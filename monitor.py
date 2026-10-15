@@ -90,6 +90,14 @@ def get_players(url, expected_players, distinguish=False):
                         "card": match.group(3).strip(),
                     }
 
+                    # DEBUG: stampa l'HTML della carta per capire
+                    # come FUT.GG segna le olografiche (da togliere dopo)
+                    if distinguish:
+                        print("DEBUG ---", alt)
+                        print("DEBUG IMG:", str(img)[:500])
+                        print("DEBUG PARENT:", str(img.parent)[:700])
+                        print("DEBUG PARENT2:", str(img.parent.parent)[:1000])
+
                     # BASE vs HOLO (solo per i feed con distinguish=True)
                     if distinguish:
                         player["holo"] = bool(
