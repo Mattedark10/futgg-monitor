@@ -4,16 +4,16 @@
       "name": "Šašić",
       "rating": "89",
       "card": "Base Hero",
-      "holo": true
+      "holo": false
     },
     {
       "name": "Zamorano",
       "rating": "88",
       "card": "Base Hero",
-      "holo": true
+      "holo": false
     },
     {
-      "name": "Gabri",
+      "name": "Milito",
       "rating": "88",
       "card": "Base Hero",
       "holo": false
