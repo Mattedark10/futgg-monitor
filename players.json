@@ -3,27 +3,32 @@
     {
       "name": "Šašić",
       "rating": "89",
-      "card": "Base Hero"
+      "card": "Base Hero",
+      "holo": false
     },
     {
       "name": "Zamorano",
       "rating": "88",
-      "card": "Base Hero"
+      "card": "Base Hero",
+      "holo": false
     },
     {
       "name": "Milito",
       "rating": "88",
-      "card": "Base Hero"
+      "card": "Base Hero",
+      "holo": false
     },
     {
       "name": "Šašić",
       "rating": "89",
-      "card": "Base Hero"
+      "card": "Base Hero",
+      "holo": false
     },
     {
       "name": "Vialli",
       "rating": "89",
-      "card": "Base Hero"
+      "card": "Base Hero",
+      "holo": false
     }
   ],
   "🌈 HOLOGRAPHICS": [
@@ -57,52 +62,62 @@
     {
       "name": "Cucurella",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "holo": false
     },
     {
       "name": "Harder",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "holo": false
     },
     {
       "name": "Jacobo Ramón",
       "rating": "87",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "holo": false
     },
     {
       "name": "Mora",
       "rating": "87",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "holo": false
     },
     {
       "name": "Bonny",
       "rating": "87",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "holo": false
     },
     {
       "name": "Harder",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "holo": false
     },
     {
       "name": "Undav",
       "rating": "87",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "holo": false
     },
     {
       "name": "Nico Paz",
       "rating": "87",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "holo": false
     },
     {
       "name": "Yohannes",
       "rating": "86",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "holo": false
     },
     {
       "name": "Mora",
       "rating": "87",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "holo": false
     }
   ]
 }
