@@ -1,17 +1,44 @@
 import os
 import re
 import json
+import html
 import requests
 from bs4 import BeautifulSoup
 
+
+# =========================
+# FUT.GG FEEDS
+# =========================
+
 PAGES = {
-    "🦸 HEROES": "https://www.fut.gg/fut-gallery/rarities/heroes/",
-    "🌈 HOLOGRAPHICS": "https://www.fut.gg/fut-gallery/rarities/holographics/",
-    "1️⃣ SEASON 1": "https://www.fut.gg/fut-gallery/rarities/season-1/",
+    "🦸 HEROES": {
+        "url": "https://www.fut.gg/fut-gallery/rarities/heroes/",
+        "players": 5
+    },
+
+    "🌈 HOLOGRAPHICS": {
+        "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
+        "players": 5
+    },
+
+    "1️⃣ SEASON 1": {
+        "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
+        "players": 10
+    },
 }
+
+
+# =========================
+# TELEGRAM
+# =========================
 
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+
+
+# =========================
+# SETTINGS
+# =========================
 
 STATE_FILE = "players.json"
 
@@ -24,67 +51,100 @@ HEADERS = {
 }
 
 
-def get_players(url):
-    r = requests.get(url, headers=HEADERS, timeout=30)
-    r.raise_for_status()
+# =========================
+# GET FUT.GG PLAYERS
+# =========================
 
-    soup = BeautifulSoup(r.text, "html.parser")
+def get_players(url, expected_players):
 
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        timeout=30
+    )
+
+    response.raise_for_status()
+
+    soup = BeautifulSoup(
+        response.text,
+        "html.parser"
+    )
+
+    # Find the FUT.GG recommended lineup section
     heading = soup.find(
-        lambda tag: tag.name in ["h2", "h3"]
+        lambda tag:
+        tag.name in ["h2", "h3"]
         and "Cheapest grade" in tag.get_text()
         and "lineup" in tag.get_text()
     )
 
     if not heading:
-        raise Exception("Lineup not found")
+        raise Exception(
+            f"Feed lineup not found: {url}"
+        )
 
     players = []
+
     current = heading.find_next()
 
     while current:
 
-        if current.name in ["h2", "h3"] and current != heading:
+        # Stop when the next section begins
+        if (
+            current.name in ["h2", "h3"]
+            and current != heading
+        ):
             break
 
         if hasattr(current, "find_all"):
+
             for img in current.find_all("img"):
 
                 alt = img.get("alt", "").strip()
 
+                # Example:
+                # Vialli - 89 - Base Hero
                 match = re.match(
                     r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
                     alt
                 )
 
                 if match:
+
                     player = {
                         "name": match.group(1).strip(),
                         "rating": match.group(2).strip(),
                         "card": match.group(3).strip()
                     }
 
-                    # Duplicates are allowed in the feed
+                    # Do NOT remove duplicates.
+                    # The same card can appear more than once.
                     players.append(player)
 
-                    if len(players) == 5:
+                    if len(players) == expected_players:
                         return players
 
         current = current.find_next()
 
     raise Exception(
-        f"Found {len(players)} players instead of 5"
+        f"Found {len(players)} players instead of "
+        f"{expected_players} on {url}"
     )
 
 
+# =========================
+# TELEGRAM MESSAGE
+# =========================
+
 def send_telegram(message):
-    url = (
+
+    telegram_url = (
         f"https://api.telegram.org/"
         f"bot{BOT_TOKEN}/sendMessage"
     )
 
     response = requests.post(
-        url,
+        telegram_url,
         data={
             "chat_id": CHAT_ID,
             "text": message,
@@ -98,53 +158,115 @@ def send_telegram(message):
 
 
 def player_text(player):
+
+    name = html.escape(player["name"])
+    rating = html.escape(player["rating"])
+    card = html.escape(player["card"])
+
     return (
-        f"<b>{player['name']}</b> — "
-        f"{player['rating']} — "
-        f"{player['card']}"
+        f"<b>{name}</b> — "
+        f"{rating} — "
+        f"{card}"
     )
 
 
+# =========================
+# MAIN MONITOR
+# =========================
+
 def main():
 
+    # Load previous feeds
     if os.path.exists(STATE_FILE):
+
         with open(
             STATE_FILE,
             "r",
             encoding="utf-8"
-        ) as f:
-            old_state = json.load(f)
+        ) as file:
+
+            old_state = json.load(file)
+
     else:
         old_state = {}
 
     new_state = {}
 
-    for category, url in PAGES.items():
+    # Check every FUT.GG feed
+    for category, config in PAGES.items():
 
-        print(f"Checking {category}...")
+        url = config["url"]
+        expected_players = config["players"]
 
-        players = get_players(url)
+        print(
+            f"Checking {category} "
+            f"({expected_players} players)..."
+        )
+
+        players = get_players(
+            url,
+            expected_players
+        )
+
+        print(
+            f"Found {len(players)} players."
+        )
+
+        for player in players:
+            print(
+                f"- {player['name']} "
+                f"{player['rating']} "
+                f"{player['card']}"
+            )
 
         new_state[category] = players
 
         old_players = old_state.get(category)
 
-        # First scan: save current feed only
+        # New category / first scan:
+        # save it without sending an alert
         if old_players is None:
-            print(f"Saving initial {category} feed.")
+
+            print(
+                f"First scan for {category}. "
+                "Saving current feed."
+            )
+
             continue
 
-        # Compare the full feed
+        # =========================
+        # CHECK FOR FEED CHANGES
+        # =========================
+
         if old_players != players:
 
             removed = old_players.copy()
             added = players.copy()
 
-            # Keep only actual changes
+            # Remove players/cards that stayed the same.
+            # This also handles duplicate cards correctly.
             for player in old_players:
+
                 if player in added:
                     added.remove(player)
-                    removed.remove(player)
+
+                    if player in removed:
+                        removed.remove(player)
+
+            # If the lists only changed order,
+            # don't send a false notification.
+            if not removed and not added:
+
+                print(
+                    f"{category}: "
+                    "player order changed only."
+                )
+
+                continue
+
+            # =========================
+            # BUILD TELEGRAM ALERT
+            # =========================
 
             message = (
                 "🚨 <b>FUT.GG FEED UPDATE</b>\n\n"
@@ -154,43 +276,68 @@ def main():
             )
 
             for player in removed:
+
                 message += (
-                    f"🔴 <b>OUT</b> · "
+                    "🔴 <b>OUT</b> · "
                     f"{player_text(player)}\n"
                 )
 
             for player in added:
+
                 message += (
-                    f"🟢 <b>IN</b> · "
+                    "🟢 <b>IN</b> · "
                     f"{player_text(player)}\n"
                 )
 
+            safe_url = html.escape(
+                url,
+                quote=True
+            )
+
             message += (
                 "\n🕐 Change detected automatically\n"
-                f'🔗 <a href="{url}">'
-                "View Feed on FUT.GG</a>"
+                f'🔗 <a href="{safe_url}">'
+                "View Feed on FUT.GG"
+                "</a>"
             )
 
             send_telegram(message)
 
-            print("Telegram notification sent.")
+            print(
+                f"{category}: "
+                "Telegram notification sent."
+            )
 
         else:
-            print("No feed changes.")
 
-    # Save current feed
+            print(
+                f"{category}: "
+                "No feed changes."
+            )
+
+    # =========================
+    # SAVE CURRENT FEEDS
+    # =========================
+
     with open(
         STATE_FILE,
         "w",
         encoding="utf-8"
-    ) as f:
+    ) as file:
+
         json.dump(
             new_state,
-            f,
+            file,
             ensure_ascii=False,
             indent=2
         )
 
+    print("Feed state saved successfully.")
+
+
+# =========================
+# START
+# =========================
 
 if __name__ == "__main__":
     main()
