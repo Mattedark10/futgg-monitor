@@ -52,5 +52,32 @@
       "rating": "88",
       "card": "Base Icon"
     }
+  ],
+  "1️⃣ SEASON 1": [
+    {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Harder",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Jacobo Ramón",
+      "rating": "87",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Mora",
+      "rating": "87",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Bonny",
+      "rating": "87",
+      "card": "Future Stars"
+    }
   ]
 }
