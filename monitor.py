@@ -1,4 +1,3 @@
-
 import os
 import re
 import json
@@ -16,7 +15,11 @@ CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 STATE_FILE = "players.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/140.0.0.0 Safari/537.36"
+    )
 }
 
 
@@ -39,41 +42,51 @@ def get_players(url):
     current = heading.find_next()
 
     while current:
+
+        # Se arriva alla sezione successiva, fermati
         if current.name in ["h2", "h3"] and current != heading:
             break
 
-        for img in current.find_all("img") if hasattr(current, "find_all") else []:
-            alt = img.get("alt", "")
+        if hasattr(current, "find_all"):
+            for img in current.find_all("img"):
 
-            # Esempio FUT.GG:
-            # "Vialli - 89 - Base Hero"
-            match = re.match(r"(.+?) - (\d+) - (.+)", alt)
+                alt = img.get("alt", "").strip()
 
-            if match:
-                player = {
-                    "name": match.group(1).strip(),
-                    "rating": match.group(2).strip(),
-                    "card": match.group(3).strip()
-                }
+                # Esempio:
+                # Vialli - 89 - Base Hero
+                match = re.match(
+                    r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
+                    alt
+                )
 
-                if player not in players:
+                if match:
+                    player = {
+                        "name": match.group(1).strip(),
+                        "rating": match.group(2).strip(),
+                        "card": match.group(3).strip()
+                    }
+
+                    # IMPORTANTE:
+                    # non eliminiamo i duplicati.
+                    # FUT.GG può usare la stessa carta
+                    # più volte nella lineup.
                     players.append(player)
 
-                if len(players) == 5:
-                    return players
+                    if len(players) == 5:
+                        return players
 
         current = current.find_next()
 
-    if len(players) != 5:
-        raise Exception(
-            f"Trovati {len(players)} giocatori invece di 5"
-        )
-
-    return players
+    raise Exception(
+        f"Trovati {len(players)} giocatori invece di 5"
+    )
 
 
 def send_telegram(message):
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    url = (
+        f"https://api.telegram.org/"
+        f"bot{BOT_TOKEN}/sendMessage"
+    )
 
     response = requests.post(
         url,
@@ -89,13 +102,21 @@ def send_telegram(message):
 
 
 def player_text(player):
-    return f"{player['name']} ({player['rating']})"
+    return (
+        f"{player['name']} "
+        f"({player['rating']})"
+    )
 
 
 def main():
 
+    # Carica la lineup precedente
     if os.path.exists(STATE_FILE):
-        with open(STATE_FILE, "r", encoding="utf-8") as f:
+        with open(
+            STATE_FILE,
+            "r",
+            encoding="utf-8"
+        ) as f:
             old_state = json.load(f)
     else:
         old_state = {}
@@ -104,52 +125,72 @@ def main():
 
     for category, url in PAGES.items():
 
+        print(f"Controllo {category}...")
+
         players = get_players(url)
+
+        print(
+            "Giocatori trovati:",
+            [player_text(p) for p in players]
+        )
+
         new_state[category] = players
 
         old_players = old_state.get(category)
 
-        # Primo avvio: salva soltanto
+        # Primo avvio:
+        # salva la lineup senza mandare notifiche
         if old_players is None:
+            print(
+                f"Prima scansione di {category}: "
+                "salvo la lineup."
+            )
             continue
 
-        old_set = {
-            (p["name"], p["rating"], p["card"])
-            for p in old_players
-        }
+        # Confrontiamo la LISTA completa.
+        # In questo modo vengono considerati
+        # anche eventuali giocatori duplicati.
+        if old_players != players:
 
-        new_set = {
-            (p["name"], p["rating"], p["card"])
-            for p in players
-        }
+            removed = old_players.copy()
+            added = players.copy()
 
-        if old_set != new_set:
+            # Rimuove le carte rimaste uguali
+            # per mostrare solo le differenze.
+            for player in old_players:
+                if player in added:
+                    added.remove(player)
+                    removed.remove(player)
 
-            removed = [
-                p for p in old_players
-                if (p["name"], p["rating"], p["card"])
-                not in new_set
-            ]
+            message = (
+                f"🚨 FUT.GG {category} CAMBIATA!\n\n"
+            )
 
-            added = [
-                p for p in players
-                if (p["name"], p["rating"], p["card"])
-                not in old_set
-            ]
+            for player in removed:
+                message += (
+                    f"❌ {player_text(player)}\n"
+                )
 
-            message = f"🚨 FUT.GG {category} CAMBIATA!\n\n"
-
-            for p in removed:
-                message += f"❌ {player_text(p)}\n"
-
-            for p in added:
-                message += f"✅ {player_text(p)}\n"
+            for player in added:
+                message += (
+                    f"✅ {player_text(player)}\n"
+                )
 
             message += f"\n🔗 {url}"
 
             send_telegram(message)
 
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
+            print("Notifica Telegram inviata.")
+
+        else:
+            print("Nessun cambiamento.")
+
+    # Salva la lineup attuale
+    with open(
+        STATE_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
         json.dump(
             new_state,
             f,
