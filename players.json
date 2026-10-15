@@ -4,31 +4,36 @@
       "name": "Šašić",
       "rating": "89",
       "card": "Base Hero",
-      "holo": false
+      "item_id": "67335170",
+      "version": "Pristine Holographic"
     },
     {
-      "name": "Zamorano",
+      "name": "Litmanen",
       "rating": "88",
       "card": "Base Hero",
-      "holo": false
+      "item_id": "67114537",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Keßler",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "67335237",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Milito",
       "rating": "88",
       "card": "Base Hero",
-      "holo": false
+      "item_id": "67371135",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Šašić",
       "rating": "89",
       "card": "Base Hero",
-      "holo": false
-    },
-    {
-      "name": "Vialli",
-      "rating": "89",
-      "card": "Base Hero",
-      "holo": false
+      "item_id": "226306",
+      "version": "Base"
     }
   ],
   "🌈 HOLOGRAPHICS": [
@@ -56,68 +61,6 @@
       "name": "Klose",
       "rating": "88",
       "card": "Base Icon"
-    }
-  ],
-  "1️⃣ SEASON 1": [
-    {
-      "name": "Cucurella",
-      "rating": "88",
-      "card": "Destined for Glory",
-      "holo": false
-    },
-    {
-      "name": "Harder",
-      "rating": "88",
-      "card": "Destined for Glory",
-      "holo": false
-    },
-    {
-      "name": "Jacobo Ramón",
-      "rating": "87",
-      "card": "Future Stars",
-      "holo": false
-    },
-    {
-      "name": "Mora",
-      "rating": "87",
-      "card": "Future Stars",
-      "holo": false
-    },
-    {
-      "name": "Bonny",
-      "rating": "87",
-      "card": "Future Stars",
-      "holo": false
-    },
-    {
-      "name": "Cucurella",
-      "rating": "88",
-      "card": "Destined for Glory",
-      "holo": false
-    },
-    {
-      "name": "Harder",
-      "rating": "88",
-      "card": "Destined for Glory",
-      "holo": false
-    },
-    {
-      "name": "Undav",
-      "rating": "87",
-      "card": "Destined for Glory",
-      "holo": false
-    },
-    {
-      "name": "Yohannes",
-      "rating": "86",
-      "card": "Future Stars",
-      "holo": false
-    },
-    {
-      "name": "Mora",
-      "rating": "87",
-      "card": "Future Stars",
-      "holo": false
     }
   ]
 }
