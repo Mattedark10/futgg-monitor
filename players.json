@@ -90,6 +90,12 @@
       "holo": false
     },
     {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory",
+      "holo": false
+    },
+    {
       "name": "Harder",
       "rating": "88",
       "card": "Destined for Glory",
@@ -97,12 +103,6 @@
     },
     {
       "name": "Undav",
-      "rating": "87",
-      "card": "Destined for Glory",
-      "holo": false
-    },
-    {
-      "name": "Nico Paz",
       "rating": "87",
       "card": "Destined for Glory",
       "holo": false
