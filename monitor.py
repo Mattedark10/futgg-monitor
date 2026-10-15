@@ -104,7 +104,7 @@ def send_telegram(message):
 def player_text(player):
     return (
         f"{player['name']} "
-        f"({player['rating']})"
+        f"({player['rating']}) - {player['card']}"
     )
 
 
