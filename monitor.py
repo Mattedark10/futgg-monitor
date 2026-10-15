@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 PAGES = {
     "🦸 HEROES": "https://www.fut.gg/fut-gallery/rarities/heroes/",
     "🌈 HOLOGRAPHICS": "https://www.fut.gg/fut-gallery/rarities/holographics/",
+    "1️⃣ SEASON 1": "https://www.fut.gg/fut-gallery/rarities/season-1/",
 }
 
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
