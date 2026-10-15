@@ -73,6 +73,31 @@ def get_version(item_url):
     return "Base"
 
 
+def find_card_link(img, soup, item_id):
+    """
+    Cerca il link alla pagina della carta (/players/.../27-ID/):
+    1) tra i genitori dell'immagine
+    2) dentro i contenitori vicini all'immagine
+    3) in qualsiasi punto della pagina
+    Accetta solo link che contengono lo stesso ID della carta.
+    """
+    pattern = re.compile(rf"/players/.*27-{item_id}")
+
+    parent = img
+    for _ in range(6):
+        parent = parent.parent
+        if parent is None:
+            break
+        if parent.name == "a" and pattern.search(parent.get("href", "")):
+            return parent["href"]
+        link = parent.find("a", href=pattern)
+        if link:
+            return link["href"]
+
+    link = soup.find("a", href=pattern)
+    return link["href"] if link else None
+
+
 # =========================
 # GET FUT.GG PLAYERS
 # =========================
@@ -119,34 +144,47 @@ def get_players(url, expected_players, distinguish=False, known_versions=None):
                     }
 
                     if distinguish:
-                        link = img.find_parent("a")
-                        href = link.get("href", "") if link else ""
                         src = img.get("src", "")
 
-                        # ID unico della carta (es. 27-67348095):
+                        # ID unico della carta (es. 27-67335170):
                         # la versione base e quella olografica
                         # hanno ID diversi
-                        id_match = (
-                            re.search(r"/27-(\d+)", href)
-                            or re.search(r"27-(\d+)", src)
-                        )
+                        id_match = re.search(r"27-(\d+)", src)
 
-                        if not id_match or not href:
+                        if not id_match:
                             raise Exception(
-                                "Link/ID carta non trovato per "
-                                f"'{alt}' | href='{href}' | src='{src}'"
+                                f"ID carta non trovato per '{alt}' | "
+                                f"src='{src}'"
                             )
 
                         item_id = id_match.group(1)
                         player["item_id"] = item_id
 
-                        # Se già conosciuta non riapro la pagina
                         if item_id in known_versions:
+                            # Già conosciuta: non riapro la pagina
                             player["version"] = known_versions[item_id]
                         else:
-                            player["version"] = get_version(
-                                urljoin(SITE, href)
-                            )
+                            href = find_card_link(img, soup, item_id)
+
+                            if href:
+                                player["version"] = get_version(
+                                    urljoin(SITE, href)
+                                )
+                            else:
+                                # Link non trovato: non blocco il bot
+                                print(
+                                    f"ATTENZIONE: link non trovato per "
+                                    f"'{alt}' (ID {item_id})"
+                                )
+                                print(
+                                    "DEBUG PARENT:",
+                                    str(img.parent)[:600]
+                                )
+                                print(
+                                    "DEBUG PARENT2:",
+                                    str(img.parent.parent)[:900]
+                                )
+                                player["version"] = "?"
 
                     # Do NOT remove duplicates.
                     # The same card can appear more than once.
@@ -188,7 +226,7 @@ def player_text(player):
 
     if version == "Base":
         tag = "⚪ <b>BASE</b> · "
-    elif version:
+    elif version and version != "?":
         tag = f"🌈 <b>{html.escape(version.upper())}</b> · "
 
     name = html.escape(player["name"])
@@ -225,7 +263,7 @@ def main():
         known_versions = {}
         if old_players and distinguish:
             for p in old_players:
-                if "item_id" in p and "version" in p:
+                if "item_id" in p and p.get("version") not in (None, "?"):
                     known_versions[p["item_id"]] = p["version"]
 
         players = get_players(
@@ -250,8 +288,12 @@ def main():
             continue
 
         # Dati vecchi senza item_id/version: li aggiorno senza notifica
-        if distinguish and any("version" not in p for p in old_players):
-            print(f"{category}: aggiornamento formato dati, nessuna notifica.")
+        if distinguish and (
+            any("version" not in p for p in old_players)
+            or any(p["version"] == "?" for p in old_players)
+            or any(p["version"] == "?" for p in players)
+        ):
+            print(f"{category}: versioni incomplete, nessuna notifica.")
             continue
 
         # =========================
