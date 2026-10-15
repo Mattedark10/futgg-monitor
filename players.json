@@ -1,0 +1,56 @@
+{
+  "🦸 HEROES": [
+    {
+      "name": "Šašić",
+      "rating": "89",
+      "card": "Base Hero"
+    },
+    {
+      "name": "Zamorano",
+      "rating": "88",
+      "card": "Base Hero"
+    },
+    {
+      "name": "Milito",
+      "rating": "88",
+      "card": "Base Hero"
+    },
+    {
+      "name": "Šašić",
+      "rating": "89",
+      "card": "Base Hero"
+    },
+    {
+      "name": "Vialli",
+      "rating": "89",
+      "card": "Base Hero"
+    }
+  ],
+  "🌈 HOLOGRAPHICS": [
+    {
+      "name": "Angerer",
+      "rating": "92",
+      "card": "Base Icon"
+    },
+    {
+      "name": "Prinz",
+      "rating": "92",
+      "card": "Base Icon"
+    },
+    {
+      "name": "Baresi",
+      "rating": "91",
+      "card": "Base Icon"
+    },
+    {
+      "name": "van Basten",
+      "rating": "91",
+      "card": "Base Icon"
+    },
+    {
+      "name": "Klose",
+      "rating": "88",
+      "card": "Base Icon"
+    }
+  ]
+}
