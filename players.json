@@ -78,6 +78,31 @@
       "name": "Bonny",
       "rating": "87",
       "card": "Future Stars"
+    },
+    {
+      "name": "Harder",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Undav",
+      "rating": "87",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Nico Paz",
+      "rating": "87",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Yohannes",
+      "rating": "86",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Mora",
+      "rating": "87",
+      "card": "Future Stars"
     }
   ]
 }
