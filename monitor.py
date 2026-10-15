@@ -36,14 +36,13 @@ def get_players(url):
     )
 
     if not heading:
-        raise Exception("Lineup non trovata")
+        raise Exception("Lineup not found")
 
     players = []
     current = heading.find_next()
 
     while current:
 
-        # Se arriva alla sezione successiva, fermati
         if current.name in ["h2", "h3"] and current != heading:
             break
 
@@ -52,8 +51,6 @@ def get_players(url):
 
                 alt = img.get("alt", "").strip()
 
-                # Esempio:
-                # Vialli - 89 - Base Hero
                 match = re.match(
                     r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
                     alt
@@ -66,10 +63,7 @@ def get_players(url):
                         "card": match.group(3).strip()
                     }
 
-                    # IMPORTANTE:
-                    # non eliminiamo i duplicati.
-                    # FUT.GG può usare la stessa carta
-                    # più volte nella lineup.
+                    # Duplicates are allowed in the feed
                     players.append(player)
 
                     if len(players) == 5:
@@ -78,7 +72,7 @@ def get_players(url):
         current = current.find_next()
 
     raise Exception(
-        f"Trovati {len(players)} giocatori invece di 5"
+        f"Found {len(players)} players instead of 5"
     )
 
 
@@ -93,6 +87,7 @@ def send_telegram(message):
         data={
             "chat_id": CHAT_ID,
             "text": message,
+            "parse_mode": "HTML",
             "disable_web_page_preview": True
         },
         timeout=30
@@ -103,14 +98,14 @@ def send_telegram(message):
 
 def player_text(player):
     return (
-        f"{player['name']} "
-        f"({player['rating']}) - {player['card']}"
+        f"<b>{player['name']}</b> — "
+        f"{player['rating']} — "
+        f"{player['card']}"
     )
 
 
 def main():
 
-    # Carica la lineup precedente
     if os.path.exists(STATE_FILE):
         with open(
             STATE_FILE,
@@ -125,67 +120,64 @@ def main():
 
     for category, url in PAGES.items():
 
-        print(f"Controllo {category}...")
+        print(f"Checking {category}...")
 
         players = get_players(url)
-
-        print(
-            "Giocatori trovati:",
-            [player_text(p) for p in players]
-        )
 
         new_state[category] = players
 
         old_players = old_state.get(category)
 
-        # Primo avvio:
-        # salva la lineup senza mandare notifiche
+        # First scan: save current feed only
         if old_players is None:
-            print(
-                f"Prima scansione di {category}: "
-                "salvo la lineup."
-            )
+            print(f"Saving initial {category} feed.")
             continue
 
-        # Confrontiamo la LISTA completa.
-        # In questo modo vengono considerati
-        # anche eventuali giocatori duplicati.
+        # Compare the full feed
         if old_players != players:
 
             removed = old_players.copy()
             added = players.copy()
 
-            # Rimuove le carte rimaste uguali
-            # per mostrare solo le differenze.
+            # Keep only actual changes
             for player in old_players:
                 if player in added:
                     added.remove(player)
                     removed.remove(player)
 
             message = (
-                f"🚨 FUT.GG {category} CAMBIATA!\n\n"
+                "🚨 <b>FUT.GG FEED UPDATE</b>\n\n"
+                f"{category} <b>FEED</b>\n"
+                "The best team has been updated.\n\n"
+                "🔄 <b>FEED CHANGES</b>\n"
             )
 
             for player in removed:
                 message += (
-                    f"❌ {player_text(player)}\n"
+                    f"🔴 <b>OUT</b> · "
+                    f"{player_text(player)}\n"
                 )
 
             for player in added:
                 message += (
-                    f"✅ {player_text(player)}\n"
+                    f"🟢 <b>IN</b> · "
+                    f"{player_text(player)}\n"
                 )
 
-            message += f"\n🔗 {url}"
+            message += (
+                "\n🕐 Change detected automatically\n"
+                f'🔗 <a href="{url}">'
+                "View Feed on FUT.GG</a>"
+            )
 
             send_telegram(message)
 
-            print("Notifica Telegram inviata.")
+            print("Telegram notification sent.")
 
         else:
-            print("Nessun cambiamento.")
+            print("No feed changes.")
 
-    # Salva la lineup attuale
+    # Save current feed
     with open(
         STATE_FILE,
         "w",
