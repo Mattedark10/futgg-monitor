@@ -3,11 +3,12 @@ import re
 import json
 import html
 import requests
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 # =========================
 # FUT.GG FEEDS
-# "distinguish": True -> separa carte BASE da carte HOLO
+# "distinguish": True -> distingue BASE / HOLOGRAPHIC / PRISTINE HOLOGRAPHIC
 # =========================
 PAGES = {
     "🦸 HEROES": {
@@ -19,11 +20,6 @@ PAGES = {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5,
         "distinguish": False,
-    },
-    "1️⃣ SEASON 1": {
-        "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
-        "players": 10,
-        "distinguish": True,
     },
 }
 
@@ -37,6 +33,7 @@ CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 # SETTINGS
 # =========================
 STATE_FILE = "players.json"
+SITE = "https://www.fut.gg"
 
 HEADERS = {
     "User-Agent": (
@@ -48,9 +45,40 @@ HEADERS = {
 
 
 # =========================
+# BASE / HOLO CHECK
+# =========================
+def get_version(item_url):
+    """
+    Apre la pagina della singola carta e legge il titolo (h1):
+    - "Cucurella - Destined for Glory 88 OVR"                    -> Base
+    - "Cucurella - Destined for Glory Pristine Holographic 88 OVR" -> Pristine Holographic
+    Si guarda SOLO l'h1, perché nel resto della pagina compare sempre
+    il selettore "Standard / Pristine Holographic".
+    """
+    response = requests.get(item_url, headers=HEADERS, timeout=30)
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    h1 = soup.find("h1")
+
+    if not h1:
+        raise Exception(f"Titolo carta non trovato: {item_url}")
+
+    title = h1.get_text(" ", strip=True)
+
+    if re.search(r"pristine\s+holographic", title, re.I):
+        return "Pristine Holographic"
+    if re.search(r"holographic", title, re.I):
+        return "Holographic"
+    return "Base"
+
+
+# =========================
 # GET FUT.GG PLAYERS
 # =========================
-def get_players(url, expected_players, distinguish=False):
+def get_players(url, expected_players, distinguish=False, known_versions=None):
+    known_versions = known_versions or {}
+
     response = requests.get(url, headers=HEADERS, timeout=30)
     response.raise_for_status()
 
@@ -90,19 +118,35 @@ def get_players(url, expected_players, distinguish=False):
                         "card": match.group(3).strip(),
                     }
 
-                    # DEBUG: stampa l'HTML della carta per capire
-                    # come FUT.GG segna le olografiche (da togliere dopo)
                     if distinguish:
-                        print("DEBUG ---", alt)
-                        print("DEBUG IMG:", str(img)[:500])
-                        print("DEBUG PARENT:", str(img.parent)[:700])
-                        print("DEBUG PARENT2:", str(img.parent.parent)[:1000])
+                        link = img.find_parent("a")
+                        href = link.get("href", "") if link else ""
+                        src = img.get("src", "")
 
-                    # BASE vs HOLO (solo per i feed con distinguish=True)
-                    if distinguish:
-                        player["holo"] = bool(
-                            re.search(r"holo|pristine", alt, re.I)
+                        # ID unico della carta (es. 27-67348095):
+                        # la versione base e quella olografica
+                        # hanno ID diversi
+                        id_match = (
+                            re.search(r"/27-(\d+)", href)
+                            or re.search(r"27-(\d+)", src)
                         )
+
+                        if not id_match or not href:
+                            raise Exception(
+                                "Link/ID carta non trovato per "
+                                f"'{alt}' | href='{href}' | src='{src}'"
+                            )
+
+                        item_id = id_match.group(1)
+                        player["item_id"] = item_id
+
+                        # Se già conosciuta non riapro la pagina
+                        if item_id in known_versions:
+                            player["version"] = known_versions[item_id]
+                        else:
+                            player["version"] = get_version(
+                                urljoin(SITE, href)
+                            )
 
                     # Do NOT remove duplicates.
                     # The same card can appear more than once.
@@ -140,8 +184,12 @@ def send_telegram(message):
 
 def player_text(player):
     tag = ""
-    if "holo" in player:
-        tag = "🌈 <b>HOLO</b> · " if player["holo"] else "⚪ <b>BASE</b> · "
+    version = player.get("version")
+
+    if version == "Base":
+        tag = "⚪ <b>BASE</b> · "
+    elif version:
+        tag = f"🌈 <b>{html.escape(version.upper())}</b> · "
 
     name = html.escape(player["name"])
     rating = html.escape(player["rating"])
@@ -171,22 +219,29 @@ def main():
 
         print(f"Checking {category} ({expected_players} players)...")
 
-        players = get_players(url, expected_players, distinguish)
+        old_players = old_state.get(category)
+
+        # Versioni già note (item_id -> Base/Holographic/...)
+        known_versions = {}
+        if old_players and distinguish:
+            for p in old_players:
+                if "item_id" in p and "version" in p:
+                    known_versions[p["item_id"]] = p["version"]
+
+        players = get_players(
+            url, expected_players, distinguish, known_versions
+        )
 
         print(f"Found {len(players)} players.")
         for player in players:
-            holo = ""
-            if "holo" in player:
-                holo = " [HOLO]" if player["holo"] else " [BASE]"
+            version = f" [{player['version']}]" if "version" in player else ""
             print(
                 f"- {player['name']} "
                 f"{player['rating']} "
-                f"{player['card']}{holo}"
+                f"{player['card']}{version}"
             )
 
         new_state[category] = players
-
-        old_players = old_state.get(category)
 
         # New category / first scan:
         # save it without sending an alert
@@ -194,11 +249,10 @@ def main():
             print(f"First scan for {category}. Saving current feed.")
             continue
 
-        # Vecchi dati senza il campo "holo": li considero BASE
-        # per evitare una notifica falsa alla prima esecuzione
-        if distinguish:
-            for p in old_players:
-                p.setdefault("holo", False)
+        # Dati vecchi senza item_id/version: li aggiorno senza notifica
+        if distinguish and any("version" not in p for p in old_players):
+            print(f"{category}: aggiornamento formato dati, nessuna notifica.")
+            continue
 
         # =========================
         # CHECK FOR FEED CHANGES
