@@ -3,288 +3,759 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070810">
 <title>FutFlex</title>
 
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <style>
 :root{
-  --bg:#0b0709;
-  --card:#150e11;
-  --line:#2a1a1f;
-  --red:#ff2d4a;
-  --tx:#fff;
-  --mu:#9a8a8f;
+  --bg:#070810;
+  --panel:#0d101b;
+  --panel2:#111522;
+  --line:#242b42;
+  --pink:#ff176f;
+  --pink2:#ff3d8d;
+  --cyan:#27f5d0;
+  --purple:#8b5cff;
+  --text:#f6f7ff;
+  --muted:#818aa8;
 }
 
 *{
   box-sizing:border-box;
   margin:0;
+  padding:0;
+}
+
+html{
+  background:var(--bg);
 }
 
 body{
-  background:var(--bg);
-  color:var(--tx);
-  font-family:system-ui,sans-serif;
-  padding:0 14px calc(env(safe-area-inset-bottom,0px) + 24px);
+  min-height:100%;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(255,23,111,.12), transparent 30%),
+    radial-gradient(circle at 0% 35%, rgba(91,50,180,.10), transparent 28%),
+    var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  padding:
+    calc(env(safe-area-inset-top,0px) + 18px)
+    14px
+    calc(env(safe-area-inset-bottom,0px) + 30px);
 }
 
-h1{
-  font-size:34px;
+/* HEADER */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:22px;
+}
+
+.brand{
+  min-width:0;
+}
+
+.logo{
+  font-size:30px;
   line-height:1;
-  margin:22px 0 6px;
+  font-weight:900;
+  font-style:italic;
+  letter-spacing:-1.5px;
+}
+
+.logo span{
+  color:var(--pink);
+}
+
+.tagline{
+  color:#929bc1;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:3px;
+  margin-top:7px;
+}
+
+.credit{
+  border:1px solid rgba(255,23,111,.5);
+  background:rgba(255,23,111,.07);
+  border-radius:16px;
+  padding:8px 11px;
+  box-shadow:
+    inset 0 0 20px rgba(255,23,111,.04),
+    0 0 18px rgba(255,23,111,.08);
+  flex:none;
+}
+
+.credit small{
+  display:block;
+  color:var(--muted);
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.credit b{
+  font-size:12px;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  border:1px solid #252b45;
+  border-radius:22px;
+  padding:22px 18px;
+  margin-bottom:16px;
+  background:
+    linear-gradient(125deg,rgba(14,18,31,.98),rgba(17,10,28,.95));
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  right:-70px;
+  top:-90px;
+  border-radius:50%;
+  background:var(--pink);
+  filter:blur(80px);
+  opacity:.18;
+}
+
+.live{
+  position:relative;
+  color:var(--pink);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.hero h1{
+  position:relative;
+  font-size:26px;
+  line-height:1.05;
   letter-spacing:-1px;
 }
 
-.sub{
-  color:var(--mu);
-  font-size:13px;
-  margin-bottom:16px;
+.hero p{
+  position:relative;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+  margin-top:8px;
+  max-width:270px;
 }
 
-.bar{
+/* SECTION */
+
+.section-head{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin:16px 0 10px;
+  gap:12px;
+  margin:20px 2px 11px;
 }
 
-.bar b{
-  font-size:17px;
-}
-
-.bar small{
-  display:block;
-  color:var(--mu);
-  font-size:12px;
-  margin-top:2px;
-}
-
-.item{
+.section-title{
   display:flex;
   align-items:center;
-  gap:12px;
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:10px 12px;
-  margin-bottom:8px;
-  cursor:pointer;
+  gap:10px;
 }
 
-.item:active{
-  transform:scale(.99);
+.bars{
+  display:flex;
+  align-items:flex-end;
+  gap:3px;
+  height:22px;
 }
 
-.rk{
-  color:var(--mu);
-  font-size:12px;
-  width:26px;
-  flex:none;
+.bars i{
+  display:block;
+  width:4px;
+  border-radius:4px;
+  background:var(--pink);
 }
 
-.ph{
-  width:58px;
-  height:76px;
-  object-fit:contain;
-  flex:none;
+.bars i:nth-child(1){height:9px}
+.bars i:nth-child(2){height:15px}
+.bars i:nth-child(3){height:21px}
+
+.section-head h2{
+  font-size:19px;
+  letter-spacing:-.4px;
 }
 
-.info{
-  min-width:0;
-  flex:1;
-}
-
-.nm{
-  font-weight:700;
-  font-size:16px;
-}
-
-.rt{
-  color:var(--red);
-  font-size:12px;
-  font-weight:700;
-}
-
-.cd{
-  color:var(--mu);
-  font-size:12px;
+.meta{
+  color:var(--muted);
+  font-size:10px;
   margin-top:2px;
-}
-
-.club{
-  color:var(--mu);
-  font-size:11px;
-  margin-top:4px;
-}
-
-.empty{
-  color:var(--mu);
-  text-align:center;
-  padding:30px 0;
 }
 
 .refresh{
-  border:1px solid var(--line);
-  background:var(--card);
-  color:var(--tx);
-  border-radius:99px;
-  padding:8px 14px;
-  font-size:14px;
+  border:1px solid rgba(255,23,111,.65);
+  color:var(--pink2);
+  background:rgba(255,23,111,.06);
+  border-radius:999px;
+  min-height:38px;
+  padding:0 14px;
+  font-size:12px;
+  font-weight:700;
   cursor:pointer;
+}
+
+/* PLAYERS */
+
+.player{
+  position:relative;
+  display:grid;
+  grid-template-columns:25px 72px minmax(0,1fr) 18px;
+  align-items:center;
+  gap:10px;
+
+  background:
+    linear-gradient(110deg,rgba(16,19,31,.98),rgba(9,12,23,.98));
+
+  border:1px solid var(--line);
+  border-radius:18px;
+
+  padding:10px;
+  margin-bottom:9px;
+
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.player:active{
+  transform:scale(.99);
+}
+
+.player:first-child{
+  border-color:rgba(255,23,111,.45);
+  box-shadow:0 0 25px rgba(255,23,111,.07);
+}
+
+.rank{
+  text-align:center;
+  font-size:16px;
+  font-weight:800;
+  color:#8d96bc;
+}
+
+.player:first-child .rank{
+  color:#ffc94d;
+}
+
+.card-wrap{
+  height:88px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.card-img{
+  display:block;
+  width:72px;
+  height:88px;
+  object-fit:contain;
+}
+
+.player-info{
+  min-width:0;
+}
+
+.player-name{
+  font-size:16px;
+  font-weight:800;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.player-stats{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:5px;
+}
+
+.rating{
+  color:var(--cyan);
+  font-size:15px;
+  font-weight:900;
+}
+
+.position{
+  color:#9ca5c8;
+  font-size:12px;
+  font-weight:700;
+}
+
+.rarity{
+  display:inline-block;
+  max-width:150px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+
+  color:#d8cfff;
+  border:1px solid rgba(139,92,255,.6);
+  background:rgba(139,92,255,.08);
+
+  border-radius:7px;
+  padding:3px 6px;
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.club{
+  color:var(--muted);
+  font-size:10px;
+  margin-top:7px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.arrow{
+  color:#8f99c2;
+  font-size:22px;
+  font-weight:300;
+}
+
+/* STATES */
+
+.empty,
+.error{
+  text-align:center;
+  color:var(--muted);
+  padding:40px 10px;
+  font-size:13px;
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top:24px;
+  padding:18px 0 5px;
+  border-top:1px solid rgba(255,255,255,.06);
+  text-align:center;
+}
+
+.footer-logo{
+  font-size:17px;
+  font-weight:900;
+  font-style:italic;
+}
+
+.footer-logo span{
+  color:var(--pink);
+}
+
+.footer p{
+  color:var(--muted);
+  font-size:9px;
+  margin-top:5px;
+}
+
+.footer a{
+  color:var(--pink2);
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* SMALL PHONES */
+
+@media(max-width:360px){
+  .logo{
+    font-size:25px;
+  }
+
+  .credit{
+    padding:7px 9px;
+  }
+
+  .player{
+    grid-template-columns:20px 62px minmax(0,1fr) 14px;
+    gap:7px;
+  }
+
+  .card-wrap{
+    height:78px;
+  }
+
+  .card-img{
+    width:62px;
+    height:78px;
+  }
+
+  .player-name{
+    font-size:14px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<h1>FutFlex</h1>
+<header class="header">
 
-<p class="sub" id="sub">
-  Loading Trending Players...
-</p>
+  <div class="brand">
+    <div class="logo">
+      Fut<span>Flex</span>
+    </div>
 
-<button class="refresh" id="ref">
-  ⟳ Refresh
-</button>
-
-<div class="bar">
-  <div>
-    <b>Trending Players</b>
-    <small id="count"></small>
+    <div class="tagline">
+      TRENDING PLAYERS
+    </div>
   </div>
-</div>
 
-<div id="list"></div>
+  <div class="credit">
+    <small>Created by</small>
+    <b>@Mattedark10</b>
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="live">
+    ● LIVE MARKET
+  </div>
+
+  <h1>
+    Trending Players
+  </h1>
+
+  <p>
+    Discover the most viewed FC 27 players currently trending on FUT.GG.
+  </p>
+
+</section>
+
+
+<section>
+
+  <div class="section-head">
+
+    <div class="section-title">
+
+      <div class="bars">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+      <div>
+        <h2>Top Trending</h2>
+        <div class="meta" id="status">
+          Loading players...
+        </div>
+      </div>
+
+    </div>
+
+    <button class="refresh" id="refresh">
+      ↻ Refresh
+    </button>
+
+  </div>
+
+  <div id="players"></div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="footer-logo">
+    Fut<span>Flex</span>
+  </div>
+
+  <p>
+    Made by
+    <a href="https://t.me/Mattedark10">
+      @Mattedark10
+    </a>
+  </p>
+
+</footer>
+
 
 <script>
-const tg = window.Telegram && Telegram.WebApp;
+const tg =
+  window.Telegram &&
+  window.Telegram.WebApp;
 
 if (tg) {
   tg.ready();
   tg.expand();
+
+  if (tg.setHeaderColor) {
+    tg.setHeaderColor("#070810");
+  }
+
+  if (tg.setBackgroundColor) {
+    tg.setBackgroundColor("#070810");
+  }
 }
 
-let players = [];
 
-const esc = s =>
-  String(s ?? "").replace(
-    /[&<>"]/g,
-    c => ({
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;"
-    }[c])
-  );
+const playersEl =
+  document.getElementById("players");
 
-function render() {
-  document.getElementById("count").textContent =
-    players.length + " players";
+const statusEl =
+  document.getElementById("status");
+
+const refreshButton =
+  document.getElementById("refresh");
+
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(
+      /[&<>"']/g,
+      char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[char]
+    );
+}
+
+
+function renderPlayers(players) {
 
   if (!players.length) {
-    document.getElementById("list").innerHTML =
-      `<p class="empty">No players available.</p>`;
+    playersEl.innerHTML =
+      `<div class="empty">
+        No trending players available.
+      </div>`;
+
     return;
   }
 
-  document.getElementById("list").innerHTML =
-    players.map((p, i) => `
-      <div
-        class="item"
-        data-url="${esc(p.url)}"
-      >
 
-        <span class="rk">
-          #${i + 1}
-        </span>
+  playersEl.innerHTML =
+    players.map((player, index) => {
 
-        ${
-          p.img
-            ? `<img
-                class="ph"
-                src="${esc(p.img)}"
-                alt="${esc(p.name)}"
-                loading="lazy"
-              >`
-            : `<div class="ph"></div>`
+      const name =
+        escapeHtml(player.name);
+
+      const rating =
+        escapeHtml(player.rating);
+
+      const position =
+        escapeHtml(player.position);
+
+      const rarity =
+        escapeHtml(player.rarity);
+
+      const club =
+        escapeHtml(player.club);
+
+      const image =
+        escapeHtml(player.img);
+
+      const url =
+        escapeHtml(player.url);
+
+
+      return `
+        <article
+          class="player"
+          data-url="${url}"
+        >
+
+          <div class="rank">
+            ${index + 1}
+          </div>
+
+
+          <div class="card-wrap">
+
+            ${
+              image
+                ? `
+                  <img
+                    class="card-img"
+                    src="${image}"
+                    alt="${name}"
+                    loading="lazy"
+                  >
+                `
+                : ""
+            }
+
+          </div>
+
+
+          <div class="player-info">
+
+            <div class="player-name">
+              ${name}
+            </div>
+
+            <div class="player-stats">
+
+              <span class="rating">
+                ${rating}
+              </span>
+
+              <span class="position">
+                ${position}
+              </span>
+
+              ${
+                rarity
+                  ? `
+                    <span class="rarity">
+                      ${rarity}
+                    </span>
+                  `
+                  : ""
+              }
+
+            </div>
+
+            <div class="club">
+              ${club}
+            </div>
+
+          </div>
+
+
+          <div class="arrow">
+            ›
+          </div>
+
+        </article>
+      `;
+
+    }).join("");
+
+
+  document
+    .querySelectorAll(".player")
+    .forEach(element => {
+
+      element.addEventListener(
+        "click",
+        () => {
+
+          const url =
+            element.dataset.url;
+
+          if (!url) {
+            return;
+          }
+
+          if (tg && tg.openLink) {
+            tg.openLink(url);
+          } else {
+            window.open(
+              url,
+              "_blank",
+              "noopener"
+            );
+          }
+
         }
+      );
 
-        <div class="info">
-
-          <div class="rt">
-            ${esc(p.rating)}
-            ${esc(p.position)}
-          </div>
-
-          <div class="nm">
-            ${esc(p.name)}
-          </div>
-
-          <div class="cd">
-            ${esc(p.rarity)}
-          </div>
-
-          <div class="club">
-            ${esc(p.club)}
-          </div>
-
-        </div>
-
-      </div>
-    `).join("");
-
-  document.querySelectorAll(".item").forEach(item => {
-    item.addEventListener("click", () => {
-      const url = item.dataset.url;
-
-      if (!url) return;
-
-      if (tg && tg.openLink) {
-        tg.openLink(url);
-      } else {
-        window.open(url, "_blank");
-      }
     });
-  });
+
 }
 
-async function load() {
-  const sub = document.getElementById("sub");
 
-  sub.textContent = "Loading Trending Players...";
+async function loadPlayers() {
+
+  refreshButton.disabled = true;
+  refreshButton.textContent = "↻ Loading";
+
+  statusEl.textContent =
+    "Updating trending players...";
+
 
   try {
-    const response = await fetch(
-      "trending.json?t=" + Date.now()
-    );
+
+    const response =
+      await fetch(
+        "trending.json?t=" +
+        Date.now(),
+        {
+          cache: "no-store"
+        }
+      );
+
 
     if (!response.ok) {
-      throw new Error("HTTP " + response.status);
+      throw new Error(
+        "HTTP " + response.status
+      );
     }
 
-    const data = await response.json();
 
-    players = Array.isArray(data)
-      ? data.slice(0, 20)
-      : [];
+    const data =
+      await response.json();
 
-    sub.textContent = "Live data from FUT.GG";
+
+    const players =
+      Array.isArray(data)
+        ? data.slice(0, 20)
+        : [];
+
+
+    renderPlayers(players);
+
+
+    statusEl.textContent =
+      `${players.length} players • Live FUT.GG data`;
+
 
   } catch (error) {
+
     console.error(error);
 
-    players = [];
+    playersEl.innerHTML =
+      `<div class="error">
+        Unable to load trending players.
+      </div>`;
 
-    sub.textContent = "Unable to load Trending Players";
+    statusEl.textContent =
+      "Data unavailable";
+
+  } finally {
+
+    refreshButton.disabled = false;
+    refreshButton.textContent =
+      "↻ Refresh";
+
   }
 
-  render();
 }
 
-document.getElementById("ref").onclick = load;
 
-load();
+refreshButton.addEventListener(
+  "click",
+  loadPlayers
+);
+
+
+loadPlayers();
 </script>
 
 </body>
