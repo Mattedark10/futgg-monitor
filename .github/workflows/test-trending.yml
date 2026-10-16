@@ -3,6 +3,9 @@ name: Test FUTGG Trending
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -19,5 +22,19 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Test Trending
+      - name: Update Trending Players
         run: python trending.py
+
+      - name: Commit trending data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs/trending.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to trending.json"
+          else
+            git commit -m "Update trending players"
+            git push
+          fi
