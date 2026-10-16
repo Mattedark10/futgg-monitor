@@ -156,19 +156,6 @@
     "price": 87500
   },
   {
-    "name": "Ferran Torres",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "Ones to Watch",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50573109.622d6c607090e4a5cf0cc080a458e9f197098b02d816ed65dcad4b639d903d61.webp",
-    "url": "https://www.fut.gg/players/241461-ferran-torres/27-50573109/",
-    "eaId": 50573109,
-    "slug": "27-50573109",
-    "price": null
-  },
-  {
     "name": "King",
     "rating": 85,
     "position": "CAM",
@@ -180,6 +167,19 @@
     "eaId": 50402434,
     "slug": "27-50402434",
     "price": 42000
+  },
+  {
+    "name": "Ferran Torres",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "Ones to Watch",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50573109.622d6c607090e4a5cf0cc080a458e9f197098b02d816ed65dcad4b639d903d61.webp",
+    "url": "https://www.fut.gg/players/241461-ferran-torres/27-50573109/",
+    "eaId": 50573109,
+    "slug": "27-50573109",
+    "price": null
   },
   {
     "name": "Pedri",
