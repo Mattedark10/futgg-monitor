@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/265057-cora-zicai/27-50596705/",
     "eaId": 50596705,
     "slug": "27-50596705",
-    "price": null
+    "price": 28730
   },
   {
     "name": "Bisiwu",
@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/88043-jesse-eugen-bisiwu/27-88043/",
     "eaId": 88043,
     "slug": "27-88043",
-    "price": null
+    "price": 92500
   },
   {
     "name": "Xavi Espart",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
     "eaId": 50413511,
     "slug": "27-50413511",
-    "price": null
+    "price": 31980
   },
   {
     "name": "Clara Serrajordi",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/78357-clara-serrajordi-diaz-clara-serrajordi/27-78357/",
     "eaId": 78357,
     "slug": "27-78357",
-    "price": null
+    "price": 17000
   },
   {
     "name": "Camavinga",
@@ -75,7 +75,7 @@
     "url": "https://www.fut.gg/players/70497-konstantinos-karetsas/27-70497/",
     "eaId": 70497,
     "slug": "27-70497",
-    "price": null
+    "price": 73000
   },
   {
     "name": "Karchaoui",
@@ -88,7 +88,7 @@
     "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
     "eaId": 233662,
     "slug": "27-233662",
-    "price": null
+    "price": 88500
   },
   {
     "name": "Aitana Bonmatí",
@@ -101,20 +101,7 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
     "slug": "27-241667",
-    "price": null
-  },
-  {
-    "name": "Kika Nazareth",
-    "rating": 83,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-261855.d9104e33b6382c0c1d7009b5df9e7643c153920d7afb4bc0234ecc73791d6827.webp",
-    "url": "https://www.fut.gg/players/261855-kika-nazareth/27-261855/",
-    "eaId": 261855,
-    "slug": "27-261855",
-    "price": null
+    "price": 297000
   },
   {
     "name": "Lamine Yamal",
@@ -127,7 +114,20 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
     "eaId": 277643,
     "slug": "27-277643",
-    "price": null
+    "price": 183000
+  },
+  {
+    "name": "Kika Nazareth",
+    "rating": 83,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-261855.d9104e33b6382c0c1d7009b5df9e7643c153920d7afb4bc0234ecc73791d6827.webp",
+    "url": "https://www.fut.gg/players/261855-kika-nazareth/27-261855/",
+    "eaId": 261855,
+    "slug": "27-261855",
+    "price": 24000
   },
   {
     "name": "Salma Paralluelo",
@@ -140,7 +140,7 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": null
+    "price": 295000
   },
   {
     "name": "Mariona",
@@ -153,7 +153,7 @@
     "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
     "eaId": 237288,
     "slug": "27-237288",
-    "price": null
+    "price": 87500
   },
   {
     "name": "Ferran Torres",
@@ -179,7 +179,7 @@
     "url": "https://www.fut.gg/players/70786-josh-king/27-50402434/",
     "eaId": 50402434,
     "slug": "27-50402434",
-    "price": null
+    "price": 42000
   },
   {
     "name": "Pedri",
@@ -192,7 +192,7 @@
     "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
     "eaId": 251854,
     "slug": "27-251854",
-    "price": null
+    "price": 235000
   },
   {
     "name": "Stanway",
@@ -205,7 +205,7 @@
     "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
     "eaId": 243404,
     "slug": "27-243404",
-    "price": null
+    "price": 49000
   },
   {
     "name": "Patri Guijarro",
@@ -218,7 +218,7 @@
     "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
     "eaId": 237289,
     "slug": "27-237289",
-    "price": null
+    "price": 223000
   },
   {
     "name": "Eric García",
@@ -231,7 +231,7 @@
     "url": "https://www.fut.gg/players/245037-eric-garcia/27-245037/",
     "eaId": 245037,
     "slug": "27-245037",
-    "price": null
+    "price": 30000
   },
   {
     "name": "Joan García",
@@ -244,7 +244,7 @@
     "url": "https://www.fut.gg/players/259532-joan-garcia/27-259532/",
     "eaId": 259532,
     "slug": "27-259532",
-    "price": null
+    "price": 38750
   },
   {
     "name": "Raphinha",
@@ -257,6 +257,6 @@
     "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
     "eaId": 233419,
     "slug": "27-233419",
-    "price": null
+    "price": 499000
   }
 ]
