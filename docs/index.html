@@ -1,761 +1,1062 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#070810">
+<meta charset="UTF-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
 <title>FutFlex</title>
 
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <style>
-:root{
-  --bg:#070810;
-  --panel:#0d101b;
-  --panel2:#111522;
-  --line:#242b42;
-  --pink:#ff176f;
-  --pink2:#ff3d8d;
-  --cyan:#27f5d0;
-  --purple:#8b5cff;
-  --text:#f6f7ff;
-  --muted:#818aa8;
+:root {
+    --bg: #07090d;
+    --panel: #0d1118;
+    --panel2: #111722;
+    --border: rgba(255,255,255,.08);
+    --text: #f5f7fb;
+    --muted: #8c95a5;
+    --accent: #7c5cff;
+    --accent2: #00e5ff;
+    --green: #36e28b;
+    --red: #ff5571;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+    box-sizing: border-box;
 }
 
-html{
-  background:var(--bg);
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(124,92,255,.18),
+            transparent 42%
+        ),
+        var(--bg);
+    color: var(--text);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    min-height: 100vh;
 }
 
-body{
-  min-height:100%;
-  background:
-    radial-gradient(circle at 90% 0%, rgba(255,23,111,.12), transparent 30%),
-    radial-gradient(circle at 0% 35%, rgba(91,50,180,.10), transparent 28%),
-    var(--bg);
-  color:var(--text);
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  padding:
-    calc(env(safe-area-inset-top,0px) + 18px)
-    14px
-    calc(env(safe-area-inset-bottom,0px) + 30px);
+button {
+    font: inherit;
 }
 
-/* HEADER */
-
-.header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  margin-bottom:22px;
+.app {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    padding: 18px;
 }
 
-.brand{
-  min-width:0;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
 }
 
-.logo{
-  font-size:30px;
-  line-height:1;
-  font-weight:900;
-  font-style:italic;
-  letter-spacing:-1.5px;
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
 }
 
-.logo span{
-  color:var(--pink);
+.logo span {
+    color: var(--accent2);
 }
 
-.tagline{
-  color:#929bc1;
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:3px;
-  margin-top:7px;
+.credit {
+    color: var(--muted);
+    font-size: 12px;
 }
 
-.credit{
-  border:1px solid rgba(255,23,111,.5);
-  background:rgba(255,23,111,.07);
-  border-radius:16px;
-  padding:8px 11px;
-  box-shadow:
-    inset 0 0 20px rgba(255,23,111,.04),
-    0 0 18px rgba(255,23,111,.08);
-  flex:none;
+.hero {
+    padding: 26px 22px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,92,255,.13),
+            rgba(0,229,255,.035)
+        ),
+        var(--panel);
+    box-shadow: 0 20px 60px rgba(0,0,0,.28);
+    margin-bottom: 20px;
 }
 
-.credit small{
-  display:block;
-  color:var(--muted);
-  font-size:8px;
-  text-transform:uppercase;
-  letter-spacing:1px;
+.live {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
 }
 
-.credit b{
-  font-size:12px;
+.hero h1 {
+    margin: 0;
+    font-size: 31px;
+    letter-spacing: -1.4px;
 }
 
-/* HERO */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  border:1px solid #252b45;
-  border-radius:22px;
-  padding:22px 18px;
-  margin-bottom:16px;
-  background:
-    linear-gradient(125deg,rgba(14,18,31,.98),rgba(17,10,28,.95));
+.hero p {
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 10px 0 0;
 }
 
-.hero:before{
-  content:"";
-  position:absolute;
-  width:180px;
-  height:180px;
-  right:-70px;
-  top:-90px;
-  border-radius:50%;
-  background:var(--pink);
-  filter:blur(80px);
-  opacity:.18;
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 2px 12px;
 }
 
-.live{
-  position:relative;
-  color:var(--pink);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:7px;
+.section-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .5px;
 }
 
-.hero h1{
-  position:relative;
-  font-size:26px;
-  line-height:1.05;
-  letter-spacing:-1px;
+.refresh {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.hero p{
-  position:relative;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.5;
-  margin-top:8px;
-  max-width:270px;
+.players {
+    display: grid;
+    gap: 10px;
 }
 
-/* SECTION */
-
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  margin:20px 2px 11px;
+.player {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 11px;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    background: rgba(13,17,24,.86);
+    cursor: pointer;
+    transition: .18s ease;
 }
 
-.section-title{
-  display:flex;
-  align-items:center;
-  gap:10px;
+.player:active {
+    transform: scale(.985);
 }
 
-.bars{
-  display:flex;
-  align-items:flex-end;
-  gap:3px;
-  height:22px;
+.player:hover {
+    border-color: rgba(124,92,255,.4);
+    transform: translateY(-1px);
 }
 
-.bars i{
-  display:block;
-  width:4px;
-  border-radius:4px;
-  background:var(--pink);
+.rank {
+    width: 22px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
 }
 
-.bars i:nth-child(1){height:9px}
-.bars i:nth-child(2){height:15px}
-.bars i:nth-child(3){height:21px}
-
-.section-head h2{
-  font-size:19px;
-  letter-spacing:-.4px;
+.card-img {
+    width: 65px;
+    height: 82px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.meta{
-  color:var(--muted);
-  font-size:10px;
-  margin-top:2px;
+.player-info {
+    min-width: 0;
+    flex: 1;
 }
 
-.refresh{
-  border:1px solid rgba(255,23,111,.65);
-  color:var(--pink2);
-  background:rgba(255,23,111,.06);
-  border-radius:999px;
-  min-height:38px;
-  padding:0 14px;
-  font-size:12px;
-  font-weight:700;
-  cursor:pointer;
+.player-name {
+    font-weight: 800;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* PLAYERS */
-
-.player{
-  position:relative;
-  display:grid;
-  grid-template-columns:25px 72px minmax(0,1fr) 18px;
-  align-items:center;
-  gap:10px;
-
-  background:
-    linear-gradient(110deg,rgba(16,19,31,.98),rgba(9,12,23,.98));
-
-  border:1px solid var(--line);
-  border-radius:18px;
-
-  padding:10px;
-  margin-bottom:9px;
-
-  overflow:hidden;
-  cursor:pointer;
+.player-meta {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11px;
 }
 
-.player:active{
-  transform:scale(.99);
+.price {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 800;
 }
 
-.player:first-child{
-  border-color:rgba(255,23,111,.45);
-  box-shadow:0 0 25px rgba(255,23,111,.07);
+.arrow {
+    color: var(--accent2);
+    font-size: 18px;
 }
 
-.rank{
-  text-align:center;
-  font-size:16px;
-  font-weight:800;
-  color:#8d96bc;
+.footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    padding: 30px 0 12px;
 }
 
-.player:first-child .rank{
-  color:#ffc94d;
+/* DETAIL */
+
+.detail {
+    display: none;
 }
 
-.card-wrap{
-  height:88px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.back {
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    padding: 0;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.card-img{
-  display:block;
-  width:72px;
-  height:88px;
-  object-fit:contain;
+.detail-card {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    border-radius: 25px;
+    padding: 22px;
 }
 
-.player-info{
-  min-width:0;
+.player-top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-.player-name{
-  font-size:16px;
-  font-weight:800;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+.detail-image {
+    width: 125px;
+    height: 155px;
+    object-fit: contain;
 }
 
-.player-stats{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-top:5px;
+.detail-name {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
 }
 
-.rating{
-  color:var(--cyan);
-  font-size:15px;
-  font-weight:900;
+.detail-meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
 }
 
-.position{
-  color:#9ca5c8;
-  font-size:12px;
-  font-weight:700;
+.market {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 18px;
+    background: var(--panel2);
 }
 
-.rarity{
-  display:inline-block;
-  max-width:150px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-
-  color:#d8cfff;
-  border:1px solid rgba(139,92,255,.6);
-  background:rgba(139,92,255,.08);
-
-  border-radius:7px;
-  padding:3px 6px;
-  font-size:8px;
-  font-weight:800;
-  text-transform:uppercase;
+.current-price {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1px;
 }
 
-.club{
-  color:var(--muted);
-  font-size:10px;
-  margin-top:7px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+.change {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 800;
 }
 
-.arrow{
-  color:#8f99c2;
-  font-size:22px;
-  font-weight:300;
+.change.up {
+    color: var(--green);
 }
 
-/* STATES */
-
-.empty,
-.error{
-  text-align:center;
-  color:var(--muted);
-  padding:40px 10px;
-  font-size:13px;
+.change.down {
+    color: var(--red);
 }
 
-/* FOOTER */
-
-.footer{
-  margin-top:24px;
-  padding:18px 0 5px;
-  border-top:1px solid rgba(255,255,255,.06);
-  text-align:center;
+.change.neutral {
+    color: var(--muted);
 }
 
-.footer-logo{
-  font-size:17px;
-  font-weight:900;
-  font-style:italic;
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 20px;
 }
 
-.footer-logo span{
-  color:var(--pink);
+.tab {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    padding: 10px 4px;
+    border-radius: 11px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
 }
 
-.footer p{
-  color:var(--muted);
-  font-size:9px;
-  margin-top:5px;
+.tab.active {
+    background: rgba(124,92,255,.17);
+    color: white;
+    border-color: rgba(124,92,255,.45);
 }
 
-.footer a{
-  color:var(--pink2);
-  text-decoration:none;
-  font-weight:700;
+.chart-wrap {
+    margin-top: 15px;
+    height: 230px;
+    position: relative;
 }
 
-/* SMALL PHONES */
+.chart {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
 
-@media(max-width:360px){
-  .logo{
-    font-size:25px;
-  }
+.chart-line {
+    fill: none;
+    stroke: var(--accent2);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
 
-  .credit{
-    padding:7px 9px;
-  }
+.chart-area {
+    fill: url(#areaGradient);
+    opacity: .28;
+}
 
-  .player{
-    grid-template-columns:20px 62px minmax(0,1fr) 14px;
-    gap:7px;
-  }
+.chart-grid {
+    stroke: rgba(255,255,255,.055);
+    stroke-width: 1;
+}
 
-  .card-wrap{
-    height:78px;
-  }
+.chart-point {
+    fill: var(--accent2);
+}
 
-  .card-img{
-    width:62px;
-    height:78px;
-  }
+.chart-label {
+    fill: var(--muted);
+    font-size: 9px;
+}
 
-  .player-name{
-    font-size:14px;
-  }
+.empty {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 20px;
+}
+
+.loading {
+    text-align: center;
+    color: var(--muted);
+    padding: 35px;
+}
+
+@media (max-width: 430px) {
+    .app {
+        padding: 14px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .detail-image {
+        width: 105px;
+        height: 135px;
+    }
+
+    .detail-name {
+        font-size: 21px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header class="header">
+<div class="app">
 
-  <div class="brand">
-    <div class="logo">
-      Fut<span>Flex</span>
-    </div>
+    <header class="header">
+        <div class="logo">Fut<span>Flex</span></div>
+        <div class="credit">@Mattedark10</div>
+    </header>
 
-    <div class="tagline">
-      TRENDING PLAYERS
-    </div>
-  </div>
+    <!-- LIST -->
 
-  <div class="credit">
-    <small>Created by</small>
-    <b>@Mattedark10</b>
-  </div>
+    <main id="home">
 
-</header>
+        <section class="hero">
+            <div class="live">● LIVE MARKET</div>
+            <h1>Trending Players</h1>
+            <p>
+                Track real-time player trends and your own price history.
+            </p>
+        </section>
 
-
-<section class="hero">
-
-  <div class="live">
-    ● LIVE MARKET
-  </div>
-
-  <h1>
-    Trending Players
-  </h1>
-
-  <p>
-    Discover the most viewed FC 27 players currently trending on FUT.GG.
-  </p>
-
-</section>
-
-
-<section>
-
-  <div class="section-head">
-
-    <div class="section-title">
-
-      <div class="bars">
-        <i></i>
-        <i></i>
-        <i></i>
-      </div>
-
-      <div>
-        <h2>Top Trending</h2>
-        <div class="meta" id="status">
-          Loading players...
+        <div class="section-head">
+            <div class="section-title">TOP TRENDING</div>
+            <button class="refresh" id="refreshBtn">
+                Refresh
+            </button>
         </div>
-      </div>
 
-    </div>
+        <div id="players" class="players">
+            <div class="loading">
+                Loading market...
+            </div>
+        </div>
 
-    <button class="refresh" id="refresh">
-      ↻ Refresh
-    </button>
+        <div class="footer">
+            FutFlex · @Mattedark10
+        </div>
 
-  </div>
+    </main>
 
-  <div id="players"></div>
+    <!-- DETAIL -->
 
-</section>
+    <main id="detail" class="detail">
 
+        <button class="back" id="backBtn">
+            ← Back
+        </button>
 
-<footer class="footer">
+        <section class="detail-card">
 
-  <div class="footer-logo">
-    Fut<span>Flex</span>
-  </div>
+            <div class="player-top">
 
-  <p>
-    Made by
-    <a href="https://t.me/Mattedark10">
-      @Mattedark10
-    </a>
-  </p>
+                <img
+                    id="detailImage"
+                    class="detail-image"
+                    src=""
+                    alt=""
+                >
 
-</footer>
+                <div>
+                    <div id="detailName" class="detail-name"></div>
 
+                    <div id="detailMeta" class="detail-meta"></div>
+                </div>
+
+            </div>
+
+            <div class="market">
+
+                <div id="currentPrice" class="current-price">
+                    —
+                </div>
+
+                <div id="change" class="change neutral">
+                    No history yet
+                </div>
+
+            </div>
+
+            <div class="tabs">
+
+                <button
+                    class="tab active"
+                    data-period="6"
+                >
+                    6H
+                </button>
+
+                <button
+                    class="tab"
+                    data-period="12"
+                >
+                    12H
+                </button>
+
+                <button
+                    class="tab"
+                    data-period="24"
+                >
+                    24H
+                </button>
+
+                <button
+                    class="tab"
+                    data-period="72"
+                >
+                    3 DAYS
+                </button>
+
+            </div>
+
+            <div class="chart-wrap">
+                <svg
+                    id="chart"
+                    class="chart"
+                    viewBox="0 0 600 230"
+                    preserveAspectRatio="none"
+                ></svg>
+            </div>
+
+        </section>
+
+        <div class="footer">
+            FutFlex · @Mattedark10
+        </div>
+
+    </main>
+
+</div>
 
 <script>
-const tg =
-  window.Telegram &&
-  window.Telegram.WebApp;
+const tg = window.Telegram?.WebApp;
 
 if (tg) {
-  tg.ready();
-  tg.expand();
+    tg.ready();
+    tg.expand();
+}
 
-  if (tg.setHeaderColor) {
-    tg.setHeaderColor("#070810");
-  }
+const playersEl = document.getElementById("players");
+const homeEl = document.getElementById("home");
+const detailEl = document.getElementById("detail");
 
-  if (tg.setBackgroundColor) {
-    tg.setBackgroundColor("#070810");
-  }
+const detailImage = document.getElementById("detailImage");
+const detailName = document.getElementById("detailName");
+const detailMeta = document.getElementById("detailMeta");
+const currentPrice = document.getElementById("currentPrice");
+const changeEl = document.getElementById("change");
+const chart = document.getElementById("chart");
+
+let players = [];
+let history = {};
+let selectedPlayer = null;
+let selectedPeriod = 6;
+
+
+function formatPrice(value) {
+    if (value === null || value === undefined) {
+        return "—";
+    }
+
+    const number = Number(value);
+
+    if (!Number.isFinite(number) || number <= 0) {
+        return "—";
+    }
+
+    return number.toLocaleString("en-US") + " coins";
 }
 
 
-const playersEl =
-  document.getElementById("players");
-
-const statusEl =
-  document.getElementById("status");
-
-const refreshButton =
-  document.getElementById("refresh");
-
-
 function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(
-      /[&<>"']/g,
-      char => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#039;"
-      })[char]
+    return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+
+async function loadData() {
+
+    try {
+
+        const cacheBust = Date.now();
+
+        const [
+            playersResponse,
+            historyResponse
+        ] = await Promise.all([
+            fetch(`trending.json?t=${cacheBust}`, {
+                cache: "no-store"
+            }),
+            fetch(`price_history.json?t=${cacheBust}`, {
+                cache: "no-store"
+            })
+        ]);
+
+        if (!playersResponse.ok) {
+            throw new Error("Trending data unavailable");
+        }
+
+        players = await playersResponse.json();
+
+        if (historyResponse.ok) {
+            history = await historyResponse.json();
+        } else {
+            history = {};
+        }
+
+        renderPlayers();
+
+    } catch (error) {
+
+        console.error(error);
+
+        playersEl.innerHTML = `
+            <div class="loading">
+                Unable to load market data.
+            </div>
+        `;
+    }
+}
+
+
+function renderPlayers() {
+
+    if (!players.length) {
+        playersEl.innerHTML = `
+            <div class="loading">
+                No trending players.
+            </div>
+        `;
+        return;
+    }
+
+    playersEl.innerHTML = players
+        .map((player, index) => {
+
+            return `
+                <article
+                    class="player"
+                    data-id="${escapeHtml(player.eaId)}"
+                >
+
+                    <div class="rank">
+                        ${index + 1}
+                    </div>
+
+                    <img
+                        class="card-img"
+                        src="${escapeHtml(player.img)}"
+                        alt=""
+                        loading="lazy"
+                    >
+
+                    <div class="player-info">
+
+                        <div class="player-name">
+                            ${escapeHtml(player.name)}
+                        </div>
+
+                        <div class="player-meta">
+                            ${escapeHtml(player.rating)}
+                            ·
+                            ${escapeHtml(player.position)}
+                            ·
+                            ${escapeHtml(player.rarity)}
+                        </div>
+
+                    </div>
+
+                    <div class="price">
+                        ${formatPrice(player.price)}
+                    </div>
+
+                    <div class="arrow">
+                        ›
+                    </div>
+
+                </article>
+            `;
+        })
+        .join("");
+
+    document
+        .querySelectorAll(".player")
+        .forEach(element => {
+
+            element.addEventListener("click", () => {
+
+                const id = element.dataset.id;
+
+                const player = players.find(
+                    item => String(item.eaId) === String(id)
+                );
+
+                if (player) {
+                    openPlayer(player);
+                }
+
+            });
+
+        });
+}
+
+
+function openPlayer(player) {
+
+    selectedPlayer = player;
+    selectedPeriod = 6;
+
+    homeEl.style.display = "none";
+    detailEl.style.display = "block";
+
+    detailImage.src = player.img || "";
+    detailImage.alt = player.name || "";
+
+    detailName.textContent = player.name || "";
+
+    detailMeta.textContent =
+        `${player.rating || ""} ${player.position || ""} · ` +
+        `${player.club || ""} · ${player.rarity || ""}`;
+
+    document
+        .querySelectorAll(".tab")
+        .forEach(tab => {
+            tab.classList.toggle(
+                "active",
+                Number(tab.dataset.period) === selectedPeriod
+            );
+        });
+
+    updateDetail();
+}
+
+
+function closePlayer() {
+
+    selectedPlayer = null;
+
+    detailEl.style.display = "none";
+    homeEl.style.display = "block";
+}
+
+
+function getPlayerPoints(player) {
+
+    if (!player) {
+        return [];
+    }
+
+    const data = history[String(player.eaId)];
+
+    if (!data || !Array.isArray(data.points)) {
+        return [];
+    }
+
+    return data.points
+        .map(point => ({
+            timestamp: new Date(point.timestamp),
+            price: Number(point.price)
+        }))
+        .filter(point =>
+            !Number.isNaN(point.timestamp.getTime()) &&
+            Number.isFinite(point.price) &&
+            point.price > 0
+        )
+        .sort(
+            (a, b) =>
+                a.timestamp.getTime() -
+                b.timestamp.getTime()
+        );
+}
+
+
+function updateDetail() {
+
+    if (!selectedPlayer) {
+        return;
+    }
+
+    currentPrice.textContent =
+        formatPrice(selectedPlayer.price);
+
+    const points = getPlayerPoints(selectedPlayer);
+
+    const cutoff =
+        Date.now() -
+        selectedPeriod * 60 * 60 * 1000;
+
+    const filtered = points.filter(
+        point =>
+            point.timestamp.getTime() >= cutoff
+    );
+
+    updateChange(filtered);
+
+    drawChart(filtered);
+}
+
+
+function updateChange(points) {
+
+    if (points.length < 2) {
+
+        changeEl.textContent =
+            "Collecting price history...";
+
+        changeEl.className =
+            "change neutral";
+
+        return;
+    }
+
+    const first = points[0].price;
+    const last =
+        selectedPlayer.price ||
+        points[points.length - 1].price;
+
+    if (!first || !last) {
+        return;
+    }
+
+    const percent =
+        ((last - first) / first) * 100;
+
+    const rounded =
+        percent.toFixed(2);
+
+    if (percent > 0) {
+
+        changeEl.textContent =
+            `▲ +${rounded}%`;
+
+        changeEl.className =
+            "change up";
+
+    } else if (percent < 0) {
+
+        changeEl.textContent =
+            `▼ ${rounded}%`;
+
+        changeEl.className =
+            "change down";
+
+    } else {
+
+        changeEl.textContent =
+            "● 0.00%";
+
+        changeEl.className =
+            "change neutral";
+    }
+}
+
+
+function drawChart(points) {
+
+    chart.innerHTML = "";
+
+    if (points.length < 2) {
+
+        chart.innerHTML = `
+            <text
+                x="300"
+                y="115"
+                text-anchor="middle"
+                class="chart-label"
+            >
+                Not enough history yet
+            </text>
+        `;
+
+        return;
+    }
+
+    const width = 600;
+    const height = 230;
+
+    const paddingLeft = 12;
+    const paddingRight = 12;
+    const paddingTop = 20;
+    const paddingBottom = 28;
+
+    const chartWidth =
+        width - paddingLeft - paddingRight;
+
+    const chartHeight =
+        height - paddingTop - paddingBottom;
+
+    const values =
+        points.map(point => point.price);
+
+    let min =
+        Math.min(...values);
+
+    let max =
+        Math.max(...values);
+
+    if (min === max) {
+        min -= 1;
+        max += 1;
+    }
+
+    const range = max - min;
+
+    // Grid
+
+    for (let i = 0; i < 4; i++) {
+
+        const y =
+            paddingTop +
+            (chartHeight * i / 3);
+
+        chart.insertAdjacentHTML(
+            "beforeend",
+            `
+                <line
+                    x1="${paddingLeft}"
+                    x2="${width - paddingRight}"
+                    y1="${y}"
+                    y2="${y}"
+                    class="chart-grid"
+                />
+            `
+        );
+    }
+
+    const coordinates =
+        points.map((point, index) => {
+
+            const x =
+                paddingLeft +
+                (index / (points.length - 1)) *
+                chartWidth;
+
+            const y =
+                paddingTop +
+                (1 -
+                    (point.price - min) / range
+                ) *
+                chartHeight;
+
+            return { x, y };
+        });
+
+    const linePath =
+        coordinates
+            .map(
+                (point, index) =>
+                    `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`
+            )
+            .join(" ");
+
+    const areaPath =
+        `${linePath}
+         L ${coordinates[coordinates.length - 1].x} ${height - paddingBottom}
+         L ${coordinates[0].x} ${height - paddingBottom}
+         Z`;
+
+    chart.insertAdjacentHTML(
+        "beforeend",
+        `
+            <defs>
+                <linearGradient
+                    id="areaGradient"
+                    x1="0"
+                    x2="0"
+                    y1="0"
+                    y2="1"
+                >
+                    <stop
+                        offset="0%"
+                        stop-color="#00e5ff"
+                        stop-opacity=".35"
+                    />
+                    <stop
+                        offset="100%"
+                        stop-color="#00e5ff"
+                        stop-opacity="0"
+                    />
+                </linearGradient>
+            </defs>
+
+            <path
+                d="${areaPath}"
+                class="chart-area"
+            />
+
+            <path
+                d="${linePath}"
+                class="chart-line"
+            />
+        `
+    );
+
+    // Ultimo punto
+
+    const last =
+        coordinates[coordinates.length - 1];
+
+    chart.insertAdjacentHTML(
+        "beforeend",
+        `
+            <circle
+                cx="${last.x}"
+                cy="${last.y}"
+                r="4"
+                class="chart-point"
+            />
+        `
     );
 }
 
 
-function renderPlayers(players) {
+document
+    .querySelectorAll(".tab")
+    .forEach(tab => {
 
-  if (!players.length) {
-    playersEl.innerHTML =
-      `<div class="empty">
-        No trending players available.
-      </div>`;
+        tab.addEventListener("click", () => {
 
-    return;
-  }
+            selectedPeriod =
+                Number(tab.dataset.period);
 
+            document
+                .querySelectorAll(".tab")
+                .forEach(item => {
+                    item.classList.toggle(
+                        "active",
+                        item === tab
+                    );
+                });
 
-  playersEl.innerHTML =
-    players.map((player, index) => {
-
-      const name =
-        escapeHtml(player.name);
-
-      const rating =
-        escapeHtml(player.rating);
-
-      const position =
-        escapeHtml(player.position);
-
-      const rarity =
-        escapeHtml(player.rarity);
-
-      const club =
-        escapeHtml(player.club);
-
-      const image =
-        escapeHtml(player.img);
-
-      const url =
-        escapeHtml(player.url);
-
-
-      return `
-        <article
-          class="player"
-          data-url="${url}"
-        >
-
-          <div class="rank">
-            ${index + 1}
-          </div>
-
-
-          <div class="card-wrap">
-
-            ${
-              image
-                ? `
-                  <img
-                    class="card-img"
-                    src="${image}"
-                    alt="${name}"
-                    loading="lazy"
-                  >
-                `
-                : ""
-            }
-
-          </div>
-
-
-          <div class="player-info">
-
-            <div class="player-name">
-              ${name}
-            </div>
-
-            <div class="player-stats">
-
-              <span class="rating">
-                ${rating}
-              </span>
-
-              <span class="position">
-                ${position}
-              </span>
-
-              ${
-                rarity
-                  ? `
-                    <span class="rarity">
-                      ${rarity}
-                    </span>
-                  `
-                  : ""
-              }
-
-            </div>
-
-            <div class="club">
-              ${club}
-            </div>
-
-          </div>
-
-
-          <div class="arrow">
-            ›
-          </div>
-
-        </article>
-      `;
-
-    }).join("");
-
-
-  document
-    .querySelectorAll(".player")
-    .forEach(element => {
-
-      element.addEventListener(
-        "click",
-        () => {
-
-          const url =
-            element.dataset.url;
-
-          if (!url) {
-            return;
-          }
-
-          if (tg && tg.openLink) {
-            tg.openLink(url);
-          } else {
-            window.open(
-              url,
-              "_blank",
-              "noopener"
-            );
-          }
-
-        }
-      );
+            updateDetail();
+        });
 
     });
 
-}
+
+document
+    .getElementById("backBtn")
+    .addEventListener("click", closePlayer);
 
 
-async function loadPlayers() {
+document
+    .getElementById("refreshBtn")
+    .addEventListener("click", async () => {
 
-  refreshButton.disabled = true;
-  refreshButton.textContent = "↻ Loading";
+        const button =
+            document.getElementById("refreshBtn");
 
-  statusEl.textContent =
-    "Updating trending players...";
+        button.textContent = "Updating...";
 
+        await loadData();
 
-  try {
-
-    const response =
-      await fetch(
-        "trending.json?t=" +
-        Date.now(),
-        {
-          cache: "no-store"
-        }
-      );
+        button.textContent = "Refresh";
+    });
 
 
-    if (!response.ok) {
-      throw new Error(
-        "HTTP " + response.status
-      );
-    }
-
-
-    const data =
-      await response.json();
-
-
-    const players =
-      Array.isArray(data)
-        ? data.slice(0, 20)
-        : [];
-
-
-    renderPlayers(players);
-
-
-    statusEl.textContent =
-      `${players.length} players • Live FUT.GG data`;
-
-
-  } catch (error) {
-
-    console.error(error);
-
-    playersEl.innerHTML =
-      `<div class="error">
-        Unable to load trending players.
-      </div>`;
-
-    statusEl.textContent =
-      "Data unavailable";
-
-  } finally {
-
-    refreshButton.disabled = false;
-    refreshButton.textContent =
-      "↻ Refresh";
-
-  }
-
-}
-
-
-refreshButton.addEventListener(
-  "click",
-  loadPlayers
-);
-
-
-loadPlayers();
+loadData();
 </script>
 
 </body>
