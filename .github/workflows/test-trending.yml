@@ -1,13 +1,20 @@
-name: Test FUTGG Trending
+name: FutFlex Trending & Price History
 
 on:
+  schedule:
+    - cron: "*/5 * * * *"
+
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: futflex-trending
+  cancel-in-progress: false
+
 jobs:
-  test:
+  trending:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,19 +29,19 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Update Trending Players
+      - name: Update Trending & Price History
         run: python trending.py
 
-      - name: Commit trending data
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add docs/trending.json
+          git add docs/trending.json docs/price_history.json
 
           if git diff --cached --quiet; then
-            echo "No changes to trending.json"
+            echo "No changes to commit"
           else
-            git commit -m "Update trending players"
+            git commit -m "Update FutFlex market data"
             git push
           fi
