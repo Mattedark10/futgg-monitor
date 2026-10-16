@@ -24,7 +24,7 @@ response = requests.get(
     API_URL,
     headers=HEADERS,
     params=PARAMS,
-    timeout=30
+    timeout=30,
 )
 
 response.raise_for_status()
@@ -40,9 +40,42 @@ for player in players:
 
     player_url = player.get("url") or ""
 
-    trending.append({
-        "name": player.get("cardName") or player.get("commonName") or "",
-        "rating": player.get("overall"),
-        "position": player.get("position") or "",
-        "rarity": player.get("rarityName") or "",
-        "club": club.get
+    trending.append(
+        {
+            "name": player.get("cardName") or player.get("commonName") or "",
+            "rating": player.get("overall"),
+            "position": player.get("position") or "",
+            "rarity": player.get("rarityName") or "",
+            "club": club.get("name") or "",
+            "league": league.get("name") or "",
+            "img": player.get("cardImageUrl") or "",
+            "url": (
+                SITE_URL + player_url
+                if player_url.startswith("/")
+                else player_url
+            ),
+            "eaId": player.get("eaId"),
+            "slug": player.get("slug") or "",
+        }
+    )
+
+os.makedirs("docs", exist_ok=True)
+
+with open("docs/trending.json", "w", encoding="utf-8") as file:
+    json.dump(
+        trending,
+        file,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+print(f"Saved {len(trending)} trending players.")
+print()
+
+for index, player in enumerate(trending, start=1):
+    print(
+        f"{index}. "
+        f"{player['name']} "
+        f"{player['rating']} "
+        f"{player['position']}"
+    )
