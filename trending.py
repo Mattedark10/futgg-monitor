@@ -10,44 +10,44 @@ HEADERS = {
     )
 }
 
-response = requests.get(
-    JS_URL,
-    headers=HEADERS,
-    timeout=30
-)
-
+response = requests.get(JS_URL, headers=HEADERS, timeout=30)
 response.raise_for_status()
 
 js = response.text
 
 print("STATUS:", response.status_code)
-print("JS SIZE:", len(js), "characters")
 
-# =========================
-# FIND Rm DEFINITION
-# =========================
-
-search_terms = [
-    "Rm=",
-    "searchByGameSlug",
-    "searchCardImages",
-]
-
-for term in search_terms:
+# Find definitions of the route builders used by FUT.GG
+for term in ["tp=", "ip=", "api.fut.gg", "https://api", "api/"]:
     print()
     print("=" * 60)
     print("SEARCHING FOR:", term)
     print("=" * 60)
 
-    position = js.find(term)
+    start = 0
+    found = 0
 
-    if position == -1:
+    while True:
+        position = js.find(term, start)
+
+        if position == -1:
+            break
+
+        found += 1
+
+        print()
+        print("FOUND AT:", position)
+
+        snippet_start = max(0, position - 1500)
+        snippet_end = min(len(js), position + 3000)
+
+        print(js[snippet_start:snippet_end])
+
+        start = position + len(term)
+
+        # Avoid enormous GitHub logs
+        if found >= 5:
+            break
+
+    if found == 0:
         print("NOT FOUND")
-        continue
-
-    print("FOUND AT:", position)
-
-    start = max(0, position - 5000)
-    end = min(len(js), position + 10000)
-
-    print(js[start:end])
