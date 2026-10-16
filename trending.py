@@ -2,10 +2,13 @@ import requests
 import re
 
 # =========================
-# FUT.GG TRENDING JS
+# FUT.GG PLAYER GRID JS
 # =========================
 
-JS_URL = "https://assets.fut.gg/ts/assets/trending-BwWTRUhl.js"
+JS_URL = (
+    "https://assets.fut.gg/ts/assets/"
+    "PlayersConditionalPromiseGrid-CCQRB6py.js"
+)
 
 HEADERS = {
     "User-Agent": (
@@ -29,57 +32,68 @@ print("STATUS:", response.status_code)
 print("JS SIZE:", len(js), "characters")
 
 # =========================
-# SEARCH INTERESTING STRINGS
+# PRINT IMPORTS
 # =========================
 
-strings = re.findall(
-    r'["\']([^"\']{3,500})["\']',
+imports = re.findall(
+    r'["\'](\./[^"\']+\.js)["\']',
     js
 )
 
-interesting = []
+print()
+print("IMPORTED JS FILES:")
+print("------------------")
+
+if imports:
+    for item in dict.fromkeys(imports):
+        print(item)
+else:
+    print("No JS imports found.")
+
+# =========================
+# SEARCH INTERESTING DATA
+# =========================
+
+strings = re.findall(
+    r'["\']([^"\']{2,1000})["\']',
+    js
+)
 
 keywords = [
     "api",
-    "trending",
     "player",
+    "players",
+    "trending",
     "price",
     "fetch",
     "axios",
-    "graphql",
-    "/v1/",
-    "/v2/",
+    "promise",
+    "query",
+    "page",
 ]
 
-for value in strings:
-    lower = value.lower()
+interesting = []
 
-    if any(keyword in lower for keyword in keywords):
+for value in strings:
+    if any(k in value.lower() for k in keywords):
         if value not in interesting:
             interesting.append(value)
 
 print()
-print("INTERESTING JS REFERENCES:")
-print("--------------------------")
+print("INTERESTING REFERENCES:")
+print("-----------------------")
 
-for value in interesting[:200]:
-    print(value)
+if interesting:
+    for value in interesting[:300]:
+        print(value)
+else:
+    print("No interesting references found.")
 
 # =========================
-# SEARCH URLS
+# PRINT BEGINNING OF FILE
 # =========================
-
-urls = re.findall(
-    r'https?://[^"\'\s]+',
-    js
-)
 
 print()
-print("URLS FOUND:")
+print("JS PREVIEW:")
 print("-----------")
-
-if urls:
-    for url in dict.fromkeys(urls):
-        print(url)
-else:
-    print("No full URLs found.")
+print(js[:10000])
