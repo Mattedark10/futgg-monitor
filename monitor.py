@@ -3,13 +3,15 @@ import re
 import json
 import html
 import requests
+from datetime import datetime, timezone
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from datetime import datetime, timezone
 
-# =========================
+
+# ============================================================
 # FUT.GG FEEDS
-# =========================
+# ============================================================
+
 PAGES = {
     "🦸 HEROES": {
         "url": "https://www.fut.gg/fut-gallery/rarities/heroes/",
@@ -23,16 +25,20 @@ PAGES = {
     },
 }
 
-# =========================
+
+# ============================================================
 # TELEGRAM
-# =========================
+# ============================================================
+
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
-# =========================
+
+# ============================================================
 # SETTINGS
-# =========================
-STATE_FILE = "players.json"
+# ============================================================
+
+STATE_FILE = "feed_state.json"
 SITE = "https://www.fut.gg"
 
 HEADERS = {
@@ -44,55 +50,82 @@ HEADERS = {
 }
 
 
-# =========================
-# BASE / HOLO CHECK
-# =========================
+# ============================================================
+# TELEGRAM
+# ============================================================
+
+def send_telegram(message):
+    telegram_url = (
+        f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    )
+
+    response = requests.post(
+        telegram_url,
+        data={
+            "chat_id": CHAT_ID,
+            "text": message,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        },
+        timeout=30,
+    )
+
+    response.raise_for_status()
+
+    print("Telegram notification sent successfully.")
+
+
+# ============================================================
+# CARD VERSION
+# ============================================================
+
 def get_version(item_url):
     response = requests.get(
         item_url,
         headers=HEADERS,
-        timeout=30
+        timeout=30,
     )
 
     response.raise_for_status()
 
     soup = BeautifulSoup(
         response.text,
-        "html.parser"
+        "html.parser",
     )
 
     h1 = soup.find("h1")
 
     if not h1:
         raise Exception(
-            f"Titolo carta non trovato: {item_url}"
+            f"Card title not found: {item_url}"
         )
 
     title = h1.get_text(
         " ",
-        strip=True
+        strip=True,
     )
 
     if re.search(
         r"pristine\s+holographic",
         title,
-        re.I
+        re.I,
     ):
         return "Pristine Holographic"
 
     if re.search(
         r"holographic",
         title,
-        re.I
+        re.I,
     ):
         return "Holographic"
 
     return "Base"
 
 
-# =========================
+# ============================================================
 # FIND CARD LINK
-# =========================
+# ============================================================
+
 def find_card_link(img, soup, item_id):
     pattern = re.compile(
         rf"/players/.*27-{item_id}"
@@ -116,7 +149,7 @@ def find_card_link(img, soup, item_id):
 
         link = parent.find(
             "a",
-            href=pattern
+            href=pattern,
         )
 
         if link:
@@ -124,40 +157,38 @@ def find_card_link(img, soup, item_id):
 
     link = soup.find(
         "a",
-        href=pattern
+        href=pattern,
     )
 
-    return (
-        link["href"]
-        if link
-        else None
-    )
+    if link:
+        return link["href"]
+
+    return None
 
 
-# =========================
+# ============================================================
 # GET FUT.GG PLAYERS
-# =========================
+# ============================================================
+
 def get_players(
     url,
     expected_players,
     distinguish=False,
-    known_versions=None
+    known_versions=None,
 ):
-    known_versions = (
-        known_versions or {}
-    )
+    known_versions = known_versions or {}
 
     response = requests.get(
         url,
         headers=HEADERS,
-        timeout=30
+        timeout=30,
     )
 
     response.raise_for_status()
 
     soup = BeautifulSoup(
         response.text,
-        "html.parser"
+        "html.parser",
     )
 
     heading = soup.find(
@@ -177,30 +208,22 @@ def get_players(
     current = heading.find_next()
 
     while current:
-
         if (
             current.name in ["h2", "h3"]
             and current != heading
         ):
             break
 
-        if hasattr(
-            current,
-            "find_all"
-        ):
-
-            for img in current.find_all(
-                "img"
-            ):
-
+        if hasattr(current, "find_all"):
+            for img in current.find_all("img"):
                 alt = img.get(
                     "alt",
-                    ""
+                    "",
                 ).strip()
 
                 match = re.match(
                     r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
-                    alt
+                    alt,
                 )
 
                 if not match:
@@ -213,147 +236,101 @@ def get_players(
                 }
 
                 if distinguish:
-
                     src = img.get(
                         "src",
-                        ""
+                        "",
                     )
 
                     id_match = re.search(
                         r"27-(\d+)",
-                        src
+                        src,
                     )
 
                     if not id_match:
-                        raise Exception(
-                            f"ID carta non trovato "
-                            f"per '{alt}' | "
-                            f"src='{src}'"
+                        print(
+                            f"WARNING: Card ID not found for {alt}"
                         )
+                        continue
 
-                    item_id = (
-                        id_match.group(1)
-                    )
+                    item_id = id_match.group(1)
 
-                    player["item_id"] = (
-                        item_id
-                    )
+                    player["item_id"] = item_id
 
                     if item_id in known_versions:
-
                         player["version"] = (
-                            known_versions[
-                                item_id
-                            ]
+                            known_versions[item_id]
                         )
 
                     else:
-
                         href = find_card_link(
                             img,
                             soup,
-                            item_id
+                            item_id,
                         )
 
                         if href:
-
-                            player["version"] = (
-                                get_version(
+                            try:
+                                player["version"] = get_version(
                                     urljoin(
                                         SITE,
-                                        href
+                                        href,
                                     )
                                 )
-                            )
+
+                            except Exception as error:
+                                print(
+                                    f"Version detection error: {error}"
+                                )
+
+                                player["version"] = "?"
 
                         else:
+                            player["version"] = "?"
 
-                            print(
-                                "ATTENZIONE: "
-                                f"link non trovato "
-                                f"per '{alt}' "
-                                f"(ID {item_id})"
-                            )
+                players.append(player)
 
-                            player[
-                                "version"
-                            ] = "?"
-
-                players.append(
-                    player
-                )
-
-                if len(players) == expected_players:
+                if len(players) >= expected_players:
                     return players
 
         current = current.find_next()
 
     raise Exception(
-        f"Found {len(players)} players "
-        f"instead of {expected_players} "
-        f"on {url}"
+        f"Found {len(players)} players instead of "
+        f"{expected_players} on {url}"
     )
 
 
-# =========================
-# TELEGRAM
-# =========================
-def send_telegram(message):
-
-    telegram_url = (
-        f"https://api.telegram.org/"
-        f"bot{BOT_TOKEN}/sendMessage"
-    )
-
-    response = requests.post(
-        telegram_url,
-        data={
-            "chat_id": CHAT_ID,
-            "text": message,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": True,
-        },
-        timeout=30,
-    )
-
-    response.raise_for_status()
-
-
-# =========================
+# ============================================================
 # PLAYER TEXT
-# =========================
-def player_text(player):
+# ============================================================
 
+def player_text(player):
     tag = ""
 
-    version = player.get(
-        "version"
-    )
+    version = player.get("version")
 
     if version == "Base":
-
-        tag = (
-            "⚪ <b>BASE</b> · "
-        )
+        tag = "⚪ <b>BASE</b> · "
 
     elif version and version != "?":
+        safe_version = html.escape(
+            version.upper()
+        )
 
         tag = (
-            f"🌈 <b>"
-            f"{html.escape(version.upper())}"
-            f"</b> · "
+            f"🌈 <b>{safe_version}</b> · "
         )
 
     name = html.escape(
-        player["name"]
+        str(player["name"])
     )
 
     rating = html.escape(
-        player["rating"]
+        str(player["rating"])
     )
 
     card = html.escape(
-        player["card"]
+        str(player["card"])
     )
 
     return (
@@ -364,88 +341,109 @@ def player_text(player):
     )
 
 
-# =========================
-# FEED CHANGE CHECK
-# =========================
-def calculate_changes(
-    old_players,
-    new_players
-):
+# ============================================================
+# LOAD STATE
+# ============================================================
 
+def load_state():
+    if not os.path.exists(
+        STATE_FILE
+    ):
+        return {}
+
+    try:
+        with open(
+            STATE_FILE,
+            "r",
+            encoding="utf-8",
+        ) as file:
+            return json.load(file)
+
+    except Exception as error:
+        print(
+            f"Could not load previous feed state: {error}"
+        )
+
+        return {}
+
+
+# ============================================================
+# SAVE STATE
+# ============================================================
+
+def save_state(state):
+    with open(
+        STATE_FILE,
+        "w",
+        encoding="utf-8",
+    ) as file:
+        json.dump(
+            state,
+            file,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    print(
+        f"{STATE_FILE} saved successfully."
+    )
+
+
+# ============================================================
+# COMPARE FEEDS
+# ============================================================
+
+def compare_players(
+    old_players,
+    new_players,
+):
     removed = old_players.copy()
     added = new_players.copy()
 
     for player in old_players:
-
         if player in added:
-
-            added.remove(
-                player
-            )
+            added.remove(player)
 
             if player in removed:
-                removed.remove(
-                    player
-                )
+                removed.remove(player)
 
     return removed, added
 
 
-# =========================
+# ============================================================
 # MAIN
-# =========================
+# ============================================================
+
 def main():
+    print("=" * 60)
+    print("FUTFLEX FUT.GG MONITOR")
+    print("=" * 60)
 
-    check_time = datetime.now(
+    now = datetime.now(
         timezone.utc
-    ).astimezone()
-
-    formatted_time = (
-        check_time.strftime(
-            "%d/%m/%Y %H:%M:%S"
-        )
     )
-
-    print()
-    print("=" * 50)
-    print("FutFlex FUT.GG MONITOR")
-    print("=" * 50)
 
     print(
-        f"Check time: {formatted_time}"
+        "Current UTC time:",
+        now.isoformat(),
     )
 
-    # =========================
-    # LOAD PREVIOUS STATE
-    # =========================
-    if os.path.exists(
-        STATE_FILE
-    ):
-
-        with open(
-            STATE_FILE,
-            "r",
-            encoding="utf-8"
-        ) as file:
-
-            old_state = json.load(
-                file
-            )
-
-    else:
-
-        old_state = {}
+    old_state = load_state()
 
     new_state = {}
+    results = []
 
-    # Salviamo qui il risultato
-    # di ogni feed per Telegram.
-    feed_results = []
-
-    # =========================
+    # ========================================================
     # CHECK EVERY FEED
-    # =========================
+    # ========================================================
+
     for category, config in PAGES.items():
+        print()
+        print("=" * 60)
+        print(
+            f"Checking {category}"
+        )
+        print("=" * 60)
 
         url = config["url"]
 
@@ -455,13 +453,7 @@ def main():
 
         distinguish = config.get(
             "distinguish",
-            False
-        )
-
-        print()
-        print(
-            f"Checking {category} "
-            f"({expected_players} players)..."
+            False,
         )
 
         old_players = old_state.get(
@@ -474,59 +466,59 @@ def main():
             old_players
             and distinguish
         ):
-
             for player in old_players:
+                item_id = player.get(
+                    "item_id"
+                )
+
+                version = player.get(
+                    "version"
+                )
 
                 if (
-                    "item_id" in player
-                    and player.get(
-                        "version"
-                    ) not in (
-                        None,
-                        "?"
-                    )
+                    item_id
+                    and version not in [None, "?"]
                 ):
-
                     known_versions[
-                        player["item_id"]
-                    ] = player[
-                        "version"
-                    ]
+                        item_id
+                    ] = version
 
-        # =========================
-        # DOWNLOAD FEED
-        # =========================
         try:
-
             players = get_players(
                 url,
                 expected_players,
                 distinguish,
-                known_versions
+                known_versions,
             )
 
-        except Exception as exc:
-
+        except Exception as error:
             print(
-                f"ERROR checking "
-                f"{category}: {exc}"
+                f"ERROR while checking {category}: {error}"
             )
 
-            feed_results.append({
+            if old_players is not None:
+                new_state[
+                    category
+                ] = old_players
+
+            results.append({
                 "category": category,
                 "status": "error",
-                "error": str(exc),
+                "error": str(error),
+                "url": url,
             })
 
-            # Non blocchiamo tutto il monitor
             continue
 
+        new_state[
+            category
+        ] = players
+
         print(
-            f"Found {len(players)} players."
+            f"Players found: {len(players)}"
         )
 
         for player in players:
-
             version = ""
 
             if "version" in player:
@@ -535,154 +527,111 @@ def main():
                 )
 
             print(
-                f"- {player['name']} "
-                f"{player['rating']} "
-                f"{player['card']}"
-                f"{version}"
+                "-",
+                player["name"],
+                player["rating"],
+                player["card"],
+                version,
             )
 
-        new_state[
-            category
-        ] = players
-
-        # =========================
+        # ====================================================
         # FIRST SCAN
-        # =========================
+        # ====================================================
+
         if old_players is None:
-
-            print(
-                f"First scan for "
-                f"{category}."
-            )
-
-            feed_results.append({
+            results.append({
                 "category": category,
                 "status": "first_scan",
-                "added": [],
-                "removed": [],
+                "players": players,
+                "url": url,
             })
 
             continue
 
-        # =========================
-        # INCOMPLETE VERSION DATA
-        # =========================
-        if distinguish and (
-            any(
-                "version" not in p
-                for p in old_players
-            )
-            or any(
-                p.get("version") == "?"
-                for p in old_players
-            )
-            or any(
-                p.get("version") == "?"
-                for p in players
-            )
-        ):
+        # ====================================================
+        # INCOMPLETE CARD INFORMATION
+        # ====================================================
 
-            print(
-                f"{category}: "
-                "versioni incomplete."
-            )
+        incomplete = False
 
-            feed_results.append({
+        if distinguish:
+            for player in players:
+                if (
+                    player.get("version")
+                    == "?"
+                ):
+                    incomplete = True
+                    break
+
+        if incomplete:
+            results.append({
                 "category": category,
                 "status": "incomplete",
-                "added": [],
-                "removed": [],
+                "players": players,
+                "url": url,
             })
 
             continue
 
-        # =========================
-        # CHECK CHANGES
-        # =========================
-        if old_players != players:
+        # ====================================================
+        # CHECK FOR CHANGES
+        # ====================================================
 
-            removed, added = (
-                calculate_changes(
-                    old_players,
-                    players
-                )
+        if old_players != players:
+            removed, added = compare_players(
+                old_players,
+                players,
             )
 
-            if not removed and not added:
-
-                print(
-                    f"{category}: "
-                    "player order changed only."
-                )
-
-                feed_results.append({
+            if (
+                not removed
+                and not added
+            ):
+                results.append({
                     "category": category,
                     "status": "unchanged",
-                    "added": [],
-                    "removed": [],
+                    "players": players,
+                    "url": url,
                 })
 
                 continue
 
-            print(
-                f"{category}: "
-                f"CHANGED "
-                f"(+{len(added)} / "
-                f"-{len(removed)})"
-            )
-
-            feed_results.append({
+            results.append({
                 "category": category,
                 "status": "changed",
-                "added": added,
+                "players": players,
                 "removed": removed,
+                "added": added,
+                "url": url,
             })
 
         else:
-
-            print(
-                f"{category}: "
-                "No feed changes."
-            )
-
-            feed_results.append({
+            results.append({
                 "category": category,
                 "status": "unchanged",
-                "added": [],
-                "removed": [],
+                "players": players,
+                "url": url,
             })
 
-    # =========================
+    # ========================================================
     # SAVE CURRENT STATE
-    # =========================
-    with open(
-        STATE_FILE,
-        "w",
-        encoding="utf-8"
-    ) as file:
+    # ========================================================
 
-        json.dump(
-            new_state,
-            file,
-            ensure_ascii=False,
-            indent=2
-        )
-
-    print(
-        "Feed state saved successfully."
+    save_state(
+        new_state
     )
 
-    # =========================
-    # BUILD ALWAYS-ON TELEGRAM
-    # =========================
+    # ========================================================
+    # BUILD TELEGRAM MESSAGE
+    # ========================================================
+
     message = (
         "🤖 <b>FUTFLEX MONITOR</b>\n\n"
-        "✅ <b>Controllo completato</b>\n"
-        f"🕐 {formatted_time}\n\n"
+        "✅ Monitoring check completed\n"
+        f"🕐 {now.strftime('%d/%m/%Y %H:%M:%S')} UTC\n"
     )
 
-    for result in feed_results:
-
+    for result in results:
         category = result[
             "category"
         ]
@@ -691,95 +640,95 @@ def main():
             "status"
         ]
 
+        message += (
+            "\n━━━━━━━━━━━━━━\n"
+            f"{category}\n"
+        )
+
+        # ====================================================
+        # FEED CHANGED
+        # ====================================================
+
         if status == "changed":
-
-            added = result[
-                "added"
-            ]
-
-            removed = result[
-                "removed"
-            ]
-
             message += (
-                f"🚨 <b>{category}</b> "
-                "— <b>CAMBIATA</b>\n"
+                "🚨 <b>FEED UPDATED</b>\n\n"
             )
 
-            for player in removed:
-
+            for player in result[
+                "removed"
+            ]:
                 message += (
                     "🔴 <b>OUT</b> · "
                     f"{player_text(player)}\n"
                 )
 
-            for player in added:
-
+            for player in result[
+                "added"
+            ]:
                 message += (
                     "🟢 <b>IN</b> · "
                     f"{player_text(player)}\n"
                 )
 
-            message += "\n"
+        # ====================================================
+        # NO CHANGES
+        # ====================================================
 
         elif status == "unchanged":
-
             message += (
-                f"🟢 <b>{category}</b> "
-                "— Nessun cambiamento\n"
+                "🟢 No changes detected\n"
             )
+
+        # ====================================================
+        # FIRST SCAN
+        # ====================================================
 
         elif status == "first_scan":
-
             message += (
-                f"🆕 <b>{category}</b> "
-                "— Prima scansione\n"
+                "🆕 First scan saved\n"
             )
+
+        # ====================================================
+        # INCOMPLETE DATA
+        # ====================================================
 
         elif status == "incomplete":
-
             message += (
-                f"⚠️ <b>{category}</b> "
-                "— Dati incompleti\n"
+                "⚠️ Incomplete card version data\n"
             )
+
+        # ====================================================
+        # ERROR
+        # ====================================================
 
         elif status == "error":
-
             error = html.escape(
-                result.get(
-                    "error",
-                    "Errore sconosciuto"
-                )
+                result["error"]
             )
 
             message += (
-                f"🔴 <b>{category}</b> "
-                "— ERRORE\n"
+                "❌ Error while checking feed\n"
                 f"<code>{error}</code>\n"
             )
 
     message += (
-        "\n🔄 Controllo automatico "
-        "ogni 5 minuti."
+        "\n━━━━━━━━━━━━━━\n"
+        "🔄 Next check scheduled in approximately 5 minutes."
     )
 
-    # =========================
+    # ========================================================
     # ALWAYS SEND TELEGRAM
-    # =========================
+    # ========================================================
+
     send_telegram(
         message
     )
 
     print()
-    print(
-        "Telegram monitor notification sent."
-    )
-
-    print("=" * 50)
+    print("=" * 60)
+    print("MONITOR COMPLETED SUCCESSFULLY")
+    print("=" * 60)
 
 
-# =========================
-# START
-# =========================
 if __name__ == "__main__":
     main()
