@@ -24,27 +24,30 @@ print("STATUS:", response.status_code)
 print("JS SIZE:", len(js), "characters")
 
 # =========================
-# FIND useSearchPaginated
+# FIND Rm DEFINITION
 # =========================
 
-target = "useSearchPaginated"
+search_terms = [
+    "Rm=",
+    "searchByGameSlug",
+    "searchCardImages",
+]
 
-position = js.find(target)
+for term in search_terms:
+    print()
+    print("=" * 60)
+    print("SEARCHING FOR:", term)
+    print("=" * 60)
 
-print()
-print("SEARCH RESULT:")
-print("==============")
+    position = js.find(term)
 
-if position == -1:
-    print("useSearchPaginated NOT FOUND")
-else:
-    print("useSearchPaginated FOUND")
-    print("POSITION:", position)
+    if position == -1:
+        print("NOT FOUND")
+        continue
+
+    print("FOUND AT:", position)
 
     start = max(0, position - 5000)
     end = min(len(js), position + 10000)
 
-    print()
-    print("CODE AROUND useSearchPaginated:")
-    print("===============================")
     print(js[start:end])
