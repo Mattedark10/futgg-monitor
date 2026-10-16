@@ -25,32 +25,30 @@ response = requests.get(
     timeout=30
 )
 
-print("REQUEST URL:", response.url)
 print("STATUS:", response.status_code)
-print("CONTENT TYPE:", response.headers.get("content-type"))
-print()
 
-print("RESPONSE:")
-print("=========")
+response.raise_for_status()
 
-try:
-    data = response.json()
+data = response.json()
 
-    print("JSON TYPE:", type(data).__name__)
+print("RESPONSE TYPE:", type(data).__name__)
 
-    if isinstance(data, list):
-        print("PLAYERS RETURNED:", len(data))
-        print()
-        print(json.dumps(data[:3], indent=2, ensure_ascii=False))
+if isinstance(data, list):
+    print("PLAYERS RETURNED:", len(data))
 
-    elif isinstance(data, dict):
-        print("TOP-LEVEL KEYS:", list(data.keys()))
-        print()
-        print(json.dumps(data, indent=2, ensure_ascii=False)[:15000])
+    if data:
+        first = data[0]
 
-    else:
-        print(data)
+        print("\nFIRST PLAYER KEYS:")
+        print(list(first.keys()))
 
-except Exception:
-    print("Response is not JSON.")
-    print(response.text[:5000])
+        print("\nFIRST PLAYER:")
+        print(json.dumps(first, indent=2, ensure_ascii=False))
+
+elif isinstance(data, dict):
+    print("\nTOP LEVEL KEYS:")
+    print(list(data.keys()))
+
+    # Print a shortened version so the GitHub log stays manageable
+    print("\nDATA PREVIEW:")
+    print(json.dumps(data, indent=2, ensure_ascii=False)[:8000])
