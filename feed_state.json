@@ -1,10 +1,10 @@
 {
   "🦸 HEROES": [
     {
-      "name": "Vialli",
+      "name": "Šašić",
       "rating": "89",
       "card": "Base Hero",
-      "item_id": "67342564",
+      "item_id": "67335170",
       "version": "Pristine Holographic"
     },
     {
@@ -75,11 +75,6 @@
       "card": "Destined for Glory"
     },
     {
-      "name": "Jacobo Ramón",
-      "rating": "87",
-      "card": "Future Stars"
-    },
-    {
       "name": "Mora",
       "rating": "87",
       "card": "Future Stars"
@@ -100,9 +95,9 @@
       "card": "Destined for Glory"
     },
     {
-      "name": "Nico Paz",
-      "rating": "87",
-      "card": "Destined for Glory"
+      "name": "Bischof",
+      "rating": "86",
+      "card": "Future Stars"
     },
     {
       "name": "Yohannes",
@@ -110,9 +105,14 @@
       "card": "Future Stars"
     },
     {
-      "name": "Mora",
-      "rating": "87",
-      "card": "Future Stars"
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory"
     }
   ]
 }
