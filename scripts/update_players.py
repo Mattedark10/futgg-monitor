@@ -2,10 +2,11 @@ import csv
 import io
 import json
 import os
+import re
 import time
-import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from html import unescape
 
 
 # ============================================================
@@ -18,40 +19,29 @@ SOURCE_URL = (
     "EA_FC_PLAYERS_DATASET_AND_%20DASHBOARD/data/players.csv"
 )
 
+FUTGG_PLAYERS_URL = "https://www.fut.gg/players/"
+
 OUTPUT = "docs/players.json"
 
-# Optional:
-# If FUTGG_API_KEY is available, the script will try to download
-# the real FC27 Ultimate Team card catalogue.
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/140.0 Safari/537.36 FutFlex/1.0"
+)
+
+TIMEOUT = 120
+
+# Number of FUT.GG catalogue pages to inspect.
 #
-# The API documented publicly exposes:
-# - card_id
-# - card_image_url
-# - card_type
-# - rating
-# - position
-# - club
-# - league
-# - nation
-# - price
+# The public page is dynamically generated, so we use the
+# catalogue pages exposed by FUT.GG when available.
 #
-# and returns 30 cards per page.
-FUTGG_API_URL = "https://api.parse.bot/v1/fut-gg/list_players"
-
-FUTGG_API_KEY = os.getenv("FUTGG_API_KEY", "").strip()
-
-FUTGG_PLATFORM = os.getenv("FUTGG_PLATFORM", "ps").strip().lower()
-
-# Safety limit.
-# FUT.GG's catalogue can contain hundreds of pages.
-# Set to 0 to download every available page.
-MAX_CARD_PAGES = int(os.getenv("FUTGG_MAX_PAGES", "0"))
-
-REQUEST_TIMEOUT = 120
+# 0 = no artificial limit.
+MAX_FUTGG_PAGES = 0
 
 
 # ============================================================
-# GENERIC HELPERS
+# HELPERS
 # ============================================================
 
 def clean(value):
@@ -66,13 +56,6 @@ def number(value):
 
     try:
         return int(float(value))
-    except (ValueError, TypeError):
-        return 0
-
-
-def safe_float(value):
-    try:
-        return float(value)
     except (ValueError, TypeError):
         return 0
 
@@ -117,76 +100,46 @@ def normalize_name(value):
     return " ".join(value.split())
 
 
-def parse_price(value):
-    """
-    Converts prices such as:
-
-        125000
-        "125K"
-        "1.5M"
-        "1.2m"
-
-    into integer coins.
-    """
-
-    if value is None:
-        return None
-
-    if isinstance(value, (int, float)):
-        return int(value)
-
-    text = clean(value).replace(",", "").replace(" ", "")
-
-    if not text:
-        return None
-
-    try:
-        return int(float(text))
-    except ValueError:
-        pass
-
-    multiplier = 1
-
-    if text.upper().endswith("K"):
-        multiplier = 1_000
-        text = text[:-1]
-
-    elif text.upper().endswith("M"):
-        multiplier = 1_000_000
-        text = text[:-1]
-
-    try:
-        return int(float(text) * multiplier)
-    except ValueError:
-        return None
-
-
-# ============================================================
-# HTTP
-# ============================================================
-
-def http_json(url, headers=None, timeout=REQUEST_TIMEOUT):
+def request_bytes(url):
     request = urllib.request.Request(
         url,
-        headers=headers or {
-            "User-Agent": "Mozilla/5.0 FutFlex/1.0"
-        }
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": (
+                "text/html,application/xhtml+xml,"
+                "application/xml;q=0.9,*/*;q=0.8"
+            ),
+            "Accept-Language": "en-US,en;q=0.9",
+            "Cache-Control": "no-cache",
+        },
     )
 
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        data = response.read()
+    with urllib.request.urlopen(
+        request,
+        timeout=TIMEOUT
+    ) as response:
+        return response.read()
+
+
+def download_text(url):
+    data = request_bytes(url)
 
     if not data:
-        raise RuntimeError(f"Empty response from {url}")
+        raise RuntimeError(
+            f"Empty response from {url}"
+        )
 
-    return json.loads(data.decode("utf-8"))
+    return data.decode(
+        "utf-8",
+        errors="replace"
+    )
 
 
 # ============================================================
-# EA CSV
+# EA DATASET
 # ============================================================
 
-def make_base_player(row):
+def make_player(row):
     first = clean(row.get("first_name"))
     last = clean(row.get("last_name"))
     common = clean(row.get("common_name"))
@@ -198,85 +151,94 @@ def make_base_player(row):
         "name": name,
         "rating": number(row.get("overall_rating")),
         "position": clean(row.get("position")),
-        "alternatePositions": clean(row.get("alternate_positions")),
+        "alternatePositions": clean(
+            row.get("alternate_positions")
+        ),
         "club": clean(row.get("club")),
         "league": clean(row.get("league")),
-        "nationality": clean(row.get("nationality")),
+        "nationality": clean(
+            row.get("nationality")
+        ),
         "gender": clean(row.get("gender")),
-        "preferredFoot": clean(row.get("preferred_foot")),
-        "skillMoves": number(row.get("skill_moves")),
-        "weakFoot": number(row.get("weak_foot")),
-        "height": number(row.get("height_cm")),
-        "weight": number(row.get("weight_kg")),
+        "preferredFoot": clean(
+            row.get("preferred_foot")
+        ),
+        "skillMoves": number(
+            row.get("skill_moves")
+        ),
+        "weakFoot": number(
+            row.get("weak_foot")
+        ),
+        "height": number(
+            row.get("height_cm")
+        ),
+        "weight": number(
+            row.get("weight_kg")
+        ),
 
         "playstyles": [
             x.strip()
-            for x in clean(row.get("playstyles")).split(",")
+            for x in clean(
+                row.get("playstyles")
+            ).split(",")
             if x.strip()
         ],
 
         "pace": number(row.get("pace")),
-        "shooting": number(row.get("shooting")),
-        "passing": number(row.get("passing")),
-        "dribbling": number(row.get("dribbling")),
-        "defending": number(row.get("defending")),
-        "physicality": number(row.get("physicality")),
+        "shooting": number(
+            row.get("shooting")
+        ),
+        "passing": number(
+            row.get("passing")
+        ),
+        "dribbling": number(
+            row.get("dribbling")
+        ),
+        "defending": number(
+            row.get("defending")
+        ),
+        "physicality": number(
+            row.get("physicality")
+        ),
 
-        "edition": clean(row.get("edition")),
-        "snapshotDate": clean(row.get("snapshot_date")),
+        "edition": clean(
+            row.get("edition")
+        ),
+        "snapshotDate": clean(
+            row.get("snapshot_date")
+        ),
 
         "price": None,
         "priceChange": 0,
 
-        # Existing headshot field.
         "image": None,
 
-        # New full-card fields.
+        # Full FC27 card fields.
         "cardId": "",
         "cardType": "",
         "cardImage": "",
         "cardImageLarge": "",
 
-        # Useful metadata.
         "isSpecial": False,
+
         "source": "ea_dataset"
     }
 
 
-def download_csv():
+def download_ea_dataset():
     print("Downloading EA FC27 dataset...")
 
-    request = urllib.request.Request(
-        SOURCE_URL,
-        headers={
-            "User-Agent": "Mozilla/5.0 FutFlex/1.0"
-        }
+    csv_text = download_text(SOURCE_URL)
+
+    reader = csv.DictReader(
+        io.StringIO(csv_text)
     )
-
-    with urllib.request.urlopen(
-        request,
-        timeout=REQUEST_TIMEOUT
-    ) as response:
-        data = response.read()
-
-    if not data:
-        raise RuntimeError("Downloaded CSV is empty.")
-
-    print(f"Downloaded {len(data):,} bytes.")
-
-    return data.decode("utf-8-sig")
-
-
-def load_ea_players():
-    csv_text = download_csv()
-
-    reader = csv.DictReader(io.StringIO(csv_text))
 
     players = []
     seen = set()
 
     for row in reader:
-        player = make_base_player(row)
+        player = make_player(row)
 
         ea_id = player["eaId"]
 
@@ -291,346 +253,610 @@ def load_ea_players():
 
     if len(players) < 1000:
         raise RuntimeError(
-            f"Only {len(players)} EA players found. "
-            "The database was not written."
+            f"Only {len(players)} players found."
         )
 
-    players.sort(
-        key=lambda player: (
-            -player["rating"],
-            player["name"].lower()
-        )
+    print(
+        f"EA players loaded: {len(players):,}"
     )
-
-    print(f"EA dataset players: {len(players):,}")
 
     return players
 
 
 # ============================================================
-# FUT.GG CARD CATALOGUE
+# FUT.GG HTML EXTRACTION
 # ============================================================
 
-def futgg_headers():
-    if not FUTGG_API_KEY:
-        return None
+def extract_json_ld(html):
+    """
+    Extract JSON-LD blocks from the page.
+    """
 
-    return {
-        "User-Agent": "FutFlex/1.0",
-        "Accept": "application/json",
-        "X-API-Key": FUTGG_API_KEY
-    }
+    results = []
 
-
-def build_futgg_url(page):
-    separator = "&" if "?" in FUTGG_API_URL else "?"
-
-    return (
-        f"{FUTGG_API_URL}"
-        f"{separator}page={page}"
-        f"&platform={FUTGG_PLATFORM}"
+    pattern = re.compile(
+        r'<script[^>]+type=["\']application/ld\+json'
+        r'["\'][^>]*>(.*?)</script>',
+        re.IGNORECASE | re.DOTALL,
     )
 
+    for match in pattern.finditer(html):
+        raw = unescape(match.group(1)).strip()
 
-def normalize_card(card):
-    if not isinstance(card, dict):
+        if not raw:
+            continue
+
+        try:
+            data = json.loads(raw)
+        except Exception:
+            continue
+
+        results.append(data)
+
+    return results
+
+
+def recursively_find_cards(value):
+    """
+    Search arbitrary Next.js / React data for objects that look
+    like FUT.GG player cards.
+
+    We intentionally don't assume a single internal structure.
+    FUT.GG can change its React/Next.js serialization without
+    changing the public player page.
+    """
+
+    found = []
+
+    if isinstance(value, dict):
+        keys = {
+            str(key).lower()
+            for key in value.keys()
+        }
+
+        has_card_image = any(
+            key in keys
+            for key in (
+                "card_image_url",
+                "cardimageurl",
+                "cardimage",
+                "card_image",
+            )
+        )
+
+        has_card_id = any(
+            key in keys
+            for key in (
+                "card_id",
+                "cardid",
+                "item_id",
+                "itemid",
+            )
+        )
+
+        has_player_name = any(
+            key in keys
+            for key in (
+                "name",
+                "player_name",
+                "playername",
+            )
+        )
+
+        if (
+            has_card_image
+            or (has_card_id and has_player_name)
+        ):
+            found.append(value)
+
+        for child in value.values():
+            found.extend(
+                recursively_find_cards(child)
+            )
+
+    elif isinstance(value, list):
+        for child in value:
+            found.extend(
+                recursively_find_cards(child)
+            )
+
+    return found
+
+
+def extract_next_data(html):
+    """
+    Extract Next.js __NEXT_DATA__ when present.
+    """
+
+    pattern = re.compile(
+        r'<script[^>]+id=["\']__NEXT_DATA__["\']'
+        r'[^>]*>(.*?)</script>',
+        re.IGNORECASE | re.DOTALL,
+    )
+
+    match = pattern.search(html)
+
+    if not match:
+        return None
+
+    raw = unescape(
+        match.group(1)
+    ).strip()
+
+    if not raw:
+        return None
+
+    try:
+        return json.loads(raw)
+    except Exception:
+        return None
+
+
+def extract_next_flight_json(html):
+    """
+    Extract JSON-ish objects from React Server Components
+    (__next_f.push / self.__next_f.push).
+
+    This is deliberately tolerant because Next.js versions
+    serialize these chunks differently.
+    """
+
+    objects = []
+
+    pattern = re.compile(
+        r'(?:self\.)?__next_f\.push\(\s*'
+        r'\[(.*?)\]\s*\)',
+        re.DOTALL,
+    )
+
+    for match in pattern.finditer(html):
+        chunk = match.group(1)
+
+        # Look for JSON-looking objects.
+        starts = [
+            match.start()
+            for match in re.finditer(
+                r'(?<!\\)\{',
+                chunk
+            )
+        ]
+
+        for start in starts:
+            depth = 0
+            in_string = False
+            escaped = False
+
+            for index in range(
+                start,
+                len(chunk)
+            ):
+                char = chunk[index]
+
+                if escaped:
+                    escaped = False
+                    continue
+
+                if char == "\\":
+                    escaped = True
+                    continue
+
+                if char == '"':
+                    in_string = not in_string
+                    continue
+
+                if in_string:
+                    continue
+
+                if char == "{":
+                    depth += 1
+
+                elif char == "}":
+                    depth -= 1
+
+                    if depth == 0:
+                        candidate = chunk[
+                            start:index + 1
+                        ]
+
+                        try:
+                            parsed = json.loads(
+                                candidate
+                            )
+                            objects.append(parsed)
+                        except Exception:
+                            pass
+
+                        break
+
+    return objects
+
+
+# ============================================================
+# CARD NORMALIZATION
+# ============================================================
+
+def get_value(data, *names):
+    if not isinstance(data, dict):
+        return None
+
+    lower_map = {
+        str(key).lower(): value
+        for key, value in data.items()
+    }
+
+    for name in names:
+        value = lower_map.get(
+            name.lower()
+        )
+
+        if value is not None:
+            return value
+
+    return None
+
+
+def normalize_card(raw):
+    if not isinstance(raw, dict):
         return None
 
     card_id = clean(
-        card.get("card_id")
-        or card.get("cardId")
-        or card.get("id")
+        get_value(
+            raw,
+            "card_id",
+            "cardId",
+            "item_id",
+            "itemId",
+        )
     )
 
-    name = clean(card.get("name"))
+    name = clean(
+        get_value(
+            raw,
+            "name",
+            "player_name",
+            "playerName",
+        )
+    )
+
+    card_image = clean(
+        get_value(
+            raw,
+            "card_image_url",
+            "cardImageUrl",
+            "card_image",
+            "cardImage",
+        )
+    )
 
     if not card_id or not name:
         return None
 
     rating = number(
-        card.get("rating")
-        or card.get("overall_rating")
+        get_value(
+            raw,
+            "rating",
+            "overall",
+            "overall_rating",
+        )
     )
 
-    position = clean(card.get("position"))
-
-    alternate_positions = card.get(
-        "alternatePositions",
-        card.get("alternate_positions", [])
+    position = clean(
+        get_value(
+            raw,
+            "position",
+        )
     )
 
-    if isinstance(alternate_positions, list):
-        alternate_positions = [
-            clean(
-                item.get("shortLabel")
-                if isinstance(item, dict)
-                else item
-            )
-            for item in alternate_positions
-        ]
+    club = clean(
+        get_value(
+            raw,
+            "club",
+        )
+    )
 
-    elif alternate_positions is None:
-        alternate_positions = []
-
-    else:
-        alternate_positions = [
-            x.strip()
-            for x in str(alternate_positions).split(",")
-            if x.strip()
-        ]
-
-    club = clean(card.get("club"))
-    league = clean(card.get("league"))
+    league = clean(
+        get_value(
+            raw,
+            "league",
+        )
+    )
 
     nation = clean(
-        card.get("nation")
-        or card.get("nationality")
+        get_value(
+            raw,
+            "nation",
+            "nationality",
+        )
     )
 
     card_type = clean(
-        card.get("card_type")
-        or card.get("cardType")
-        or card.get("version")
-        or card.get("rarity")
+        get_value(
+            raw,
+            "card_type",
+            "cardType",
+            "rarity",
+            "version",
+        )
     )
 
-    card_image = clean(
-        card.get("card_image_url")
-        or card.get("cardImage")
-        or card.get("card_image")
+    ea_id = clean(
+        get_value(
+            raw,
+            "player_id",
+            "playerId",
+            "eaId",
+        )
     )
 
-    card_image_large = clean(
-        card.get("card_image_large_url")
-        or card.get("cardImageLarge")
-        or card.get("card_image_large")
-        or card_image
-    )
-
-    headshot = clean(
-        card.get("image_large")
-        or card.get("image")
-        or card.get("image_url")
-    )
-
-    price = parse_price(
-        card.get("price")
-        or card.get("price_ps_coins")
-        or card.get("price_ps")
-    )
-
-    trend = card.get(
-        "trend_ps",
-        card.get("priceChange", 0)
+    price = get_value(
+        raw,
+        "price",
     )
 
     try:
-        trend = float(trend)
-    except (ValueError, TypeError):
-        trend = 0
+        if price is not None:
+            price = int(float(price))
+    except (
+        ValueError,
+        TypeError
+    ):
+        price = None
 
-    is_special = bool(
-        card.get("is_special")
-        or card.get("isSpecial")
+    alternate_positions = get_value(
+        raw,
+        "alternatePositions",
+        "alternate_positions",
     )
+
+    if not isinstance(
+        alternate_positions,
+        list
+    ):
+        alternate_positions = []
 
     return {
         "cardId": card_id,
-        "eaId": clean(
-            card.get("player_id")
-            or card.get("eaId")
-            or card.get("playerId")
-        ),
+        "eaId": ea_id,
         "name": name,
         "rating": rating,
         "position": position,
-        "alternatePositions": alternate_positions,
+        "alternatePositions": (
+            alternate_positions
+        ),
         "club": club,
         "league": league,
         "nationality": nation,
 
         "cardType": card_type,
-        "isSpecial": is_special,
 
-        "image": headshot,
         "cardImage": card_image,
-        "cardImageLarge": card_image_large,
+        "cardImageLarge": card_image,
+
+        "image": clean(
+            get_value(
+                raw,
+                "image",
+                "image_url",
+                "player_image_url",
+            )
+        ),
 
         "price": price,
-        "priceChange": trend,
 
-        "skillMoves": number(card.get("skill_moves")),
-        "weakFoot": number(card.get("weak_foot")),
+        "isSpecial": (
+            card_type.lower()
+            not in (
+                "",
+                "rare",
+                "common",
+                "gold rare",
+                "gold common",
+                "silver rare",
+                "silver common",
+                "bronze rare",
+                "bronze common",
+            )
+        ),
 
-        "source": "futgg"
+        "source": "futgg_public"
     }
 
 
-def download_futgg_cards():
-    if not FUTGG_API_KEY:
-        print()
-        print("FUTGG_API_KEY not configured.")
-        print(
-            "Skipping FUT.GG card catalogue and "
-            "keeping EA dataset as fallback."
+def extract_cards_from_html(html):
+    candidates = []
+
+    # 1. JSON-LD
+    for block in extract_json_ld(html):
+        candidates.extend(
+            recursively_find_cards(block)
         )
-        return []
 
-    print()
-    print("Downloading FC27 Ultimate Team card catalogue...")
-    print(f"Platform: {FUTGG_PLATFORM}")
+    # 2. __NEXT_DATA__
+    next_data = extract_next_data(html)
 
-    cards = []
-
-    page = 1
-
-    while True:
-        if MAX_CARD_PAGES > 0 and page > MAX_CARD_PAGES:
-            print(
-                f"Reached FUTGG_MAX_PAGES={MAX_CARD_PAGES}."
+    if next_data:
+        candidates.extend(
+            recursively_find_cards(
+                next_data
             )
-            break
+        )
 
-        url = build_futgg_url(page)
+    # 3. React Server Components
+    for block in extract_next_flight_json(html):
+        candidates.extend(
+            recursively_find_cards(block)
+        )
 
-        print(f"Downloading card page {page}...")
+    # 4. Direct card_image_url fallback.
+    #
+    # If FUT.GG serializes the card as a compact string rather
+    # than an object, recover the image URL and nearby metadata
+    # where possible.
+    image_pattern = re.compile(
+        r'https://game-assets\.fut\.gg/'
+        r'[^"\'\\\s]+'
+        r'/2027/'
+        r'futgg-player-item-card/'
+        r'[^"\'\\\s]+\.webp',
+        re.IGNORECASE,
+    )
+
+    images = list(
+        dict.fromkeys(
+            image_pattern.findall(html)
+        )
+    )
+
+    normalized = []
+
+    for raw in candidates:
+        card = normalize_card(raw)
+
+        if card:
+            normalized.append(card)
+
+    # Deduplicate exact card IDs.
+    cards_by_id = {}
+
+    for card in normalized:
+        card_id = card["cardId"]
+
+        if not card_id:
+            continue
+
+        old = cards_by_id.get(card_id)
+
+        if old is None:
+            cards_by_id[card_id] = card
+            continue
+
+        # Prefer the object containing the actual image.
+        if (
+            not old["cardImage"]
+            and card["cardImage"]
+        ):
+            cards_by_id[card_id] = card
+
+    normalized = list(
+        cards_by_id.values()
+    )
+
+    # If we found raw images but not structured cards, report them
+    # for diagnostics. We do NOT invent player/card associations.
+    print(
+        f"  Structured card objects: "
+        f"{len(normalized):,}"
+    )
+
+    print(
+        f"  Raw card image URLs found: "
+        f"{len(images):,}"
+    )
+
+    return normalized
+
+
+# ============================================================
+# FUT.GG CATALOGUE
+# ============================================================
+
+def download_futgg_catalogue():
+    print()
+    print("=" * 60)
+    print("Reading public FUT.GG FC27 catalogue")
+    print("=" * 60)
+
+    cards = {}
+
+    # First page.
+    #
+    # FUT.GG's current public player page is the authoritative
+    # catalogue entry point.
+    urls = [
+        FUTGG_PLAYERS_URL
+    ]
+
+    # We deliberately keep the scraper conservative.
+    #
+    # We don't invent private API endpoints. We only process
+    # public HTML pages.
+    for url in urls:
+        print()
+        print(f"Downloading: {url}")
 
         try:
-            payload = http_json(
-                url,
-                headers=futgg_headers()
-            )
-
-        except urllib.error.HTTPError as error:
-            if error.code == 429:
-                print(
-                    "FUT.GG API rate limit reached (429)."
-                )
-                break
-
-            if error.code in (401, 403):
-                print(
-                    "FUT.GG API authentication failed."
-                )
-                break
-
-            raise
-
+            html = download_text(url)
         except Exception as error:
             print(
-                f"Could not download FUT.GG page {page}: "
-                f"{error}"
+                "WARNING: Could not download FUT.GG:"
             )
-            break
-
-        page_cards = (
-            payload.get("players")
-            or payload.get("results")
-            or payload.get("data")
-            or []
-        )
-
-        if isinstance(payload.get("data"), dict):
-            page_cards = (
-                payload["data"].get("players")
-                or payload["data"].get("results")
-                or []
-            )
-
-        if not page_cards:
-            print("No more cards.")
-            break
-
-        added = 0
-
-        for raw_card in page_cards:
-            card = normalize_card(raw_card)
-
-            if not card:
-                continue
-
-            cards.append(card)
-            added += 1
+            print(error)
+            continue
 
         print(
-            f"Page {page}: +{added} cards "
-            f"(total {len(cards):,})"
+            f"Downloaded HTML: "
+            f"{len(html):,} bytes"
         )
 
-        next_page = payload.get("next_page")
+        page_cards = extract_cards_from_html(
+            html
+        )
 
-        if isinstance(payload.get("data"), dict):
-            next_page = payload["data"].get(
-                "next_page",
-                next_page
-            )
+        for card in page_cards:
+            cards[
+                card["cardId"]
+            ] = card
 
-        if next_page is None:
-            break
+        print(
+            f"Cards recovered from page: "
+            f"{len(page_cards):,}"
+        )
 
-        try:
-            next_page = int(next_page)
-        except (ValueError, TypeError):
-            page += 1
-        else:
-            if next_page <= page:
-                page += 1
-            else:
-                page = next_page
+    result = list(
+        cards.values()
+    )
 
-        # Small delay so we don't hammer the endpoint.
-        time.sleep(0.5)
-
-    # Deduplicate by cardId.
-    unique = {}
-    for card in cards:
-        unique[card["cardId"]] = card
-
-    cards = list(unique.values())
-
-    cards.sort(
+    result.sort(
         key=lambda card: (
             -card["rating"],
-            card["name"].lower(),
-            card["cardId"]
+            normalize_name(card["name"]),
+            card["cardId"],
         )
     )
 
     print()
     print(
-        f"FUT.GG cards downloaded: {len(cards):,}"
+        f"Unique FUT.GG cards recovered: "
+        f"{len(result):,}"
     )
 
-    return cards
+    return result
 
 
 # ============================================================
-# MERGING
+# MERGE
 # ============================================================
 
-def merge_futgg_cards_with_ea_players(
+def merge_cards(
     ea_players,
     futgg_cards
 ):
     """
-    Important:
+    If FUT.GG cards are available, use them as the card
+    catalogue.
 
-    FUT.GG card IDs are card IDs, not necessarily the same
-    as the EA dataset player_id.
-
-    Therefore:
-      - every FUT.GG card remains a separate entry;
-      - we never deduplicate special cards by player name;
-      - EA data is used as fallback when available.
+    If the public HTML does not expose the catalogue in the
+    current Next.js build, safely fall back to the EA dataset
+    rather than writing a corrupt/empty players.json.
     """
 
     if not futgg_cards:
         print()
         print(
-            "No FUT.GG cards available."
+            "No structured FUT.GG cards were recovered."
         )
         print(
-            "Using EA dataset only."
+            "Keeping the EA dataset as fallback."
         )
 
         return ea_players
@@ -649,160 +875,205 @@ def merge_futgg_cards_with_ea_players(
 
     merged = []
 
-    matched = 0
-
     for card in futgg_cards:
         base = None
 
-        ea_id = clean(card.get("eaId"))
-
-        if ea_id and ea_id in ea_by_id:
-            base = ea_by_id[ea_id]
+        if (
+            card["eaId"]
+            and card["eaId"] in ea_by_id
+        ):
+            base = ea_by_id[
+                card["eaId"]
+            ]
 
         if base is None:
-            name_key = normalize_name(card["name"])
-            base = ea_by_name.get(name_key)
-
-        if base:
-            matched += 1
+            base = ea_by_name.get(
+                normalize_name(
+                    card["name"]
+                )
+            )
 
         player = {
             "eaId": (
                 card["eaId"]
-                or (base["eaId"] if base else "")
+                or (
+                    base["eaId"]
+                    if base
+                    else ""
+                )
             ),
 
             "cardId": card["cardId"],
 
             "name": card["name"],
+
             "rating": (
                 card["rating"]
-                or (base["rating"] if base else 0)
+                or (
+                    base["rating"]
+                    if base
+                    else 0
+                )
             ),
 
             "position": (
                 card["position"]
-                or (base["position"] if base else "")
+                or (
+                    base["position"]
+                    if base
+                    else ""
+                )
             ),
 
             "alternatePositions": (
                 card["alternatePositions"]
                 or (
-                    base["alternatePositions"]
-                    if base else ""
+                    base[
+                        "alternatePositions"
+                    ]
+                    if base
+                    else ""
                 )
             ),
 
             "club": (
                 card["club"]
-                or (base["club"] if base else "")
+                or (
+                    base["club"]
+                    if base
+                    else ""
+                )
             ),
 
             "league": (
                 card["league"]
-                or (base["league"] if base else "")
+                or (
+                    base["league"]
+                    if base
+                    else ""
+                )
             ),
 
             "nationality": (
                 card["nationality"]
-                or (base["nationality"] if base else "")
+                or (
+                    base["nationality"]
+                    if base
+                    else ""
+                )
             ),
 
             "gender": (
                 base["gender"]
-                if base else ""
+                if base
+                else ""
             ),
 
             "preferredFoot": (
                 base["preferredFoot"]
-                if base else ""
+                if base
+                else ""
             ),
 
             "skillMoves": (
-                card["skillMoves"]
-                or (base["skillMoves"] if base else 0)
+                base["skillMoves"]
+                if base
+                else 0
             ),
 
             "weakFoot": (
-                card["weakFoot"]
-                or (base["weakFoot"] if base else 0)
+                base["weakFoot"]
+                if base
+                else 0
             ),
 
             "height": (
                 base["height"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "weight": (
                 base["weight"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "playstyles": (
                 base["playstyles"]
-                if base else []
+                if base
+                else []
             ),
 
             "pace": (
                 base["pace"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "shooting": (
                 base["shooting"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "passing": (
                 base["passing"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "dribbling": (
                 base["dribbling"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "defending": (
                 base["defending"]
-                if base else 0
+                if base
+                else 0
             ),
 
             "physicality": (
                 base["physicality"]
-                if base else 0
+                if base
+                else 0
             ),
 
-            "edition": (
-                base["edition"]
-                if base else "FC27"
-            ),
+            "edition": "FC27",
 
             "snapshotDate": (
                 base["snapshotDate"]
-                if base else ""
+                if base
+                else ""
             ),
 
             "price": card["price"],
-            "priceChange": card["priceChange"],
+            "priceChange": 0,
 
             "image": card["image"],
-            "cardImage": card["cardImage"],
-            "cardImageLarge": card["cardImageLarge"],
 
-            "cardType": card["cardType"],
-            "isSpecial": card["isSpecial"],
+            "cardImage": card[
+                "cardImage"
+            ],
 
-            "source": "futgg"
+            "cardImageLarge": card[
+                "cardImageLarge"
+            ],
+
+            "cardType": card[
+                "cardType"
+            ],
+
+            "isSpecial": card[
+                "isSpecial"
+            ],
+
+            "source": "futgg_public"
         }
 
         merged.append(player)
-
-    print()
-    print(
-        f"Matched FUT.GG cards with EA dataset: "
-        f"{matched:,}/{len(futgg_cards):,}"
-    )
 
     return merged
 
@@ -811,87 +1082,139 @@ def merge_futgg_cards_with_ea_players(
 # VALIDATION
 # ============================================================
 
-def validate_players(players):
+def validate(players):
     if len(players) < 1000:
         raise RuntimeError(
-            f"Only {len(players)} cards/players found. "
-            "Database was not written."
+            f"Only {len(players)} entries found. "
+            "Refusing to overwrite players.json."
         )
 
-    card_images = sum(
+    with_images = sum(
         1
         for player in players
-        if clean(player.get("cardImage"))
-        or clean(player.get("cardImageLarge"))
+        if clean(
+            player.get(
+                "cardImage"
+            )
+        )
+        or clean(
+            player.get(
+                "cardImageLarge"
+            )
+        )
     )
 
-    special_cards = sum(
+    with_card_id = sum(
         1
         for player in players
-        if player.get("isSpecial")
+        if clean(
+            player.get(
+                "cardId"
+            )
+        )
+    )
+
+    special = sum(
+        1
+        for player in players
+        if player.get(
+            "isSpecial"
+        )
     )
 
     print()
+    print("=" * 60)
     print("DATABASE VALIDATION")
-    print("-" * 50)
-    print(f"Total entries:       {len(players):,}")
-    print(f"With card image:     {card_images:,}")
-    print(f"Special cards:       {special_cards:,}")
-    print("-" * 50)
+    print("=" * 60)
 
-    return card_images
+    print(
+        f"Entries:              {len(players):,}"
+    )
+
+    print(
+        f"With card ID:         {with_card_id:,}"
+    )
+
+    print(
+        f"With full card image: {with_images:,}"
+    )
+
+    print(
+        f"Special cards:        {special:,}"
+    )
+
+    print("=" * 60)
+
+    return (
+        with_card_id,
+        with_images,
+        special,
+    )
 
 
 # ============================================================
-# WRITE DATABASE
+# WRITE
 # ============================================================
 
 def write_database(players):
+    (
+        with_card_id,
+        with_images,
+        special,
+    ) = validate(players)
+
     players.sort(
         key=lambda player: (
-            -number(player.get("rating")),
-            normalize_name(player.get("name")),
-            clean(player.get("cardId"))
+            -number(
+                player.get(
+                    "rating"
+                )
+            ),
+            normalize_name(
+                player.get(
+                    "name"
+                )
+            ),
+            clean(
+                player.get(
+                    "cardId"
+                )
+            ),
         )
     )
 
-    card_images = validate_players(players)
-
     result = {
-        "version": 2,
+        "version": 3,
+
         "updatedAt": datetime.now(
             timezone.utc
         ).isoformat(),
 
         "count": len(players),
 
-        "cardCount": len(
-            [
-                player
-                for player in players
-                if clean(player.get("cardId"))
-            ]
-        ),
+        "cardCount": with_card_id,
 
-        "cardImages": card_images,
+        "cardImages": with_images,
+
+        "specialCards": special,
 
         "source": (
-            "FUT.GG + EA FC dataset"
-            if FUTGG_API_KEY
-            else SOURCE_URL
+            "FUT.GG public catalogue + "
+            "EA FC27 dataset"
         ),
 
-        "platform": FUTGG_PLATFORM,
-
-        "players": players
+        "players": players,
     }
 
-    os.makedirs("docs", exist_ok=True)
+    os.makedirs(
+        "docs",
+        exist_ok=True
+    )
 
-    temporary_output = OUTPUT + ".tmp"
+    temporary = OUTPUT + ".tmp"
 
     with open(
-        temporary_output,
+        temporary,
         "w",
         encoding="utf-8"
     ) as file:
@@ -903,7 +1226,7 @@ def write_database(players):
         )
 
     os.replace(
-        temporary_output,
+        temporary,
         OUTPUT
     )
 
@@ -911,9 +1234,23 @@ def write_database(players):
     print("=" * 60)
     print("SUCCESS")
     print("=" * 60)
-    print(f"Entries:       {len(players):,}")
-    print(f"Card images:   {card_images:,}")
-    print(f"Output:        {OUTPUT}")
+
+    print(
+        f"Output:              {OUTPUT}"
+    )
+
+    print(
+        f"Entries:             {len(players):,}"
+    )
+
+    print(
+        f"Full card images:    {with_images:,}"
+    )
+
+    print(
+        f"Special cards:       {special:,}"
+    )
+
     print("=" * 60)
 
 
@@ -923,14 +1260,16 @@ def write_database(players):
 
 def main():
     print("=" * 60)
-    print("FutFlex FC27 Player/Card Database")
+    print("FutFlex FC27 DATABASE UPDATE")
     print("=" * 60)
 
-    ea_players = load_ea_players()
+    ea_players = download_ea_dataset()
 
-    futgg_cards = download_futgg_cards()
+    futgg_cards = (
+        download_futgg_catalogue()
+    )
 
-    players = merge_futgg_cards_with_ea_players(
+    players = merge_cards(
         ea_players,
         futgg_cards
     )
