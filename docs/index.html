@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>FutFlex</title>
+
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <style>
@@ -20,54 +21,69 @@
   --red:#ff5571;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
   background:
-    radial-gradient(circle at 50% -10%,rgba(124,92,255,.18),transparent 42%),
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(124,92,255,.18),
+      transparent 42%
+    ),
     var(--bg);
   color:var(--text);
   font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  min-height:100vh
+  min-height:100vh;
 }
 
-button,input{font:inherit}
+button,
+input{
+  font:inherit;
+}
 
-button{cursor:pointer}
+button{
+  cursor:pointer;
+}
 
 .app{
   width:100%;
   max-width:720px;
   margin:auto;
-  padding:18px
+  padding:18px;
 }
+
+/* HEADER */
 
 .header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:22px
+  margin-bottom:22px;
 }
 
 .logo{
   font-size:25px;
   font-weight:900;
-  letter-spacing:-1px
+  letter-spacing:-1px;
 }
 
-.logo span{color:var(--accent2)}
+.logo span{
+  color:var(--accent2);
+}
 
 .credit{
   color:var(--muted);
-  font-size:12px
+  font-size:12px;
 }
 
 /* SEARCH */
 
 .search-box{
   position:relative;
-  margin-bottom:20px
+  margin-bottom:20px;
 }
 
 .search-input{
@@ -84,12 +100,12 @@ button{cursor:pointer}
 }
 
 .search-input::placeholder{
-  color:#687182
+  color:#687182;
 }
 
 .search-input:focus{
   border-color:rgba(124,92,255,.55);
-  box-shadow:0 0 0 3px rgba(124,92,255,.08)
+  box-shadow:0 0 0 3px rgba(124,92,255,.08);
 }
 
 .search-icon{
@@ -99,7 +115,7 @@ button{cursor:pointer}
   transform:translateY(-50%);
   color:var(--muted);
   font-size:18px;
-  pointer-events:none
+  pointer-events:none;
 }
 
 .search-results{
@@ -111,11 +127,11 @@ button{cursor:pointer}
   border-radius:17px;
   background:rgba(13,17,24,.97);
   box-shadow:0 20px 50px rgba(0,0,0,.35);
-  padding:7px
+  padding:7px;
 }
 
 .search-results.visible{
-  display:block
+  display:block;
 }
 
 .search-result{
@@ -125,23 +141,23 @@ button{cursor:pointer}
   padding:9px;
   border-radius:13px;
   cursor:pointer;
-  transition:.15s ease
+  transition:.15s ease;
 }
 
 .search-result:hover{
-  background:rgba(124,92,255,.10)
+  background:rgba(124,92,255,.10);
 }
 
 .search-result-img{
-  width:47px;
-  height:60px;
+  width:55px;
+  height:70px;
   object-fit:contain;
-  flex-shrink:0
+  flex-shrink:0;
 }
 
 .search-result-info{
   min-width:0;
-  flex:1
+  flex:1;
 }
 
 .search-result-name{
@@ -149,7 +165,7 @@ button{cursor:pointer}
   font-weight:850;
   white-space:nowrap;
   overflow:hidden;
-  text-overflow:ellipsis
+  text-overflow:ellipsis;
 }
 
 .search-result-meta{
@@ -158,20 +174,20 @@ button{cursor:pointer}
   margin-top:4px;
   white-space:nowrap;
   overflow:hidden;
-  text-overflow:ellipsis
+  text-overflow:ellipsis;
 }
 
 .search-result-price{
   font-size:11px;
   font-weight:900;
-  text-align:right
+  text-align:right;
 }
 
 .search-message{
   color:var(--muted);
   text-align:center;
   padding:22px 10px;
-  font-size:12px
+  font-size:12px;
 }
 
 /* HERO */
@@ -188,7 +204,7 @@ button{cursor:pointer}
     ),
     var(--panel);
   box-shadow:0 20px 60px rgba(0,0,0,.28);
-  margin-bottom:20px
+  margin-bottom:20px;
 }
 
 .live{
@@ -196,32 +212,32 @@ button{cursor:pointer}
   font-size:11px;
   font-weight:800;
   letter-spacing:1.5px;
-  margin-bottom:10px
+  margin-bottom:10px;
 }
 
 .hero h1{
   margin:0;
   font-size:31px;
-  letter-spacing:-1.4px
+  letter-spacing:-1.4px;
 }
 
 .hero p{
   color:var(--muted);
   line-height:1.5;
-  margin:10px 0 0
+  margin:10px 0 0;
 }
 
 .section-head{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin:20px 2px 12px
+  margin:20px 2px 12px;
 }
 
 .section-title{
   font-size:14px;
   font-weight:800;
-  letter-spacing:.5px
+  letter-spacing:.5px;
 }
 
 .refresh{
@@ -229,12 +245,12 @@ button{cursor:pointer}
   background:var(--panel);
   color:var(--text);
   padding:8px 12px;
-  border-radius:10px
+  border-radius:10px;
 }
 
 .players{
   display:grid;
-  gap:10px
+  gap:10px;
 }
 
 .player{
@@ -246,16 +262,16 @@ button{cursor:pointer}
   border:1px solid var(--border);
   background:rgba(13,17,24,.86);
   cursor:pointer;
-  transition:.18s ease
+  transition:.18s ease;
 }
 
 .player:active{
-  transform:scale(.985)
+  transform:scale(.985);
 }
 
 .player:hover{
   border-color:rgba(124,92,255,.4);
-  transform:translateY(-1px)
+  transform:translateY(-1px);
 }
 
 .rank{
@@ -263,19 +279,19 @@ button{cursor:pointer}
   text-align:center;
   color:var(--muted);
   font-size:12px;
-  font-weight:800
+  font-weight:800;
 }
 
 .card-img{
   width:65px;
   height:82px;
   object-fit:contain;
-  flex-shrink:0
+  flex-shrink:0;
 }
 
 .player-info{
   min-width:0;
-  flex:1
+  flex:1;
 }
 
 .player-name{
@@ -283,43 +299,43 @@ button{cursor:pointer}
   font-size:15px;
   white-space:nowrap;
   overflow:hidden;
-  text-overflow:ellipsis
+  text-overflow:ellipsis;
 }
 
 .player-meta{
   margin-top:4px;
   color:var(--muted);
-  font-size:11px
+  font-size:11px;
 }
 
 .price{
   text-align:right;
   font-size:13px;
-  font-weight:800
+  font-weight:800;
 }
 
 .arrow{
   color:var(--accent2);
-  font-size:18px
+  font-size:18px;
 }
 
 .loading{
   text-align:center;
   color:var(--muted);
-  padding:35px
+  padding:35px;
 }
 
 .footer{
   text-align:center;
   color:var(--muted);
   font-size:11px;
-  padding:30px 0 12px
+  padding:30px 0 12px;
 }
 
 /* DETAIL */
 
 .detail{
-  display:none
+  display:none;
 }
 
 .back{
@@ -328,69 +344,77 @@ button{cursor:pointer}
   color:var(--text);
   padding:0;
   font-size:14px;
-  margin-bottom:20px
+  margin-bottom:20px;
 }
 
 .detail-card{
   border:1px solid var(--border);
   background:var(--panel);
   border-radius:25px;
-  padding:22px
+  padding:22px;
 }
 
 .player-top{
   display:flex;
   align-items:center;
-  gap:18px
+  gap:18px;
 }
 
 .detail-image{
   width:125px;
   height:155px;
-  object-fit:contain
+  object-fit:contain;
 }
 
 .detail-name{
   font-size:25px;
   font-weight:900;
-  letter-spacing:-1px
+  letter-spacing:-1px;
 }
 
 .detail-meta{
   color:var(--muted);
   font-size:13px;
   margin-top:6px;
-  line-height:1.5
+  line-height:1.5;
 }
 
 .market{
   margin-top:25px;
   padding:18px;
   border-radius:18px;
-  background:var(--panel2)
+  background:var(--panel2);
 }
 
 .current-price{
   font-size:30px;
   font-weight:900;
-  letter-spacing:-1px
+  letter-spacing:-1px;
 }
 
 .change{
   margin-top:5px;
   font-size:13px;
-  font-weight:800
+  font-weight:800;
 }
 
-.change.up{color:var(--green)}
-.change.down{color:var(--red)}
-.change.neutral{color:var(--muted)}
+.change.up{
+  color:var(--green);
+}
+
+.change.down{
+  color:var(--red);
+}
+
+.change.neutral{
+  color:var(--muted);
+}
 
 .tabs{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:6px;
-  margin-top:20px
+  margin-top:20px;
 }
 
 .tab{
@@ -400,25 +424,25 @@ button{cursor:pointer}
   padding:10px 4px;
   border-radius:11px;
   font-size:11px;
-  font-weight:800
+  font-weight:800;
 }
 
 .tab.active{
   background:rgba(124,92,255,.17);
   color:white;
-  border-color:rgba(124,92,255,.45)
+  border-color:rgba(124,92,255,.45);
 }
 
 .chart-wrap{
   margin-top:15px;
   height:230px;
-  position:relative
+  position:relative;
 }
 
 .chart{
   width:100%;
   height:100%;
-  overflow:visible
+  overflow:visible;
 }
 
 .chart-line{
@@ -426,26 +450,26 @@ button{cursor:pointer}
   stroke:var(--accent2);
   stroke-width:2.5;
   stroke-linecap:round;
-  stroke-linejoin:round
+  stroke-linejoin:round;
 }
 
 .chart-area{
   fill:url(#areaGradient);
-  opacity:.28
+  opacity:.28;
 }
 
 .chart-grid{
   stroke:rgba(255,255,255,.055);
-  stroke-width:1
+  stroke-width:1;
 }
 
 .chart-point{
-  fill:var(--accent2)
+  fill:var(--accent2);
 }
 
 .chart-label{
   fill:var(--muted);
-  font-size:9px
+  font-size:9px;
 }
 
 /* SALES */
@@ -454,39 +478,39 @@ button{cursor:pointer}
   margin-top:20px;
   padding:18px;
   border-radius:18px;
-  background:var(--panel2)
+  background:var(--panel2);
 }
 
 .sales-head{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:15px
+  margin-bottom:15px;
 }
 
 .sales-title{
   font-size:14px;
   font-weight:900;
-  letter-spacing:.6px
+  letter-spacing:.6px;
 }
 
 .sales-count{
   color:var(--muted);
-  font-size:11px
+  font-size:11px;
 }
 
 .sales-stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:8px;
-  margin-bottom:15px
+  margin-bottom:15px;
 }
 
 .sales-stat{
   padding:11px 8px;
   border:1px solid var(--border);
   border-radius:12px;
-  background:rgba(255,255,255,.025)
+  background:rgba(255,255,255,.025);
 }
 
 .sales-stat-label{
@@ -494,12 +518,12 @@ button{cursor:pointer}
   font-size:9px;
   font-weight:800;
   letter-spacing:.5px;
-  margin-bottom:5px
+  margin-bottom:5px;
 }
 
 .sales-stat-value{
   font-size:12px;
-  font-weight:900
+  font-weight:900;
 }
 
 .sales-list{
@@ -507,7 +531,7 @@ button{cursor:pointer}
   flex-direction:column;
   gap:7px;
   max-height:310px;
-  overflow-y:auto
+  overflow-y:auto;
 }
 
 .sale-row{
@@ -517,25 +541,25 @@ button{cursor:pointer}
   padding:10px 11px;
   border-radius:11px;
   background:rgba(255,255,255,.025);
-  border:1px solid rgba(255,255,255,.04)
+  border:1px solid rgba(255,255,255,.04);
 }
 
 .sale-time{
   color:var(--muted);
   font-size:11px;
-  font-weight:700
+  font-weight:700;
 }
 
 .sale-price{
   font-size:12px;
-  font-weight:900
+  font-weight:900;
 }
 
 .sales-empty{
   padding:25px 10px;
   text-align:center;
   color:var(--muted);
-  font-size:11px
+  font-size:11px;
 }
 
 .coin-icon{
@@ -543,23 +567,33 @@ button{cursor:pointer}
   height:15px;
   display:inline-block;
   vertical-align:-3px;
-  margin-right:4px
+  margin-right:4px;
 }
 
 .price-coin{
   display:inline-flex;
   align-items:center;
-  gap:4px
+  gap:4px;
 }
 
 @media(max-width:430px){
-  .app{padding:14px}
-  .hero h1{font-size:27px}
+
+  .app{
+    padding:14px;
+  }
+
+  .hero h1{
+    font-size:27px;
+  }
+
   .detail-image{
     width:105px;
-    height:135px
+    height:135px;
   }
-  .detail-name{font-size:21px}
+
+  .detail-name{
+    font-size:21px;
+  }
 }
 </style>
 </head>
@@ -569,6 +603,7 @@ button{cursor:pointer}
 <div class="app">
 
 <header class="header">
+
   <div class="logo">
     Fut<span>Flex</span>
   </div>
@@ -576,6 +611,7 @@ button{cursor:pointer}
   <div class="credit">
     @Mattedark10
   </div>
+
 </header>
 
 <!-- SEARCH -->
@@ -590,9 +626,14 @@ button{cursor:pointer}
     placeholder="Search player or EA ID..."
   >
 
-  <div class="search-icon">⌕</div>
+  <div class="search-icon">
+    ⌕
+  </div>
 
-  <div id="searchResults" class="search-results"></div>
+  <div
+    id="searchResults"
+    class="search-results">
+  </div>
 
 </div>
 
@@ -622,13 +663,17 @@ button{cursor:pointer}
     TOP TRENDING
   </div>
 
-  <button class="refresh" id="refreshBtn">
+  <button
+    class="refresh"
+    id="refreshBtn">
     Refresh
   </button>
 
 </div>
 
-<div id="players" class="players">
+<div
+  id="players"
+  class="players">
 
   <div class="loading">
     Loading market...
@@ -644,9 +689,13 @@ button{cursor:pointer}
 
 <!-- DETAIL -->
 
-<main id="detail" class="detail">
+<main
+  id="detail"
+  class="detail">
 
-<button class="back" id="backBtn">
+<button
+  class="back"
+  id="backBtn">
   ← Back
 </button>
 
@@ -663,9 +712,15 @@ button{cursor:pointer}
 
 <div>
 
-<div id="detailName" class="detail-name"></div>
+<div
+  id="detailName"
+  class="detail-name">
+</div>
 
-<div id="detailMeta" class="detail-meta"></div>
+<div
+  id="detailMeta"
+  class="detail-meta">
+</div>
 
 </div>
 
@@ -673,11 +728,15 @@ button{cursor:pointer}
 
 <div class="market">
 
-<div id="currentPrice" class="current-price">
+<div
+  id="currentPrice"
+  class="current-price">
   —
 </div>
 
-<div id="change" class="change neutral">
+<div
+  id="change"
+  class="change neutral">
   No history yet
 </div>
 
@@ -685,19 +744,27 @@ button{cursor:pointer}
 
 <div class="tabs">
 
-<button class="tab active" data-period="6">
+<button
+  class="tab active"
+  data-period="6">
   6H
 </button>
 
-<button class="tab" data-period="12">
+<button
+  class="tab"
+  data-period="12">
   12H
 </button>
 
-<button class="tab" data-period="24">
+<button
+  class="tab"
+  data-period="24">
   24H
 </button>
 
-<button class="tab" data-period="72">
+<button
+  class="tab"
+  data-period="72">
   3 DAYS
 </button>
 
@@ -724,7 +791,9 @@ button{cursor:pointer}
   SALES HISTORY
 </div>
 
-<div id="salesCount" class="sales-count">
+<div
+  id="salesCount"
+  class="sales-count">
   0 SALES
 </div>
 
@@ -738,7 +807,9 @@ button{cursor:pointer}
   AVERAGE
 </div>
 
-<div id="salesAverage" class="sales-stat-value">
+<div
+  id="salesAverage"
+  class="sales-stat-value">
   —
 </div>
 
@@ -750,7 +821,9 @@ button{cursor:pointer}
   HIGHEST
 </div>
 
-<div id="salesHighest" class="sales-stat-value">
+<div
+  id="salesHighest"
+  class="sales-stat-value">
   —
 </div>
 
@@ -762,7 +835,9 @@ button{cursor:pointer}
   LOWEST
 </div>
 
-<div id="salesLowest" class="sales-stat-value">
+<div
+  id="salesLowest"
+  class="sales-stat-value">
   —
 </div>
 
@@ -770,7 +845,9 @@ button{cursor:pointer}
 
 </div>
 
-<div id="salesList" class="sales-list">
+<div
+  id="salesList"
+  class="sales-list">
 
 <div class="sales-empty">
   No sales history yet.
@@ -791,6 +868,7 @@ button{cursor:pointer}
 </div>
 
 <script>
+
 const tg = window.Telegram?.WebApp;
 
 if(tg){
@@ -800,27 +878,53 @@ if(tg){
 
 /* ELEMENTS */
 
-const playersEl = document.getElementById("players");
-const homeEl = document.getElementById("home");
-const detailEl = document.getElementById("detail");
+const playersEl =
+  document.getElementById("players");
 
-const detailImage = document.getElementById("detailImage");
-const detailName = document.getElementById("detailName");
-const detailMeta = document.getElementById("detailMeta");
+const homeEl =
+  document.getElementById("home");
 
-const currentPrice = document.getElementById("currentPrice");
-const changeEl = document.getElementById("change");
+const detailEl =
+  document.getElementById("detail");
 
-const chart = document.getElementById("chart");
+const detailImage =
+  document.getElementById("detailImage");
 
-const salesCount = document.getElementById("salesCount");
-const salesAverage = document.getElementById("salesAverage");
-const salesHighest = document.getElementById("salesHighest");
-const salesLowest = document.getElementById("salesLowest");
-const salesList = document.getElementById("salesList");
+const detailName =
+  document.getElementById("detailName");
 
-const searchInput = document.getElementById("searchInput");
-const searchResults = document.getElementById("searchResults");
+const detailMeta =
+  document.getElementById("detailMeta");
+
+const currentPrice =
+  document.getElementById("currentPrice");
+
+const changeEl =
+  document.getElementById("change");
+
+const chart =
+  document.getElementById("chart");
+
+const salesCount =
+  document.getElementById("salesCount");
+
+const salesAverage =
+  document.getElementById("salesAverage");
+
+const salesHighest =
+  document.getElementById("salesHighest");
+
+const salesLowest =
+  document.getElementById("salesLowest");
+
+const salesList =
+  document.getElementById("salesList");
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const searchResults =
+  document.getElementById("searchResults");
 
 /* DATA */
 
@@ -840,56 +944,68 @@ let searchTimer = null;
 
 function coinSvg(){
 
-return `
-<svg class="coin-icon" viewBox="0 0 32 32" aria-hidden="true">
+  return `
+  <svg
+    class="coin-icon"
+    viewBox="0 0 32 32"
+    aria-hidden="true">
 
-<defs>
+    <defs>
 
-<linearGradient
-  id="coinG"
-  x1="0"
-  y1="0"
-  x2="1"
-  y2="1"
->
+      <linearGradient
+        id="coinG"
+        x1="0"
+        y1="0"
+        x2="1"
+        y2="1">
 
-<stop offset="0" stop-color="#fff27a"/>
-<stop offset=".45" stop-color="#ffd21c"/>
-<stop offset="1" stop-color="#e49b00"/>
+        <stop
+          offset="0"
+          stop-color="#fff27a"/>
 
-</linearGradient>
+        <stop
+          offset=".45"
+          stop-color="#ffd21c"/>
 
-</defs>
+        <stop
+          offset="1"
+          stop-color="#e49b00"/>
 
-<circle
-  cx="16"
-  cy="16"
-  r="13"
-  fill="url(#coinG)"
-  stroke="#fff6a8"
-  stroke-width="1.4"
-/>
+      </linearGradient>
 
-<path
-  d="M16 7.5v17
-     M11.2 11.2
-     c1.1-1.2 2.7-1.8 4.8-1.8
-     2.8 0 4.7 1.2 4.7 3.2
-     0 2.2-1.9 3-4.7 3.4
-     -2.8.4-4.7 1.2-4.7 3.4
-     0 2 1.9 3.2 4.7 3.2
-     2.1 0 3.7-.6 4.8-1.8"
-  fill="none"
-  stroke="#8c5d00"
-  stroke-width="1.7"
-  stroke-linecap="round"
-/>
+    </defs>
 
-</svg>
-`;
+    <circle
+      cx="16"
+      cy="16"
+      r="13"
+      fill="url(#coinG)"
+      stroke="#fff6a8"
+      stroke-width="1.4"
+    />
+
+    <path
+      d="
+        M16 7.5v17
+        M11.2 11.2
+        c1.1-1.2 2.7-1.8 4.8-1.8
+        2.8 0 4.7 1.2 4.7 3.2
+        0 2.2-1.9 3-4.7 3.4
+        -2.8.4-4.7 1.2-4.7 3.4
+        0 2 1.9 3.2 4.7 3.2
+        2.1 0 3.7-.6 4.8-1.8
+      "
+      fill="none"
+      stroke="#8c5d00"
+      stroke-width="1.7"
+      stroke-linecap="round"
+    />
+
+  </svg>
+  `;
 }
 
-/* HELPERS */
+/* PRICE */
 
 function formatPrice(value){
 
@@ -912,6 +1028,8 @@ function formatPrice(value){
   `;
 }
 
+/* ESCAPE */
+
 function escapeHtml(value){
 
   return String(value ?? "")
@@ -921,6 +1039,8 @@ function escapeHtml(value){
     .replaceAll('"',"&quot;")
     .replaceAll("'","&#039;");
 }
+
+/* NORMALIZE PLAYER */
 
 function normalizePlayer(p){
 
@@ -933,6 +1053,8 @@ function normalizePlayer(p){
       p.ea_id ??
       p.player_id ??
       p.item_id ??
+      p.card_id ??
+      p.id ??
       "",
 
     name:
@@ -966,14 +1088,32 @@ function normalizePlayer(p){
 
     rarity:
       p.rarity ??
+      p.card_type ??
       p.card ??
+      p.version ??
       p.edition ??
       "",
 
+    /*
+      IMPORTANT:
+
+      Priorità assoluta alle immagini
+      COMPLETE DELLA CARTA.
+
+      NON viene data priorità a
+      player_face / face / portrait.
+    */
+
     img:
+      p.card_image_url ??
+      p.cardImageUrl ??
+      p.card_image ??
+      p.cardImage ??
+      p.card_image_large_url ??
+      p.cardImageLargeUrl ??
+      p.card_url ??
+      p.cardUrl ??
       p.img ??
-      p.image ??
-      p.image_url ??
       "",
 
     price:
@@ -988,10 +1128,43 @@ function normalizePlayer(p){
 
     nationality:
       p.nationality ??
+      p.nation ??
       "",
 
     raw:p
   };
+}
+
+/* CARD IMAGE */
+
+function getCardImage(p){
+
+  if(!p) return "";
+
+  /*
+    Prima cerchiamo SEMPRE la carta completa.
+  */
+
+  const image =
+    p.card_image_url ??
+    p.cardImageUrl ??
+    p.card_image ??
+    p.cardImage ??
+    p.card_image_large_url ??
+    p.cardImageLargeUrl ??
+    p.card_url ??
+    p.cardUrl ??
+    p.img ??
+    "";
+
+  if(
+    typeof image === "string" &&
+    image.trim()
+  ){
+    return image.trim();
+  }
+
+  return "";
 }
 
 /* LOAD DATA */
@@ -1011,32 +1184,46 @@ async function loadData(){
 
       fetch(
         `trending.json?t=${t}`,
-        {cache:"no-store"}
+        {
+          cache:"no-store"
+        }
       ),
 
       fetch(
         `players.json?t=${t}`,
-        {cache:"no-store"}
+        {
+          cache:"no-store"
+        }
       ),
 
       fetch(
         `price_history.json?t=${t}`,
-        {cache:"no-store"}
+        {
+          cache:"no-store"
+        }
       ),
 
       fetch(
         `sales_history.json?t=${t}`,
-        {cache:"no-store"}
+        {
+          cache:"no-store"
+        }
       )
 
     ]);
 
     if(!trendingResponse.ok){
-      throw new Error("Trending data unavailable");
+
+      throw new Error(
+        "Trending data unavailable"
+      );
     }
 
     if(!playersResponse.ok){
-      throw new Error("Players database unavailable");
+
+      throw new Error(
+        "Players database unavailable"
+      );
     }
 
     const trendingRaw =
@@ -1059,7 +1246,9 @@ async function loadData(){
 
     trendingPlayers =
       Array.isArray(trendingRaw)
-        ? trendingRaw.map(normalizePlayer).filter(Boolean)
+        ? trendingRaw
+            .map(normalizePlayer)
+            .filter(Boolean)
         : [];
 
     /* ALL PLAYERS */
@@ -1074,20 +1263,39 @@ async function loadData(){
     allPlayers =
       rawPlayers
         .map(normalizePlayer)
-        .filter(p => p && p.name && p.eaId);
+        .filter(
+          p =>
+            p &&
+            p.name &&
+            p.eaId
+        );
 
     playersById.clear();
 
     for(const p of allPlayers){
+
       playersById.set(
         String(p.eaId),
         p
       );
+
     }
 
     console.log(
       "FutFlex players loaded:",
       allPlayers.length
+    );
+
+    console.log(
+      "Example player:",
+      allPlayers[0]
+    );
+
+    console.log(
+      "Example card image:",
+      allPlayers[0]
+        ? getCardImage(allPlayers[0])
+        : ""
     );
 
     renderTrending();
@@ -1105,6 +1313,7 @@ async function loadData(){
         );
 
       if(fresh){
+
         selectedPlayer = {
           ...selectedPlayer,
           ...fresh
@@ -1147,16 +1356,13 @@ function renderTrending(){
       .map((p,i)=>{
 
         const image =
-          p.img ||
-          p.image ||
-          "";
+          getCardImage(p);
 
         return `
 
         <article
           class="player"
-          data-id="${escapeHtml(p.eaId)}"
-        >
+          data-id="${escapeHtml(p.eaId)}">
 
           <div class="rank">
             ${i+1}
@@ -1168,8 +1374,9 @@ function renderTrending(){
             `<img
               class="card-img"
               src="${escapeHtml(image)}"
-              alt=""
+              alt="${escapeHtml(p.name)}"
               loading="lazy"
+              onerror="this.style.display='none'"
             >`
             :
             `<div class="card-img"></div>`
@@ -1182,11 +1389,13 @@ function renderTrending(){
             </div>
 
             <div class="player-meta">
+
               ${escapeHtml(p.rating)}
               ·
               ${escapeHtml(p.position)}
               ·
               ${escapeHtml(p.rarity)}
+
             </div>
 
           </div>
@@ -1200,13 +1409,14 @@ function renderTrending(){
           </div>
 
         </article>
+
         `;
       })
       .join("");
 
   document
     .querySelectorAll(".player")
-    .forEach(el => {
+    .forEach(el=>{
 
       el.addEventListener(
         "click",
@@ -1240,7 +1450,10 @@ function searchPlayers(query){
 
   if(!q){
 
-    searchResults.classList.remove("visible");
+    searchResults.classList.remove(
+      "visible"
+    );
+
     searchResults.innerHTML = "";
 
     return;
@@ -1254,7 +1467,9 @@ function searchPlayers(query){
       </div>
     `;
 
-    searchResults.classList.add("visible");
+    searchResults.classList.add(
+      "visible"
+    );
 
     return;
   }
@@ -1264,19 +1479,29 @@ function searchPlayers(query){
   for(const p of allPlayers){
 
     const name =
-      String(p.name || "").toLowerCase();
+      String(
+        p.name || ""
+      ).toLowerCase();
 
     const id =
-      String(p.eaId || "").toLowerCase();
+      String(
+        p.eaId || ""
+      ).toLowerCase();
 
     const club =
-      String(p.club || "").toLowerCase();
+      String(
+        p.club || ""
+      ).toLowerCase();
 
     const league =
-      String(p.league || "").toLowerCase();
+      String(
+        p.league || ""
+      ).toLowerCase();
 
     const rarity =
-      String(p.rarity || "").toLowerCase();
+      String(
+        p.rarity || ""
+      ).toLowerCase();
 
     if(
       name.includes(q) ||
@@ -1302,7 +1527,9 @@ function searchPlayers(query){
       </div>
     `;
 
-    searchResults.classList.add("visible");
+    searchResults.classList.add(
+      "visible"
+    );
 
     return;
   }
@@ -1311,16 +1538,18 @@ function searchPlayers(query){
     results
       .map(p=>{
 
+        /*
+          QUI viene mostrata la CARTA COMPLETA.
+        */
+
         const image =
-          p.img ||
-          "";
+          getCardImage(p);
 
         return `
 
         <div
           class="search-result"
-          data-id="${escapeHtml(p.eaId)}"
-        >
+          data-id="${escapeHtml(p.eaId)}">
 
           ${
             image
@@ -1328,11 +1557,16 @@ function searchPlayers(query){
             `<img
               class="search-result-img"
               src="${escapeHtml(image)}"
-              alt=""
+              alt="${escapeHtml(p.name)}"
               loading="lazy"
+              onerror="
+                this.style.display='none';
+              "
             >`
             :
-            `<div class="search-result-img"></div>`
+            `<div
+              class="search-result-img">
+            </div>`
           }
 
           <div class="search-result-info">
@@ -1351,8 +1585,10 @@ function searchPlayers(query){
 
               ${
                 p.league
-                ? ` · ${escapeHtml(p.league)}`
-                : ""
+                ?
+                ` · ${escapeHtml(p.league)}`
+                :
+                ""
               }
 
             </div>
@@ -1364,14 +1600,19 @@ function searchPlayers(query){
           </div>
 
         </div>
+
         `;
       })
       .join("");
 
-  searchResults.classList.add("visible");
+  searchResults.classList.add(
+    "visible"
+  );
 
   searchResults
-    .querySelectorAll(".search-result")
+    .querySelectorAll(
+      ".search-result"
+    )
     .forEach(el=>{
 
       el.addEventListener(
@@ -1406,12 +1647,16 @@ searchInput.addEventListener(
   "input",
   ()=>{
 
-    clearTimeout(searchTimer);
+    clearTimeout(
+      searchTimer
+    );
 
     searchTimer =
       setTimeout(
         ()=>{
-          searchPlayers(searchInput.value);
+          searchPlayers(
+            searchInput.value
+          );
         },
         120
       );
@@ -1422,8 +1667,14 @@ searchInput.addEventListener(
   "focus",
   ()=>{
 
-    if(searchInput.value.trim()){
-      searchPlayers(searchInput.value);
+    if(
+      searchInput.value.trim()
+    ){
+
+      searchPlayers(
+        searchInput.value
+      );
+
     }
 
   }
@@ -1434,29 +1685,34 @@ searchInput.addEventListener(
 function openPlayer(p){
 
   selectedPlayer = p;
+
   selectedPeriod = 6;
 
   homeEl.style.display = "none";
+
   detailEl.style.display = "block";
 
+  /*
+    CARTA COMPLETA
+  */
+
   detailImage.src =
-    p.img ||
-    "";
+    getCardImage(p);
 
   detailImage.alt =
-    p.name ||
-    "";
+    p.name || "";
 
   detailName.textContent =
-    p.name ||
-    "";
+    p.name || "";
 
   const metaParts = [
+
     p.rating,
     p.position,
     p.club,
     p.league,
     p.rarity
+
   ].filter(Boolean);
 
   detailMeta.textContent =
@@ -1467,20 +1723,24 @@ function openPlayer(p){
     .forEach(t =>
       t.classList.toggle(
         "active",
-        Number(t.dataset.period) === 6
+        Number(
+          t.dataset.period
+        ) === 6
       )
     );
 
   updateDetail();
 }
 
+/* CLOSE */
+
 function closePlayer(){
 
   selectedPlayer = null;
 
   detailEl.style.display = "none";
-  homeEl.style.display = "block";
 
+  homeEl.style.display = "block";
 }
 
 /* PRICE HISTORY */
@@ -1490,7 +1750,9 @@ function getPlayerPoints(p){
   if(!p) return [];
 
   const d =
-    history[String(p.eaId)];
+    history[
+      String(p.eaId)
+    ];
 
   if(!d) return [];
 
@@ -1504,6 +1766,7 @@ function getPlayerPoints(p){
   }
 
   return raw
+
     .map(x=>({
 
       timestamp:
@@ -1520,16 +1783,21 @@ function getPlayerPoints(p){
         )
 
     }))
+
     .filter(x =>
       !Number.isNaN(
         x.timestamp.getTime()
       ) &&
-      Number.isFinite(x.price) &&
+      Number.isFinite(
+        x.price
+      ) &&
       x.price > 0
     )
+
     .sort(
       (a,b) =>
-        a.timestamp-b.timestamp
+        a.timestamp -
+        b.timestamp
     );
 }
 
@@ -1540,7 +1808,9 @@ function getPlayerSales(p){
   if(!p) return [];
 
   const d =
-    salesHistory[String(p.eaId)];
+    salesHistory[
+      String(p.eaId)
+    ];
 
   if(!d) return [];
 
@@ -1554,6 +1824,7 @@ function getPlayerSales(p){
   }
 
   return s
+
     .map(x=>({
 
       timestamp:
@@ -1571,18 +1842,25 @@ function getPlayerSales(p){
         )
 
     }))
+
     .filter(x =>
       !Number.isNaN(
         x.timestamp.getTime()
       ) &&
-      Number.isFinite(x.price) &&
+      Number.isFinite(
+        x.price
+      ) &&
       x.price > 0
     )
+
     .sort(
       (a,b) =>
-        b.timestamp-a.timestamp
+        b.timestamp -
+        a.timestamp
     );
 }
+
+/* SALES TIME */
 
 function formatSaleTime(d){
 
@@ -1595,6 +1873,8 @@ function formatSaleTime(d){
   );
 }
 
+/* SALES HISTORY */
+
 function updateSalesHistory(p){
 
   const sales =
@@ -1606,25 +1886,32 @@ function updateSalesHistory(p){
   if(!sales.length){
 
     salesAverage.innerHTML = "—";
+
     salesHighest.innerHTML = "—";
+
     salesLowest.innerHTML = "—";
 
     salesList.innerHTML =
-      `<div class="sales-empty">
+      `
+      <div class="sales-empty">
         No sales history yet.
-      </div>`;
+      </div>
+      `;
 
     return;
   }
 
   const prices =
-    sales.map(x=>x.price);
+    sales.map(
+      x=>x.price
+    );
 
   const avg =
     prices.reduce(
       (a,b)=>a+b,
       0
-    ) / prices.length;
+    ) /
+    prices.length;
 
   salesAverage.innerHTML =
     formatPrice(avg);
@@ -1646,11 +1933,15 @@ function updateSalesHistory(p){
         <div class="sale-row">
 
           <div class="sale-time">
-            ${formatSaleTime(x.timestamp)}
+            ${formatSaleTime(
+              x.timestamp
+            )}
           </div>
 
           <div class="sale-price">
-            ${formatPrice(x.price)}
+            ${formatPrice(
+              x.price
+            )}
           </div>
 
         </div>
@@ -1691,9 +1982,17 @@ function updateDetail(){
         cutoff
     );
 
-  updateChange(filtered);
-  drawChart(filtered);
-  updateSalesHistory(selectedPlayer);
+  updateChange(
+    filtered
+  );
+
+  drawChart(
+    filtered
+  );
+
+  updateSalesHistory(
+    selectedPlayer
+  );
 }
 
 /* CHANGE */
@@ -1718,7 +2017,9 @@ function updateChange(points){
     Number(
       selectedPlayer.price
     ) ||
-    points[points.length-1].price;
+    points[
+      points.length-1
+    ].price;
 
   if(!first || !last){
     return;
@@ -1769,9 +2070,10 @@ function drawChart(points){
         x="300"
         y="115"
         text-anchor="middle"
-        class="chart-label"
-      >
+        class="chart-label">
+
         Not enough history yet
+
       </text>
     `;
 
@@ -1797,7 +2099,9 @@ function drawChart(points){
     pb;
 
   const values =
-    points.map(x=>x.price);
+    points.map(
+      x=>x.price
+    );
 
   let min =
     Math.min(...values);
@@ -1840,14 +2144,18 @@ function drawChart(points){
 
         x:
           pl +
-          i/(points.length-1)*cw,
+          i /
+          (points.length-1) *
+          cw,
 
         y:
           pt +
           (
             1 -
-            (p.price-min)/range
-          )*ch
+            (p.price-min) /
+            range
+          ) *
+          ch
 
       })
     );
@@ -1862,7 +2170,9 @@ function drawChart(points){
 
   const area =
     `${line}
-     L ${coords[coords.length-1].x} ${height-pb}
+     L ${coords[
+       coords.length-1
+     ].x} ${height-pb}
      L ${coords[0].x} ${height-pb}
      Z`;
 
@@ -1877,8 +2187,7 @@ function drawChart(points){
         x1="0"
         x2="0"
         y1="0"
-        y2="1"
-      >
+        y2="1">
 
         <stop
           offset="0%"
@@ -1910,7 +2219,9 @@ function drawChart(points){
   );
 
   const last =
-    coords[coords.length-1];
+    coords[
+      coords.length-1
+    ];
 
   chart.insertAdjacentHTML(
     "beforeend",
@@ -1952,6 +2263,7 @@ document
         updateDetail();
       }
     );
+
   });
 
 /* BACK */
@@ -1986,7 +2298,7 @@ document
     }
   );
 
-/* CLOSE SEARCH WHEN CLICKING OUTSIDE */
+/* CLOSE SEARCH */
 
 document.addEventListener(
   "click",
@@ -2001,6 +2313,7 @@ document.addEventListener(
       searchResults.classList.remove(
         "visible"
       );
+
     }
 
   }
@@ -2010,12 +2323,13 @@ document.addEventListener(
 
 loadData();
 
-/* AUTO UPDATE EVERY 5 MINUTES */
+/* AUTO UPDATE */
 
 setInterval(
   loadData,
   5 * 60 * 1000
 );
+
 </script>
 
 </body>
