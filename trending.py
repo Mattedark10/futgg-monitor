@@ -2,9 +2,10 @@ import requests
 import re
 
 # =========================
-# FUT.GG TRENDING PLAYERS
+# FUT.GG TRENDING JS
 # =========================
-URL = "https://www.fut.gg/players/trending/"
+
+JS_URL = "https://assets.fut.gg/ts/assets/trending-BwWTRUhl.js"
 
 HEADERS = {
     "User-Agent": (
@@ -15,65 +16,70 @@ HEADERS = {
 }
 
 response = requests.get(
-    URL,
+    JS_URL,
     headers=HEADERS,
     timeout=30
 )
 
 response.raise_for_status()
 
-page_html = response.text
+js = response.text
 
 print("STATUS:", response.status_code)
-print("HTML SIZE:", len(page_html), "characters")
+print("JS SIZE:", len(js), "characters")
 
 # =========================
-# SEARCH FOR API / JS DATA
+# SEARCH INTERESTING STRINGS
 # =========================
 
-patterns = [
-    r'https?://[^"\']+',
-    r'[^"\']*(?:api|trending)[^"\']*',
+strings = re.findall(
+    r'["\']([^"\']{3,500})["\']',
+    js
+)
+
+interesting = []
+
+keywords = [
+    "api",
+    "trending",
+    "player",
+    "price",
+    "fetch",
+    "axios",
+    "graphql",
+    "/v1/",
+    "/v2/",
 ]
 
-results = []
+for value in strings:
+    lower = value.lower()
 
-for pattern in patterns:
-    for match in re.findall(pattern, page_html, re.IGNORECASE):
-        match = match.strip()
-
-        if (
-            "api" in match.lower()
-            or "trending" in match.lower()
-        ):
-            if match not in results:
-                results.append(match)
+    if any(keyword in lower for keyword in keywords):
+        if value not in interesting:
+            interesting.append(value)
 
 print()
-print("POSSIBLE API / TRENDING REFERENCES:")
-print("-----------------------------------")
+print("INTERESTING JS REFERENCES:")
+print("--------------------------")
 
-if results:
-    for result in results[:100]:
-        print(result)
-else:
-    print("No references found.")
+for value in interesting[:200]:
+    print(value)
 
 # =========================
-# NEXT.JS DATA CHECK
+# SEARCH URLS
 # =========================
 
-next_data = re.search(
-    r'<script[^>]+id=["\']__NEXT_DATA__["\'][^>]*>(.*?)</script>',
-    page_html,
-    re.DOTALL | re.IGNORECASE
+urls = re.findall(
+    r'https?://[^"\'\s]+',
+    js
 )
 
 print()
-print("NEXT.JS DATA:")
-print("-------------")
+print("URLS FOUND:")
+print("-----------")
 
-if next_data:
-    print(next_data.group(1)[:5000])
+if urls:
+    for url in dict.fromkeys(urls):
+        print(url)
 else:
-    print("No __NEXT_DATA__ found.")
+    print("No full URLs found.")
