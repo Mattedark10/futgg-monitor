@@ -1,4 +1,5 @@
 import requests
+import re
 
 JS_URL = "https://assets.fut.gg/ts/assets/index-LtbajdOB.js"
 
@@ -16,38 +17,37 @@ response.raise_for_status()
 js = response.text
 
 print("STATUS:", response.status_code)
+print("JS SIZE:", len(js), "characters")
 
-# Find definitions of the route builders used by FUT.GG
-for term in ["tp=", "ip=", "api.fut.gg", "https://api", "api/"]:
-    print()
-    print("=" * 60)
-    print("SEARCHING FOR:", term)
-    print("=" * 60)
+patterns = [
+    r"function tp\(",
+    r"tp\s*=\s*\(",
+    r"tp\s*=\s*function",
+    r"tp\s*=\s*[A-Za-z_$][A-Za-z0-9_$]*\(",
+]
 
-    start = 0
-    found = 0
+print()
+print("TP DEFINITION SEARCH:")
+print("=====================")
 
-    while True:
-        position = js.find(term, start)
+found_positions = []
 
-        if position == -1:
-            break
+for pattern in patterns:
+    for match in re.finditer(pattern, js):
+        position = match.start()
 
-        found += 1
+        if position not in found_positions:
+            found_positions.append(position)
 
-        print()
-        print("FOUND AT:", position)
+            print()
+            print("PATTERN:", pattern)
+            print("FOUND AT:", position)
+            print("---------------------")
 
-        snippet_start = max(0, position - 1500)
-        snippet_end = min(len(js), position + 3000)
+            start = max(0, position - 3000)
+            end = min(len(js), position + 6000)
 
-        print(js[snippet_start:snippet_end])
+            print(js[start:end])
 
-        start = position + len(term)
-
-        # Avoid enormous GitHub logs
-        if found >= 5:
-            break
-
-    if found == 0:
-        print("NOT FOUND")
+if not found_positions:
+    print("No direct tp definition found.")
