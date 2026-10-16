@@ -8,10 +8,17 @@
       "version": "Pristine Holographic"
     },
     {
-      "name": "Vialli",
-      "rating": "89",
+      "name": "Zamorano",
+      "rating": "88",
       "card": "Base Hero",
-      "item_id": "67342564",
+      "item_id": "67186651",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Milito",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "67371135",
       "version": "Pristine Holographic"
     },
     {
@@ -26,13 +33,6 @@
       "rating": "89",
       "card": "Base Hero",
       "item_id": "233700",
-      "version": "Base"
-    },
-    {
-      "name": "Litmanen",
-      "rating": "88",
-      "card": "Base Hero",
-      "item_id": "5673",
       "version": "Base"
     }
   ],
