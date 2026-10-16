@@ -1,109 +1,2022 @@
 <!doctype html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>FutFlex</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <style>
-:root{--bg:#07090d;--panel:#0d1118;--panel2:#111722;--border:rgba(255,255,255,.08);--text:#f5f7fb;--muted:#8c95a5;--accent:#7c5cff;--accent2:#00e5ff;--green:#36e28b;--red:#ff5571}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,rgba(124,92,255,.18),transparent 42%),var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button{font:inherit}.app{width:100%;max-width:720px;margin:auto;padding:18px}.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}.logo{font-size:25px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--accent2)}.credit{color:var(--muted);font-size:12px}.hero{padding:26px 22px;border:1px solid var(--border);border-radius:24px;background:linear-gradient(135deg,rgba(124,92,255,.13),rgba(0,229,255,.035)),var(--panel);box-shadow:0 20px 60px rgba(0,0,0,.28);margin-bottom:20px}.live{color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.5px;margin-bottom:10px}.hero h1{margin:0;font-size:31px;letter-spacing:-1.4px}.hero p{color:var(--muted);line-height:1.5;margin:10px 0 0}.section-head{display:flex;justify-content:space-between;align-items:center;margin:20px 2px 12px}.section-title{font-size:14px;font-weight:800;letter-spacing:.5px}.refresh{border:1px solid var(--border);background:var(--panel);color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}.players{display:grid;gap:10px}.player{display:flex;align-items:center;gap:13px;padding:11px;border-radius:17px;border:1px solid var(--border);background:rgba(13,17,24,.86);cursor:pointer;transition:.18s ease}.player:active{transform:scale(.985)}.player:hover{border-color:rgba(124,92,255,.4);transform:translateY(-1px)}.rank{width:22px;text-align:center;color:var(--muted);font-size:12px;font-weight:800}.card-img{width:65px;height:82px;object-fit:contain;flex-shrink:0}.player-info{min-width:0;flex:1}.player-name{font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.player-meta{margin-top:4px;color:var(--muted);font-size:11px}.price{text-align:right;font-size:13px;font-weight:800}.arrow{color:var(--accent2);font-size:18px}.footer{text-align:center;color:var(--muted);font-size:11px;padding:30px 0 12px}.detail{display:none}.back{border:0;background:transparent;color:var(--text);padding:0;font-size:14px;cursor:pointer;margin-bottom:20px}.detail-card{border:1px solid var(--border);background:var(--panel);border-radius:25px;padding:22px}.player-top{display:flex;align-items:center;gap:18px}.detail-image{width:125px;height:155px;object-fit:contain}.detail-name{font-size:25px;font-weight:900;letter-spacing:-1px}.detail-meta{color:var(--muted);font-size:13px;margin-top:6px;line-height:1.5}.market{margin-top:25px;padding:18px;border-radius:18px;background:var(--panel2)}.current-price{font-size:30px;font-weight:900;letter-spacing:-1px}.change{margin-top:5px;font-size:13px;font-weight:800}.change.up{color:var(--green)}.change.down{color:var(--red)}.change.neutral{color:var(--muted)}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:20px}.tab{border:1px solid var(--border);background:transparent;color:var(--muted);padding:10px 4px;border-radius:11px;font-size:11px;font-weight:800;cursor:pointer}.tab.active{background:rgba(124,92,255,.17);color:white;border-color:rgba(124,92,255,.45)}.chart-wrap{margin-top:15px;height:230px;position:relative}.chart{width:100%;height:100%;overflow:visible}.chart-line{fill:none;stroke:var(--accent2);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.chart-area{fill:url(#areaGradient);opacity:.28}.chart-grid{stroke:rgba(255,255,255,.055);stroke-width:1}.chart-point{fill:var(--accent2)}.chart-label{fill:var(--muted);font-size:9px}.loading{text-align:center;color:var(--muted);padding:35px}
-.sales-history{margin-top:20px;padding:18px;border-radius:18px;background:var(--panel2)}.sales-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.sales-title{font-size:14px;font-weight:900;letter-spacing:.6px}.sales-count{color:var(--muted);font-size:11px}.sales-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:15px}.sales-stat{padding:11px 8px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.025)}.sales-stat-label{color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.5px;margin-bottom:5px}.sales-stat-value{font-size:12px;font-weight:900}.sales-list{display:flex;flex-direction:column;gap:7px;max-height:310px;overflow-y:auto}.sale-row{display:flex;justify-content:space-between;align-items:center;padding:10px 11px;border-radius:11px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.04)}.sale-time{color:var(--muted);font-size:11px;font-weight:700}.sale-price{font-size:12px;font-weight:900}.sales-empty{padding:25px 10px;text-align:center;color:var(--muted);font-size:11px}.coin-icon{width:15px;height:15px;display:inline-block;vertical-align:-3px;margin-right:4px}.price-coin{display:inline-flex;align-items:center;gap:4px}
-@media(max-width:430px){.app{padding:14px}.hero h1{font-size:27px}.detail-image{width:105px;height:135px}.detail-name{font-size:21px}}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>FutFlex</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<style>
+:root{
+  --bg:#07090d;
+  --panel:#0d1118;
+  --panel2:#111722;
+  --border:rgba(255,255,255,.08);
+  --text:#f5f7fb;
+  --muted:#8c95a5;
+  --accent:#7c5cff;
+  --accent2:#00e5ff;
+  --green:#36e28b;
+  --red:#ff5571;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(124,92,255,.18),transparent 42%),
+    var(--bg);
+  color:var(--text);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  min-height:100vh
+}
+
+button,input{font:inherit}
+
+button{cursor:pointer}
+
+.app{
+  width:100%;
+  max-width:720px;
+  margin:auto;
+  padding:18px
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:22px
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:-1px
+}
+
+.logo span{color:var(--accent2)}
+
+.credit{
+  color:var(--muted);
+  font-size:12px
+}
+
+/* SEARCH */
+
+.search-box{
+  position:relative;
+  margin-bottom:20px
+}
+
+.search-input{
+  width:100%;
+  height:52px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  outline:none;
+  background:var(--panel);
+  color:var(--text);
+  padding:0 46px 0 17px;
+  font-size:14px;
+  transition:.18s ease;
+}
+
+.search-input::placeholder{
+  color:#687182
+}
+
+.search-input:focus{
+  border-color:rgba(124,92,255,.55);
+  box-shadow:0 0 0 3px rgba(124,92,255,.08)
+}
+
+.search-icon{
+  position:absolute;
+  right:17px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--muted);
+  font-size:18px;
+  pointer-events:none
+}
+
+.search-results{
+  display:none;
+  margin-top:8px;
+  max-height:500px;
+  overflow-y:auto;
+  border:1px solid var(--border);
+  border-radius:17px;
+  background:rgba(13,17,24,.97);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  padding:7px
+}
+
+.search-results.visible{
+  display:block
+}
+
+.search-result{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:9px;
+  border-radius:13px;
+  cursor:pointer;
+  transition:.15s ease
+}
+
+.search-result:hover{
+  background:rgba(124,92,255,.10)
+}
+
+.search-result-img{
+  width:47px;
+  height:60px;
+  object-fit:contain;
+  flex-shrink:0
+}
+
+.search-result-info{
+  min-width:0;
+  flex:1
+}
+
+.search-result-name{
+  font-size:13px;
+  font-weight:850;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
+}
+
+.search-result-meta{
+  color:var(--muted);
+  font-size:10px;
+  margin-top:4px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
+}
+
+.search-result-price{
+  font-size:11px;
+  font-weight:900;
+  text-align:right
+}
+
+.search-message{
+  color:var(--muted);
+  text-align:center;
+  padding:22px 10px;
+  font-size:12px
+}
+
+/* HERO */
+
+.hero{
+  padding:26px 22px;
+  border:1px solid var(--border);
+  border-radius:24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124,92,255,.13),
+      rgba(0,229,255,.035)
+    ),
+    var(--panel);
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+  margin-bottom:20px
+}
+
+.live{
+  color:var(--green);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  margin-bottom:10px
+}
+
+.hero h1{
+  margin:0;
+  font-size:31px;
+  letter-spacing:-1.4px
+}
+
+.hero p{
+  color:var(--muted);
+  line-height:1.5;
+  margin:10px 0 0
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:20px 2px 12px
+}
+
+.section-title{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.5px
+}
+
+.refresh{
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:var(--text);
+  padding:8px 12px;
+  border-radius:10px
+}
+
+.players{
+  display:grid;
+  gap:10px
+}
+
+.player{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:11px;
+  border-radius:17px;
+  border:1px solid var(--border);
+  background:rgba(13,17,24,.86);
+  cursor:pointer;
+  transition:.18s ease
+}
+
+.player:active{
+  transform:scale(.985)
+}
+
+.player:hover{
+  border-color:rgba(124,92,255,.4);
+  transform:translateY(-1px)
+}
+
+.rank{
+  width:22px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800
+}
+
+.card-img{
+  width:65px;
+  height:82px;
+  object-fit:contain;
+  flex-shrink:0
+}
+
+.player-info{
+  min-width:0;
+  flex:1
+}
+
+.player-name{
+  font-weight:800;
+  font-size:15px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
+}
+
+.player-meta{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:11px
+}
+
+.price{
+  text-align:right;
+  font-size:13px;
+  font-weight:800
+}
+
+.arrow{
+  color:var(--accent2);
+  font-size:18px
+}
+
+.loading{
+  text-align:center;
+  color:var(--muted);
+  padding:35px
+}
+
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:11px;
+  padding:30px 0 12px
+}
+
+/* DETAIL */
+
+.detail{
+  display:none
+}
+
+.back{
+  border:0;
+  background:transparent;
+  color:var(--text);
+  padding:0;
+  font-size:14px;
+  margin-bottom:20px
+}
+
+.detail-card{
+  border:1px solid var(--border);
+  background:var(--panel);
+  border-radius:25px;
+  padding:22px
+}
+
+.player-top{
+  display:flex;
+  align-items:center;
+  gap:18px
+}
+
+.detail-image{
+  width:125px;
+  height:155px;
+  object-fit:contain
+}
+
+.detail-name{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:-1px
+}
+
+.detail-meta{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:6px;
+  line-height:1.5
+}
+
+.market{
+  margin-top:25px;
+  padding:18px;
+  border-radius:18px;
+  background:var(--panel2)
+}
+
+.current-price{
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:-1px
+}
+
+.change{
+  margin-top:5px;
+  font-size:13px;
+  font-weight:800
+}
+
+.change.up{color:var(--green)}
+.change.down{color:var(--red)}
+.change.neutral{color:var(--muted)}
+
+.tabs{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+  margin-top:20px
+}
+
+.tab{
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--muted);
+  padding:10px 4px;
+  border-radius:11px;
+  font-size:11px;
+  font-weight:800
+}
+
+.tab.active{
+  background:rgba(124,92,255,.17);
+  color:white;
+  border-color:rgba(124,92,255,.45)
+}
+
+.chart-wrap{
+  margin-top:15px;
+  height:230px;
+  position:relative
+}
+
+.chart{
+  width:100%;
+  height:100%;
+  overflow:visible
+}
+
+.chart-line{
+  fill:none;
+  stroke:var(--accent2);
+  stroke-width:2.5;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+
+.chart-area{
+  fill:url(#areaGradient);
+  opacity:.28
+}
+
+.chart-grid{
+  stroke:rgba(255,255,255,.055);
+  stroke-width:1
+}
+
+.chart-point{
+  fill:var(--accent2)
+}
+
+.chart-label{
+  fill:var(--muted);
+  font-size:9px
+}
+
+/* SALES */
+
+.sales-history{
+  margin-top:20px;
+  padding:18px;
+  border-radius:18px;
+  background:var(--panel2)
+}
+
+.sales-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px
+}
+
+.sales-title{
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.6px
+}
+
+.sales-count{
+  color:var(--muted);
+  font-size:11px
+}
+
+.sales-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-bottom:15px
+}
+
+.sales-stat{
+  padding:11px 8px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:rgba(255,255,255,.025)
+}
+
+.sales-stat-label{
+  color:var(--muted);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.5px;
+  margin-bottom:5px
+}
+
+.sales-stat-value{
+  font-size:12px;
+  font-weight:900
+}
+
+.sales-list{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  max-height:310px;
+  overflow-y:auto
+}
+
+.sale-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 11px;
+  border-radius:11px;
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.04)
+}
+
+.sale-time{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:700
+}
+
+.sale-price{
+  font-size:12px;
+  font-weight:900
+}
+
+.sales-empty{
+  padding:25px 10px;
+  text-align:center;
+  color:var(--muted);
+  font-size:11px
+}
+
+.coin-icon{
+  width:15px;
+  height:15px;
+  display:inline-block;
+  vertical-align:-3px;
+  margin-right:4px
+}
+
+.price-coin{
+  display:inline-flex;
+  align-items:center;
+  gap:4px
+}
+
+@media(max-width:430px){
+  .app{padding:14px}
+  .hero h1{font-size:27px}
+  .detail-image{
+    width:105px;
+    height:135px
+  }
+  .detail-name{font-size:21px}
+}
 </style>
- </head>
- <body>
-  <div class="app">
-   <header class="header">
-    <div class="logo">
-     Fut<span>Flex</span>
-    </div>
-    <div class="credit">@Mattedark10</div>
-   </header>
-   <main id="home">
-    <section class="hero">
-     <div class="live">● LIVE MARKET</div>
-     <h1>Trending Players</h1>
-     <p>Track real-time player trends and your own price history.</p>
-    </section>
-    <div class="section-head">
-     <div class="section-title">TOP TRENDING</div>
-     <button class="refresh" id="refreshBtn">Refresh</button>
-    </div>
-    <div id="players" class="players">
-     <div class="loading">Loading market...</div>
-    </div>
-    <div class="footer">FutFlex · @Mattedark10</div>
-   </main>
-   <main id="detail" class="detail">
-    <button class="back" id="backBtn">← Back</button>
-    <section class="detail-card">
-     <div class="player-top">
-      <img id="detailImage" class="detail-image" src="" alt="">
-      <div>
-       <div id="detailName" class="detail-name"></div>
-       <div id="detailMeta" class="detail-meta"></div>
-      </div>
-     </div>
-     <div class="market">
-      <div id="currentPrice" class="current-price">—</div>
-      <div id="change" class="change neutral">No history yet</div>
-     </div>
-     <div class="tabs">
-      <button class="tab active" data-period="6">6H</button>
-      <button class="tab" data-period="12">12H</button>
-      <button class="tab" data-period="24">24H</button>
-      <button class="tab" data-period="72">3 DAYS</button>
-     </div>
-     <div class="chart-wrap">
-      <svg id="chart" class="chart" viewBox="0 0 600 230" preserveAspectRatio="none"></svg>
-     </div>
-     <div class="sales-history">
-      <div class="sales-head">
-       <div class="sales-title">SALES HISTORY</div>
-       <div id="salesCount" class="sales-count">0 SALES</div>
-      </div>
-      <div class="sales-stats">
-       <div class="sales-stat">
-        <div class="sales-stat-label">AVERAGE</div>
-        <div id="salesAverage" class="sales-stat-value">—</div>
-       </div>
-       <div class="sales-stat">
-        <div class="sales-stat-label">HIGHEST</div>
-        <div id="salesHighest" class="sales-stat-value">—</div>
-       </div>
-       <div class="sales-stat">
-        <div class="sales-stat-label">LOWEST</div>
-        <div id="salesLowest" class="sales-stat-value">—</div>
-       </div>
-      </div>
-      <div id="salesList" class="sales-list">
-       <div class="sales-empty">No sales history yet.</div>
-      </div>
-     </div>
-    </section>
-    <div class="footer">FutFlex · @Mattedark10</div>
-   </main>
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+  <div class="logo">
+    Fut<span>Flex</span>
   </div>
-  <script>
-const tg=window.Telegram?.WebApp;if(tg){tg.ready();tg.expand()}
-const playersEl=document.getElementById("players"),homeEl=document.getElementById("home"),detailEl=document.getElementById("detail"),detailImage=document.getElementById("detailImage"),detailName=document.getElementById("detailName"),detailMeta=document.getElementById("detailMeta"),currentPrice=document.getElementById("currentPrice"),changeEl=document.getElementById("change"),chart=document.getElementById("chart"),salesCount=document.getElementById("salesCount"),salesAverage=document.getElementById("salesAverage"),salesHighest=document.getElementById("salesHighest"),salesLowest=document.getElementById("salesLowest"),salesList=document.getElementById("salesList");
-let players=[],history={},salesHistory={},selectedPlayer=null,selectedPeriod=6;
-function coinSvg(){return '<svg class="coin-icon" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="coinG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff27a"/><stop offset=".45" stop-color="#ffd21c"/><stop offset="1" stop-color="#e49b00"/></linearGradient></defs><circle cx="16" cy="16" r="13" fill="url(#coinG)" stroke="#fff6a8" stroke-width="1.4"/><path d="M16 7.5v17M11.2 11.2c1.1-1.2 2.7-1.8 4.8-1.8 2.8 0 4.7 1.2 4.7 3.2 0 2.2-1.9 3-4.7 3.4-2.8.4-4.7 1.2-4.7 3.4 0 2 1.9 3.2 4.7 3.2 2.1 0 3.7-.6 4.8-1.8" fill="none" stroke="#8c5d00" stroke-width="1.7" stroke-linecap="round"/></svg>'}
-function formatPrice(value){const n=Number(value);if(value===null||value===undefined||!Number.isFinite(n)||n<=0)return "—";return `<span class="price-coin">${coinSvg()}${n.toLocaleString("en-US")}</span>`}
-function escapeHtml(value){return String(value??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;")}
-async function loadData(){try{const t=Date.now(),[pr,hr,sr]=await Promise.all([fetch(`trending.json?t=${t}`,{cache:"no-store"}),fetch(`price_history.json?t=${t}`,{cache:"no-store"}),fetch(`sales_history.json?t=${t}`,{cache:"no-store"})]);if(!pr.ok)throw new Error("Trending data unavailable");players=await pr.json();history=hr.ok?await hr.json():{};salesHistory=sr.ok?await sr.json():{};renderPlayers();if(selectedPlayer){const fresh=players.find(x=>String(x.eaId)===String(selectedPlayer.eaId));if(fresh)selectedPlayer=fresh;updateDetail()}}catch(e){console.error(e);playersEl.innerHTML='<div class="loading">Unable to load market data.</div>'}}
-function renderPlayers(){if(!players.length){playersEl.innerHTML='<div class="loading">No trending players.</div>';return}playersEl.innerHTML=players.map((p,i)=>`<article class="player" data-id="${escapeHtml(p.eaId)}"><div class="rank">${i+1}</div><img class="card-img" src="${escapeHtml(p.img)}" alt="" loading="lazy"><div class="player-info"><div class="player-name">${escapeHtml(p.name)}</div><div class="player-meta">${escapeHtml(p.rating)} · ${escapeHtml(p.position)} · ${escapeHtml(p.rarity)}</div></div><div class="price">${formatPrice(p.price)}</div><div class="arrow">›</div></article>`).join("");document.querySelectorAll(".player").forEach(el=>el.addEventListener("click",()=>{const p=players.find(x=>String(x.eaId)===String(el.dataset.id));if(p)openPlayer(p)}))}
-function openPlayer(p){selectedPlayer=p;selectedPeriod=6;homeEl.style.display="none";detailEl.style.display="block";detailImage.src=p.img||"";detailImage.alt=p.name||"";detailName.textContent=p.name||"";detailMeta.textContent=`${p.rating||""} ${p.position||""} · ${p.club||""} · ${p.rarity||""}`;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",Number(t.dataset.period)===6));updateDetail()}
-function closePlayer(){selectedPlayer=null;detailEl.style.display="none";homeEl.style.display="block"}
-function getPlayerPoints(p){if(!p)return[];const d=history[String(p.eaId)];if(!d||!Array.isArray(d.points))return[];return d.points.map(x=>({timestamp:new Date(x.timestamp),price:Number(x.price)})).filter(x=>!Number.isNaN(x.timestamp.getTime())&&Number.isFinite(x.price)&&x.price>0).sort((a,b)=>a.timestamp-b.timestamp)}
-function getPlayerSales(p){if(!p)return[];const d=salesHistory[String(p.eaId)];const s=Array.isArray(d)?d:d?.sales;if(!Array.isArray(s))return[];return s.map(x=>({timestamp:new Date(x.timestamp),price:Number(x.price??x.sold_price??x.soldPrice)})).filter(x=>!Number.isNaN(x.timestamp.getTime())&&Number.isFinite(x.price)&&x.price>0).sort((a,b)=>b.timestamp-a.timestamp)}
-function formatSaleTime(d){return d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}
-function updateSalesHistory(p){const sales=getPlayerSales(p);salesCount.textContent=`${sales.length} SALES`;if(!sales.length){salesAverage.innerHTML="—";salesHighest.innerHTML="—";salesLowest.innerHTML="—";salesList.innerHTML='<div class="sales-empty">No sales history yet.</div>';return}const prices=sales.map(x=>x.price),avg=prices.reduce((a,b)=>a+b,0)/prices.length;salesAverage.innerHTML=formatPrice(avg);salesHighest.innerHTML=formatPrice(Math.max(...prices));salesLowest.innerHTML=formatPrice(Math.min(...prices));salesList.innerHTML=sales.map(x=>`<div class="sale-row"><div class="sale-time">${formatSaleTime(x.timestamp)}</div><div class="sale-price">${formatPrice(x.price)}</div></div>`).join("")}
-function updateDetail(){if(!selectedPlayer)return;currentPrice.innerHTML=formatPrice(selectedPlayer.price);const points=getPlayerPoints(selectedPlayer),cutoff=Date.now()-selectedPeriod*60*60*1000,filtered=points.filter(x=>x.timestamp.getTime()>=cutoff);updateChange(filtered);drawChart(filtered);updateSalesHistory(selectedPlayer)}
-function updateChange(points){if(points.length<2){changeEl.textContent="Collecting price history...";changeEl.className="change neutral";return}const first=points[0].price,last=selectedPlayer.price||points[points.length-1].price;if(!first||!last)return;const pct=((last-first)/first)*100,r=pct.toFixed(2);if(pct>0){changeEl.textContent=`▲ +${r}%`;changeEl.className="change up"}else if(pct<0){changeEl.textContent=`▼ ${r}%`;changeEl.className="change down"}else{changeEl.textContent="● 0.00%";changeEl.className="change neutral"}}
-function drawChart(points){chart.innerHTML="";if(points.length<2){chart.innerHTML='<text x="300" y="115" text-anchor="middle" class="chart-label">Not enough history yet</text>';return}const width=600,height=230,pl=12,pr=12,pt=20,pb=28,cw=width-pl-pr,ch=height-pt-pb,values=points.map(x=>x.price);let min=Math.min(...values),max=Math.max(...values);if(min===max){min-=1;max+=1}const range=max-min;for(let i=0;i<4;i++){const y=pt+ch*i/3;chart.insertAdjacentHTML("beforeend",`<line x1="${pl}" x2="${width-pr}" y1="${y}" y2="${y}" class="chart-grid"/>`)}const c=points.map((p,i)=>({x:pl+i/(points.length-1)*cw,y:pt+(1-(p.price-min)/range)*ch})),line=c.map((p,i)=>`${i?"L":"M"} ${p.x} ${p.y}`).join(" "),area=`${line} L ${c[c.length-1].x} ${height-pb} L ${c[0].x} ${height-pb} Z`;chart.insertAdjacentHTML("beforeend",`<defs><linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#00e5ff" stop-opacity=".35"/><stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/></linearGradient></defs><path d="${area}" class="chart-area"/><path d="${line}" class="chart-line"/>`);const last=c[c.length-1];chart.insertAdjacentHTML("beforeend",`<circle cx="${last.x}" cy="${last.y}" r="4" class="chart-point"/>`)}
-document.querySelectorAll(".tab").forEach(tab=>tab.addEventListener("click",()=>{selectedPeriod=Number(tab.dataset.period);document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===tab));updateDetail()}));document.getElementById("backBtn").addEventListener("click",closePlayer);document.getElementById("refreshBtn").addEventListener("click",async()=>{const b=document.getElementById("refreshBtn");b.textContent="Updating...";await loadData();b.textContent="Refresh"});loadData();
+
+  <div class="credit">
+    @Mattedark10
+  </div>
+</header>
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+  <input
+    id="searchInput"
+    class="search-input"
+    type="search"
+    autocomplete="off"
+    placeholder="Search player or EA ID..."
+  >
+
+  <div class="search-icon">⌕</div>
+
+  <div id="searchResults" class="search-results"></div>
+
+</div>
+
+<!-- HOME -->
+
+<main id="home">
+
+<section class="hero">
+
+  <div class="live">
+    ● LIVE MARKET
+  </div>
+
+  <h1>
+    Trending Players
+  </h1>
+
+  <p>
+    Track real-time player trends and your own price history.
+  </p>
+
+</section>
+
+<div class="section-head">
+
+  <div class="section-title">
+    TOP TRENDING
+  </div>
+
+  <button class="refresh" id="refreshBtn">
+    Refresh
+  </button>
+
+</div>
+
+<div id="players" class="players">
+
+  <div class="loading">
+    Loading market...
+  </div>
+
+</div>
+
+<div class="footer">
+  FutFlex · @Mattedark10
+</div>
+
+</main>
+
+<!-- DETAIL -->
+
+<main id="detail" class="detail">
+
+<button class="back" id="backBtn">
+  ← Back
+</button>
+
+<section class="detail-card">
+
+<div class="player-top">
+
+<img
+  id="detailImage"
+  class="detail-image"
+  src=""
+  alt=""
+>
+
+<div>
+
+<div id="detailName" class="detail-name"></div>
+
+<div id="detailMeta" class="detail-meta"></div>
+
+</div>
+
+</div>
+
+<div class="market">
+
+<div id="currentPrice" class="current-price">
+  —
+</div>
+
+<div id="change" class="change neutral">
+  No history yet
+</div>
+
+</div>
+
+<div class="tabs">
+
+<button class="tab active" data-period="6">
+  6H
+</button>
+
+<button class="tab" data-period="12">
+  12H
+</button>
+
+<button class="tab" data-period="24">
+  24H
+</button>
+
+<button class="tab" data-period="72">
+  3 DAYS
+</button>
+
+</div>
+
+<div class="chart-wrap">
+
+<svg
+  id="chart"
+  class="chart"
+  viewBox="0 0 600 230"
+  preserveAspectRatio="none">
+</svg>
+
+</div>
+
+<!-- SALES -->
+
+<div class="sales-history">
+
+<div class="sales-head">
+
+<div class="sales-title">
+  SALES HISTORY
+</div>
+
+<div id="salesCount" class="sales-count">
+  0 SALES
+</div>
+
+</div>
+
+<div class="sales-stats">
+
+<div class="sales-stat">
+
+<div class="sales-stat-label">
+  AVERAGE
+</div>
+
+<div id="salesAverage" class="sales-stat-value">
+  —
+</div>
+
+</div>
+
+<div class="sales-stat">
+
+<div class="sales-stat-label">
+  HIGHEST
+</div>
+
+<div id="salesHighest" class="sales-stat-value">
+  —
+</div>
+
+</div>
+
+<div class="sales-stat">
+
+<div class="sales-stat-label">
+  LOWEST
+</div>
+
+<div id="salesLowest" class="sales-stat-value">
+  —
+</div>
+
+</div>
+
+</div>
+
+<div id="salesList" class="sales-list">
+
+<div class="sales-empty">
+  No sales history yet.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+  FutFlex · @Mattedark10
+</div>
+
+</main>
+
+</div>
+
+<script>
+const tg = window.Telegram?.WebApp;
+
+if(tg){
+  tg.ready();
+  tg.expand();
+}
+
+/* ELEMENTS */
+
+const playersEl = document.getElementById("players");
+const homeEl = document.getElementById("home");
+const detailEl = document.getElementById("detail");
+
+const detailImage = document.getElementById("detailImage");
+const detailName = document.getElementById("detailName");
+const detailMeta = document.getElementById("detailMeta");
+
+const currentPrice = document.getElementById("currentPrice");
+const changeEl = document.getElementById("change");
+
+const chart = document.getElementById("chart");
+
+const salesCount = document.getElementById("salesCount");
+const salesAverage = document.getElementById("salesAverage");
+const salesHighest = document.getElementById("salesHighest");
+const salesLowest = document.getElementById("salesLowest");
+const salesList = document.getElementById("salesList");
+
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+/* DATA */
+
+let trendingPlayers = [];
+let allPlayers = [];
+let playersById = new Map();
+
+let history = {};
+let salesHistory = {};
+
+let selectedPlayer = null;
+let selectedPeriod = 6;
+
+let searchTimer = null;
+
+/* COIN */
+
+function coinSvg(){
+
+return `
+<svg class="coin-icon" viewBox="0 0 32 32" aria-hidden="true">
+
+<defs>
+
+<linearGradient
+  id="coinG"
+  x1="0"
+  y1="0"
+  x2="1"
+  y2="1"
+>
+
+<stop offset="0" stop-color="#fff27a"/>
+<stop offset=".45" stop-color="#ffd21c"/>
+<stop offset="1" stop-color="#e49b00"/>
+
+</linearGradient>
+
+</defs>
+
+<circle
+  cx="16"
+  cy="16"
+  r="13"
+  fill="url(#coinG)"
+  stroke="#fff6a8"
+  stroke-width="1.4"
+/>
+
+<path
+  d="M16 7.5v17
+     M11.2 11.2
+     c1.1-1.2 2.7-1.8 4.8-1.8
+     2.8 0 4.7 1.2 4.7 3.2
+     0 2.2-1.9 3-4.7 3.4
+     -2.8.4-4.7 1.2-4.7 3.4
+     0 2 1.9 3.2 4.7 3.2
+     2.1 0 3.7-.6 4.8-1.8"
+  fill="none"
+  stroke="#8c5d00"
+  stroke-width="1.7"
+  stroke-linecap="round"
+/>
+
+</svg>
+`;
+}
+
+/* HELPERS */
+
+function formatPrice(value){
+
+  const n = Number(value);
+
+  if(
+    value === null ||
+    value === undefined ||
+    !Number.isFinite(n) ||
+    n <= 0
+  ){
+    return "—";
+  }
+
+  return `
+    <span class="price-coin">
+      ${coinSvg()}
+      ${Math.round(n).toLocaleString("en-US")}
+    </span>
+  `;
+}
+
+function escapeHtml(value){
+
+  return String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function normalizePlayer(p){
+
+  if(!p) return null;
+
+  return {
+
+    eaId:
+      p.eaId ??
+      p.ea_id ??
+      p.player_id ??
+      p.item_id ??
+      "",
+
+    name:
+      p.name ??
+      p.player_name ??
+      p.common_name ??
+      "",
+
+    rating:
+      p.rating ??
+      p.overall_rating ??
+      p.overall ??
+      0,
+
+    position:
+      p.position ??
+      "",
+
+    alternatePositions:
+      p.alternatePositions ??
+      p.alternate_positions ??
+      "",
+
+    club:
+      p.club ??
+      "",
+
+    league:
+      p.league ??
+      "",
+
+    rarity:
+      p.rarity ??
+      p.card ??
+      p.edition ??
+      "",
+
+    img:
+      p.img ??
+      p.image ??
+      p.image_url ??
+      "",
+
+    price:
+      p.price ??
+      p.currentPrice ??
+      null,
+
+    priceChange:
+      p.priceChange ??
+      p.price_change ??
+      0,
+
+    nationality:
+      p.nationality ??
+      "",
+
+    raw:p
+  };
+}
+
+/* LOAD DATA */
+
+async function loadData(){
+
+  try{
+
+    const t = Date.now();
+
+    const [
+      trendingResponse,
+      playersResponse,
+      historyResponse,
+      salesResponse
+    ] = await Promise.all([
+
+      fetch(
+        `trending.json?t=${t}`,
+        {cache:"no-store"}
+      ),
+
+      fetch(
+        `players.json?t=${t}`,
+        {cache:"no-store"}
+      ),
+
+      fetch(
+        `price_history.json?t=${t}`,
+        {cache:"no-store"}
+      ),
+
+      fetch(
+        `sales_history.json?t=${t}`,
+        {cache:"no-store"}
+      )
+
+    ]);
+
+    if(!trendingResponse.ok){
+      throw new Error("Trending data unavailable");
+    }
+
+    if(!playersResponse.ok){
+      throw new Error("Players database unavailable");
+    }
+
+    const trendingRaw =
+      await trendingResponse.json();
+
+    const playersRaw =
+      await playersResponse.json();
+
+    history =
+      historyResponse.ok
+        ? await historyResponse.json()
+        : {};
+
+    salesHistory =
+      salesResponse.ok
+        ? await salesResponse.json()
+        : {};
+
+    /* TRENDING */
+
+    trendingPlayers =
+      Array.isArray(trendingRaw)
+        ? trendingRaw.map(normalizePlayer).filter(Boolean)
+        : [];
+
+    /* ALL PLAYERS */
+
+    const rawPlayers =
+      Array.isArray(playersRaw)
+        ? playersRaw
+        : Array.isArray(playersRaw.players)
+          ? playersRaw.players
+          : [];
+
+    allPlayers =
+      rawPlayers
+        .map(normalizePlayer)
+        .filter(p => p && p.name && p.eaId);
+
+    playersById.clear();
+
+    for(const p of allPlayers){
+      playersById.set(
+        String(p.eaId),
+        p
+      );
+    }
+
+    console.log(
+      "FutFlex players loaded:",
+      allPlayers.length
+    );
+
+    renderTrending();
+
+    if(selectedPlayer){
+
+      const fresh =
+        playersById.get(
+          String(selectedPlayer.eaId)
+        ) ||
+        trendingPlayers.find(
+          x =>
+            String(x.eaId) ===
+            String(selectedPlayer.eaId)
+        );
+
+      if(fresh){
+        selectedPlayer = {
+          ...selectedPlayer,
+          ...fresh
+        };
+
+        updateDetail();
+      }
+    }
+
+  }catch(error){
+
+    console.error(error);
+
+    playersEl.innerHTML = `
+      <div class="loading">
+        Unable to load market data.
+      </div>
+    `;
+  }
+}
+
+/* TRENDING */
+
+function renderTrending(){
+
+  if(!trendingPlayers.length){
+
+    playersEl.innerHTML = `
+      <div class="loading">
+        No trending players.
+      </div>
+    `;
+
+    return;
+  }
+
+  playersEl.innerHTML =
+    trendingPlayers
+      .slice(0,20)
+      .map((p,i)=>{
+
+        const image =
+          p.img ||
+          p.image ||
+          "";
+
+        return `
+
+        <article
+          class="player"
+          data-id="${escapeHtml(p.eaId)}"
+        >
+
+          <div class="rank">
+            ${i+1}
+          </div>
+
+          ${
+            image
+            ?
+            `<img
+              class="card-img"
+              src="${escapeHtml(image)}"
+              alt=""
+              loading="lazy"
+            >`
+            :
+            `<div class="card-img"></div>`
+          }
+
+          <div class="player-info">
+
+            <div class="player-name">
+              ${escapeHtml(p.name)}
+            </div>
+
+            <div class="player-meta">
+              ${escapeHtml(p.rating)}
+              ·
+              ${escapeHtml(p.position)}
+              ·
+              ${escapeHtml(p.rarity)}
+            </div>
+
+          </div>
+
+          <div class="price">
+            ${formatPrice(p.price)}
+          </div>
+
+          <div class="arrow">
+            ›
+          </div>
+
+        </article>
+        `;
+      })
+      .join("");
+
+  document
+    .querySelectorAll(".player")
+    .forEach(el => {
+
+      el.addEventListener(
+        "click",
+        ()=>{
+
+          const p =
+            trendingPlayers.find(
+              x =>
+                String(x.eaId) ===
+                String(el.dataset.id)
+            );
+
+          if(p){
+            openPlayer(p);
+          }
+
+        }
+      );
+
+    });
+}
+
+/* SEARCH */
+
+function searchPlayers(query){
+
+  const q =
+    query
+      .trim()
+      .toLowerCase();
+
+  if(!q){
+
+    searchResults.classList.remove("visible");
+    searchResults.innerHTML = "";
+
+    return;
+  }
+
+  if(!allPlayers.length){
+
+    searchResults.innerHTML = `
+      <div class="search-message">
+        Player database is loading...
+      </div>
+    `;
+
+    searchResults.classList.add("visible");
+
+    return;
+  }
+
+  const results = [];
+
+  for(const p of allPlayers){
+
+    const name =
+      String(p.name || "").toLowerCase();
+
+    const id =
+      String(p.eaId || "").toLowerCase();
+
+    const club =
+      String(p.club || "").toLowerCase();
+
+    const league =
+      String(p.league || "").toLowerCase();
+
+    const rarity =
+      String(p.rarity || "").toLowerCase();
+
+    if(
+      name.includes(q) ||
+      id.includes(q) ||
+      club.includes(q) ||
+      league.includes(q) ||
+      rarity.includes(q)
+    ){
+
+      results.push(p);
+
+      if(results.length >= 40){
+        break;
+      }
+    }
+  }
+
+  if(!results.length){
+
+    searchResults.innerHTML = `
+      <div class="search-message">
+        No players found
+      </div>
+    `;
+
+    searchResults.classList.add("visible");
+
+    return;
+  }
+
+  searchResults.innerHTML =
+    results
+      .map(p=>{
+
+        const image =
+          p.img ||
+          "";
+
+        return `
+
+        <div
+          class="search-result"
+          data-id="${escapeHtml(p.eaId)}"
+        >
+
+          ${
+            image
+            ?
+            `<img
+              class="search-result-img"
+              src="${escapeHtml(image)}"
+              alt=""
+              loading="lazy"
+            >`
+            :
+            `<div class="search-result-img"></div>`
+          }
+
+          <div class="search-result-info">
+
+            <div class="search-result-name">
+              ${escapeHtml(p.name)}
+            </div>
+
+            <div class="search-result-meta">
+
+              ${escapeHtml(p.rating)}
+              ·
+              ${escapeHtml(p.position)}
+              ·
+              ${escapeHtml(p.club)}
+
+              ${
+                p.league
+                ? ` · ${escapeHtml(p.league)}`
+                : ""
+              }
+
+            </div>
+
+          </div>
+
+          <div class="search-result-price">
+            ${formatPrice(p.price)}
+          </div>
+
+        </div>
+        `;
+      })
+      .join("");
+
+  searchResults.classList.add("visible");
+
+  searchResults
+    .querySelectorAll(".search-result")
+    .forEach(el=>{
+
+      el.addEventListener(
+        "click",
+        ()=>{
+
+          const p =
+            playersById.get(
+              String(el.dataset.id)
+            );
+
+          if(p){
+
+            searchResults.classList.remove(
+              "visible"
+            );
+
+            searchInput.value = "";
+
+            openPlayer(p);
+          }
+
+        }
+      );
+
+    });
+}
+
+/* SEARCH EVENTS */
+
+searchInput.addEventListener(
+  "input",
+  ()=>{
+
+    clearTimeout(searchTimer);
+
+    searchTimer =
+      setTimeout(
+        ()=>{
+          searchPlayers(searchInput.value);
+        },
+        120
+      );
+  }
+);
+
+searchInput.addEventListener(
+  "focus",
+  ()=>{
+
+    if(searchInput.value.trim()){
+      searchPlayers(searchInput.value);
+    }
+
+  }
+);
+
+/* DETAIL */
+
+function openPlayer(p){
+
+  selectedPlayer = p;
+  selectedPeriod = 6;
+
+  homeEl.style.display = "none";
+  detailEl.style.display = "block";
+
+  detailImage.src =
+    p.img ||
+    "";
+
+  detailImage.alt =
+    p.name ||
+    "";
+
+  detailName.textContent =
+    p.name ||
+    "";
+
+  const metaParts = [
+    p.rating,
+    p.position,
+    p.club,
+    p.league,
+    p.rarity
+  ].filter(Boolean);
+
+  detailMeta.textContent =
+    metaParts.join(" · ");
+
+  document
+    .querySelectorAll(".tab")
+    .forEach(t =>
+      t.classList.toggle(
+        "active",
+        Number(t.dataset.period) === 6
+      )
+    );
+
+  updateDetail();
+}
+
+function closePlayer(){
+
+  selectedPlayer = null;
+
+  detailEl.style.display = "none";
+  homeEl.style.display = "block";
+
+}
+
+/* PRICE HISTORY */
+
+function getPlayerPoints(p){
+
+  if(!p) return [];
+
+  const d =
+    history[String(p.eaId)];
+
+  if(!d) return [];
+
+  const raw =
+    Array.isArray(d)
+      ? d
+      : d.points;
+
+  if(!Array.isArray(raw)){
+    return [];
+  }
+
+  return raw
+    .map(x=>({
+
+      timestamp:
+        new Date(
+          x.timestamp ??
+          x.time ??
+          x.date
+        ),
+
+      price:
+        Number(
+          x.price ??
+          x.value
+        )
+
+    }))
+    .filter(x =>
+      !Number.isNaN(
+        x.timestamp.getTime()
+      ) &&
+      Number.isFinite(x.price) &&
+      x.price > 0
+    )
+    .sort(
+      (a,b) =>
+        a.timestamp-b.timestamp
+    );
+}
+
+/* SALES */
+
+function getPlayerSales(p){
+
+  if(!p) return [];
+
+  const d =
+    salesHistory[String(p.eaId)];
+
+  if(!d) return [];
+
+  const s =
+    Array.isArray(d)
+      ? d
+      : d.sales;
+
+  if(!Array.isArray(s)){
+    return [];
+  }
+
+  return s
+    .map(x=>({
+
+      timestamp:
+        new Date(
+          x.timestamp ??
+          x.time ??
+          x.date
+        ),
+
+      price:
+        Number(
+          x.price ??
+          x.sold_price ??
+          x.soldPrice
+        )
+
+    }))
+    .filter(x =>
+      !Number.isNaN(
+        x.timestamp.getTime()
+      ) &&
+      Number.isFinite(x.price) &&
+      x.price > 0
+    )
+    .sort(
+      (a,b) =>
+        b.timestamp-a.timestamp
+    );
+}
+
+function formatSaleTime(d){
+
+  return d.toLocaleTimeString(
+    "it-IT",
+    {
+      hour:"2-digit",
+      minute:"2-digit"
+    }
+  );
+}
+
+function updateSalesHistory(p){
+
+  const sales =
+    getPlayerSales(p);
+
+  salesCount.textContent =
+    `${sales.length} SALES`;
+
+  if(!sales.length){
+
+    salesAverage.innerHTML = "—";
+    salesHighest.innerHTML = "—";
+    salesLowest.innerHTML = "—";
+
+    salesList.innerHTML =
+      `<div class="sales-empty">
+        No sales history yet.
+      </div>`;
+
+    return;
+  }
+
+  const prices =
+    sales.map(x=>x.price);
+
+  const avg =
+    prices.reduce(
+      (a,b)=>a+b,
+      0
+    ) / prices.length;
+
+  salesAverage.innerHTML =
+    formatPrice(avg);
+
+  salesHighest.innerHTML =
+    formatPrice(
+      Math.max(...prices)
+    );
+
+  salesLowest.innerHTML =
+    formatPrice(
+      Math.min(...prices)
+    );
+
+  salesList.innerHTML =
+    sales
+      .map(x=>`
+
+        <div class="sale-row">
+
+          <div class="sale-time">
+            ${formatSaleTime(x.timestamp)}
+          </div>
+
+          <div class="sale-price">
+            ${formatPrice(x.price)}
+          </div>
+
+        </div>
+
+      `)
+      .join("");
+}
+
+/* DETAIL UPDATE */
+
+function updateDetail(){
+
+  if(!selectedPlayer){
+    return;
+  }
+
+  currentPrice.innerHTML =
+    formatPrice(
+      selectedPlayer.price
+    );
+
+  const points =
+    getPlayerPoints(
+      selectedPlayer
+    );
+
+  const cutoff =
+    Date.now() -
+    selectedPeriod *
+    60 *
+    60 *
+    1000;
+
+  const filtered =
+    points.filter(
+      x =>
+        x.timestamp.getTime() >=
+        cutoff
+    );
+
+  updateChange(filtered);
+  drawChart(filtered);
+  updateSalesHistory(selectedPlayer);
+}
+
+/* CHANGE */
+
+function updateChange(points){
+
+  if(points.length < 2){
+
+    changeEl.textContent =
+      "Collecting price history...";
+
+    changeEl.className =
+      "change neutral";
+
+    return;
+  }
+
+  const first =
+    points[0].price;
+
+  const last =
+    Number(
+      selectedPlayer.price
+    ) ||
+    points[points.length-1].price;
+
+  if(!first || !last){
+    return;
+  }
+
+  const pct =
+    ((last-first)/first)*100;
+
+  const rounded =
+    pct.toFixed(2);
+
+  if(pct > 0){
+
+    changeEl.textContent =
+      `▲ +${rounded}%`;
+
+    changeEl.className =
+      "change up";
+
+  }else if(pct < 0){
+
+    changeEl.textContent =
+      `▼ ${rounded}%`;
+
+    changeEl.className =
+      "change down";
+
+  }else{
+
+    changeEl.textContent =
+      "● 0.00%";
+
+    changeEl.className =
+      "change neutral";
+  }
+}
+
+/* CHART */
+
+function drawChart(points){
+
+  chart.innerHTML = "";
+
+  if(points.length < 2){
+
+    chart.innerHTML = `
+      <text
+        x="300"
+        y="115"
+        text-anchor="middle"
+        class="chart-label"
+      >
+        Not enough history yet
+      </text>
+    `;
+
+    return;
+  }
+
+  const width = 600;
+  const height = 230;
+
+  const pl = 12;
+  const pr = 12;
+  const pt = 20;
+  const pb = 28;
+
+  const cw =
+    width -
+    pl -
+    pr;
+
+  const ch =
+    height -
+    pt -
+    pb;
+
+  const values =
+    points.map(x=>x.price);
+
+  let min =
+    Math.min(...values);
+
+  let max =
+    Math.max(...values);
+
+  if(min === max){
+
+    min -= 1;
+    max += 1;
+  }
+
+  const range =
+    max-min;
+
+  for(let i=0;i<4;i++){
+
+    const y =
+      pt +
+      ch*i/3;
+
+    chart.insertAdjacentHTML(
+      "beforeend",
+      `
+      <line
+        x1="${pl}"
+        x2="${width-pr}"
+        y1="${y}"
+        y2="${y}"
+        class="chart-grid"
+      />
+      `
+    );
+  }
+
+  const coords =
+    points.map(
+      (p,i)=>({
+
+        x:
+          pl +
+          i/(points.length-1)*cw,
+
+        y:
+          pt +
+          (
+            1 -
+            (p.price-min)/range
+          )*ch
+
+      })
+    );
+
+  const line =
+    coords
+      .map(
+        (p,i)=>
+          `${i ? "L":"M"} ${p.x} ${p.y}`
+      )
+      .join(" ");
+
+  const area =
+    `${line}
+     L ${coords[coords.length-1].x} ${height-pb}
+     L ${coords[0].x} ${height-pb}
+     Z`;
+
+  chart.insertAdjacentHTML(
+    "beforeend",
+    `
+
+    <defs>
+
+      <linearGradient
+        id="areaGradient"
+        x1="0"
+        x2="0"
+        y1="0"
+        y2="1"
+      >
+
+        <stop
+          offset="0%"
+          stop-color="#00e5ff"
+          stop-opacity=".35"
+        />
+
+        <stop
+          offset="100%"
+          stop-color="#00e5ff"
+          stop-opacity="0"
+        />
+
+      </linearGradient>
+
+    </defs>
+
+    <path
+      d="${area}"
+      class="chart-area"
+    />
+
+    <path
+      d="${line}"
+      class="chart-line"
+    />
+
+    `
+  );
+
+  const last =
+    coords[coords.length-1];
+
+  chart.insertAdjacentHTML(
+    "beforeend",
+    `
+    <circle
+      cx="${last.x}"
+      cy="${last.y}"
+      r="4"
+      class="chart-point"
+    />
+    `
+  );
+}
+
+/* TABS */
+
+document
+  .querySelectorAll(".tab")
+  .forEach(tab => {
+
+    tab.addEventListener(
+      "click",
+      ()=>{
+
+        selectedPeriod =
+          Number(
+            tab.dataset.period
+          );
+
+        document
+          .querySelectorAll(".tab")
+          .forEach(x =>
+            x.classList.toggle(
+              "active",
+              x === tab
+            )
+          );
+
+        updateDetail();
+      }
+    );
+  });
+
+/* BACK */
+
+document
+  .getElementById("backBtn")
+  .addEventListener(
+    "click",
+    closePlayer
+  );
+
+/* REFRESH */
+
+document
+  .getElementById("refreshBtn")
+  .addEventListener(
+    "click",
+    async ()=>{
+
+      const button =
+        document.getElementById(
+          "refreshBtn"
+        );
+
+      button.textContent =
+        "Updating...";
+
+      await loadData();
+
+      button.textContent =
+        "Refresh";
+    }
+  );
+
+/* CLOSE SEARCH WHEN CLICKING OUTSIDE */
+
+document.addEventListener(
+  "click",
+  event => {
+
+    if(
+      !event.target.closest(
+        ".search-box"
+      )
+    ){
+
+      searchResults.classList.remove(
+        "visible"
+      );
+    }
+
+  }
+);
+
+/* INITIAL LOAD */
+
+loadData();
+
+/* AUTO UPDATE EVERY 5 MINUTES */
+
+setInterval(
+  loadData,
+  5 * 60 * 1000
+);
 </script>
- </body>
+
+</body>
 </html>
