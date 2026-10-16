@@ -9,7 +9,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596705.83a1beab5bbf68a116756250c88e0588b31b964729afb479dfeedbd28d310f18.webp",
     "url": "https://www.fut.gg/players/265057-cora-zicai/27-50596705/",
     "eaId": 50596705,
-    "slug": "27-50596705"
+    "slug": "27-50596705",
+    "price": null
   },
   {
     "name": "Bisiwu",
@@ -21,7 +22,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-88043.17e49fb3bd5920592a8afdd5d6f29e58e044244a0f5b3137e0e0ac7fe023caf1.webp",
     "url": "https://www.fut.gg/players/88043-jesse-eugen-bisiwu/27-88043/",
     "eaId": 88043,
-    "slug": "27-88043"
+    "slug": "27-88043",
+    "price": null
   },
   {
     "name": "Xavi Espart",
@@ -33,7 +35,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
     "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
     "eaId": 50413511,
-    "slug": "27-50413511"
+    "slug": "27-50413511",
+    "price": null
   },
   {
     "name": "Clara Serrajordi",
@@ -45,7 +48,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-78357.d672c232b7ec032b3d774eaf691e1a4746339af8e8c59b6d4f7538edf810d5ca.webp",
     "url": "https://www.fut.gg/players/78357-clara-serrajordi-diaz-clara-serrajordi/27-78357/",
     "eaId": 78357,
-    "slug": "27-78357"
+    "slug": "27-78357",
+    "price": null
   },
   {
     "name": "Camavinga",
@@ -57,7 +61,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-248243.602b3ff063c9780f09ae01bf0bc49e8688cfddcc7c164911a46206d8f2c92c0d.webp",
     "url": "https://www.fut.gg/players/248243-eduardo-camavinga/27-248243/",
     "eaId": 248243,
-    "slug": "27-248243"
+    "slug": "27-248243",
+    "price": null
   },
   {
     "name": "Karetsas",
@@ -69,7 +74,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-70497.cd2ecc7dc7c899b79e828a160f8206e7033f972dfadeea5c3330c889a00937d7.webp",
     "url": "https://www.fut.gg/players/70497-konstantinos-karetsas/27-70497/",
     "eaId": 70497,
-    "slug": "27-70497"
+    "slug": "27-70497",
+    "price": null
   },
   {
     "name": "Karchaoui",
@@ -81,7 +87,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.412e17c1c8ea7ca2e9ef22ce32e054ce18ba71f138160cf09856a21b080ed55b.webp",
     "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
     "eaId": 233662,
-    "slug": "27-233662"
+    "slug": "27-233662",
+    "price": null
   },
   {
     "name": "Aitana Bonmatí",
@@ -93,7 +100,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
-    "slug": "27-241667"
+    "slug": "27-241667",
+    "price": null
   },
   {
     "name": "Kika Nazareth",
@@ -105,7 +113,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-261855.d9104e33b6382c0c1d7009b5df9e7643c153920d7afb4bc0234ecc73791d6827.webp",
     "url": "https://www.fut.gg/players/261855-kika-nazareth/27-261855/",
     "eaId": 261855,
-    "slug": "27-261855"
+    "slug": "27-261855",
+    "price": null
   },
   {
     "name": "Lamine Yamal",
@@ -117,7 +126,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
     "eaId": 277643,
-    "slug": "27-277643"
+    "slug": "27-277643",
+    "price": null
   },
   {
     "name": "Salma Paralluelo",
@@ -129,7 +139,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.8c0b830d573fabd9c4578db1004d7dd6b8396d690bebda5e6b26b8d617d07a57.webp",
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
-    "slug": "27-269404"
+    "slug": "27-269404",
+    "price": null
   },
   {
     "name": "Mariona",
@@ -141,7 +152,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
     "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
     "eaId": 237288,
-    "slug": "27-237288"
+    "slug": "27-237288",
+    "price": null
   },
   {
     "name": "Ferran Torres",
@@ -153,7 +165,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50573109.622d6c607090e4a5cf0cc080a458e9f197098b02d816ed65dcad4b639d903d61.webp",
     "url": "https://www.fut.gg/players/241461-ferran-torres/27-50573109/",
     "eaId": 50573109,
-    "slug": "27-50573109"
+    "slug": "27-50573109",
+    "price": null
   },
   {
     "name": "King",
@@ -165,7 +178,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50402434.72c766b01bc6d23c3532145899c3313de605cf8613093426dc7376b66618bbb6.webp",
     "url": "https://www.fut.gg/players/70786-josh-king/27-50402434/",
     "eaId": 50402434,
-    "slug": "27-50402434"
+    "slug": "27-50402434",
+    "price": null
   },
   {
     "name": "Pedri",
@@ -177,7 +191,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
     "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
     "eaId": 251854,
-    "slug": "27-251854"
+    "slug": "27-251854",
+    "price": null
   },
   {
     "name": "Stanway",
@@ -189,7 +204,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
     "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
     "eaId": 243404,
-    "slug": "27-243404"
+    "slug": "27-243404",
+    "price": null
   },
   {
     "name": "Patri Guijarro",
@@ -201,7 +217,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.4e23ed659cce224828463baec2989b83cb08a8a5fb277f53e6a61696a6149fcf.webp",
     "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
     "eaId": 237289,
-    "slug": "27-237289"
+    "slug": "27-237289",
+    "price": null
   },
   {
     "name": "Eric García",
@@ -213,7 +230,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-245037.70b44edbafe44064d3096cc7bcbd4d2bb9e2df07743be6b5e40983593e16ad35.webp",
     "url": "https://www.fut.gg/players/245037-eric-garcia/27-245037/",
     "eaId": 245037,
-    "slug": "27-245037"
+    "slug": "27-245037",
+    "price": null
   },
   {
     "name": "Joan García",
@@ -225,7 +243,8 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259532.e0add8ed4678fad3b84b0219825e78a41feaaba3739150529263ce8e53dde782.webp",
     "url": "https://www.fut.gg/players/259532-joan-garcia/27-259532/",
     "eaId": 259532,
-    "slug": "27-259532"
+    "slug": "27-259532",
+    "price": null
   },
   {
     "name": "Raphinha",
@@ -237,6 +256,7 @@
     "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233419.1101f0e4f954127d6d28afda571f2e4af01a27316dd850c43d03c661d51816c5.webp",
     "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
     "eaId": 233419,
-    "slug": "27-233419"
+    "slug": "27-233419",
+    "price": null
   }
 ]
