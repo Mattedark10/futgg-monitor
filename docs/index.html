@@ -131,20 +131,21 @@ h1{
   border-radius:99px;
   padding:8px 14px;
   font-size:14px;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<h1>IL MERCATO</h1>
+<h1>FutFlex</h1>
 
 <p class="sub" id="sub">
-  Caricamento Trending Players…
+  Loading Trending Players...
 </p>
 
 <button class="refresh" id="ref">
-  ⟳ Aggiorna
+  ⟳ Refresh
 </button>
 
 <div class="bar">
@@ -178,19 +179,17 @@ const esc = s =>
   );
 
 function render() {
-
   document.getElementById("count").textContent =
-    players.length + " giocatori";
+    players.length + " players";
 
   if (!players.length) {
     document.getElementById("list").innerHTML =
-      `<p class="empty">Nessun giocatore disponibile.</p>`;
+      `<p class="empty">No players available.</p>`;
     return;
   }
 
   document.getElementById("list").innerHTML =
     players.map((p, i) => `
-
       <div
         class="item"
         data-url="${esc(p.url)}"
@@ -233,7 +232,60 @@ function render() {
         </div>
 
       </div>
-
     `).join("");
 
-  document
+  document.querySelectorAll(".item").forEach(item => {
+    item.addEventListener("click", () => {
+      const url = item.dataset.url;
+
+      if (!url) return;
+
+      if (tg && tg.openLink) {
+        tg.openLink(url);
+      } else {
+        window.open(url, "_blank");
+      }
+    });
+  });
+}
+
+async function load() {
+  const sub = document.getElementById("sub");
+
+  sub.textContent = "Loading Trending Players...";
+
+  try {
+    const response = await fetch(
+      "trending.json?t=" + Date.now()
+    );
+
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+
+    const data = await response.json();
+
+    players = Array.isArray(data)
+      ? data.slice(0, 20)
+      : [];
+
+    sub.textContent = "Live data from FUT.GG";
+
+  } catch (error) {
+    console.error(error);
+
+    players = [];
+
+    sub.textContent = "Unable to load Trending Players";
+  }
+
+  render();
+}
+
+document.getElementById("ref").onclick = load;
+
+load();
+</script>
+
+</body>
+</html>
