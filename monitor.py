@@ -18,9 +18,16 @@ PAGES = {
         "players": 5,
         "distinguish": True,
     },
-    "🌈 HOLOGRAPHICS": {
+
+    "✨ HOLOGRAPHICS": {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5,
+        "distinguish": False,
+    },
+
+    "🏆 SEASON 1": {
+        "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
+        "players": 10,
         "distinguish": False,
     },
 }
@@ -318,7 +325,7 @@ def player_text(player):
         )
 
         tag = (
-            f"🌈 <b>{safe_version}</b> · "
+            f"✨ <b>{safe_version}</b> · "
         )
 
     name = html.escape(
@@ -446,10 +453,7 @@ def main():
         print("=" * 60)
 
         url = config["url"]
-
-        expected_players = (
-            config["players"]
-        )
+        expected_players = config["players"]
 
         distinguish = config.get(
             "distinguish",
@@ -625,24 +629,32 @@ def main():
     # BUILD TELEGRAM MESSAGE
     # ========================================================
 
-    message = (
-        "🤖 <b>FUTFLEX MONITOR</b>\n\n"
+    has_changes = any(
+        result["status"] == "changed"
+        for result in results
+    )
+
+    if has_changes:
+        message = (
+            "⚡ <b>FUTFLEX FEED UPDATE</b>\n\n"
+        )
+    else:
+        message = (
+            "🤖 <b>FUTFLEX MONITOR</b>\n\n"
+        )
+
+    message += (
         "✅ Monitoring check completed\n"
         f"🕐 {now.strftime('%d/%m/%Y %H:%M:%S')} UTC\n"
     )
 
     for result in results:
-        category = result[
-            "category"
-        ]
-
-        status = result[
-            "status"
-        ]
+        category = result["category"]
+        status = result["status"]
 
         message += (
             "\n━━━━━━━━━━━━━━\n"
-            f"{category}\n"
+            f"<b>{category}</b>\n"
         )
 
         # ====================================================
@@ -650,23 +662,15 @@ def main():
         # ====================================================
 
         if status == "changed":
-            message += (
-                "🚨 <b>FEED UPDATED</b>\n\n"
-            )
-
-            for player in result[
-                "removed"
-            ]:
+            for player in result["removed"]:
                 message += (
-                    "🔴 <b>OUT</b> · "
+                    "❌ <b>GONE</b> · "
                     f"{player_text(player)}\n"
                 )
 
-            for player in result[
-                "added"
-            ]:
+            for player in result["added"]:
                 message += (
-                    "🟢 <b>IN</b> · "
+                    "🆕 <b>NEW</b> · "
                     f"{player_text(player)}\n"
                 )
 
@@ -676,7 +680,7 @@ def main():
 
         elif status == "unchanged":
             message += (
-                "🟢 No changes detected\n"
+                "✓ No changes\n"
             )
 
         # ====================================================
@@ -685,7 +689,7 @@ def main():
 
         elif status == "first_scan":
             message += (
-                "🆕 First scan saved\n"
+                "✓ First scan saved\n"
             )
 
         # ====================================================
@@ -707,13 +711,13 @@ def main():
             )
 
             message += (
-                "❌ Error while checking feed\n"
+                "⚠️ Feed check failed\n"
                 f"<code>{error}</code>\n"
             )
 
     message += (
         "\n━━━━━━━━━━━━━━\n"
-        "🔄 Next check scheduled in approximately 5 minutes."
+        "⏱ Automatic monitoring · 5 min"
     )
 
     # ========================================================
