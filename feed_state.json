@@ -1,0 +1,66 @@
+{
+  "🦸 HEROES": [
+    {
+      "name": "Šašić",
+      "rating": "89",
+      "card": "Base Hero",
+      "item_id": "67335170",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Litmanen",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "67114537",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Keßler",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "67335237",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Milito",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "67371135",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Šašić",
+      "rating": "89",
+      "card": "Base Hero",
+      "item_id": "226306",
+      "version": "Base"
+    }
+  ],
+  "🌈 HOLOGRAPHICS": [
+    {
+      "name": "Angerer",
+      "rating": "92",
+      "card": "Base Icon"
+    },
+    {
+      "name": "Prinz",
+      "rating": "92",
+      "card": "Base Icon"
+    },
+    {
+      "name": "Baresi",
+      "rating": "91",
+      "card": "Base Icon"
+    },
+    {
+      "name": "van Basten",
+      "rating": "91",
+      "card": "Base Icon"
+    },
+    {
+      "name": "Rush",
+      "rating": "88",
+      "card": "Base Icon"
+    }
+  ]
+}
