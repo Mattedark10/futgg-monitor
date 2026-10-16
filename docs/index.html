@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FUT Nexus</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+:root{--bg:#0b0709;--card:#150e11;--line:#2a1a1f;--red:#ff2d4a;--tx:#fff;--mu:#9a8a8f}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,sans-serif;padding:0 14px calc(env(safe-area-inset-bottom,0px) + 24px)}
+h1{font-size:34px;line-height:1;margin:22px 0 6px;letter-spacing:-1px}
+.sub{color:var(--mu);font-size:13px;margin-bottom:16px}
+.row{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:99px;padding:8px 14px;font-size:14px;white-space:nowrap}
+.chip.on{background:var(--red);border-color:var(--red);font-weight:600}
+.bar{display:flex;justify-content:space-between;align-items:center;margin:16px 0 10px}
+.bar b{font-size:17px}.bar small{display:block;color:var(--mu);font-size:12px;margin-top:2px}
+.plat{display:flex;gap:6px}
+.item{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:8px}
+.rk{color:var(--mu);font-size:12px;width:26px}
+.ph{width:46px;height:58px;border-radius:8px;background:#241519;object-fit:cover;flex:none}
+.nm{font-weight:700;font-size:16px}.rt{color:var(--red);font-size:12px;font-weight:700}
+.cd{color:var(--mu);font-size:12px}.pr{font-size:13px;font-weight:700;margin-top:3px}
+.empty{color:var(--mu);text-align:center;padding:30px 0}
+</style>
+</head>
+<body>
+<h1>IL MERCATO</h1>
+<p class="sub" id="sub">Caricamento…</p>
+<div class="row" id="filters"></div>
+<div class="bar">
+  <div><b>Trending adesso</b><small id="count"></small></div>
+  <div class="plat" id="plat"></div>
+</div>
+<div id="list"></div>
+
+<script>
+const tg = window.Telegram && Telegram.WebApp;
+if (tg) { tg.ready(); tg.expand(); }
+
+const FILTERS = [["all","Tutti"],["hero","Hero"],["icon","Icon"],["holo","Olografiche"],["pristine","Pristine"]];
+const DEMO = {updated:"dati demo", players:[
+  {name:"Angerer",rating:92,pos:"GK",card:"Base Icon",type:"icon",ps5:292000,pc:371000},
+  {name:"Prinz",rating:92,pos:"ST",card:"Base Icon",type:"icon",ps5:350000,pc:593000},
+  {name:"Šašić",rating:89,pos:"ST",card:"Base Hero",type:"hero",ps5:333000,pc:333000},
+  {name:"Nico Paz",rating:87,pos:"CAM",card:"Destined for Glory",type:"holo",ps5:175000,pc:null}
+]};
+
+let data = DEMO, filter = "all", plat = "ps5";
+
+const fmt = n => n == null ? "Prezzo n/d" : n.toLocaleString("it-IT") + " crediti";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function chips(el, items, cur, cb) {
+  el.innerHTML = items.map(([k, l]) =>
+    `<button class="chip ${k === cur ? "on" : ""}" data-k="${k}">${l}</button>`).join("");
+  el.onclick = e => { const k = e.target.dataset.k; if (k) cb(k); };
+}
+
+function render() {
+  chips(document.getElementById("filters"), FILTERS, filter, k => { filter = k; render(); });
+  chips(document.getElementById("plat"), [["ps5","PS5"],["pc","PC"]], plat, k => { plat = k; render(); });
+
+  const rows = data.players.filter(p => filter === "all" || p.type === filter);
+  document.getElementById("sub").textContent = "Aggiornato: " + data.updated;
+  document.getElementById("count").textContent = rows.length + " giocatori";
+  document.getElementById("list").innerHTML = rows.length ? rows.map((p, i) => `
+    <div class="item">
+      <span class="rk">#${i + 1}</span>
+      ${p.img ? `<img class="ph" src="${esc(p.img)}" alt="" loading="lazy">` : `<div class="ph"></div>`}
+      <div>
+        <div class="rt">${esc(p.rating)} ${esc(p.pos)}</div>
+        <div class="nm">${esc(p.name)}</div>
+        <div class="cd">${esc(p.card)}</div>
+        <div class="pr">${fmt(p[plat])} <span class="cd">· ${plat.toUpperCase()}</span></div>
+      </div>
+    </div>`).join("") : `<p class="empty">Nessun giocatore in questa categoria.</p>`;
+}
+
+async function load() {
+  try {
+    const r = await fetch("trending.json?t=" + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    data = await r.json();
+  } catch (e) { data = DEMO; }
+  render();
+}
+
+document.getElementById("sub").insertAdjacentHTML("afterend",
+  '<button class="chip" id="ref" style="margin-bottom:14px">⟳ Aggiorna</button>');
+document.getElementById("ref").onclick = load;
+load();
+</script>
+</body>
+</html>
