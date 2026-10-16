@@ -1,33 +1,56 @@
 import requests
+import json
 
-JS_URL = "https://assets.fut.gg/ts/assets/index-LtbajdOB.js"
+API_URL = "https://www.fut.gg/api/fut/players/v2/27/"
 
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/140.0.0.0 Safari/537.36"
-    )
+    ),
+    "Accept": "application/json",
+    "Referer": "https://www.fut.gg/players/trending/",
 }
 
-response = requests.get(JS_URL, headers=HEADERS, timeout=30)
-response.raise_for_status()
+PARAMS = {
+    "sorts": "-pageviews",
+    "count": 20,
+}
 
-js = response.text
+response = requests.get(
+    API_URL,
+    headers=HEADERS,
+    params=PARAMS,
+    timeout=30
+)
 
-target = "function tp("
-position = js.find(target)
-
+print("REQUEST URL:", response.url)
 print("STATUS:", response.status_code)
+print("CONTENT TYPE:", response.headers.get("content-type"))
 print()
-print("TP FUNCTION:")
-print("============")
 
-if position == -1:
-    print("function tp NOT FOUND")
-else:
-    print("FOUND AT:", position)
-    print()
-    
-    # Print only from the beginning of the tp function
-    print(js[position:position + 8000])
+print("RESPONSE:")
+print("=========")
+
+try:
+    data = response.json()
+
+    print("JSON TYPE:", type(data).__name__)
+
+    if isinstance(data, list):
+        print("PLAYERS RETURNED:", len(data))
+        print()
+        print(json.dumps(data[:3], indent=2, ensure_ascii=False))
+
+    elif isinstance(data, dict):
+        print("TOP-LEVEL KEYS:", list(data.keys()))
+        print()
+        print(json.dumps(data, indent=2, ensure_ascii=False)[:15000])
+
+    else:
+        print(data)
+
+except Exception:
+    print("Response is not JSON.")
+    print(response.text[:5000])
