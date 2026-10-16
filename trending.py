@@ -1,7 +1,9 @@
-import requests
 import json
+import os
+import requests
 
 API_URL = "https://www.fut.gg/api/fut/players/v2/27/"
+SITE_URL = "https://www.fut.gg"
 
 HEADERS = {
     "User-Agent": (
@@ -25,30 +27,22 @@ response = requests.get(
     timeout=30
 )
 
-print("STATUS:", response.status_code)
-
 response.raise_for_status()
 
 data = response.json()
+players = data.get("data", [])[:20]
 
-print("RESPONSE TYPE:", type(data).__name__)
+trending = []
 
-if isinstance(data, list):
-    print("PLAYERS RETURNED:", len(data))
+for player in players:
+    club = player.get("uniqueClub") or player.get("club") or {}
+    league = player.get("league") or {}
 
-    if data:
-        first = data[0]
+    player_url = player.get("url") or ""
 
-        print("\nFIRST PLAYER KEYS:")
-        print(list(first.keys()))
-
-        print("\nFIRST PLAYER:")
-        print(json.dumps(first, indent=2, ensure_ascii=False))
-
-elif isinstance(data, dict):
-    print("\nTOP LEVEL KEYS:")
-    print(list(data.keys()))
-
-    # Print a shortened version so the GitHub log stays manageable
-    print("\nDATA PREVIEW:")
-    print(json.dumps(data, indent=2, ensure_ascii=False)[:8000])
+    trending.append({
+        "name": player.get("cardName") or player.get("commonName") or "",
+        "rating": player.get("overall"),
+        "position": player.get("position") or "",
+        "rarity": player.get("rarityName") or "",
+        "club": club.get
