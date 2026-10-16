@@ -1,10 +1,10 @@
 {
   "🦸 HEROES": [
     {
-      "name": "Vialli",
+      "name": "Šašić",
       "rating": "89",
       "card": "Base Hero",
-      "item_id": "67342564",
+      "item_id": "67335170",
       "version": "Pristine Holographic"
     },
     {
@@ -53,13 +53,13 @@
       "card": "Base Icon"
     },
     {
-      "name": "Foudy",
-      "rating": "90",
+      "name": "van Basten",
+      "rating": "91",
       "card": "Base Icon"
     },
     {
-      "name": "Moore",
-      "rating": "90",
+      "name": "Rush",
+      "rating": "88",
       "card": "Base Icon"
     }
   ]
