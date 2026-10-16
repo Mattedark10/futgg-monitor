@@ -1,15 +1,43 @@
 import json
 import os
-import time
 from datetime import datetime, timezone, timedelta
 
 import requests
 
 
+# =========================
+# FUT.GG PLAYER DATA
+# =========================
+
 PLAYERS_API = "https://www.fut.gg/api/fut/players/v2/27/"
-PRICE_API = "https://www.fut.gg/api/fut/player-prices/27"
+
+# =========================
+# PUBLIC FC27 MARKET API
+# =========================
+
+MARKET_API = "https://fc27-market.val.run/latest"
 
 SITE_URL = "https://www.fut.gg"
+
+# =========================
+# FILES
+# =========================
+
+DOCS_DIR = "docs"
+
+TRENDING_FILE = os.path.join(
+    DOCS_DIR,
+    "trending.json"
+)
+
+HISTORY_FILE = os.path.join(
+    DOCS_DIR,
+    "price_history.json"
+)
+
+# Keep 72 hours
+HISTORY_HOURS = 72
+
 
 HEADERS = {
     "User-Agent": (
@@ -18,38 +46,55 @@ HEADERS = {
         "Chrome/140.0.0.0 Safari/537.36"
     ),
     "Accept": "application/json",
-    "Referer": "https://www.fut.gg/players/trending/",
+    "Referer": "https://www.fut.gg/",
 }
 
-DOCS_DIR = "docs"
-TRENDING_FILE = os.path.join(DOCS_DIR, "trending.json")
-HISTORY_FILE = os.path.join(DOCS_DIR, "price_history.json")
 
-HISTORY_HOURS = 72
-
+# =========================
+# JSON HELPERS
+# =========================
 
 def load_json(path, default):
+
     if not os.path.exists(path):
         return default
 
     try:
-        with open(path, "r", encoding="utf-8") as file:
+        with open(
+            path,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
             return json.load(file)
+
     except Exception:
+
         return default
 
 
 def save_json(path, data):
-    with open(path, "w", encoding="utf-8") as file:
+
+    with open(
+        path,
+        "w",
+        encoding="utf-8"
+    ) as file:
+
         json.dump(
             data,
             file,
             ensure_ascii=False,
-            indent=2,
+            indent=2
         )
 
 
+# =========================
+# TRENDING
+# =========================
+
 def get_trending_players():
+
     response = requests.get(
         PLAYERS_API,
         headers=HEADERS,
@@ -64,19 +109,26 @@ def get_trending_players():
 
     data = response.json()
 
-    return data.get("data", [])[:20]
+    return data.get(
+        "data",
+        []
+    )[:20]
 
 
-def get_player_price(ea_id):
-    """
-    Recupera prezzo corrente + storico della singola carta.
-    """
+# =========================
+# MARKET
+# =========================
 
-    url = f"{PRICE_API}/{ea_id}/"
+def get_market_prices():
+
+    print("Getting public FC27 market feed...")
 
     response = requests.get(
-        url,
-        headers=HEADERS,
+        MARKET_API,
+        headers={
+            "User-Agent": HEADERS["User-Agent"],
+            "Accept": "application/json",
+        },
         timeout=30,
     )
 
@@ -84,161 +136,118 @@ def get_player_price(ea_id):
 
     data = response.json()
 
-    return data
+    prices = {}
 
+    groups = data.get(
+        "groups",
+        {}
+    )
 
-def extract_current_price(data):
-    """
-    Gestisce le possibili strutture della risposta.
-    """
+    for group_players in groups.values():
 
-    candidates = [
-        data.get("price"),
-        data.get("currentPrice"),
-    ]
-
-    if isinstance(data.get("data"), dict):
-        candidates.extend([
-            data["data"].get("price"),
-            data["data"].get("currentPrice"),
-        ])
-
-    for value in candidates:
-        if value is None:
+        if not isinstance(
+            group_players,
+            list
+        ):
             continue
 
-        try:
-            value = int(value)
+        for player in group_players:
 
-            if value > 0:
-                return value
-
-        except (TypeError, ValueError):
-            pass
-
-    return None
-
-
-def extract_api_history(data):
-    """
-    Estrae la history già disponibile nell'API.
-    """
-
-    history = []
-
-    possible_histories = [
-        data.get("history"),
-    ]
-
-    if isinstance(data.get("data"), dict):
-        possible_histories.append(
-            data["data"].get("history")
-        )
-
-    raw_history = None
-
-    for candidate in possible_histories:
-        if isinstance(candidate, list):
-            raw_history = candidate
-            break
-
-    if not raw_history:
-        return history
-
-    for point in raw_history:
-
-        if not isinstance(point, dict):
-            continue
-
-        date_value = (
-            point.get("date")
-            or point.get("timestamp")
-            or point.get("datetime")
-        )
-
-        price_value = point.get("price")
-
-        if not date_value or price_value is None:
-            continue
-
-        try:
-            price_value = int(price_value)
-
-            if price_value <= 0:
-                continue
-
-        except (TypeError, ValueError):
-            continue
-
-        try:
-            parsed_date = datetime.fromisoformat(
-                str(date_value).replace("Z", "+00:00")
+            ea_id = player.get(
+                "eaId"
             )
 
-            if parsed_date.tzinfo is None:
-                parsed_date = parsed_date.replace(
-                    tzinfo=timezone.utc
-                )
+            price = player.get(
+                "price"
+            )
 
-            timestamp = parsed_date.astimezone(
-                timezone.utc
-            ).isoformat().replace("+00:00", "Z")
+            if ea_id is None:
+                continue
 
-        except Exception:
-            continue
+            if price is None:
+                continue
 
-        history.append(
-            {
-                "timestamp": timestamp,
-                "price": price_value,
-            }
-        )
+            try:
 
-    return history
+                price = int(price)
+
+            except (
+                TypeError,
+                ValueError
+            ):
+
+                continue
+
+            if price <= 0:
+                continue
+
+            prices[str(ea_id)] = price
+
+    print(
+        f"Received prices for "
+        f"{len(prices)} players."
+    )
+
+    return prices
 
 
-def add_point(history, ea_id, timestamp, price):
+# =========================
+# HISTORY
+# =========================
+
+def add_history_point(
+    history,
+    ea_id,
+    timestamp,
+    price
+):
+
     key = str(ea_id)
 
     if key not in history:
+
         history[key] = {
             "points": []
         }
 
-    points = history[key].get("points", [])
+    points = history[key].get(
+        "points",
+        []
+    )
 
     points.append(
         {
             "timestamp": timestamp,
-            "price": price,
+            "price": price
         }
     )
 
-    # Rimuove duplicati dello stesso timestamp
-    unique = {}
 
-    for point in points:
-        unique[point["timestamp"]] = point
+def clean_history(
+    history,
+    now
+):
 
-    history[key]["points"] = list(
-        unique.values()
-    )
-
-
-def clean_history(history, now):
-    cutoff = now - timedelta(
-        hours=HISTORY_HOURS
+    cutoff = (
+        now
+        - timedelta(
+            hours=HISTORY_HOURS
+        )
     )
 
     cleaned = {}
 
-    for ea_id, data in history.items():
+    for ea_id, player_data in history.items():
 
         points = []
 
-        for point in data.get("points", []):
+        for point in player_data.get(
+            "points",
+            []
+        ):
 
             try:
+
                 timestamp = datetime.fromisoformat(
                     point["timestamp"].replace(
                         "Z",
@@ -246,33 +255,57 @@ def clean_history(history, now):
                     )
                 )
 
-                price = int(point["price"])
-
-                if (
-                    timestamp >= cutoff
-                    and price > 0
-                ):
-                    points.append(
-                        {
-                            "timestamp": point["timestamp"],
-                            "price": price,
-                        }
-                    )
+                price = int(
+                    point["price"]
+                )
 
             except Exception:
+
                 continue
 
+            if timestamp < cutoff:
+                continue
+
+            if price <= 0:
+                continue
+
+            points.append(
+                {
+                    "timestamp": point["timestamp"],
+                    "price": price
+                }
+            )
+
+        # Sort chronologically
         points.sort(
             key=lambda x: x["timestamp"]
         )
 
+        # Remove duplicate timestamps
+        unique = {}
+
+        for point in points:
+
+            unique[
+                point["timestamp"]
+            ] = point
+
+        points = list(
+            unique.values()
+        )
+
         if points:
+
             cleaned[ea_id] = {
                 "points": points
             }
 
     return cleaned
 
+
+# =========================
+# MAIN
+# =========================
 
 def main():
 
@@ -281,15 +314,41 @@ def main():
         exist_ok=True
     )
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(
+        timezone.utc
+    )
 
-    print("Getting trending players...")
+    timestamp = (
+        now.isoformat()
+        .replace(
+            "+00:00",
+            "Z"
+        )
+    )
+
+    print()
+    print(
+        "Getting trending players..."
+    )
 
     players = get_trending_players()
 
     print(
-        f"Found {len(players)} trending players."
+        f"Found {len(players)} "
+        f"trending players."
     )
+
+    print()
+
+    # =========================
+    # GET PRICES
+    # =========================
+
+    prices = get_market_prices()
+
+    # =========================
+    # LOAD OLD HISTORY
+    # =========================
 
     history = load_json(
         HISTORY_FILE,
@@ -298,87 +357,80 @@ def main():
 
     trending = []
 
+    # =========================
+    # BUILD TRENDING
+    # =========================
+
     for index, player in enumerate(
         players,
         start=1
     ):
 
-        ea_id = player.get("eaId")
+        ea_id = player.get(
+            "eaId"
+        )
+
+        name = (
+            player.get("cardName")
+            or player.get("commonName")
+            or ""
+        )
+
+        price = None
+
+        if ea_id is not None:
+
+            price = prices.get(
+                str(ea_id)
+            )
 
         print(
             f"[{index}/{len(players)}] "
-            f"{player.get('cardName') or player.get('commonName')}"
+            f"{name}"
         )
 
-        current_price = None
-        api_history = []
+        print(
+            f"  EA ID: {ea_id}"
+        )
 
-        if ea_id is not None:
+        print(
+            f"  Price: {price}"
+        )
 
-            try:
+        # =========================
+        # SAVE CURRENT PRICE
+        # =========================
 
-                price_data = get_player_price(
-                    ea_id
-                )
+        if (
+            ea_id is not None
+            and price is not None
+        ):
 
-                current_price = extract_current_price(
-                    price_data
-                )
+            add_history_point(
+                history,
+                ea_id,
+                timestamp,
+                price
+            )
 
-                api_history = extract_api_history(
-                    price_data
-                )
-
-                print(
-                    f"  Price: {current_price}"
-                )
-
-                print(
-                    f"  API history: "
-                    f"{len(api_history)} points"
-                )
-
-            except Exception as error:
-
-                print(
-                    f"  Price error: {error}"
-                )
-
-        # Importiamo la history disponibile
-        # nell'API come base iniziale.
-        if ea_id is not None:
-
-            for point in api_history:
-
-                add_point(
-                    history,
-                    ea_id,
-                    point["timestamp"],
-                    point["price"]
-                )
-
-            # Aggiungiamo il nostro rilevamento
-            # corrente.
-            if current_price is not None:
-
-                add_point(
-                    history,
-                    ea_id,
-                    now.isoformat().replace(
-                        "+00:00",
-                        "Z"
-                    ),
-                    current_price
-                )
+        # =========================
+        # PLAYER DATA
+        # =========================
 
         club = (
-            player.get("uniqueClub")
-            or player.get("club")
+            player.get(
+                "uniqueClub"
+            )
+            or player.get(
+                "club"
+            )
             or {}
         )
 
         league = (
-            player.get("league")
+            player.get(
+                "league"
+            )
             or {}
         )
 
@@ -389,58 +441,78 @@ def main():
 
         trending.append(
             {
-                "name": (
-                    player.get("cardName")
-                    or player.get("commonName")
-                    or ""
-                ),
+                "name": name,
+
                 "rating": player.get(
                     "overall"
                 ),
+
                 "position": (
-                    player.get("position")
+                    player.get(
+                        "position"
+                    )
                     or ""
                 ),
+
                 "rarity": (
-                    player.get("rarityName")
+                    player.get(
+                        "rarityName"
+                    )
                     or ""
                 ),
+
                 "club": (
-                    club.get("name")
+                    club.get(
+                        "name"
+                    )
                     or ""
                 ),
+
                 "league": (
-                    league.get("name")
+                    league.get(
+                        "name"
+                    )
                     or ""
                 ),
+
                 "img": (
                     player.get(
                         "cardImageUrl"
                     )
                     or ""
                 ),
+
                 "url": (
                     SITE_URL + player_url
                     if player_url.startswith("/")
                     else player_url
                 ),
+
                 "eaId": ea_id,
+
                 "slug": (
-                    player.get("slug")
+                    player.get(
+                        "slug"
+                    )
                     or ""
                 ),
-                "price": current_price,
+
+                "price": price,
             }
         )
 
-        # Piccola pausa per evitare richieste
-        # troppo ravvicinate.
-        time.sleep(0.2)
+    # =========================
+    # CLEAN HISTORY
+    # =========================
 
     history = clean_history(
         history,
         now
     )
+
+    # =========================
+    # SAVE FILES
+    # =========================
 
     save_json(
         TRENDING_FILE,
@@ -452,14 +524,27 @@ def main():
         history
     )
 
+    # =========================
+    # SUMMARY
+    # =========================
+
     print()
     print(
-        f"Saved {len(trending)} trending players."
+        "================================"
+    )
+
+    print(
+        f"Saved {len(trending)} "
+        f"trending players."
     )
 
     print(
         f"Saved history for "
         f"{len(history)} players."
+    )
+
+    print(
+        "================================"
     )
 
     print()
