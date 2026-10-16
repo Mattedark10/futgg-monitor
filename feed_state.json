@@ -36,7 +36,7 @@
       "version": "Base"
     }
   ],
-  "🌈 HOLOGRAPHICS": [
+  "✨ HOLOGRAPHICS": [
     {
       "name": "Angerer",
       "rating": "92",
@@ -61,6 +61,58 @@
       "name": "Moore",
       "rating": "90",
       "card": "Base Icon"
+    }
+  ],
+  "🏆 SEASON 1": [
+    {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Harder",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Jacobo Ramón",
+      "rating": "87",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Mora",
+      "rating": "87",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Bonny",
+      "rating": "87",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Harder",
+      "rating": "88",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Undav",
+      "rating": "87",
+      "card": "Destined for Glory"
+    },
+    {
+      "name": "Bischof",
+      "rating": "86",
+      "card": "Future Stars"
+    },
+    {
+      "name": "Kiwior",
+      "rating": "86",
+      "card": "Destined for Glory"
     }
   ]
 }
