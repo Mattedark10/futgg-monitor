@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
     "eaId": 50608342,
     "slug": "27-50608342",
-    "price": 49530
+    "price": 48600
   },
   {
     "name": "Mainoo",
@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/269136-kobbie-mainoo/27-50600784/",
     "eaId": 50600784,
     "slug": "27-50600784",
-    "price": 2650000
+    "price": 2485000
   },
   {
     "name": "Dro Fernández",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/80674-pedro-fernandez-dro/27-50412322/",
     "eaId": 50412322,
     "slug": "27-50412322",
-    "price": 111000
+    "price": 110000
   },
   {
     "name": "Scott",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
     "eaId": 50592947,
     "slug": "27-50592947",
-    "price": 319000
+    "price": 330000
   },
   {
     "name": "Rayan",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/83494-rayan-vitor-simplicio-rocha-rayan/27-50415142/",
     "eaId": 50415142,
     "slug": "27-50415142",
-    "price": 2038000
+    "price": 2389000
   },
   {
     "name": "Hato",
@@ -75,20 +75,7 @@
     "url": "https://www.fut.gg/players/272978-jorrel-hato/27-50604626/",
     "eaId": 50604626,
     "slug": "27-50604626",
-    "price": 309000
-  },
-  {
-    "name": "Pubill",
-    "rating": 89,
-    "position": "CB",
-    "rarity": "Future Stars",
-    "club": "Atlético de Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50597687.a404a5867133a154dc805f477baebbfc1cb0c5c4afbd88f87216ae2703c3c51b.webp",
-    "url": "https://www.fut.gg/players/266039-pubill/27-50597687/",
-    "eaId": 50597687,
-    "slug": "27-50597687",
-    "price": 1249000
+    "price": 305000
   },
   {
     "name": "Kanjinga",
@@ -101,7 +88,7 @@
     "url": "https://www.fut.gg/players/77050-merveille-kanjinga/27-50408698/",
     "eaId": 50408698,
     "slug": "27-50408698",
-    "price": 75500
+    "price": 70000
   },
   {
     "name": "Brunner",
@@ -114,7 +101,20 @@
     "url": "https://www.fut.gg/players/274126-paris-brunner/27-50605774/",
     "eaId": 50605774,
     "slug": "27-50605774",
-    "price": 386000
+    "price": 456000
+  },
+  {
+    "name": "Pubill",
+    "rating": 89,
+    "position": "CB",
+    "rarity": "Future Stars",
+    "club": "Atlético de Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50597687.a404a5867133a154dc805f477baebbfc1cb0c5c4afbd88f87216ae2703c3c51b.webp",
+    "url": "https://www.fut.gg/players/266039-pubill/27-50597687/",
+    "eaId": 50597687,
+    "slug": "27-50597687",
+    "price": 1225000
   },
   {
     "name": "Mastantuono",
@@ -127,33 +127,7 @@
     "url": "https://www.fut.gg/players/279173-franco-mastantuono/27-84165253/",
     "eaId": 84165253,
     "slug": "27-84165253",
-    "price": 500000
-  },
-  {
-    "name": "Brown",
-    "rating": 87,
-    "position": "LB",
-    "rarity": "Future Stars",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601349.b383e21fa9aac5f650963c849bff8340f69bd9dd254a42819cc1d0fa98889570.webp",
-    "url": "https://www.fut.gg/players/269701-nathaniel-brown/27-50601349/",
-    "eaId": 50601349,
-    "slug": "27-50601349",
-    "price": 376000
-  },
-  {
-    "name": "Thompson",
-    "rating": 87,
-    "position": "RB",
-    "rarity": "Future Stars",
-    "club": "Angel City FC",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606461.aee0eb940b6744b9348d2d5d0bf1342b1e9ba7cdaebe9f96a4d453da96343a5b.webp",
-    "url": "https://www.fut.gg/players/274813-gisele-thompson/27-50606461/",
-    "eaId": 50606461,
-    "slug": "27-50606461",
-    "price": 109000
+    "price": 400000
   },
   {
     "name": "Alajbegović",
@@ -166,7 +140,33 @@
     "url": "https://www.fut.gg/players/75533-kerim-alajbegovic/27-50407181/",
     "eaId": 50407181,
     "slug": "27-50407181",
-    "price": 98500
+    "price": 92500
+  },
+  {
+    "name": "Brown",
+    "rating": 87,
+    "position": "LB",
+    "rarity": "Future Stars",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601349.b383e21fa9aac5f650963c849bff8340f69bd9dd254a42819cc1d0fa98889570.webp",
+    "url": "https://www.fut.gg/players/269701-nathaniel-brown/27-50601349/",
+    "eaId": 50601349,
+    "slug": "27-50601349",
+    "price": 372000
+  },
+  {
+    "name": "Thompson",
+    "rating": 87,
+    "position": "RB",
+    "rarity": "Future Stars",
+    "club": "Angel City FC",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606461.aee0eb940b6744b9348d2d5d0bf1342b1e9ba7cdaebe9f96a4d453da96343a5b.webp",
+    "url": "https://www.fut.gg/players/274813-gisele-thompson/27-50606461/",
+    "eaId": 50606461,
+    "slug": "27-50606461",
+    "price": 118000
   },
   {
     "name": "Enciso",
@@ -182,19 +182,6 @@
     "price": null
   },
   {
-    "name": "Tresoldi",
-    "rating": 86,
-    "position": "ST",
-    "rarity": "Future Stars",
-    "club": "Club Brugge",
-    "league": "1A Pro League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598543.9abfc8f82124d73850e2b5b3baa44bb4a7461545eed2e772175cdd52b925f550.webp",
-    "url": "https://www.fut.gg/players/266895-nicolo-tresoldi/27-50598543/",
-    "eaId": 50598543,
-    "slug": "27-50598543",
-    "price": 75000
-  },
-  {
     "name": "Jeltsch",
     "rating": 85,
     "position": "CB",
@@ -205,7 +192,20 @@
     "url": "https://www.fut.gg/players/278780-finn-jeltsch/27-50610428/",
     "eaId": 50610428,
     "slug": "27-50610428",
-    "price": 30000
+    "price": 29000
+  },
+  {
+    "name": "Tresoldi",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Future Stars",
+    "club": "Club Brugge",
+    "league": "1A Pro League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598543.9abfc8f82124d73850e2b5b3baa44bb4a7461545eed2e772175cdd52b925f550.webp",
+    "url": "https://www.fut.gg/players/266895-nicolo-tresoldi/27-50598543/",
+    "eaId": 50598543,
+    "slug": "27-50598543",
+    "price": 65500
   },
   {
     "name": "Peio Canales",
@@ -231,32 +231,32 @@
     "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
     "eaId": 50413511,
     "slug": "27-50413511",
-    "price": 33415
+    "price": 32800
   },
   {
-    "name": "Bisiwu",
-    "rating": 67,
-    "position": "LW",
+    "name": "Aitana Bonmatí",
+    "rating": 90,
+    "position": "CM",
     "rarity": "Rare",
     "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-88043.17e49fb3bd5920592a8afdd5d6f29e58e044244a0f5b3137e0e0ac7fe023caf1.webp",
-    "url": "https://www.fut.gg/players/88043-jesse-eugen-bisiwu/27-88043/",
-    "eaId": 88043,
-    "slug": "27-88043",
-    "price": 10000
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 299000
   },
   {
-    "name": "Gruda",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "Future Stars",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50604260.5fe091dced27a070ade2b319735e90ab52cfb595c6f43f396636dea1bb6e2d1f.webp",
-    "url": "https://www.fut.gg/players/272612-brajan-gruda/27-50604260/",
-    "eaId": 50604260,
-    "slug": "27-50604260",
-    "price": null
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.412e17c1c8ea7ca2e9ef22ce32e054ce18ba71f138160cf09856a21b080ed55b.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 90500
   }
 ]
