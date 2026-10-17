@@ -8,24 +8,10 @@
       "version": "Pristine Holographic"
     },
     {
-      "name": "Litmanen",
-      "rating": "88",
+      "name": "Vialli",
+      "rating": "89",
       "card": "Base Hero",
-      "item_id": "67114537",
-      "version": "Pristine Holographic"
-    },
-    {
-      "name": "Keßler",
-      "rating": "88",
-      "card": "Base Hero",
-      "item_id": "67335237",
-      "version": "Pristine Holographic"
-    },
-    {
-      "name": "Milito",
-      "rating": "88",
-      "card": "Base Hero",
-      "item_id": "67371135",
+      "item_id": "67342564",
       "version": "Pristine Holographic"
     },
     {
@@ -33,6 +19,20 @@
       "rating": "89",
       "card": "Base Hero",
       "item_id": "226306",
+      "version": "Base"
+    },
+    {
+      "name": "Vialli",
+      "rating": "89",
+      "card": "Base Hero",
+      "item_id": "233700",
+      "version": "Base"
+    },
+    {
+      "name": "Litmanen",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "5673",
       "version": "Base"
     }
   ],
@@ -79,13 +79,6 @@
       "version": "Pristine Holographic"
     },
     {
-      "name": "Jacobo Ramón",
-      "rating": "87",
-      "card": "Future Stars",
-      "item_id": "67179830",
-      "version": "Holographic"
-    },
-    {
       "name": "Mora",
       "rating": "87",
       "card": "Future Stars",
@@ -114,10 +107,10 @@
       "version": "Holographic"
     },
     {
-      "name": "Nico Paz",
-      "rating": "87",
-      "card": "Destined for Glory",
-      "item_id": "67386710",
+      "name": "Bischof",
+      "rating": "86",
+      "card": "Future Stars",
+      "item_id": "67372629",
       "version": "Holographic"
     },
     {
@@ -128,11 +121,18 @@
       "version": "Holographic"
     },
     {
-      "name": "Mora",
-      "rating": "87",
-      "card": "Future Stars",
-      "item_id": "50411047",
-      "version": "Base"
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory",
+      "item_id": "67348095",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory",
+      "item_id": "67348095",
+      "version": "Pristine Holographic"
     }
   ]
 }
