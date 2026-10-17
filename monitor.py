@@ -22,13 +22,13 @@ PAGES = {
     "✨ HOLOGRAPHICS": {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5,
-        "distinguish": True,
+        "distinguish": False,
     },
 
     "🏆 SEASON 1": {
         "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
         "players": 10,
-        "distinguish": False,
+        "distinguish": True,
     },
 }
 
