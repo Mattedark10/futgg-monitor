@@ -104,19 +104,6 @@
     "price": 70000
   },
   {
-    "name": "Manzambi",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
-    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
-    "eaId": 50608342,
-    "slug": "27-50608342",
-    "price": 50920
-  },
-  {
     "name": "Gilberto",
     "rating": 84,
     "position": "CB",
@@ -141,6 +128,19 @@
     "eaId": 50609459,
     "slug": "27-50609459",
     "price": null
+  },
+  {
+    "name": "Manzambi",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
+    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
+    "eaId": 50608342,
+    "slug": "27-50608342",
+    "price": 50920
   },
   {
     "name": "Xavi Espart",
@@ -169,19 +169,6 @@
     "price": null
   },
   {
-    "name": "Scott",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "AFC Bournemouth",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
-    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
-    "eaId": 50592947,
-    "slug": "27-50592947",
-    "price": 309000
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -193,19 +180,6 @@
     "eaId": 277643,
     "slug": "27-277643",
     "price": 202000
-  },
-  {
-    "name": "Dro Fernández",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50412322.cded55d1520be3cfc9d16389444aad5c14b78a7b2465e64ac677e47a42cf4dd9.webp",
-    "url": "https://www.fut.gg/players/80674-pedro-fernandez-dro/27-50412322/",
-    "eaId": 50412322,
-    "slug": "27-50412322",
-    "price": 87500
   },
   {
     "name": "Aitana Bonmatí",
@@ -221,6 +195,19 @@
     "price": 296000
   },
   {
+    "name": "Scott",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "AFC Bournemouth",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
+    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
+    "eaId": 50592947,
+    "slug": "27-50592947",
+    "price": 309000
+  },
+  {
     "name": "Karchaoui",
     "rating": 87,
     "position": "CM",
@@ -234,17 +221,17 @@
     "price": 86500
   },
   {
-    "name": "Mainoo",
-    "rating": 89,
-    "position": "CDM",
+    "name": "Dro Fernández",
+    "rating": 85,
+    "position": "CM",
     "rarity": "Future Stars",
-    "club": "Man Utd",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600784.20e23f6adda9babe6f65d98948e43d19aae454f134d7beee002a28a6aad91bf7.webp",
-    "url": "https://www.fut.gg/players/269136-kobbie-mainoo/27-50600784/",
-    "eaId": 50600784,
-    "slug": "27-50600784",
-    "price": 2850000
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50412322.cded55d1520be3cfc9d16389444aad5c14b78a7b2465e64ac677e47a42cf4dd9.webp",
+    "url": "https://www.fut.gg/players/80674-pedro-fernandez-dro/27-50412322/",
+    "eaId": 50412322,
+    "slug": "27-50412322",
+    "price": 87500
   },
   {
     "name": "Salma Paralluelo",
@@ -258,5 +245,18 @@
     "eaId": 269404,
     "slug": "27-269404",
     "price": 300000
+  },
+  {
+    "name": "Pedri",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
+    "eaId": 251854,
+    "slug": "27-251854",
+    "price": 229000
   }
 ]
