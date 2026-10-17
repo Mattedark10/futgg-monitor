@@ -76,9 +76,27 @@ def send_telegram(message):
 
     response.raise_for_status()
 
-    print(
-        "Telegram notification sent successfully."
+    print("Telegram notification sent successfully.")
+
+
+# ============================================================
+# PLAYER ALT
+# ============================================================
+
+def parse_player_alt(alt):
+    match = re.match(
+        r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
+        alt.strip(),
     )
+
+    if not match:
+        return None
+
+    return {
+        "name": match.group(1).strip(),
+        "rating": match.group(2).strip(),
+        "card": match.group(3).strip(),
+    }
 
 
 # ============================================================
@@ -86,31 +104,23 @@ def send_telegram(message):
 # ============================================================
 
 def extract_item_id(img):
-    """
-    Extract the exact FC item ID from the image URL.
-    """
-
     values = []
 
-    for attribute in [
+    for attribute in (
         "src",
         "data-src",
         "srcset",
         "data-srcset",
-    ]:
+    ):
         value = img.get(
             attribute,
             "",
         )
 
         if value:
-            values.append(
-                value
-            )
+            values.append(value)
 
-    combined = " ".join(
-        values
-    )
+    combined = " ".join(values)
 
     match = re.search(
         r"27-(\d+)",
@@ -132,80 +142,64 @@ def find_exact_card_link(
     item_id,
 ):
     """
-    Search only around the current card image.
-
-    This avoids accidentally using the link from another
-    copy of the same player.
+    Search for the card link only around the current image.
+    Never search the entire page for the player.
     """
 
     pattern = re.compile(
-        rf"/players/[^\"']*27-{re.escape(item_id)}"
+        rf"/players/[^\"']*/27-{re.escape(item_id)}/?"
     )
 
-    # First check if the image itself is inside a link.
+    # Image directly inside a link.
 
-    parent_link = img.find_parent(
-        "a"
+    link = img.find_parent(
+        "a",
+        href=True,
     )
 
-    if parent_link:
-        href = parent_link.get(
+    if link:
+        href = link.get(
             "href",
             "",
         )
 
-        if pattern.search(
-            href
-        ):
+        if pattern.search(href):
             return href
 
-    # Search only in nearby parents.
+    # Search progressively through nearby containers.
 
-    parent = img
+    parent = img.parent
 
-    for _ in range(6):
-        parent = parent.parent
-
+    for _ in range(8):
         if parent is None:
             break
 
-        if not hasattr(
+        if hasattr(
             parent,
             "find_all",
         ):
-            continue
-
-        links = parent.find_all(
-            "a",
-            href=True,
-        )
-
-        for link in links:
-            href = link.get(
-                "href",
-                "",
-            )
-
-            if pattern.search(
-                href
+            for link in parent.find_all(
+                "a",
+                href=True,
             ):
-                return href
+                href = link.get(
+                    "href",
+                    "",
+                )
+
+                if pattern.search(href):
+                    return href
+
+        parent = parent.parent
 
     return None
 
 
 # ============================================================
-# CARD VERSION
+# DETECT CARD VERSION
 # ============================================================
 
-def get_version(
-    item_url,
-):
-    """
-    Detect Base / Holographic / Pristine Holographic
-    from the exact FUT.GG card page.
-    """
-
+def get_version(item_url):
     response = requests.get(
         item_url,
         headers=HEADERS,
@@ -219,51 +213,62 @@ def get_version(
         "html.parser",
     )
 
-    # Prefer the H1.
+    # Read as much useful metadata as possible.
 
-    h1 = soup.find(
-        "h1"
-    )
+    texts = []
+
+    h1 = soup.find("h1")
 
     if h1:
-        title = h1.get_text(
-            " ",
-            strip=True,
-        )
-
-    else:
-        title_tag = soup.find(
-            "title"
-        )
-
-        if not title_tag:
-            raise Exception(
-                f"Card title not found: {item_url}"
+        texts.append(
+            h1.get_text(
+                " ",
+                strip=True,
             )
-
-        title = title_tag.get_text(
-            " ",
-            strip=True,
         )
+
+    title = soup.find("title")
+
+    if title:
+        texts.append(
+            title.get_text(
+                " ",
+                strip=True,
+            )
+        )
+
+    # Some FUT.GG pages may expose the version elsewhere
+    # in their metadata.
+
+    for meta in soup.find_all("meta"):
+        content = meta.get(
+            "content",
+            "",
+        )
+
+        if content:
+            texts.append(content)
+
+    combined = " ".join(texts)
 
     print(
-        f"Card page: {item_url}"
+        f"Card URL: {item_url}"
     )
 
     print(
-        f"Card title: {title}"
+        f"Version metadata: {combined[:500]}"
     )
 
     if re.search(
         r"pristine\s+holographic",
-        title,
+        combined,
         re.I,
     ):
         return "Pristine Holographic"
 
     if re.search(
-        r"holographic",
-        title,
+        r"\bholographic\b",
+        combined,
         re.I,
     ):
         return "Holographic"
@@ -272,7 +277,7 @@ def get_version(
 
 
 # ============================================================
-# GET LINEUP IMAGES
+# GET LINEUP PLAYER IMAGES
 # ============================================================
 
 def get_lineup_images(
@@ -280,22 +285,17 @@ def get_lineup_images(
     expected_players,
 ):
     """
-    Get every player image exactly once.
+    Find the Cheapest grade lineup and read every player IMG
+    until the Add players heading.
 
-    IMPORTANT:
-    The old parser repeatedly called find_all() while walking
-    through nested HTML elements. That could add the same card
-    more than once.
-
-    This function processes each actual <img> element only once.
+    Important:
+    We walk through next_elements rather than stopping at the
+    next H2/H3 because FUT.GG uses nested headings/containers.
     """
 
     heading = soup.find(
         lambda tag:
-        tag.name in [
-            "h2",
-            "h3",
-        ]
+        tag.name in ["h2", "h3"]
         and "Cheapest grade"
         in tag.get_text(
             " ",
@@ -315,73 +315,90 @@ def get_lineup_images(
 
     images = []
 
-    seen_elements = set()
+    seen_images = set()
 
-    current = heading.next_element
+    for element in heading.next_elements:
 
-    while current:
-
-        # Stop when reaching the next heading.
+        # ====================================================
+        # STOP AT ADD PLAYERS
+        # ====================================================
 
         if (
             getattr(
-                current,
+                element,
                 "name",
                 None,
             )
-            in [
-                "h2",
-                "h3",
-            ]
-            and current is not heading
+            in ["h2", "h3"]
+        ):
+            heading_text = element.get_text(
+                " ",
+                strip=True,
+            )
+
+            if (
+                heading_text.lower()
+                == "add players"
+            ):
+                break
+
+        # ====================================================
+        # ONLY PROCESS IMG ELEMENTS
+        # ====================================================
+
+        if (
+            getattr(
+                element,
+                "name",
+                None,
+            )
+            != "img"
+        ):
+            continue
+
+        alt = element.get(
+            "alt",
+            "",
+        ).strip()
+
+        player_data = parse_player_alt(
+            alt
+        )
+
+        if not player_data:
+            continue
+
+        # BeautifulSoup object identity prevents processing
+        # the exact same IMG node twice.
+
+        element_identity = id(
+            element
+        )
+
+        if (
+            element_identity
+            in seen_images
+        ):
+            continue
+
+        seen_images.add(
+            element_identity
+        )
+
+        images.append(
+            element
+        )
+
+        print(
+            "Lineup slot "
+            f"{len(images)}: {alt}"
+        )
+
+        if (
+            len(images)
+            == expected_players
         ):
             break
-
-        # Process ONLY the current IMG itself.
-        # Do not call current.find_all("img").
-
-        if (
-            getattr(
-                current,
-                "name",
-                None,
-            )
-            == "img"
-        ):
-            alt = current.get(
-                "alt",
-                "",
-            ).strip()
-
-            match = re.match(
-                r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
-                alt,
-            )
-
-            if match:
-                element_id = id(
-                    current
-                )
-
-                if (
-                    element_id
-                    not in seen_elements
-                ):
-                    seen_elements.add(
-                        element_id
-                    )
-
-                    images.append(
-                        current
-                    )
-
-                    if (
-                        len(images)
-                        >= expected_players
-                    ):
-                        break
-
-        current = current.next_element
 
     return images
 
@@ -419,6 +436,10 @@ def get_players(
         expected_players,
     )
 
+    print(
+        f"Lineup images found: {len(images)}"
+    )
+
     if (
         len(images)
         != expected_players
@@ -432,10 +453,10 @@ def get_players(
     players = []
 
     # ========================================================
-    # PROCESS EACH SLOT ONCE
+    # PROCESS EACH SLOT
     # ========================================================
 
-    for slot_number, img in enumerate(
+    for slot, img in enumerate(
         images,
         start=1,
     ):
@@ -444,33 +465,24 @@ def get_players(
             "",
         ).strip()
 
-        match = re.match(
-            r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
-            alt,
+        player = parse_player_alt(
+            alt
         )
 
-        if not match:
+        if not player:
             continue
-
-        player = {
-            "name": (
-                match.group(1).strip()
-            ),
-            "rating": (
-                match.group(2).strip()
-            ),
-            "card": (
-                match.group(3).strip()
-            ),
-        }
 
         print()
         print(
-            f"SLOT {slot_number}"
+            "=" * 40
         )
 
         print(
-            f"Player: {player['name']}"
+            f"SLOT {slot}"
+        )
+
+        print(
+            f"Name: {player['name']}"
         )
 
         print(
@@ -482,7 +494,7 @@ def get_players(
         )
 
         # ====================================================
-        # CARD VERSION
+        # VERSION DETECTION
         # ====================================================
 
         if detect_version:
@@ -507,26 +519,31 @@ def get_players(
                     item_id
                     in known_versions
                 ):
+                    version = (
+                        known_versions[
+                            item_id
+                        ]
+                    )
+
                     player[
                         "version"
-                    ] = known_versions[
-                        item_id
-                    ]
+                    ] = version
 
                     print(
-                        "Version: "
-                        f"{player['version']} "
+                        f"Version: {version} "
                         "(cached)"
                     )
 
                 # ============================================
-                # NEW ITEM
+                # DETECT NEW ITEM
                 # ============================================
 
                 else:
-                    href = find_exact_card_link(
-                        img,
-                        item_id,
+                    href = (
+                        find_exact_card_link(
+                            img,
+                            item_id,
+                        )
                     )
 
                     if href:
@@ -536,8 +553,10 @@ def get_players(
                         )
 
                         try:
-                            version = get_version(
-                                item_url
+                            version = (
+                                get_version(
+                                    item_url
+                                )
                             )
 
                             player[
@@ -560,8 +579,8 @@ def get_players(
 
                     else:
                         print(
-                            "Exact card link "
-                            "not found."
+                            "WARNING: Exact card "
+                            "link not found."
                         )
 
                         player[
@@ -570,7 +589,8 @@ def get_players(
 
             else:
                 print(
-                    "Item ID not found."
+                    "WARNING: Item ID "
+                    "not found."
                 )
 
                 player[
@@ -579,15 +599,6 @@ def get_players(
 
         players.append(
             player
-        )
-
-    if (
-        len(players)
-        != expected_players
-    ):
-        raise Exception(
-            f"Parsed {len(players)} players "
-            f"instead of {expected_players}"
         )
 
     return players
@@ -601,14 +612,9 @@ def player_identity(
     player,
 ):
     """
-    Identity used when comparing two scans.
+    Two copies of the same player are allowed.
 
-    Item ID is important because two cards may have:
-    - same player
-    - same rating
-    - same rarity
-
-    but one can be Base and another Holographic.
+    Item ID + version distinguishes Base from Holographic.
     """
 
     item_id = player.get(
@@ -626,17 +632,23 @@ def player_identity(
         )
 
     return (
-        player.get(
-            "name",
-            ""
+        str(
+            player.get(
+                "name",
+                "",
+            )
         ),
-        player.get(
-            "rating",
-            ""
+        str(
+            player.get(
+                "rating",
+                "",
+            )
         ),
-        player.get(
-            "card",
-            ""
+        str(
+            player.get(
+                "card",
+                "",
+            )
         ),
         str(version),
     )
@@ -651,32 +663,27 @@ def compare_players(
     new_players,
 ):
     """
-    Counter-based comparison.
-
-    This is important because FUT.GG can legitimately contain
-    multiple copies of the same player.
+    Counter is required because duplicate players are valid.
     """
 
     old_counter = Counter(
-        player_identity(
-            player
-        )
-        for player in old_players
+        player_identity(player)
+        for player
+        in old_players
     )
 
     new_counter = Counter(
-        player_identity(
-            player
-        )
-        for player in new_players
+        player_identity(player)
+        for player
+        in new_players
     )
 
-    removed_needed = (
+    removed_counter = (
         old_counter
         - new_counter
     )
 
-    added_needed = (
+    added_counter = (
         new_counter
         - old_counter
     )
@@ -684,7 +691,7 @@ def compare_players(
     removed = []
     added = []
 
-    # Preserve the original display order.
+    # Preserve lineup order.
 
     for player in old_players:
         identity = player_identity(
@@ -692,7 +699,7 @@ def compare_players(
         )
 
         if (
-            removed_needed[
+            removed_counter[
                 identity
             ]
             > 0
@@ -701,7 +708,7 @@ def compare_players(
                 player
             )
 
-            removed_needed[
+            removed_counter[
                 identity
             ] -= 1
 
@@ -711,7 +718,7 @@ def compare_players(
         )
 
         if (
-            added_needed[
+            added_counter[
                 identity
             ]
             > 0
@@ -720,7 +727,7 @@ def compare_players(
                 player
             )
 
-            added_needed[
+            added_counter[
                 identity
             ] -= 1
 
@@ -731,7 +738,7 @@ def compare_players(
 
 
 # ============================================================
-# TELEGRAM PLAYER FORMAT
+# PLAYER TELEGRAM FORMAT
 # ============================================================
 
 def player_text(
@@ -815,9 +822,7 @@ def player_text(
         and version != "?"
     ):
         safe_version = html.escape(
-            str(
-                version
-            ).upper()
+            str(version).upper()
         )
 
         version_text = (
@@ -870,7 +875,7 @@ def load_state():
     except Exception as error:
         print(
             "Could not load previous "
-            f"state: {error}"
+            f"feed state: {error}"
         )
 
         return {}
@@ -974,7 +979,7 @@ def main():
         known_versions = {}
 
         # ====================================================
-        # LOAD SAVED VERSIONS
+        # RESTORE CACHED VERSIONS
         # ====================================================
 
         if (
@@ -1000,7 +1005,7 @@ def main():
                     ] = version
 
         # ====================================================
-        # DOWNLOAD CURRENT FEED
+        # READ CURRENT FEED
         # ====================================================
 
         try:
@@ -1029,12 +1034,42 @@ def main():
 
             continue
 
+        # ====================================================
+        # SAFETY CHECK
+        # ====================================================
+
+        if (
+            len(players)
+            != expected_players
+        ):
+            error = (
+                f"Parsed {len(players)} players "
+                f"instead of {expected_players}"
+            )
+
+            print(
+                f"ERROR: {error}"
+            )
+
+            if old_players is not None:
+                new_state[
+                    category
+                ] = old_players
+
+            results.append({
+                "category": category,
+                "status": "error",
+                "error": error,
+            })
+
+            continue
+
         new_state[
             category
         ] = players
 
         # ====================================================
-        # PRINT RESULT
+        # LOG CURRENT LINEUP
         # ====================================================
 
         print()
@@ -1047,23 +1082,13 @@ def main():
             players,
             start=1,
         ):
-            version = player.get(
-                "version",
-                "",
-            )
-
-            item_id = player.get(
-                "item_id",
-                "",
-            )
-
             print(
                 f"{index}. "
                 f"{player['name']} | "
                 f"{player['rating']} | "
                 f"{player['card']} | "
-                f"{version} | "
-                f"ID {item_id}"
+                f"{player.get('version', '')} | "
+                f"ID {player.get('item_id', '')}"
             )
 
         # ====================================================
@@ -1079,7 +1104,7 @@ def main():
             continue
 
         # ====================================================
-        # CHECK VERSION DATA
+        # VERSION SAFETY
         # ====================================================
 
         if detect_version:
@@ -1091,7 +1116,8 @@ def main():
                     None,
                     "?",
                 ]
-                for player in players
+                for player
+                in players
             )
 
             if incomplete:
@@ -1141,10 +1167,10 @@ def main():
     # ========================================================
 
     has_changes = any(
-        result[
-            "status"
-        ] == "changed"
-        for result in results
+        result["status"]
+        == "changed"
+        for result
+        in results
     )
 
     if has_changes:
@@ -1166,7 +1192,7 @@ def main():
     )
 
     # ========================================================
-    # TELEGRAM FEEDS
+    # TELEGRAM RESULTS
     # ========================================================
 
     for result in results:
@@ -1213,7 +1239,7 @@ def main():
                 )
 
             # ================================================
-            # SEPARATOR
+            # GONE / NEW SEPARATOR
             # ================================================
 
             if removed and added:
@@ -1256,7 +1282,7 @@ def main():
             )
 
         # ====================================================
-        # INCOMPLETE
+        # INCOMPLETE VERSION
         # ====================================================
 
         elif status == "incomplete":
@@ -1270,9 +1296,7 @@ def main():
 
         elif status == "error":
             error = html.escape(
-                result[
-                    "error"
-                ]
+                result["error"]
             )
 
             message += (
@@ -1289,10 +1313,6 @@ def main():
         "━━━━━━━━━━━━━━\n"
         "⏱ Automatic monitoring · 5 min"
     )
-
-    # ========================================================
-    # SEND TELEGRAM
-    # ========================================================
 
     send_telegram(
         message
