@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/264652-bradley-barcola/27-67373516/",
     "eaId": 67373516,
     "slug": "27-67373516",
-    "price": null
+    "price": 936000
   },
   {
     "name": "Cissè",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
     "eaId": 50609974,
     "slug": "27-50609974",
-    "price": null
+    "price": 148000
   },
   {
     "name": "Doué",
@@ -49,20 +49,7 @@
     "url": "https://www.fut.gg/players/271421-desire-doue/27-50603069/",
     "eaId": 50603069,
     "slug": "27-50603069",
-    "price": null
-  },
-  {
-    "name": "William Gomes",
-    "rating": 84,
-    "position": "RW",
-    "rarity": "Future Stars",
-    "club": "FC Porto",
-    "league": "Liga Portugal",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50408681.6876f0c4d739633baa5ba22bd0890e8f58fe9a71e371790085d0b3b3f2ce2e64.webp",
-    "url": "https://www.fut.gg/players/77033-william-gomes-c-santos-william-gomes/27-50408681/",
-    "eaId": 50408681,
-    "slug": "27-50408681",
-    "price": null
+    "price": 2500000
   },
   {
     "name": "Sadiki",
@@ -75,6 +62,19 @@
     "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
     "eaId": 50600878,
     "slug": "27-50600878",
+    "price": 251000
+  },
+  {
+    "name": "William Gomes",
+    "rating": 84,
+    "position": "RW",
+    "rarity": "Future Stars",
+    "club": "FC Porto",
+    "league": "Liga Portugal",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50408681.6876f0c4d739633baa5ba22bd0890e8f58fe9a71e371790085d0b3b3f2ce2e64.webp",
+    "url": "https://www.fut.gg/players/77033-william-gomes-c-santos-william-gomes/27-50408681/",
+    "eaId": 50408681,
+    "slug": "27-50408681",
     "price": null
   },
   {
@@ -91,19 +91,6 @@
     "price": null
   },
   {
-    "name": "Manzambi",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
-    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
-    "eaId": 50608342,
-    "slug": "27-50608342",
-    "price": 48600
-  },
-  {
     "name": "Vandevoordt",
     "rating": 85,
     "position": "GK",
@@ -114,6 +101,32 @@
     "url": "https://www.fut.gg/players/242879-maarten-vandevoordt/27-50574527/",
     "eaId": 50574527,
     "slug": "27-50574527",
+    "price": 70000
+  },
+  {
+    "name": "Manzambi",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
+    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
+    "eaId": 50608342,
+    "slug": "27-50608342",
+    "price": 50920
+  },
+  {
+    "name": "Gilberto",
+    "rating": 84,
+    "position": "CB",
+    "rarity": "Future Stars",
+    "club": "Moreirense FC",
+    "league": "Liga Portugal",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608090.ae8d235cfcc1c8aee217f26c45b05c6abadb3b767df28aea8e5a9007724601d8.webp",
+    "url": "https://www.fut.gg/players/276442-gilberto-dambi-batista-gilberto/27-50608090/",
+    "eaId": 50608090,
+    "slug": "27-50608090",
     "price": null
   },
   {
@@ -130,19 +143,6 @@
     "price": null
   },
   {
-    "name": "Gilberto",
-    "rating": 84,
-    "position": "CB",
-    "rarity": "Future Stars",
-    "club": "Moreirense FC",
-    "league": "Liga Portugal",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608090.ae8d235cfcc1c8aee217f26c45b05c6abadb3b767df28aea8e5a9007724601d8.webp",
-    "url": "https://www.fut.gg/players/276442-gilberto-dambi-batista-gilberto/27-50608090/",
-    "eaId": 50608090,
-    "slug": "27-50608090",
-    "price": null
-  },
-  {
     "name": "Xavi Espart",
     "rating": 85,
     "position": "LB",
@@ -153,33 +153,7 @@
     "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
     "eaId": 50413511,
     "slug": "27-50413511",
-    "price": 32800
-  },
-  {
-    "name": "Scott",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "AFC Bournemouth",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
-    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
-    "eaId": 50592947,
-    "slug": "27-50592947",
-    "price": 330000
-  },
-  {
-    "name": "Dro Fernández",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50412322.cded55d1520be3cfc9d16389444aad5c14b78a7b2465e64ac677e47a42cf4dd9.webp",
-    "url": "https://www.fut.gg/players/80674-pedro-fernandez-dro/27-50412322/",
-    "eaId": 50412322,
-    "slug": "27-50412322",
-    "price": 110000
+    "price": 34440
   },
   {
     "name": "Delgado",
@@ -195,30 +169,17 @@
     "price": null
   },
   {
-    "name": "Mainoo",
-    "rating": 89,
-    "position": "CDM",
-    "rarity": "Future Stars",
-    "club": "Man Utd",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600784.20e23f6adda9babe6f65d98948e43d19aae454f134d7beee002a28a6aad91bf7.webp",
-    "url": "https://www.fut.gg/players/269136-kobbie-mainoo/27-50600784/",
-    "eaId": 50600784,
-    "slug": "27-50600784",
-    "price": 2485000
-  },
-  {
-    "name": "Aitana Bonmatí",
-    "rating": 90,
+    "name": "Scott",
+    "rating": 86,
     "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
-    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
-    "eaId": 241667,
-    "slug": "27-241667",
-    "price": 299000
+    "rarity": "Future Stars",
+    "club": "AFC Bournemouth",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
+    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
+    "eaId": 50592947,
+    "slug": "27-50592947",
+    "price": 309000
   },
   {
     "name": "Lamine Yamal",
@@ -231,7 +192,33 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
     "eaId": 277643,
     "slug": "27-277643",
-    "price": 188000
+    "price": 202000
+  },
+  {
+    "name": "Dro Fernández",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50412322.cded55d1520be3cfc9d16389444aad5c14b78a7b2465e64ac677e47a42cf4dd9.webp",
+    "url": "https://www.fut.gg/players/80674-pedro-fernandez-dro/27-50412322/",
+    "eaId": 50412322,
+    "slug": "27-50412322",
+    "price": 87500
+  },
+  {
+    "name": "Aitana Bonmatí",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 296000
   },
   {
     "name": "Karchaoui",
@@ -244,7 +231,20 @@
     "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
     "eaId": 233662,
     "slug": "27-233662",
-    "price": 90500
+    "price": 86500
+  },
+  {
+    "name": "Mainoo",
+    "rating": 89,
+    "position": "CDM",
+    "rarity": "Future Stars",
+    "club": "Man Utd",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600784.20e23f6adda9babe6f65d98948e43d19aae454f134d7beee002a28a6aad91bf7.webp",
+    "url": "https://www.fut.gg/players/269136-kobbie-mainoo/27-50600784/",
+    "eaId": 50600784,
+    "slug": "27-50600784",
+    "price": 2850000
   },
   {
     "name": "Salma Paralluelo",
@@ -257,6 +257,6 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 309000
+    "price": 300000
   }
 ]
