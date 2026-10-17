@@ -27,7 +27,7 @@ PAGES = {
     "✨ HOLOGRAPHICS": {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5,
-        "detect_version": False,
+        "detect_version": True,
     },
     "🏆 SEASON 1": {
         "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
@@ -46,32 +46,24 @@ def load_state():
         return {}
 
     try:
-        with open(
-            STATE_FILE,
-            "r",
-            encoding="utf-8",
-        ) as file:
+        with open(STATE_FILE, "r", encoding="utf-8") as file:
             return json.load(file)
 
     except Exception as error:
-        print(
-            f"Could not load previous state: {error}"
-        )
+        print(f"Could not load previous state: {error}")
         return {}
 
 
 def save_state(state):
-    with open(
-        STATE_FILE,
-        "w",
-        encoding="utf-8",
-    ) as file:
+    with open(STATE_FILE, "w", encoding="utf-8") as file:
         json.dump(
             state,
             file,
             ensure_ascii=False,
             indent=2,
         )
+
+    print("feed_state.json saved successfully.")
 
 
 # ============================================================
@@ -97,15 +89,25 @@ def send_telegram(message):
 
     response.raise_for_status()
 
+    print("Telegram notification sent successfully.")
+
 
 # ============================================================
-# PLAYER PARSING
+# PLAYER DATA
 # ============================================================
 
 def parse_player_alt(alt):
+    if not alt:
+        return None
+
+    alt = alt.strip()
+
+    if alt.lower() == "player card":
+        return None
+
     match = re.match(
         r"^(.+?)\s*-\s*(\d+)\s*-\s*(.+?)$",
-        alt.strip(),
+        alt,
     )
 
     if not match:
@@ -118,45 +120,147 @@ def parse_player_alt(alt):
     }
 
 
-def extract_item_id(src, href=""):
-    values = [
-        src or "",
-        href or "",
-    ]
+def extract_item_id(src="", href=""):
+    for value in (href, src):
+        if not value:
+            continue
 
-    patterns = [
-        r"/27-(\d+)",
-        r"27-(\d+)",
-    ]
+        match = re.search(
+            r"(?:/|^)27-(\d+)(?:/|\.|$)",
+            value,
+        )
 
-    for value in values:
-        for pattern in patterns:
-            match = re.search(
-                pattern,
-                value,
-            )
-
-            if match:
-                return match.group(1)
+        if match:
+            return match.group(1)
 
     return None
+
+
+# ============================================================
+# LINEUP
+# ============================================================
+
+async def wait_for_lineup(page, expected_players):
+    await page.wait_for_selector(
+        'ul[data-gallery-builder-slots="true"]',
+        timeout=30000,
+    )
+
+    locator = page.locator(
+        'ul[data-gallery-builder-slots="true"] > li'
+    )
+
+    for attempt in range(20):
+        count = await locator.count()
+
+        real_cards = 0
+
+        if count >= expected_players:
+            for index in range(expected_players):
+                slot = locator.nth(index)
+
+                images = slot.locator("img")
+
+                if await images.count() == 0:
+                    continue
+
+                alt = (
+                    await images.first.get_attribute("alt")
+                    or ""
+                )
+
+                alt = alt.strip()
+
+                if (
+                    alt
+                    and alt.lower() != "player card"
+                ):
+                    real_cards += 1
+
+        print(
+            f"Rendered lineup: "
+            f"{real_cards}/{expected_players} real cards"
+        )
+
+        if (
+            count >= expected_players
+            and real_cards == expected_players
+        ):
+            return True
+
+        await page.wait_for_timeout(1000)
+
+    return False
+
+
+async def get_rendered_slots(page, expected_players):
+    locator = page.locator(
+        'ul[data-gallery-builder-slots="true"] > li'
+    )
+
+    count = await locator.count()
+
+    if count < expected_players:
+        raise RuntimeError(
+            f"Found {count} lineup slots instead "
+            f"of {expected_players}."
+        )
+
+    slots = []
+
+    for index in range(expected_players):
+        slot = locator.nth(index)
+
+        images = slot.locator("img")
+
+        alt = ""
+        src = ""
+
+        if await images.count() > 0:
+            image = images.first
+
+            alt = (
+                await image.get_attribute("alt")
+                or ""
+            )
+
+            src = (
+                await image.get_attribute("src")
+                or ""
+            )
+
+        href = ""
+
+        links = slot.locator(
+            'a[href*="/players/"]'
+        )
+
+        if await links.count() > 0:
+            href = (
+                await links.first.get_attribute("href")
+                or ""
+            )
+
+        slots.append(
+            {
+                "alt": alt.strip(),
+                "src": src.strip(),
+                "href": href.strip(),
+            }
+        )
+
+    return slots
 
 
 # ============================================================
 # VERSION DETECTION
 # ============================================================
 
-async def detect_card_version(
-    context,
-    href,
-):
+async def detect_card_version(context, href):
     if not href:
         return "?"
 
-    url = urljoin(
-        SITE,
-        href,
-    )
+    url = urljoin(SITE, href)
 
     page = await context.new_page()
 
@@ -167,13 +271,7 @@ async def detect_card_version(
             timeout=30000,
         )
 
-        try:
-            await page.wait_for_load_state(
-                "networkidle",
-                timeout=8000,
-            )
-        except Exception:
-            pass
+        await page.wait_for_timeout(1500)
 
         content = await page.content()
 
@@ -182,10 +280,10 @@ async def detect_card_version(
             "html.parser",
         )
 
-        searchable_parts = []
+        parts = []
 
         if soup.title:
-            searchable_parts.append(
+            parts.append(
                 soup.title.get_text(
                     " ",
                     strip=True,
@@ -195,7 +293,7 @@ async def detect_card_version(
         h1 = soup.find("h1")
 
         if h1:
-            searchable_parts.append(
+            parts.append(
                 h1.get_text(
                     " ",
                     strip=True,
@@ -203,33 +301,21 @@ async def detect_card_version(
             )
 
         for meta in soup.find_all("meta"):
-            meta_content = meta.get(
-                "content",
-                "",
-            )
+            value = meta.get("content")
 
-            if meta_content:
-                searchable_parts.append(
-                    meta_content
-                )
+            if value:
+                parts.append(value)
 
-        # Page text is included as a fallback because FUT.GG can
-        # expose the cosmetic information outside the title.
-        searchable_parts.append(
-            soup.get_text(
-                " ",
-                strip=True,
-            )[:50000]
+        page_text = soup.get_text(
+            " ",
+            strip=True,
         )
 
-        searchable = " ".join(
-            searchable_parts
-        ).lower()
+        parts.append(page_text[:50000])
 
-        if (
-            "pristine holographic"
-            in searchable
-        ):
+        searchable = " ".join(parts).lower()
+
+        if "pristine holographic" in searchable:
             return "Pristine Holographic"
 
         if "holographic" in searchable:
@@ -239,9 +325,9 @@ async def detect_card_version(
 
     except Exception as error:
         print(
-            f"Version detection failed for "
-            f"{url}: {error}"
+            f"Version detection failed: {error}"
         )
+
         return "?"
 
     finally:
@@ -249,155 +335,18 @@ async def detect_card_version(
 
 
 # ============================================================
-# FUT.GG LINEUP
+# CATEGORY SCANNER
 # ============================================================
 
-async def wait_for_lineup(
-    page,
-    expected_players,
-):
-    """
-    Wait until FUT.GG has rendered the expected number of
-    Gallery Builder slots and as many real player cards as
-    possible.
-    """
-
-    await page.wait_for_selector(
-        'ul[data-gallery-builder-slots="true"]',
-        timeout=30000,
-    )
-
-    # Give FUT.GG's client-side requests time to replace
-    # placeholder cards.
-    for attempt in range(20):
-        data = await page.locator(
-            'ul[data-gallery-builder-slots="true"] > li'
-        ).evaluate_all(
-            """
-            (slots) => slots.map((slot) => {
-                const img = slot.querySelector("img");
-
-                return {
-                    alt: img?.getAttribute("alt") || "",
-                    src: img?.getAttribute("src") || "",
-                    html: slot.innerHTML
-                };
-            })
-            """
-        )
-
-        if len(data) >= expected_players:
-            first_slots = data[
-                :expected_players
-            ]
-
-            real_cards = sum(
-                1
-                for slot in first_slots
-                if slot["alt"]
-                and slot["alt"].toLowerCase()
-                != "player card"
-            )
-
-            print(
-                f"Rendered lineup: "
-                f"{real_cards}/"
-                f"{expected_players} real cards"
-            )
-
-            if real_cards == expected_players:
-                return
-
-        await page.wait_for_timeout(
-            1000
-        )
-
-    print(
-        "FUT.GG still has placeholder cards "
-        "after waiting."
-    )
-
-
-async def get_rendered_slots(
-    page,
-    expected_players,
-):
-    locator = page.locator(
-        'ul[data-gallery-builder-slots="true"] > li'
-    )
-
-    count = await locator.count()
-
-    if count < expected_players:
-        raise Exception(
-            f"Found {count} lineup slots instead "
-            f"of {expected_players}."
-        )
-
-    slots = []
-
-    for index in range(
-        expected_players
-    ):
-        slot = locator.nth(index)
-
-        data = await slot.evaluate(
-            """
-            (slot) => {
-                const img =
-                    slot.querySelector("img");
-
-                const links = Array.from(
-                    slot.querySelectorAll("a[href]")
-                );
-
-                const playerLink =
-                    links.find((a) =>
-                        a.getAttribute("href")
-                            ?.includes("/players/")
-                    );
-
-                return {
-                    alt:
-                        img?.getAttribute("alt")
-                        || "",
-
-                    src:
-                        img?.getAttribute("src")
-                        || "",
-
-                    href:
-                        playerLink
-                            ?.getAttribute("href")
-                        || "",
-
-                    text:
-                        slot.innerText || ""
-                };
-            }
-            """
-        )
-
-        slots.append(data)
-
-    return slots
-
-
-async def scan_category(
-    context,
-    label,
-    config,
-):
+async def scan_category(context, label, config):
     page = await context.new_page()
 
     try:
         print()
-        print(
-            f"Scanning {label}"
-        )
-        print(
-            config["url"]
-        )
+        print("=" * 60)
+        print(f"Scanning {label}")
+        print(config["url"])
+        print("=" * 60)
 
         await page.goto(
             config["url"],
@@ -405,16 +354,10 @@ async def scan_category(
             timeout=45000,
         )
 
-        try:
-            await page.wait_for_load_state(
-                "networkidle",
-                timeout=10000,
-            )
-        except Exception:
-            # Some sites keep background connections open.
-            pass
+        # Allow FUT.GG JavaScript to start rendering.
+        await page.wait_for_timeout(2000)
 
-        await wait_for_lineup(
+        complete = await wait_for_lineup(
             page,
             config["players"],
         )
@@ -426,89 +369,72 @@ async def scan_category(
 
         players = []
 
-        for number, slot in enumerate(
+        for slot_number, slot in enumerate(
             slots,
             start=1,
         ):
-            alt = slot["alt"].strip()
-            src = slot["src"].strip()
-            href = slot["href"].strip()
-
             player = parse_player_alt(
-                alt
+                slot["alt"]
             )
 
-            if not player:
-                raise Exception(
-                    f"Slot {number} is still a "
-                    f"placeholder after JavaScript "
-                    f"rendering."
+            if player is None:
+                raise RuntimeError(
+                    f"Slot {slot_number} is still "
+                    f"a placeholder after rendering."
                 )
 
             item_id = extract_item_id(
-                src,
-                href,
+                slot["src"],
+                slot["href"],
             )
 
             player["item_id"] = item_id
 
-            if (
-                label
-                == "✨ HOLOGRAPHICS"
-            ):
-                # Every card in this Gallery set is
-                # Holographic by definition. The exact
-                # Regular/Pristine type is detected below
-                # only when the player page exposes it.
-                version = (
-                    await detect_card_version(
-                        context,
-                        href,
-                    )
-                    if href
-                    else "Holographic"
+            if config["detect_version"]:
+                version = await detect_card_version(
+                    context,
+                    slot["href"],
                 )
 
-                if version == "Base":
+                if (
+                    label == "✨ HOLOGRAPHICS"
+                    and version == "Base"
+                ):
                     version = "Holographic"
 
                 player["version"] = version
 
-            elif config[
-                "detect_version"
-            ]:
-                player["version"] = (
-                    await detect_card_version(
-                        context,
-                        href,
-                    )
-                )
-
             else:
                 player["version"] = "?"
 
-            players.append(
-                player
-            )
+            players.append(player)
 
             print(
-                f"Slot {number}: "
+                f"Slot {slot_number}: "
                 f"{player['name']} | "
                 f"{player['rating']} | "
                 f"{player['card']} | "
                 f"{player['version']} | "
-                f"{player['item_id']}"
+                f"{player['item_id'] or '?'}"
             )
 
-        if (
-            len(players)
-            != config["players"]
-        ):
-            raise Exception(
-                f"Found {len(players)} players "
-                f"instead of "
-                f"{config['players']}."
+        if not complete:
+            raise RuntimeError(
+                f"FUT.GG did not render all "
+                f"{config['players']} player cards."
             )
+
+        if len(players) != config["players"]:
+            raise RuntimeError(
+                f"Found {len(players)} players "
+                f"instead of {config['players']}."
+            )
+
+        print(
+            f"{label}: "
+            f"{len(players)}/{config['players']} "
+            f"players found."
+        )
 
         return players
 
@@ -517,17 +443,12 @@ async def scan_category(
 
 
 # ============================================================
-# COMPARISON
+# PLAYER COMPARISON
 # ============================================================
 
 def player_identity(player):
-    item_id = player.get(
-        "item_id"
-    )
-
-    version = player.get(
-        "version"
-    )
+    item_id = player.get("item_id")
+    version = player.get("version")
 
     if item_id:
         return (
@@ -536,26 +457,14 @@ def player_identity(player):
         )
 
     return (
-        player.get(
-            "name",
-            "",
-        ),
-        player.get(
-            "rating",
-            "",
-        ),
-        player.get(
-            "card",
-            "",
-        ),
+        player.get("name", ""),
+        player.get("rating", ""),
+        player.get("card", ""),
         str(version),
     )
 
 
-def compare_players(
-    old_players,
-    new_players,
-):
+def compare_players(old_players, new_players):
     old_counter = Counter(
         player_identity(player)
         for player in old_players
@@ -578,42 +487,18 @@ def compare_players(
     added = []
 
     for player in old_players:
-        identity = player_identity(
-            player
-        )
+        identity = player_identity(player)
 
-        if (
-            removed_needed[
-                identity
-            ]
-            > 0
-        ):
-            removed.append(
-                player
-            )
-
-            removed_needed[
-                identity
-            ] -= 1
+        if removed_needed[identity] > 0:
+            removed.append(player)
+            removed_needed[identity] -= 1
 
     for player in new_players:
-        identity = player_identity(
-            player
-        )
+        identity = player_identity(player)
 
-        if (
-            added_needed[
-                identity
-            ]
-            > 0
-        ):
-            added.append(
-                player
-            )
-
-            added_needed[
-                identity
-            ] -= 1
+        if added_needed[identity] > 0:
+            added.append(player)
+            added_needed[identity] -= 1
 
     return removed, added
 
@@ -622,78 +507,42 @@ def compare_players(
 # TELEGRAM FORMATTING
 # ============================================================
 
-def player_text(
-    player,
-    status,
-):
+def player_text(player, status):
     name = html.escape(
-        str(
-            player.get(
-                "name",
-                "",
-            )
-        )
+        str(player.get("name", ""))
     )
 
     rating = html.escape(
-        str(
-            player.get(
-                "rating",
-                "",
-            )
-        )
+        str(player.get("rating", ""))
     )
 
     card = html.escape(
-        str(
-            player.get(
-                "card",
-                "",
-            )
-        )
+        str(player.get("card", ""))
     )
 
-    version = player.get(
-        "version"
-    )
+    version = player.get("version")
 
     if status == "new":
-        status_text = (
-            "🆕 <b>NEW</b>"
-        )
+        status_text = "🆕 <b>NEW</b>"
     else:
-        status_text = (
-            "❌ <b>GONE</b>"
-        )
+        status_text = "❌ <b>GONE</b>"
 
     version_text = None
 
     if version == "Base":
-        version_text = (
-            "⚪ <b>BASE</b>"
-        )
+        version_text = "⚪ <b>BASE</b>"
 
-    elif (
-        version
-        == "Holographic"
-    ):
+    elif version == "Holographic":
         version_text = (
             "✨ <b>HOLOGRAPHIC</b>"
         )
 
-    elif (
-        version
-        == "Pristine Holographic"
-    ):
+    elif version == "Pristine Holographic":
         version_text = (
-            "✨ <b>PRISTINE "
-            "HOLOGRAPHIC</b>"
+            "✨ <b>PRISTINE HOLOGRAPHIC</b>"
         )
 
-    elif (
-        version
-        and version != "?"
-    ):
+    elif version and version != "?":
         safe_version = html.escape(
             str(version).upper()
         )
@@ -708,23 +557,16 @@ def player_text(
     ]
 
     if version_text:
-        lines.append(
-            version_text
-        )
+        lines.append(version_text)
 
     lines.append(
         f"⭐ {rating} · {card}"
     )
 
-    return "\n".join(
-        lines
-    )
+    return "\n".join(lines)
 
 
-def build_category_message(
-    label,
-    result,
-):
+def build_category_message(label, result):
     lines = [
         "━━━━━━━━━━━━━━",
         f"<b>{label}</b>",
@@ -736,51 +578,30 @@ def build_category_message(
         )
 
         lines.append(
-            html.escape(
-                result["error"]
-            )
+            html.escape(result["error"])
         )
 
-        return "\n".join(
-            lines
-        )
+        return "\n".join(lines)
 
     if result["first_scan"]:
         lines.append(
             "✓ Monitoring initialized"
         )
 
-        return "\n".join(
-            lines
-        )
+        return "\n".join(lines)
 
-    removed = result[
-        "removed"
-    ]
+    removed = result["removed"]
+    added = result["added"]
 
-    added = result[
-        "added"
-    ]
-
-    if (
-        not removed
-        and not added
-    ):
-        lines.append(
-            "✓ No changes"
-        )
-
-        return "\n".join(
-            lines
-        )
+    if not removed and not added:
+        lines.append("✓ No changes")
+        return "\n".join(lines)
 
     if removed:
         lines.append("")
 
-        for index, player in enumerate(
-            removed
-        ):
-            if index:
+        for index, player in enumerate(removed):
+            if index > 0:
                 lines.append("")
 
             lines.append(
@@ -800,15 +621,11 @@ def build_category_message(
         )
 
     if added:
-        if (
-            not removed
-        ):
+        if not removed:
             lines.append("")
 
-        for index, player in enumerate(
-            added
-        ):
-            if index:
+        for index, player in enumerate(added):
+            if index > 0:
                 lines.append("")
 
             lines.append(
@@ -818,9 +635,7 @@ def build_category_message(
                 )
             )
 
-    return "\n".join(
-        lines
-    )
+    return "\n".join(lines)
 
 
 # ============================================================
@@ -830,12 +645,10 @@ def build_category_message(
 async def main():
     old_state = load_state()
 
-    new_state = dict(
-        old_state
-    )
+    # Preserve previous categories if a scan fails.
+    new_state = dict(old_state)
 
     results = {}
-
     any_changes = False
 
     async with async_playwright() as playwright:
@@ -871,23 +684,17 @@ async def main():
                     config,
                 )
 
-                previous = old_state.get(
-                    label
-                )
+                previous = old_state.get(label)
 
-                first_scan = (
-                    previous is None
-                )
+                first_scan = previous is None
 
                 removed = []
                 added = []
 
                 if not first_scan:
-                    removed, added = (
-                        compare_players(
-                            previous,
-                            players,
-                        )
+                    removed, added = compare_players(
+                        previous,
+                        players,
                     )
 
                 if removed or added:
@@ -900,14 +707,11 @@ async def main():
                     "added": added,
                 }
 
-                # Only replace the category state after a
-                # complete and valid scan.
                 new_state[label] = players
 
             except Exception as error:
                 print(
-                    f"{label} failed: "
-                    f"{error}"
+                    f"{label} failed: {error}"
                 )
 
                 results[label] = {
@@ -917,14 +721,12 @@ async def main():
                     "added": [],
                 }
 
-                # Previous state is intentionally preserved.
+                # Do not overwrite this category in the state.
 
         await context.close()
         await browser.close()
 
-    save_state(
-        new_state
-    )
+    save_state(new_state)
 
     now = datetime.now(
         timezone.utc
@@ -959,24 +761,19 @@ async def main():
 
         message_parts.append("")
 
-    message_parts.append(
-        "━━━━━━━━━━━━━━"
-    )
-
-    message_parts.append(
-        "⏱ Automatic monitoring · 5 min"
+    message_parts.extend(
+        [
+            "━━━━━━━━━━━━━━",
+            "⏱ Automatic monitoring · 5 min",
+        ]
     )
 
     message = "\n".join(
         message_parts
     )
 
-    send_telegram(
-        message
-    )
+    send_telegram(message)
 
 
 if __name__ == "__main__":
-    asyncio.run(
-        main()
-                )
+    asyncio.run(main())
