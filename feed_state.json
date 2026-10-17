@@ -8,10 +8,17 @@
       "version": "Pristine Holographic"
     },
     {
-      "name": "Zamorano",
+      "name": "Litmanen",
       "rating": "88",
       "card": "Base Hero",
-      "item_id": "67186651",
+      "item_id": "67114537",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Márquez",
+      "rating": "88",
+      "card": "Base Hero",
+      "item_id": "67135573",
       "version": "Pristine Holographic"
     },
     {
@@ -26,50 +33,34 @@
       "rating": "89",
       "card": "Base Hero",
       "item_id": "226306",
-      "version": "Pristine Holographic"
-    },
-    {
-      "name": "Vialli",
-      "rating": "89",
-      "card": "Base Hero",
-      "item_id": "233700",
-      "version": "Pristine Holographic"
+      "version": "Base"
     }
   ],
   "✨ HOLOGRAPHICS": [
     {
       "name": "Angerer",
       "rating": "92",
-      "card": "Base Icon",
-      "item_id": "67335157",
-      "version": "Pristine Holographic"
+      "card": "Base Icon"
     },
     {
       "name": "Prinz",
       "rating": "92",
-      "card": "Base Icon",
-      "item_id": "67384140",
-      "version": "Pristine Holographic"
+      "card": "Base Icon"
     },
     {
       "name": "Baresi",
       "rating": "91",
-      "card": "Base Icon",
-      "item_id": "67275770",
-      "version": "Pristine Holographic"
+      "card": "Base Icon"
     },
     {
       "name": "Foudy",
       "rating": "90",
-      "card": "Base Icon",
-      "item_id": "67180472",
-      "version": "Pristine Holographic"
+      "card": "Base Icon"
     },
     {
       "name": "Moore",
       "rating": "90",
-      "card": "Base Icon",
-      "item_id": "67298908",
-      "version": "Pristine Holographic"
+      "card": "Base Icon"
     }
-  
+  ]
+}
