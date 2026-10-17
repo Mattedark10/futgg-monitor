@@ -88,7 +88,7 @@ def send_telegram(message):
 
 def get_version(item_url):
     """
-    Opens the specific FUT.GG card page and reads the card title.
+    Opens the specific FUT.GG card page and detects its version.
 
     Possible results:
     - Base
@@ -152,7 +152,7 @@ def find_card_link(
     item_id,
 ):
     """
-    Finds the specific FUT.GG card URL using the card item ID.
+    Finds the FUT.GG page for the exact card item ID.
     """
 
     pattern = re.compile(
@@ -265,9 +265,6 @@ def get_players(
                     "",
                 ).strip()
 
-                # Example:
-                # Player Name - 88 - Season 1
-
                 match = re.match(
                     r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
                     alt,
@@ -289,11 +286,10 @@ def get_players(
                 }
 
                 # ============================================
-                # DETECT BASE / HOLOGRAPHIC VERSION
+                # BASE / HOLOGRAPHIC DETECTION
                 # ============================================
 
                 if distinguish:
-
                     src = img.get(
                         "src",
                         "",
@@ -320,10 +316,10 @@ def get_players(
                         "item_id"
                     ] = item_id
 
-                    # Use cached version when possible.
+                    # Use the saved version when this card
+                    # has already been detected.
 
                     if item_id in known_versions:
-
                         player[
                             "version"
                         ] = known_versions[
@@ -338,7 +334,6 @@ def get_players(
                         )
 
                     else:
-
                         href = find_card_link(
                             img,
                             soup,
@@ -346,14 +341,12 @@ def get_players(
                         )
 
                         if href:
-
                             item_url = urljoin(
                                 SITE,
                                 href,
                             )
 
                             try:
-
                                 version = get_version(
                                     item_url
                                 )
@@ -369,7 +362,6 @@ def get_players(
                                 )
 
                             except Exception as error:
-
                                 print(
                                     "Version detection "
                                     f"error for "
@@ -382,7 +374,6 @@ def get_players(
                                 ] = "?"
 
                         else:
-
                             print(
                                 "WARNING: "
                                 "Card link not found for "
@@ -416,55 +407,13 @@ def get_players(
 
 
 # ============================================================
-# PLAYER TEXT
+# PLAYER TELEGRAM FORMAT
 # ============================================================
 
-def player_text(player):
-    version = player.get(
-        "version"
-    )
-
-    version_tag = ""
-
-    if version == "Base":
-
-        version_tag = (
-            "⚪ <b>BASE</b> · "
-        )
-
-    elif (
-        version
-        == "Holographic"
-    ):
-
-        version_tag = (
-            "✨ <b>HOLOGRAPHIC</b> · "
-        )
-
-    elif (
-        version
-        == "Pristine Holographic"
-    ):
-
-        version_tag = (
-            "✨ <b>PRISTINE HOLOGRAPHIC</b> · "
-        )
-
-    elif (
-        version
-        and version != "?"
-    ):
-
-        safe_version = (
-            html.escape(
-                version.upper()
-            )
-        )
-
-        version_tag = (
-            f"✨ <b>{safe_version}</b> · "
-        )
-
+def player_text(
+    player,
+    status,
+):
     name = html.escape(
         str(player["name"])
     )
@@ -477,11 +426,71 @@ def player_text(player):
         str(player["card"])
     )
 
-    return (
-        f"{version_tag}"
-        f"<b>{name}</b> — "
-        f"{rating} — "
-        f"{card}"
+    version = player.get(
+        "version"
+    )
+
+    # Status
+
+    if status == "new":
+        status_text = (
+            "🆕 <b>NEW</b>"
+        )
+
+    else:
+        status_text = (
+            "❌ <b>GONE</b>"
+        )
+
+    # Card version
+
+    version_text = None
+
+    if version == "Base":
+        version_text = (
+            "⚪ <b>BASE</b>"
+        )
+
+    elif version == "Holographic":
+        version_text = (
+            "✨ <b>HOLOGRAPHIC</b>"
+        )
+
+    elif version == "Pristine Holographic":
+        version_text = (
+            "✨ <b>PRISTINE HOLOGRAPHIC</b>"
+        )
+
+    elif (
+        version
+        and version != "?"
+    ):
+        safe_version = html.escape(
+            str(version).upper()
+        )
+
+        version_text = (
+            f"✨ <b>{safe_version}</b>"
+        )
+
+    # Build player block.
+
+    lines = [
+        f"👤 <b>{name}</b>",
+        status_text,
+    ]
+
+    if version_text:
+        lines.append(
+            version_text
+        )
+
+    lines.append(
+        f"⭐ {rating} · {card}"
+    )
+
+    return "\n".join(
+        lines
     )
 
 
@@ -490,26 +499,22 @@ def player_text(player):
 # ============================================================
 
 def load_state():
-
     if not os.path.exists(
         STATE_FILE
     ):
         return {}
 
     try:
-
         with open(
             STATE_FILE,
             "r",
             encoding="utf-8",
         ) as file:
-
             return json.load(
                 file
             )
 
     except Exception as error:
-
         print(
             "Could not load previous "
             f"feed state: {error}"
@@ -522,14 +527,14 @@ def load_state():
 # SAVE STATE
 # ============================================================
 
-def save_state(state):
-
+def save_state(
+    state,
+):
     with open(
         STATE_FILE,
         "w",
         encoding="utf-8",
     ) as file:
-
         json.dump(
             state,
             file,
@@ -550,7 +555,6 @@ def compare_players(
     old_players,
     new_players,
 ):
-
     removed = (
         old_players.copy()
     )
@@ -560,15 +564,12 @@ def compare_players(
     )
 
     for player in old_players:
-
         if player in added:
-
             added.remove(
                 player
             )
 
             if player in removed:
-
                 removed.remove(
                     player
                 )
@@ -584,7 +585,6 @@ def compare_players(
 # ============================================================
 
 def main():
-
     print(
         "=" * 60
     )
@@ -660,17 +660,13 @@ def main():
 
         known_versions = {}
 
-        # ================================================
-        # RESTORE KNOWN CARD VERSIONS
-        # ================================================
+        # Restore versions already detected.
 
         if (
             old_players
             and distinguish
         ):
-
             for player in old_players:
-
                 item_id = (
                     player.get(
                         "item_id"
@@ -691,13 +687,11 @@ def main():
                         "?",
                     ]
                 ):
-
                     known_versions[
                         item_id
                     ] = version
 
         try:
-
             players = get_players(
                 url,
                 expected_players,
@@ -706,7 +700,6 @@ def main():
             )
 
         except Exception as error:
-
             print(
                 f"ERROR while checking "
                 f"{category}: {error}"
@@ -716,7 +709,6 @@ def main():
                 old_players
                 is not None
             ):
-
                 new_state[
                     category
                 ] = old_players
@@ -740,7 +732,6 @@ def main():
         )
 
         for player in players:
-
             version = (
                 player.get(
                     "version"
@@ -748,7 +739,6 @@ def main():
             )
 
             if version:
-
                 print(
                     f"- {player['name']} "
                     f"{player['rating']} "
@@ -757,7 +747,6 @@ def main():
                 )
 
             else:
-
                 print(
                     f"- {player['name']} "
                     f"{player['rating']} "
@@ -772,7 +761,6 @@ def main():
             old_players
             is None
         ):
-
             results.append({
                 "category": category,
                 "status": "first_scan",
@@ -789,22 +777,17 @@ def main():
         incomplete = False
 
         if distinguish:
-
             for player in players:
-
                 if (
                     player.get(
                         "version"
                     )
                     == "?"
                 ):
-
                     incomplete = True
-
                     break
 
         if incomplete:
-
             results.append({
                 "category": category,
                 "status": "incomplete",
@@ -822,7 +805,6 @@ def main():
             old_players
             != players
         ):
-
             (
                 removed,
                 added,
@@ -831,13 +813,12 @@ def main():
                 players,
             )
 
-            # Only ordering changed.
+            # Ignore ordering-only changes.
 
             if (
                 not removed
                 and not added
             ):
-
                 results.append({
                     "category": category,
                     "status": "unchanged",
@@ -857,7 +838,6 @@ def main():
             })
 
         else:
-
             results.append({
                 "category": category,
                 "status": "unchanged",
@@ -874,37 +854,35 @@ def main():
     )
 
     # ========================================================
-    # BUILD TELEGRAM MESSAGE
+    # TELEGRAM MESSAGE
     # ========================================================
 
     has_changes = any(
-        result["status"]
-        == "changed"
-        for result
-        in results
+        result["status"] == "changed"
+        for result in results
     )
 
     if has_changes:
-
         message = (
-            "⚡ <b>FUTFLEX FEED UPDATE</b>\n\n"
+            "⚡ <b>FUTFLEX FEED UPDATE</b>\n"
         )
 
     else:
-
         message = (
-            "🤖 <b>FUTFLEX MONITOR</b>\n\n"
+            "🤖 <b>FUTFLEX MONITOR</b>\n"
         )
 
     message += (
+        "\n"
         "✅ Monitoring check completed\n"
-        f"🕐 "
-        f"{now.strftime('%d/%m/%Y %H:%M:%S')} "
-        f"UTC\n"
+        f"🕐 {now.strftime('%d/%m/%Y %H:%M:%S')} UTC\n"
     )
 
-    for result in results:
+    # ========================================================
+    # FEED RESULTS
+    # ========================================================
 
+    for result in results:
         category = (
             result["category"]
         )
@@ -914,7 +892,8 @@ def main():
         )
 
         message += (
-            "\n━━━━━━━━━━━━━━\n"
+            "\n"
+            "━━━━━━━━━━━━━━\n"
             f"<b>{category}</b>\n"
         )
 
@@ -922,38 +901,37 @@ def main():
         # CHANGED
         # ====================================================
 
-        if (
-            status
-            == "changed"
-        ):
+        if status == "changed":
 
-            for player in result[
+            removed = result[
                 "removed"
-            ]:
+            ]
 
-                message += (
-                    "❌ <b>GONE</b> · "
-                    f"{player_text(player)}\n"
-                )
-
-            for player in result[
+            added = result[
                 "added"
-            ]:
+            ]
 
+            # Removed players first.
+
+            for player in removed:
                 message += (
-                    "🆕 <b>NEW</b> · "
-                    f"{player_text(player)}\n"
+                    "\n"
+                    f"{player_text(player, 'gone')}\n"
+                )
+
+            # New players second.
+
+            for player in added:
+                message += (
+                    "\n"
+                    f"{player_text(player, 'new')}\n"
                 )
 
         # ====================================================
-        # UNCHANGED
+        # NO CHANGES
         # ====================================================
 
-        elif (
-            status
-            == "unchanged"
-        ):
-
+        elif status == "unchanged":
             message += (
                 "✓ No changes\n"
             )
@@ -962,42 +940,27 @@ def main():
         # FIRST SCAN
         # ====================================================
 
-        elif (
-            status
-            == "first_scan"
-        ):
-
+        elif status == "first_scan":
             message += (
                 "✓ First scan saved\n"
             )
 
         # ====================================================
-        # INCOMPLETE
+        # INCOMPLETE DATA
         # ====================================================
 
-        elif (
-            status
-            == "incomplete"
-        ):
-
+        elif status == "incomplete":
             message += (
-                "⚠️ Incomplete card "
-                "version data\n"
+                "⚠️ Incomplete card version data\n"
             )
 
         # ====================================================
         # ERROR
         # ====================================================
 
-        elif (
-            status
-            == "error"
-        ):
-
-            error = (
-                html.escape(
-                    result["error"]
-                )
+        elif status == "error":
+            error = html.escape(
+                result["error"]
             )
 
             message += (
@@ -1005,8 +968,13 @@ def main():
                 f"<code>{error}</code>\n"
             )
 
+    # ========================================================
+    # FOOTER
+    # ========================================================
+
     message += (
-        "\n━━━━━━━━━━━━━━\n"
+        "\n"
+        "━━━━━━━━━━━━━━\n"
         "⏱ Automatic monitoring · 5 min"
     )
 
