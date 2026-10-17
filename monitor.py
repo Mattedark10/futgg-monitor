@@ -433,47 +433,51 @@ async def scan_category(context, label, config):
         await page.wait_for_timeout(2000)
 
         if label == "🏆 SEASON 1":
-            # Diagnostic: find where the site keeps its platform setting.
+            # Diagnostic: look for a platform selector on the page.
             try:
-                storage = await page.evaluate(
+                found = await page.evaluate(
                     """() => {
-                        const out = {};
-                        for (let i = 0; i < localStorage.length; i++) {
-                            const key = localStorage.key(i);
-                            const value = String(localStorage.getItem(key));
-                            out[key] = /platform|console|region/i.test(key)
-                                ? value.slice(0, 80)
-                                : "(" + value.length + " chars)";
-                        }
-                        return out;
+                        const rx = /\\b(ps5?|playstation|xbox|pc|platform|console)\\b/i;
+                        const sel = 'button, a, [role="button"], [role="tab"], '
+                            + '[role="radio"], [role="option"], select, option, '
+                            + 'img, label, input, [class*="platform" i], '
+                            + '[data-platform]';
+                        const out = [];
+                        const seen = new Set();
+                        document.querySelectorAll(sel).forEach((el) => {
+                            const text = (el.innerText || el.value || "")
+                                .trim().slice(0, 40);
+                            const attrs = [
+                                el.getAttribute("aria-label"),
+                                el.getAttribute("title"),
+                                el.getAttribute("alt"),
+                                el.getAttribute("name"),
+                                el.getAttribute("data-platform"),
+                                el.getAttribute("value"),
+                                (typeof el.className === "string"
+                                    && /platform/i.test(el.className))
+                                    ? el.className.slice(0, 60) : null,
+                            ].filter(Boolean).join(" | ");
+                            if (rx.test(text) || rx.test(attrs)) {
+                                const line = el.tagName + ": " + text
+                                    + " [" + attrs.slice(0, 100) + "]";
+                                if (!seen.has(line)) {
+                                    seen.add(line);
+                                    out.push(line);
+                                }
+                            }
+                        });
+                        return out.slice(0, 30);
                     }"""
                 )
 
-                print(f"DEBUG localStorage: {storage}")
+                print("DEBUG platform controls found:", len(found))
 
-                cookies = await context.cookies()
-
-                print(
-                    "DEBUG cookies: "
-                    + str(
-                        [
-                            c["name"]
-                            + (
-                                "=" + c["value"][:20]
-                                if re.search(
-                                    r"platform|console|region",
-                                    c["name"],
-                                    re.I,
-                                )
-                                else ""
-                            )
-                            for c in cookies
-                        ]
-                    )
-                )
+                for line in found:
+                    print("DEBUG  ", line)
 
             except Exception as error:
-                print(f"DEBUG storage failed: {error}")
+                print(f"DEBUG platform scan failed: {error}")
 
         await wait_for_lineup(
             page,
