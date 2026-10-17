@@ -28,7 +28,7 @@ PAGES = {
     "🏆 SEASON 1": {
         "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
         "players": 10,
-        "distinguish": False,
+        "distinguish": True,
     },
 }
 
@@ -87,6 +87,15 @@ def send_telegram(message):
 # ============================================================
 
 def get_version(item_url):
+    """
+    Opens the specific FUT.GG card page and reads the card title.
+
+    Possible results:
+    - Base
+    - Holographic
+    - Pristine Holographic
+    """
+
     response = requests.get(
         item_url,
         headers=HEADERS,
@@ -112,6 +121,10 @@ def get_version(item_url):
         strip=True,
     )
 
+    print(
+        f"Card title: {title}"
+    )
+
     if re.search(
         r"pristine\s+holographic",
         title,
@@ -133,14 +146,22 @@ def get_version(item_url):
 # FIND CARD LINK
 # ============================================================
 
-def find_card_link(img, soup, item_id):
+def find_card_link(
+    img,
+    soup,
+    item_id,
+):
+    """
+    Finds the specific FUT.GG card URL using the card item ID.
+    """
+
     pattern = re.compile(
-        rf"/players/.*27-{item_id}"
+        rf"/players/.*27-{re.escape(item_id)}"
     )
 
     parent = img
 
-    for _ in range(6):
+    for _ in range(8):
         parent = parent.parent
 
         if parent is None:
@@ -154,13 +175,17 @@ def find_card_link(img, soup, item_id):
         ):
             return parent["href"]
 
-        link = parent.find(
-            "a",
-            href=pattern,
-        )
+        if hasattr(
+            parent,
+            "find",
+        ):
+            link = parent.find(
+                "a",
+                href=pattern,
+            )
 
-        if link:
-            return link["href"]
+            if link:
+                return link["href"]
 
     link = soup.find(
         "a",
@@ -183,7 +208,9 @@ def get_players(
     distinguish=False,
     known_versions=None,
 ):
-    known_versions = known_versions or {}
+    known_versions = (
+        known_versions or {}
+    )
 
     response = requests.get(
         url,
@@ -197,6 +224,8 @@ def get_players(
         response.text,
         "html.parser",
     )
+
+    # Find the recommended lineup section.
 
     heading = soup.find(
         lambda tag:
@@ -215,18 +244,29 @@ def get_players(
     current = heading.find_next()
 
     while current:
+
+        # Stop when the next section begins.
+
         if (
             current.name in ["h2", "h3"]
             and current != heading
         ):
             break
 
-        if hasattr(current, "find_all"):
-            for img in current.find_all("img"):
+        if hasattr(
+            current,
+            "find_all",
+        ):
+            for img in current.find_all(
+                "img"
+            ):
                 alt = img.get(
                     "alt",
                     "",
                 ).strip()
+
+                # Example:
+                # Player Name - 88 - Season 1
 
                 match = re.match(
                     r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
@@ -237,12 +277,23 @@ def get_players(
                     continue
 
                 player = {
-                    "name": match.group(1).strip(),
-                    "rating": match.group(2).strip(),
-                    "card": match.group(3).strip(),
+                    "name": (
+                        match.group(1).strip()
+                    ),
+                    "rating": (
+                        match.group(2).strip()
+                    ),
+                    "card": (
+                        match.group(3).strip()
+                    ),
                 }
 
+                # ============================================
+                # DETECT BASE / HOLOGRAPHIC VERSION
+                # ============================================
+
                 if distinguish:
+
                     src = img.get(
                         "src",
                         "",
@@ -255,20 +306,39 @@ def get_players(
 
                     if not id_match:
                         print(
-                            f"WARNING: Card ID not found for {alt}"
+                            "WARNING: "
+                            f"Card ID not found for {alt}"
                         )
+
                         continue
 
-                    item_id = id_match.group(1)
+                    item_id = (
+                        id_match.group(1)
+                    )
 
-                    player["item_id"] = item_id
+                    player[
+                        "item_id"
+                    ] = item_id
+
+                    # Use cached version when possible.
 
                     if item_id in known_versions:
-                        player["version"] = (
-                            known_versions[item_id]
+
+                        player[
+                            "version"
+                        ] = known_versions[
+                            item_id
+                        ]
+
+                        print(
+                            f"{player['name']} "
+                            f"[{item_id}] -> "
+                            f"{player['version']} "
+                            "(cached)"
                         )
 
                     else:
+
                         href = find_card_link(
                             img,
                             soup,
@@ -276,34 +346,72 @@ def get_players(
                         )
 
                         if href:
+
+                            item_url = urljoin(
+                                SITE,
+                                href,
+                            )
+
                             try:
-                                player["version"] = get_version(
-                                    urljoin(
-                                        SITE,
-                                        href,
-                                    )
+
+                                version = get_version(
+                                    item_url
+                                )
+
+                                player[
+                                    "version"
+                                ] = version
+
+                                print(
+                                    f"{player['name']} "
+                                    f"[{item_id}] -> "
+                                    f"{version}"
                                 )
 
                             except Exception as error:
+
                                 print(
-                                    f"Version detection error: {error}"
+                                    "Version detection "
+                                    f"error for "
+                                    f"{player['name']}: "
+                                    f"{error}"
                                 )
 
-                                player["version"] = "?"
+                                player[
+                                    "version"
+                                ] = "?"
 
                         else:
-                            player["version"] = "?"
 
-                players.append(player)
+                            print(
+                                "WARNING: "
+                                "Card link not found for "
+                                f"{player['name']} "
+                                f"[{item_id}]"
+                            )
 
-                if len(players) >= expected_players:
+                            player[
+                                "version"
+                            ] = "?"
+
+                players.append(
+                    player
+                )
+
+                if (
+                    len(players)
+                    >= expected_players
+                ):
                     return players
 
-        current = current.find_next()
+        current = (
+            current.find_next()
+        )
 
     raise Exception(
-        f"Found {len(players)} players instead of "
-        f"{expected_players} on {url}"
+        f"Found {len(players)} players "
+        f"instead of {expected_players} "
+        f"on {url}"
     )
 
 
@@ -312,19 +420,48 @@ def get_players(
 # ============================================================
 
 def player_text(player):
-    tag = ""
+    version = player.get(
+        "version"
+    )
 
-    version = player.get("version")
+    version_tag = ""
 
     if version == "Base":
-        tag = "⚪ <b>BASE</b> · "
 
-    elif version and version != "?":
-        safe_version = html.escape(
-            version.upper()
+        version_tag = (
+            "⚪ <b>BASE</b> · "
         )
 
-        tag = (
+    elif (
+        version
+        == "Holographic"
+    ):
+
+        version_tag = (
+            "✨ <b>HOLOGRAPHIC</b> · "
+        )
+
+    elif (
+        version
+        == "Pristine Holographic"
+    ):
+
+        version_tag = (
+            "✨ <b>PRISTINE HOLOGRAPHIC</b> · "
+        )
+
+    elif (
+        version
+        and version != "?"
+    ):
+
+        safe_version = (
+            html.escape(
+                version.upper()
+            )
+        )
+
+        version_tag = (
             f"✨ <b>{safe_version}</b> · "
         )
 
@@ -341,7 +478,7 @@ def player_text(player):
     )
 
     return (
-        f"{tag}"
+        f"{version_tag}"
         f"<b>{name}</b> — "
         f"{rating} — "
         f"{card}"
@@ -353,22 +490,29 @@ def player_text(player):
 # ============================================================
 
 def load_state():
+
     if not os.path.exists(
         STATE_FILE
     ):
         return {}
 
     try:
+
         with open(
             STATE_FILE,
             "r",
             encoding="utf-8",
         ) as file:
-            return json.load(file)
+
+            return json.load(
+                file
+            )
 
     except Exception as error:
+
         print(
-            f"Could not load previous feed state: {error}"
+            "Could not load previous "
+            f"feed state: {error}"
         )
 
         return {}
@@ -379,11 +523,13 @@ def load_state():
 # ============================================================
 
 def save_state(state):
+
     with open(
         STATE_FILE,
         "w",
         encoding="utf-8",
     ) as file:
+
         json.dump(
             state,
             file,
@@ -404,17 +550,33 @@ def compare_players(
     old_players,
     new_players,
 ):
-    removed = old_players.copy()
-    added = new_players.copy()
+
+    removed = (
+        old_players.copy()
+    )
+
+    added = (
+        new_players.copy()
+    )
 
     for player in old_players:
+
         if player in added:
-            added.remove(player)
+
+            added.remove(
+                player
+            )
 
             if player in removed:
-                removed.remove(player)
 
-    return removed, added
+                removed.remove(
+                    player
+                )
+
+    return (
+        removed,
+        added,
+    )
 
 
 # ============================================================
@@ -422,9 +584,18 @@ def compare_players(
 # ============================================================
 
 def main():
-    print("=" * 60)
-    print("FUTFLEX FUT.GG MONITOR")
-    print("=" * 60)
+
+    print(
+        "=" * 60
+    )
+
+    print(
+        "FUTFLEX FUT.GG MONITOR"
+    )
+
+    print(
+        "=" * 60
+    )
 
     now = datetime.now(
         timezone.utc
@@ -435,59 +606,98 @@ def main():
         now.isoformat(),
     )
 
-    old_state = load_state()
+    old_state = (
+        load_state()
+    )
 
     new_state = {}
+
     results = []
 
     # ========================================================
     # CHECK EVERY FEED
     # ========================================================
 
-    for category, config in PAGES.items():
+    for (
+        category,
+        config,
+    ) in PAGES.items():
+
         print()
-        print("=" * 60)
+
+        print(
+            "=" * 60
+        )
+
         print(
             f"Checking {category}"
         )
-        print("=" * 60)
 
-        url = config["url"]
-        expected_players = config["players"]
-
-        distinguish = config.get(
-            "distinguish",
-            False,
+        print(
+            "=" * 60
         )
 
-        old_players = old_state.get(
-            category
+        url = (
+            config["url"]
+        )
+
+        expected_players = (
+            config["players"]
+        )
+
+        distinguish = (
+            config.get(
+                "distinguish",
+                False,
+            )
+        )
+
+        old_players = (
+            old_state.get(
+                category
+            )
         )
 
         known_versions = {}
+
+        # ================================================
+        # RESTORE KNOWN CARD VERSIONS
+        # ================================================
 
         if (
             old_players
             and distinguish
         ):
+
             for player in old_players:
-                item_id = player.get(
-                    "item_id"
+
+                item_id = (
+                    player.get(
+                        "item_id"
+                    )
                 )
 
-                version = player.get(
-                    "version"
+                version = (
+                    player.get(
+                        "version"
+                    )
                 )
 
                 if (
                     item_id
-                    and version not in [None, "?"]
+                    and version
+                    not in [
+                        None,
+                        "?",
+                    ]
                 ):
+
                     known_versions[
                         item_id
                     ] = version
 
         try:
+
             players = get_players(
                 url,
                 expected_players,
@@ -496,11 +706,17 @@ def main():
             )
 
         except Exception as error:
+
             print(
-                f"ERROR while checking {category}: {error}"
+                f"ERROR while checking "
+                f"{category}: {error}"
             )
 
-            if old_players is not None:
+            if (
+                old_players
+                is not None
+            ):
+
                 new_state[
                     category
                 ] = old_players
@@ -519,30 +735,44 @@ def main():
         ] = players
 
         print(
-            f"Players found: {len(players)}"
+            f"Players found: "
+            f"{len(players)}"
         )
 
         for player in players:
-            version = ""
 
-            if "version" in player:
-                version = (
-                    f" [{player['version']}]"
+            version = (
+                player.get(
+                    "version"
+                )
+            )
+
+            if version:
+
+                print(
+                    f"- {player['name']} "
+                    f"{player['rating']} "
+                    f"{player['card']} "
+                    f"[{version}]"
                 )
 
-            print(
-                "-",
-                player["name"],
-                player["rating"],
-                player["card"],
-                version,
-            )
+            else:
+
+                print(
+                    f"- {player['name']} "
+                    f"{player['rating']} "
+                    f"{player['card']}"
+                )
 
         # ====================================================
         # FIRST SCAN
         # ====================================================
 
-        if old_players is None:
+        if (
+            old_players
+            is None
+        ):
+
             results.append({
                 "category": category,
                 "status": "first_scan",
@@ -553,21 +783,28 @@ def main():
             continue
 
         # ====================================================
-        # INCOMPLETE CARD INFORMATION
+        # INCOMPLETE VERSION DATA
         # ====================================================
 
         incomplete = False
 
         if distinguish:
+
             for player in players:
+
                 if (
-                    player.get("version")
+                    player.get(
+                        "version"
+                    )
                     == "?"
                 ):
+
                     incomplete = True
+
                     break
 
         if incomplete:
+
             results.append({
                 "category": category,
                 "status": "incomplete",
@@ -581,16 +818,26 @@ def main():
         # CHECK FOR CHANGES
         # ====================================================
 
-        if old_players != players:
-            removed, added = compare_players(
+        if (
+            old_players
+            != players
+        ):
+
+            (
+                removed,
+                added,
+            ) = compare_players(
                 old_players,
                 players,
             )
+
+            # Only ordering changed.
 
             if (
                 not removed
                 and not added
             ):
+
                 results.append({
                     "category": category,
                     "status": "unchanged",
@@ -610,6 +857,7 @@ def main():
             })
 
         else:
+
             results.append({
                 "category": category,
                 "status": "unchanged",
@@ -630,27 +878,40 @@ def main():
     # ========================================================
 
     has_changes = any(
-        result["status"] == "changed"
-        for result in results
+        result["status"]
+        == "changed"
+        for result
+        in results
     )
 
     if has_changes:
+
         message = (
             "⚡ <b>FUTFLEX FEED UPDATE</b>\n\n"
         )
+
     else:
+
         message = (
             "🤖 <b>FUTFLEX MONITOR</b>\n\n"
         )
 
     message += (
         "✅ Monitoring check completed\n"
-        f"🕐 {now.strftime('%d/%m/%Y %H:%M:%S')} UTC\n"
+        f"🕐 "
+        f"{now.strftime('%d/%m/%Y %H:%M:%S')} "
+        f"UTC\n"
     )
 
     for result in results:
-        category = result["category"]
-        status = result["status"]
+
+        category = (
+            result["category"]
+        )
+
+        status = (
+            result["status"]
+        )
 
         message += (
             "\n━━━━━━━━━━━━━━\n"
@@ -658,27 +919,41 @@ def main():
         )
 
         # ====================================================
-        # FEED CHANGED
+        # CHANGED
         # ====================================================
 
-        if status == "changed":
-            for player in result["removed"]:
+        if (
+            status
+            == "changed"
+        ):
+
+            for player in result[
+                "removed"
+            ]:
+
                 message += (
                     "❌ <b>GONE</b> · "
                     f"{player_text(player)}\n"
                 )
 
-            for player in result["added"]:
+            for player in result[
+                "added"
+            ]:
+
                 message += (
                     "🆕 <b>NEW</b> · "
                     f"{player_text(player)}\n"
                 )
 
         # ====================================================
-        # NO CHANGES
+        # UNCHANGED
         # ====================================================
 
-        elif status == "unchanged":
+        elif (
+            status
+            == "unchanged"
+        ):
+
             message += (
                 "✓ No changes\n"
             )
@@ -687,27 +962,42 @@ def main():
         # FIRST SCAN
         # ====================================================
 
-        elif status == "first_scan":
+        elif (
+            status
+            == "first_scan"
+        ):
+
             message += (
                 "✓ First scan saved\n"
             )
 
         # ====================================================
-        # INCOMPLETE DATA
+        # INCOMPLETE
         # ====================================================
 
-        elif status == "incomplete":
+        elif (
+            status
+            == "incomplete"
+        ):
+
             message += (
-                "⚠️ Incomplete card version data\n"
+                "⚠️ Incomplete card "
+                "version data\n"
             )
 
         # ====================================================
         # ERROR
         # ====================================================
 
-        elif status == "error":
-            error = html.escape(
-                result["error"]
+        elif (
+            status
+            == "error"
+        ):
+
+            error = (
+                html.escape(
+                    result["error"]
+                )
             )
 
             message += (
@@ -717,7 +1007,7 @@ def main():
 
     message += (
         "\n━━━━━━━━━━━━━━\n"
-        "⏱ Automatic monitoring · 10 min"
+        "⏱ Automatic monitoring · 5 min"
     )
 
     # ========================================================
@@ -729,9 +1019,18 @@ def main():
     )
 
     print()
-    print("=" * 60)
-    print("MONITOR COMPLETED SUCCESSFULLY")
-    print("=" * 60)
+
+    print(
+        "=" * 60
+    )
+
+    print(
+        "MONITOR COMPLETED SUCCESSFULLY"
+    )
+
+    print(
+        "=" * 60
+    )
 
 
 if __name__ == "__main__":
