@@ -52,19 +52,6 @@
     "price": 1719000
   },
   {
-    "name": "Hato",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Future Stars",
-    "club": "Chelsea",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50604626.f5af2aa5e381f2dff300449b6007f9168ec1a85a6ab686a3520adc5a1b6d0503.webp",
-    "url": "https://www.fut.gg/players/272978-jorrel-hato/27-50604626/",
-    "eaId": 50604626,
-    "slug": "27-50604626",
-    "price": 274000
-  },
-  {
     "name": "Scott",
     "rating": 86,
     "position": "CM",
@@ -76,6 +63,19 @@
     "eaId": 50592947,
     "slug": "27-50592947",
     "price": 370000
+  },
+  {
+    "name": "Hato",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Future Stars",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50604626.f5af2aa5e381f2dff300449b6007f9168ec1a85a6ab686a3520adc5a1b6d0503.webp",
+    "url": "https://www.fut.gg/players/272978-jorrel-hato/27-50604626/",
+    "eaId": 50604626,
+    "slug": "27-50604626",
+    "price": 274000
   },
   {
     "name": "Pubill",
@@ -91,19 +91,6 @@
     "price": 1445000
   },
   {
-    "name": "Brunner",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Future Stars",
-    "club": "AS Monaco",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50605774.42768e6b121bed87dbe2b02e1da5f2223c302f4bdcd6acd3446298b13e4bac00.webp",
-    "url": "https://www.fut.gg/players/274126-paris-brunner/27-50605774/",
-    "eaId": 50605774,
-    "slug": "27-50605774",
-    "price": 470000
-  },
-  {
     "name": "Kanjinga",
     "rating": 85,
     "position": "ST",
@@ -115,6 +102,19 @@
     "eaId": 50408698,
     "slug": "27-50408698",
     "price": 93000
+  },
+  {
+    "name": "Brunner",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Future Stars",
+    "club": "AS Monaco",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50605774.42768e6b121bed87dbe2b02e1da5f2223c302f4bdcd6acd3446298b13e4bac00.webp",
+    "url": "https://www.fut.gg/players/274126-paris-brunner/27-50605774/",
+    "eaId": 50605774,
+    "slug": "27-50605774",
+    "price": 470000
   },
   {
     "name": "Mastantuono",
@@ -208,19 +208,6 @@
     "price": 33000
   },
   {
-    "name": "Bisiwu",
-    "rating": 67,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-88043.17e49fb3bd5920592a8afdd5d6f29e58e044244a0f5b3137e0e0ac7fe023caf1.webp",
-    "url": "https://www.fut.gg/players/88043-jesse-eugen-bisiwu/27-88043/",
-    "eaId": 88043,
-    "slug": "27-88043",
-    "price": null
-  },
-  {
     "name": "Peio Canales",
     "rating": 85,
     "position": "CAM",
@@ -231,6 +218,19 @@
     "url": "https://www.fut.gg/players/75263-peio-canales-peio-canales/27-50406911/",
     "eaId": 50406911,
     "slug": "27-50406911",
+    "price": null
+  },
+  {
+    "name": "Bisiwu",
+    "rating": 67,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-88043.17e49fb3bd5920592a8afdd5d6f29e58e044244a0f5b3137e0e0ac7fe023caf1.webp",
+    "url": "https://www.fut.gg/players/88043-jesse-eugen-bisiwu/27-88043/",
+    "eaId": 88043,
+    "slug": "27-88043",
     "price": null
   },
   {
@@ -247,16 +247,16 @@
     "price": 31365
   },
   {
-    "name": "Clara Serrajordi",
-    "rating": 79,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-78357.d672c232b7ec032b3d774eaf691e1a4746339af8e8c59b6d4f7538edf810d5ca.webp",
-    "url": "https://www.fut.gg/players/78357-clara-serrajordi-diaz-clara-serrajordi/27-78357/",
-    "eaId": 78357,
-    "slug": "27-78357",
+    "name": "Gruda",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "Future Stars",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50604260.5fe091dced27a070ade2b319735e90ab52cfb595c6f43f396636dea1bb6e2d1f.webp",
+    "url": "https://www.fut.gg/players/272612-brajan-gruda/27-50604260/",
+    "eaId": 50604260,
+    "slug": "27-50604260",
     "price": null
   }
 ]
