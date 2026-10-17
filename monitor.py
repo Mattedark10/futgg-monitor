@@ -3,6 +3,7 @@ import re
 import json
 import html
 import requests
+from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 
 
@@ -16,12 +17,12 @@ PAGES = {
         "players": 5
     },
 
-    "🌈 HOLOGRAPHICS": {
+    "✨ HOLOGRAPHICS": {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5
     },
 
-    "1️⃣ SEASON 1": {
+    "🏆 SEASON 1": {
         "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
         "players": 10
     },
@@ -156,6 +157,8 @@ def send_telegram(message):
 
     response.raise_for_status()
 
+    print("Telegram notification sent successfully.")
+
 
 def player_text(player):
 
@@ -190,7 +193,11 @@ def main():
     else:
         old_state = {}
 
-    new_state = {}
+    # Keep old data for categories that fail to load
+    new_state = dict(old_state)
+
+    results = []
+    any_changes = False
 
     # Check every FUT.GG feed
     for category, config in PAGES.items():
@@ -203,10 +210,25 @@ def main():
             f"({expected_players} players)..."
         )
 
-        players = get_players(
-            url,
-            expected_players
-        )
+        try:
+            players = get_players(
+                url,
+                expected_players
+            )
+
+        except Exception as error:
+
+            print(
+                f"{category}: ERROR {error}"
+            )
+
+            results.append({
+                "category": category,
+                "status": "error",
+                "error": str(error)
+            })
+
+            continue
 
         print(
             f"Found {len(players)} players."
@@ -223,8 +245,7 @@ def main():
 
         old_players = old_state.get(category)
 
-        # New category / first scan:
-        # save it without sending an alert
+        # New category / first scan
         if old_players is None:
 
             print(
@@ -232,88 +253,53 @@ def main():
                 "Saving current feed."
             )
 
+            results.append({
+                "category": category,
+                "status": "first_scan"
+            })
+
             continue
 
         # =========================
         # CHECK FOR FEED CHANGES
         # =========================
 
-        if old_players != players:
+        removed = old_players.copy()
+        added = players.copy()
 
-            removed = old_players.copy()
-            added = players.copy()
+        # Remove players/cards that stayed the same.
+        # This also handles duplicate cards correctly.
+        for player in old_players:
 
-            # Remove players/cards that stayed the same.
-            # This also handles duplicate cards correctly.
-            for player in old_players:
+            if player in added:
+                added.remove(player)
 
-                if player in added:
-                    added.remove(player)
+                if player in removed:
+                    removed.remove(player)
 
-                    if player in removed:
-                        removed.remove(player)
-
-            # If the lists only changed order,
-            # don't send a false notification.
-            if not removed and not added:
-
-                print(
-                    f"{category}: "
-                    "player order changed only."
-                )
-
-                continue
-
-            # =========================
-            # BUILD TELEGRAM ALERT
-            # =========================
-
-            message = (
-                "🚨 <b>FUT.GG FEED UPDATE</b>\n\n"
-                f"{category} <b>FEED</b>\n"
-                "The best team has been updated.\n\n"
-                "🔄 <b>FEED CHANGES</b>\n"
-            )
-
-            for player in removed:
-
-                message += (
-                    "🔴 <b>OUT</b> · "
-                    f"{player_text(player)}\n"
-                )
-
-            for player in added:
-
-                message += (
-                    "🟢 <b>IN</b> · "
-                    f"{player_text(player)}\n"
-                )
-
-            safe_url = html.escape(
-                url,
-                quote=True
-            )
-
-            message += (
-                "\n🕐 Change detected automatically\n"
-                f'🔗 <a href="{safe_url}">'
-                "View Feed on FUT.GG"
-                "</a>"
-            )
-
-            send_telegram(message)
+        # If the lists only changed order (or nothing
+        # changed), there is nothing to report.
+        if not removed and not added:
 
             print(
-                f"{category}: "
-                "Telegram notification sent."
+                f"{category}: No feed changes."
             )
 
-        else:
+            results.append({
+                "category": category,
+                "status": "unchanged"
+            })
 
-            print(
-                f"{category}: "
-                "No feed changes."
-            )
+            continue
+
+        any_changes = True
+
+        results.append({
+            "category": category,
+            "status": "changed",
+            "removed": removed,
+            "added": added
+        })
 
     # =========================
     # SAVE CURRENT FEEDS
@@ -333,6 +319,74 @@ def main():
         )
 
     print("Feed state saved successfully.")
+
+    # =========================
+    # BUILD TELEGRAM MESSAGE
+    # (sent on every run)
+    # =========================
+
+    now = datetime.now(
+        timezone.utc
+    ).strftime(
+        "%d/%m/%Y %H:%M:%S UTC"
+    )
+
+    if any_changes:
+        header = "⚡ <b>FUTFLEX FEED UPDATE</b>"
+    else:
+        header = "🤖 <b>FUTFLEX MONITOR</b>"
+
+    parts = [
+        header,
+        "",
+        "✅ Monitoring check completed",
+        f"🕐 {now}",
+        ""
+    ]
+
+    for result in results:
+
+        category = html.escape(
+            result["category"]
+        )
+
+        parts.append("━━━━━━━━━━━━━━")
+        parts.append(f"<b>{category}</b>")
+
+        status = result["status"]
+
+        if status == "changed":
+
+            for player in result["removed"]:
+                parts.append(
+                    "❌ <b>GONE</b> · "
+                    f"{player_text(player)}"
+                )
+
+            for player in result["added"]:
+                parts.append(
+                    "🆕 <b>NEW</b> · "
+                    f"{player_text(player)}"
+                )
+
+        elif status == "unchanged":
+            parts.append("✓ No changes")
+
+        elif status == "first_scan":
+            parts.append("✓ Monitoring initialized")
+
+        elif status == "error":
+            parts.append("⚠️ <b>Feed check failed</b>")
+            parts.append(
+                html.escape(result["error"])
+            )
+
+        parts.append("")
+
+    parts.append("━━━━━━━━━━━━━━")
+    parts.append("⏱ Automatic monitoring · 5 min")
+
+    send_telegram("\n".join(parts))
 
 
 # =========================
