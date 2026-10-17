@@ -432,6 +432,49 @@ async def scan_category(context, label, config):
         # Allow FUT.GG JavaScript to start rendering.
         await page.wait_for_timeout(2000)
 
+        if label == "🏆 SEASON 1":
+            # Diagnostic: find where the site keeps its platform setting.
+            try:
+                storage = await page.evaluate(
+                    """() => {
+                        const out = {};
+                        for (let i = 0; i < localStorage.length; i++) {
+                            const key = localStorage.key(i);
+                            const value = String(localStorage.getItem(key));
+                            out[key] = /platform|console|region/i.test(key)
+                                ? value.slice(0, 80)
+                                : "(" + value.length + " chars)";
+                        }
+                        return out;
+                    }"""
+                )
+
+                print(f"DEBUG localStorage: {storage}")
+
+                cookies = await context.cookies()
+
+                print(
+                    "DEBUG cookies: "
+                    + str(
+                        [
+                            c["name"]
+                            + (
+                                "=" + c["value"][:20]
+                                if re.search(
+                                    r"platform|console|region",
+                                    c["name"],
+                                    re.I,
+                                )
+                                else ""
+                            )
+                            for c in cookies
+                        ]
+                    )
+                )
+
+            except Exception as error:
+                print(f"DEBUG storage failed: {error}")
+
         await wait_for_lineup(
             page,
             config["players"],
