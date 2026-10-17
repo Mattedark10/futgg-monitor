@@ -1,0 +1,497 @@
+name: Debug Season 1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  debug-season1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Debug Season 1 slots
+        run: |
+          python - <<'PY'
+          import re
+          import requests
+          from bs4 import BeautifulSoup
+
+          URL = "https://www.fut.gg/fut-gallery/rarities/season-1/"
+
+          HEADERS = {
+              "User-Agent": (
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/140.0.0.0 Safari/537.36"
+              ),
+              "Accept": (
+                  "text/html,application/xhtml+xml,"
+                  "application/xml;q=0.9,image/avif,"
+                  "image/webp,*/*;q=0.8"
+              ),
+              "Accept-Language": "en-US,en;q=0.9",
+          }
+
+          print("=" * 80)
+          print("FUTFLEX - SEASON 1 RAW SLOT DEBUG")
+          print("=" * 80)
+
+          response = requests.get(
+              URL,
+              headers=HEADERS,
+              timeout=30,
+          )
+
+          response.raise_for_status()
+
+          print()
+          print(f"HTTP status: {response.status_code}")
+          print(f"HTML size: {len(response.text):,} characters")
+
+          soup = BeautifulSoup(
+              response.text,
+              "html.parser",
+          )
+
+          # --------------------------------------------------
+          # FIND LINEUP HEADING
+          # --------------------------------------------------
+
+          heading = soup.find(
+              lambda tag:
+              tag.name in ["h1", "h2", "h3", "h4"]
+              and "Cheapest grade"
+              in tag.get_text(
+                  " ",
+                  strip=True,
+              )
+              and "lineup"
+              in tag.get_text(
+                  " ",
+                  strip=True,
+              )
+          )
+
+          if not heading:
+              raise SystemExit(
+                  "ERROR: Cheapest grade lineup heading not found."
+              )
+
+          print()
+          print("Lineup heading:")
+          print(
+              heading.get_text(
+                  " ",
+                  strip=True,
+              )
+          )
+
+          # --------------------------------------------------
+          # COLLECT ALL IMAGES UNTIL ADD PLAYERS
+          # --------------------------------------------------
+
+          lineup_images = []
+
+          for element in heading.next_elements:
+
+              if (
+                  getattr(
+                      element,
+                      "name",
+                      None,
+                  )
+                  in ["h1", "h2", "h3", "h4"]
+              ):
+                  text = element.get_text(
+                      " ",
+                      strip=True,
+                  )
+
+                  if text.lower() == "add players":
+                      break
+
+              if (
+                  getattr(
+                      element,
+                      "name",
+                      None,
+                  )
+                  != "img"
+              ):
+                  continue
+
+              alt = element.get(
+                  "alt",
+                  "",
+              ).strip()
+
+              # Player cards have either:
+              #
+              # Name - Rating - Rarity
+              #
+              # or:
+              #
+              # Player Card
+
+              if (
+                  re.match(
+                      r".+?\s*-\s*\d+\s*-\s*.+",
+                      alt,
+                  )
+                  or alt.lower() == "player card"
+              ):
+                  lineup_images.append(
+                      element
+                  )
+
+                  if len(lineup_images) >= 10:
+                      break
+
+          print()
+          print(
+              f"Candidate lineup slots found: "
+              f"{len(lineup_images)}"
+          )
+
+          # --------------------------------------------------
+          # DEBUG EACH SLOT
+          # --------------------------------------------------
+
+          for slot_number, img in enumerate(
+              lineup_images,
+              start=1,
+          ):
+              print()
+              print("=" * 80)
+              print(f"SLOT {slot_number}")
+              print("=" * 80)
+
+              print(
+                  "ALT:",
+                  repr(
+                      img.get(
+                          "alt",
+                          "",
+                      )
+                  ),
+              )
+
+              print(
+                  "SRC:",
+                  repr(
+                      img.get(
+                          "src",
+                          "",
+                      )
+                  ),
+              )
+
+              print(
+                  "DATA-SRC:",
+                  repr(
+                      img.get(
+                          "data-src",
+                          "",
+                      )
+                  ),
+              )
+
+              print(
+                  "SRCSET:",
+                  repr(
+                      img.get(
+                          "srcset",
+                          "",
+                      )
+                  ),
+              )
+
+              print(
+                  "DATA-SRCSET:",
+                  repr(
+                      img.get(
+                          "data-srcset",
+                          "",
+                      )
+                  ),
+              )
+
+              print()
+              print("IMAGE ATTRIBUTES:")
+
+              for key, value in img.attrs.items():
+                  print(
+                      f"  {key} = {value!r}"
+                  )
+
+              # ----------------------------------------------
+              # PARENT LINK
+              # ----------------------------------------------
+
+              link = img.find_parent(
+                  "a"
+              )
+
+              print()
+              print("NEAREST LINK:")
+
+              if link:
+                  print(
+                      "HREF:",
+                      repr(
+                          link.get(
+                              "href",
+                              "",
+                          )
+                      ),
+                  )
+
+                  print(
+                      "LINK ATTRIBUTES:"
+                  )
+
+                  for key, value in link.attrs.items():
+                      print(
+                          f"  {key} = {value!r}"
+                      )
+
+              else:
+                  print(
+                      "No parent link found."
+                  )
+
+              # ----------------------------------------------
+              # PARENT CONTAINERS
+              # ----------------------------------------------
+
+              parent = img.parent
+
+              for level in range(
+                  1,
+                  7,
+              ):
+                  if parent is None:
+                      break
+
+                  print()
+                  print(
+                      f"PARENT LEVEL {level}:"
+                  )
+
+                  print(
+                      "TAG:",
+                      parent.name,
+                  )
+
+                  print(
+                      "ATTRIBUTES:",
+                      dict(
+                          parent.attrs
+                      ),
+                  )
+
+                  text = parent.get_text(
+                      " ",
+                      strip=True,
+                  )
+
+                  print(
+                      "TEXT:",
+                      repr(
+                          text[:500]
+                      ),
+                  )
+
+                  # Print links inside this local container.
+
+                  links = parent.find_all(
+                      "a",
+                      href=True,
+                  )
+
+                  if links:
+                      print(
+                          "LINKS:"
+                      )
+
+                      for local_link in links[:10]:
+                          print(
+                              " ",
+                              repr(
+                                  local_link.get(
+                                      "href"
+                                  )
+                              ),
+                          )
+
+                  # Print data attributes.
+
+                  data_attributes = {
+                      key: value
+                      for key, value
+                      in parent.attrs.items()
+                      if key.startswith(
+                          "data-"
+                      )
+                  }
+
+                  if data_attributes:
+                      print(
+                          "DATA ATTRIBUTES:"
+                      )
+
+                      for (
+                          key,
+                          value,
+                      ) in data_attributes.items():
+                          print(
+                              f"  {key} = {value!r}"
+                          )
+
+                  parent = parent.parent
+
+          # --------------------------------------------------
+          # SEARCH RAW HTML AROUND PLAYER CARD
+          # --------------------------------------------------
+
+          print()
+          print("=" * 80)
+          print("RAW HTML PLAYER CARD OCCURRENCES")
+          print("=" * 80)
+
+          html = response.text
+
+          matches = list(
+              re.finditer(
+                  r"Player Card",
+                  html,
+                  re.I,
+              )
+          )
+
+          print(
+              f"'Player Card' occurrences: "
+              f"{len(matches)}"
+          )
+
+          for index, match in enumerate(
+              matches[:20],
+              start=1,
+          ):
+              start = max(
+                  0,
+                  match.start() - 1000,
+              )
+
+              end = min(
+                  len(html),
+                  match.end() + 1000,
+              )
+
+              snippet = html[
+                  start:end
+              ]
+
+              print()
+              print("-" * 80)
+              print(
+                  f"PLAYER CARD OCCURRENCE {index}"
+              )
+              print("-" * 80)
+              print(snippet)
+
+          # --------------------------------------------------
+          # SEARCH FOR POSSIBLE EMBEDDED DATA
+          # --------------------------------------------------
+
+          print()
+          print("=" * 80)
+          print("EMBEDDED SCRIPT DEBUG")
+          print("=" * 80)
+
+          scripts = soup.find_all(
+              "script"
+          )
+
+          print(
+              f"Scripts found: {len(scripts)}"
+          )
+
+          interesting_words = [
+              "Cucurella",
+              "Harder",
+              "Mora",
+              "Bonny",
+              "Undav",
+              "Bischof",
+              "Yohannes",
+              "Kiwior",
+              "holographic",
+              "lineup",
+          ]
+
+          for script_number, script in enumerate(
+              scripts,
+              start=1,
+          ):
+              content = (
+                  script.string
+                  or script.get_text(
+                      " ",
+                      strip=False,
+                  )
+                  or ""
+              )
+
+              if not content:
+                  continue
+
+              found_words = [
+                  word
+                  for word
+                  in interesting_words
+                  if word.lower()
+                  in content.lower()
+              ]
+
+              if not found_words:
+                  continue
+
+              print()
+              print("-" * 80)
+              print(
+                  f"INTERESTING SCRIPT {script_number}"
+              )
+              print(
+                  "MATCHES:",
+                  ", ".join(
+                      found_words
+                  ),
+              )
+              print("-" * 80)
+
+              # Avoid printing an enormous script.
+              print(
+                  content[:10000]
+              )
+
+          print()
+          print("=" * 80)
+          print("DEBUG COMPLETED")
+          print("=" * 80)
+          PY
