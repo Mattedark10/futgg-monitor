@@ -26,41 +26,51 @@
       "rating": "89",
       "card": "Base Hero",
       "item_id": "226306",
-      "version": "Base"
+      "version": "Pristine Holographic"
     },
     {
       "name": "Vialli",
       "rating": "89",
       "card": "Base Hero",
       "item_id": "233700",
-      "version": "Base"
+      "version": "Pristine Holographic"
     }
   ],
   "✨ HOLOGRAPHICS": [
     {
       "name": "Angerer",
       "rating": "92",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67335157",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Prinz",
       "rating": "92",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67384140",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Baresi",
       "rating": "91",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67275770",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Foudy",
       "rating": "90",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67180472",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Moore",
       "rating": "90",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67298908",
+      "version": "Pristine Holographic"
     }
   ],
   "🏆 SEASON 1": [
