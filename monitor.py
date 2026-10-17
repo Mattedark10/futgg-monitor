@@ -3,7 +3,6 @@ import html
 import json
 import os
 import re
-import time
 from collections import Counter
 from datetime import datetime, timezone
 from urllib.parse import urljoin
@@ -439,50 +438,6 @@ async def scan_category(context, label, config):
         # Allow FUT.GG JavaScript to start rendering.
         await page.wait_for_timeout(2000)
 
-        if label == "🏆 SEASON 1":
-            # Diagnostic: does the static HTML change with the request?
-            variants = {
-                "plain": (config["url"], None),
-                "no-slash": (config["url"].rstrip("/"), None),
-                "cache-bust": (
-                    f"{config['url']}?cb={int(time.time())}",
-                    None,
-                ),
-                "no-cache": (
-                    config["url"],
-                    {
-                        "Cache-Control": "no-cache",
-                        "Pragma": "no-cache",
-                    },
-                ),
-                "it-IT": (
-                    config["url"],
-                    {"Accept-Language": "it-IT,it;q=0.9"},
-                ),
-            }
-
-            for name, (variant_url, variant_headers) in variants.items():
-                try:
-                    found = await get_static_slots(
-                        context,
-                        variant_url,
-                        config["players"],
-                        variant_headers,
-                    )
-
-                    names = ", ".join(
-                        item["alt"].split(" - ")[0]
-                        for item in found
-                    )
-
-                    print(
-                        f"PROBE {name}: "
-                        f"{len(found)} cards: {names}"
-                    )
-
-                except Exception as error:
-                    print(f"PROBE {name} failed: {error}")
-
         await wait_for_lineup(
             page,
             config["players"],
@@ -526,15 +481,6 @@ async def scan_category(context, label, config):
                 f"Static HTML cards found: "
                 f"{len(static_slots)}"
             )
-
-            for number, static_slot in enumerate(
-                static_slots,
-                start=1,
-            ):
-                print(
-                    f"  static {number}: "
-                    f"{static_slot['alt']}"
-                )
 
             if len(static_slots) > rendered_real:
                 print(
