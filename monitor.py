@@ -3,6 +3,7 @@ import re
 import json
 import html
 import requests
+from collections import Counter
 from datetime import datetime, timezone
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
@@ -16,34 +17,29 @@ PAGES = {
     "🦸 HEROES": {
         "url": "https://www.fut.gg/fut-gallery/rarities/heroes/",
         "players": 5,
-        "distinguish": True,
+        "detect_version": True,
     },
 
     "✨ HOLOGRAPHICS": {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5,
-        "distinguish": False,
+        "detect_version": False,
     },
 
     "🏆 SEASON 1": {
         "url": "https://www.fut.gg/fut-gallery/rarities/season-1/",
         "players": 10,
-        "distinguish": True,
+        "detect_version": True,
     },
 }
 
 
 # ============================================================
-# TELEGRAM
+# SETTINGS
 # ============================================================
 
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
-
-
-# ============================================================
-# SETTINGS
-# ============================================================
 
 STATE_FILE = "feed_state.json"
 SITE = "https://www.fut.gg"
@@ -58,16 +54,17 @@ HEADERS = {
 
 
 # ============================================================
-# SEND TELEGRAM MESSAGE
+# TELEGRAM
 # ============================================================
 
 def send_telegram(message):
-    telegram_url = (
-        f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    url = (
+        f"https://api.telegram.org/"
+        f"bot{BOT_TOKEN}/sendMessage"
     )
 
     response = requests.post(
-        telegram_url,
+        url,
         data={
             "chat_id": CHAT_ID,
             "text": message,
@@ -79,14 +76,136 @@ def send_telegram(message):
 
     response.raise_for_status()
 
-    print("Telegram notification sent successfully.")
+    print(
+        "Telegram notification sent successfully."
+    )
 
 
 # ============================================================
-# DETECT CARD VERSION
+# EXTRACT ITEM ID
 # ============================================================
 
-def get_version(item_url):
+def extract_item_id(img):
+    """
+    Extract the exact FC item ID from the image URL.
+    """
+
+    values = []
+
+    for attribute in [
+        "src",
+        "data-src",
+        "srcset",
+        "data-srcset",
+    ]:
+        value = img.get(
+            attribute,
+            "",
+        )
+
+        if value:
+            values.append(
+                value
+            )
+
+    combined = " ".join(
+        values
+    )
+
+    match = re.search(
+        r"27-(\d+)",
+        combined,
+    )
+
+    if not match:
+        return None
+
+    return match.group(1)
+
+
+# ============================================================
+# FIND EXACT CARD LINK
+# ============================================================
+
+def find_exact_card_link(
+    img,
+    item_id,
+):
+    """
+    Search only around the current card image.
+
+    This avoids accidentally using the link from another
+    copy of the same player.
+    """
+
+    pattern = re.compile(
+        rf"/players/[^\"']*27-{re.escape(item_id)}"
+    )
+
+    # First check if the image itself is inside a link.
+
+    parent_link = img.find_parent(
+        "a"
+    )
+
+    if parent_link:
+        href = parent_link.get(
+            "href",
+            "",
+        )
+
+        if pattern.search(
+            href
+        ):
+            return href
+
+    # Search only in nearby parents.
+
+    parent = img
+
+    for _ in range(6):
+        parent = parent.parent
+
+        if parent is None:
+            break
+
+        if not hasattr(
+            parent,
+            "find_all",
+        ):
+            continue
+
+        links = parent.find_all(
+            "a",
+            href=True,
+        )
+
+        for link in links:
+            href = link.get(
+                "href",
+                "",
+            )
+
+            if pattern.search(
+                href
+            ):
+                return href
+
+    return None
+
+
+# ============================================================
+# CARD VERSION
+# ============================================================
+
+def get_version(
+    item_url,
+):
+    """
+    Detect Base / Holographic / Pristine Holographic
+    from the exact FUT.GG card page.
+    """
+
     response = requests.get(
         item_url,
         headers=HEADERS,
@@ -100,16 +219,35 @@ def get_version(item_url):
         "html.parser",
     )
 
-    h1 = soup.find("h1")
+    # Prefer the H1.
 
-    if not h1:
-        raise Exception(
-            f"Card title not found: {item_url}"
+    h1 = soup.find(
+        "h1"
+    )
+
+    if h1:
+        title = h1.get_text(
+            " ",
+            strip=True,
         )
 
-    title = h1.get_text(
-        " ",
-        strip=True,
+    else:
+        title_tag = soup.find(
+            "title"
+        )
+
+        if not title_tag:
+            raise Exception(
+                f"Card title not found: {item_url}"
+            )
+
+        title = title_tag.get_text(
+            " ",
+            strip=True,
+        )
+
+    print(
+        f"Card page: {item_url}"
     )
 
     print(
@@ -134,69 +272,133 @@ def get_version(item_url):
 
 
 # ============================================================
-# FIND CARD LINK
+# GET LINEUP IMAGES
 # ============================================================
 
-def find_card_link(
-    img,
+def get_lineup_images(
     soup,
-    item_id,
+    expected_players,
 ):
-    pattern = re.compile(
-        rf"/players/.*27-{re.escape(item_id)}"
+    """
+    Get every player image exactly once.
+
+    IMPORTANT:
+    The old parser repeatedly called find_all() while walking
+    through nested HTML elements. That could add the same card
+    more than once.
+
+    This function processes each actual <img> element only once.
+    """
+
+    heading = soup.find(
+        lambda tag:
+        tag.name in [
+            "h2",
+            "h3",
+        ]
+        and "Cheapest grade"
+        in tag.get_text(
+            " ",
+            strip=True,
+        )
+        and "lineup"
+        in tag.get_text(
+            " ",
+            strip=True,
+        )
     )
 
-    parent = img
+    if not heading:
+        raise Exception(
+            "Cheapest grade lineup section not found."
+        )
 
-    for _ in range(8):
-        parent = parent.parent
+    images = []
 
-        if parent is None:
-            break
+    seen_elements = set()
+
+    current = heading.next_element
+
+    while current:
+
+        # Stop when reaching the next heading.
 
         if (
-            parent.name == "a"
-            and pattern.search(
-                parent.get("href", "")
+            getattr(
+                current,
+                "name",
+                None,
             )
+            in [
+                "h2",
+                "h3",
+            ]
+            and current is not heading
         ):
-            return parent["href"]
+            break
 
-        if hasattr(
-            parent,
-            "find",
+        # Process ONLY the current IMG itself.
+        # Do not call current.find_all("img").
+
+        if (
+            getattr(
+                current,
+                "name",
+                None,
+            )
+            == "img"
         ):
-            link = parent.find(
-                "a",
-                href=pattern,
+            alt = current.get(
+                "alt",
+                "",
+            ).strip()
+
+            match = re.match(
+                r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
+                alt,
             )
 
-            if link:
-                return link["href"]
+            if match:
+                element_id = id(
+                    current
+                )
 
-    link = soup.find(
-        "a",
-        href=pattern,
-    )
+                if (
+                    element_id
+                    not in seen_elements
+                ):
+                    seen_elements.add(
+                        element_id
+                    )
 
-    if link:
-        return link["href"]
+                    images.append(
+                        current
+                    )
 
-    return None
+                    if (
+                        len(images)
+                        >= expected_players
+                    ):
+                        break
+
+        current = current.next_element
+
+    return images
 
 
 # ============================================================
-# GET FUT.GG PLAYERS
+# GET PLAYERS
 # ============================================================
 
 def get_players(
     url,
     expected_players,
-    distinguish=False,
+    detect_version=False,
     known_versions=None,
 ):
     known_versions = (
-        known_versions or {}
+        known_versions
+        or {}
     )
 
     response = requests.get(
@@ -212,182 +414,324 @@ def get_players(
         "html.parser",
     )
 
-    heading = soup.find(
-        lambda tag:
-        tag.name in ["h2", "h3"]
-        and "Cheapest grade" in tag.get_text()
-        and "lineup" in tag.get_text()
+    images = get_lineup_images(
+        soup,
+        expected_players,
     )
 
-    if not heading:
+    if (
+        len(images)
+        != expected_players
+    ):
         raise Exception(
-            f"Feed lineup not found: {url}"
+            f"Found {len(images)} player slots "
+            f"instead of {expected_players} "
+            f"on {url}"
         )
 
     players = []
 
-    current = heading.find_next()
+    # ========================================================
+    # PROCESS EACH SLOT ONCE
+    # ========================================================
 
-    while current:
-        if (
-            current.name in ["h2", "h3"]
-            and current != heading
-        ):
-            break
+    for slot_number, img in enumerate(
+        images,
+        start=1,
+    ):
+        alt = img.get(
+            "alt",
+            "",
+        ).strip()
 
-        if hasattr(
-            current,
-            "find_all",
-        ):
-            for img in current.find_all(
-                "img"
-            ):
-                alt = img.get(
-                    "alt",
-                    "",
-                ).strip()
+        match = re.match(
+            r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
+            alt,
+        )
 
-                match = re.match(
-                    r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
-                    alt,
+        if not match:
+            continue
+
+        player = {
+            "name": (
+                match.group(1).strip()
+            ),
+            "rating": (
+                match.group(2).strip()
+            ),
+            "card": (
+                match.group(3).strip()
+            ),
+        }
+
+        print()
+        print(
+            f"SLOT {slot_number}"
+        )
+
+        print(
+            f"Player: {player['name']}"
+        )
+
+        print(
+            f"Rating: {player['rating']}"
+        )
+
+        print(
+            f"Card: {player['card']}"
+        )
+
+        # ====================================================
+        # CARD VERSION
+        # ====================================================
+
+        if detect_version:
+            item_id = extract_item_id(
+                img
+            )
+
+            if item_id:
+                player[
+                    "item_id"
+                ] = item_id
+
+                print(
+                    f"Item ID: {item_id}"
                 )
 
-                if not match:
-                    continue
-
-                player = {
-                    "name": (
-                        match.group(1).strip()
-                    ),
-                    "rating": (
-                        match.group(2).strip()
-                    ),
-                    "card": (
-                        match.group(3).strip()
-                    ),
-                }
-
                 # ============================================
-                # BASE / HOLOGRAPHIC DETECTION
+                # CACHED VERSION
                 # ============================================
 
-                if distinguish:
-                    src = img.get(
-                        "src",
-                        "",
-                    )
-
-                    id_match = re.search(
-                        r"27-(\d+)",
-                        src,
-                    )
-
-                    if not id_match:
-                        print(
-                            "WARNING: "
-                            f"Card ID not found for {alt}"
-                        )
-
-                        continue
-
-                    item_id = (
-                        id_match.group(1)
-                    )
-
+                if (
+                    item_id
+                    in known_versions
+                ):
                     player[
-                        "item_id"
-                    ] = item_id
+                        "version"
+                    ] = known_versions[
+                        item_id
+                    ]
 
-                    # Use cached version when available.
+                    print(
+                        "Version: "
+                        f"{player['version']} "
+                        "(cached)"
+                    )
 
-                    if item_id in known_versions:
-                        player[
-                            "version"
-                        ] = known_versions[
-                            item_id
-                        ]
+                # ============================================
+                # NEW ITEM
+                # ============================================
 
-                        print(
-                            f"{player['name']} "
-                            f"[{item_id}] -> "
-                            f"{player['version']} "
-                            "(cached)"
+                else:
+                    href = find_exact_card_link(
+                        img,
+                        item_id,
+                    )
+
+                    if href:
+                        item_url = urljoin(
+                            SITE,
+                            href,
                         )
 
-                    else:
-                        href = find_card_link(
-                            img,
-                            soup,
-                            item_id,
-                        )
-
-                        if href:
-                            item_url = urljoin(
-                                SITE,
-                                href,
+                        try:
+                            version = get_version(
+                                item_url
                             )
 
-                            try:
-                                version = get_version(
-                                    item_url
-                                )
+                            player[
+                                "version"
+                            ] = version
 
-                                player[
-                                    "version"
-                                ] = version
-
-                                print(
-                                    f"{player['name']} "
-                                    f"[{item_id}] -> "
-                                    f"{version}"
-                                )
-
-                            except Exception as error:
-                                print(
-                                    "Version detection error "
-                                    f"for {player['name']}: "
-                                    f"{error}"
-                                )
-
-                                player[
-                                    "version"
-                                ] = "?"
-
-                        else:
                             print(
-                                "WARNING: "
-                                "Card link not found for "
-                                f"{player['name']} "
-                                f"[{item_id}]"
+                                f"Version: {version}"
+                            )
+
+                        except Exception as error:
+                            print(
+                                "Version detection "
+                                f"failed: {error}"
                             )
 
                             player[
                                 "version"
                             ] = "?"
 
-                players.append(
-                    player
+                    else:
+                        print(
+                            "Exact card link "
+                            "not found."
+                        )
+
+                        player[
+                            "version"
+                        ] = "?"
+
+            else:
+                print(
+                    "Item ID not found."
                 )
 
-                if (
-                    len(players)
-                    >= expected_players
-                ):
-                    return players
+                player[
+                    "version"
+                ] = "?"
 
-        current = (
-            current.find_next()
+        players.append(
+            player
         )
 
-    raise Exception(
-        f"Found {len(players)} players "
-        f"instead of {expected_players} "
-        f"on {url}"
+    if (
+        len(players)
+        != expected_players
+    ):
+        raise Exception(
+            f"Parsed {len(players)} players "
+            f"instead of {expected_players}"
+        )
+
+    return players
+
+
+# ============================================================
+# PLAYER IDENTITY
+# ============================================================
+
+def player_identity(
+    player,
+):
+    """
+    Identity used when comparing two scans.
+
+    Item ID is important because two cards may have:
+    - same player
+    - same rating
+    - same rarity
+
+    but one can be Base and another Holographic.
+    """
+
+    item_id = player.get(
+        "item_id"
+    )
+
+    version = player.get(
+        "version"
+    )
+
+    if item_id:
+        return (
+            str(item_id),
+            str(version),
+        )
+
+    return (
+        player.get(
+            "name",
+            ""
+        ),
+        player.get(
+            "rating",
+            ""
+        ),
+        player.get(
+            "card",
+            ""
+        ),
+        str(version),
     )
 
 
 # ============================================================
-# PLAYER TELEGRAM FORMAT
+# COMPARE PLAYERS
+# ============================================================
+
+def compare_players(
+    old_players,
+    new_players,
+):
+    """
+    Counter-based comparison.
+
+    This is important because FUT.GG can legitimately contain
+    multiple copies of the same player.
+    """
+
+    old_counter = Counter(
+        player_identity(
+            player
+        )
+        for player in old_players
+    )
+
+    new_counter = Counter(
+        player_identity(
+            player
+        )
+        for player in new_players
+    )
+
+    removed_needed = (
+        old_counter
+        - new_counter
+    )
+
+    added_needed = (
+        new_counter
+        - old_counter
+    )
+
+    removed = []
+    added = []
+
+    # Preserve the original display order.
+
+    for player in old_players:
+        identity = player_identity(
+            player
+        )
+
+        if (
+            removed_needed[
+                identity
+            ]
+            > 0
+        ):
+            removed.append(
+                player
+            )
+
+            removed_needed[
+                identity
+            ] -= 1
+
+    for player in new_players:
+        identity = player_identity(
+            player
+        )
+
+        if (
+            added_needed[
+                identity
+            ]
+            > 0
+        ):
+            added.append(
+                player
+            )
+
+            added_needed[
+                identity
+            ] -= 1
+
+    return (
+        removed,
+        added,
+    )
+
+
+# ============================================================
+# TELEGRAM PLAYER FORMAT
 # ============================================================
 
 def player_text(
@@ -395,22 +739,39 @@ def player_text(
     status,
 ):
     name = html.escape(
-        str(player["name"])
+        str(
+            player.get(
+                "name",
+                "",
+            )
+        )
     )
 
     rating = html.escape(
-        str(player["rating"])
+        str(
+            player.get(
+                "rating",
+                "",
+            )
+        )
     )
 
     card = html.escape(
-        str(player["card"])
+        str(
+            player.get(
+                "card",
+                "",
+            )
+        )
     )
 
     version = player.get(
         "version"
     )
 
-    # Status
+    # ========================================================
+    # STATUS
+    # ========================================================
 
     if status == "new":
         status_text = (
@@ -422,7 +783,9 @@ def player_text(
             "❌ <b>GONE</b>"
         )
 
-    # Card version
+    # ========================================================
+    # VERSION
+    # ========================================================
 
     version_text = None
 
@@ -431,12 +794,18 @@ def player_text(
             "⚪ <b>BASE</b>"
         )
 
-    elif version == "Holographic":
+    elif (
+        version
+        == "Holographic"
+    ):
         version_text = (
             "✨ <b>HOLOGRAPHIC</b>"
         )
 
-    elif version == "Pristine Holographic":
+    elif (
+        version
+        == "Pristine Holographic"
+    ):
         version_text = (
             "✨ <b>PRISTINE HOLOGRAPHIC</b>"
         )
@@ -446,14 +815,18 @@ def player_text(
         and version != "?"
     ):
         safe_version = html.escape(
-            str(version).upper()
+            str(
+                version
+            ).upper()
         )
 
         version_text = (
             f"✨ <b>{safe_version}</b>"
         )
 
-    # Player name first.
+    # ========================================================
+    # PLAYER BLOCK
+    # ========================================================
 
     lines = [
         f"👤 <b>{name}</b>",
@@ -497,7 +870,7 @@ def load_state():
     except Exception as error:
         print(
             "Could not load previous "
-            f"feed state: {error}"
+            f"state: {error}"
         )
 
         return {}
@@ -528,39 +901,6 @@ def save_state(
 
 
 # ============================================================
-# COMPARE FEEDS
-# ============================================================
-
-def compare_players(
-    old_players,
-    new_players,
-):
-    removed = (
-        old_players.copy()
-    )
-
-    added = (
-        new_players.copy()
-    )
-
-    for player in old_players:
-        if player in added:
-            added.remove(
-                player
-            )
-
-            if player in removed:
-                removed.remove(
-                    player
-                )
-
-    return (
-        removed,
-        added,
-    )
-
-
-# ============================================================
 # MAIN
 # ============================================================
 
@@ -586,16 +926,14 @@ def main():
         now.isoformat(),
     )
 
-    old_state = (
-        load_state()
-    )
+    old_state = load_state()
 
     new_state = {}
 
     results = []
 
     # ========================================================
-    # CHECK EVERY FEED
+    # CHECK FEEDS
     # ========================================================
 
     for (
@@ -604,7 +942,6 @@ def main():
     ) in PAGES.items():
 
         print()
-
         print(
             "=" * 60
         )
@@ -617,84 +954,69 @@ def main():
             "=" * 60
         )
 
-        url = (
-            config["url"]
+        url = config[
+            "url"
+        ]
+
+        expected_players = config[
+            "players"
+        ]
+
+        detect_version = config.get(
+            "detect_version",
+            False,
         )
 
-        expected_players = (
-            config["players"]
-        )
-
-        distinguish = (
-            config.get(
-                "distinguish",
-                False,
-            )
-        )
-
-        old_players = (
-            old_state.get(
-                category
-            )
+        old_players = old_state.get(
+            category
         )
 
         known_versions = {}
 
-        # ================================================
-        # RESTORE SAVED CARD VERSIONS
-        # ================================================
+        # ====================================================
+        # LOAD SAVED VERSIONS
+        # ====================================================
 
         if (
             old_players
-            and distinguish
+            and detect_version
         ):
             for player in old_players:
-                item_id = (
-                    player.get(
-                        "item_id"
-                    )
+                item_id = player.get(
+                    "item_id"
                 )
 
-                version = (
-                    player.get(
-                        "version"
-                    )
+                version = player.get(
+                    "version"
                 )
 
                 if (
                     item_id
                     and version
-                    not in [
-                        None,
-                        "?",
-                    ]
+                    and version != "?"
                 ):
                     known_versions[
-                        item_id
+                        str(item_id)
                     ] = version
 
-        # ================================================
-        # DOWNLOAD FEED
-        # ================================================
+        # ====================================================
+        # DOWNLOAD CURRENT FEED
+        # ====================================================
 
         try:
             players = get_players(
-                url,
-                expected_players,
-                distinguish,
-                known_versions,
+                url=url,
+                expected_players=expected_players,
+                detect_version=detect_version,
+                known_versions=known_versions,
             )
 
         except Exception as error:
             print(
-                f"ERROR while checking "
-                f"{category}: {error}"
+                f"ERROR: {error}"
             )
 
-            if (
-                old_players
-                is not None
-            ):
+            if old_players is not None:
                 new_state[
                     category
                 ] = old_players
@@ -703,7 +1025,6 @@ def main():
                 "category": category,
                 "status": "error",
                 "error": str(error),
-                "url": url,
             })
 
             continue
@@ -712,127 +1033,103 @@ def main():
             category
         ] = players
 
+        # ====================================================
+        # PRINT RESULT
+        # ====================================================
+
+        print()
         print(
-            f"Players found: "
-            f"{len(players)}"
+            f"{category}: "
+            f"{len(players)} players"
         )
 
-        for player in players:
-            version = (
-                player.get(
-                    "version"
-                )
+        for index, player in enumerate(
+            players,
+            start=1,
+        ):
+            version = player.get(
+                "version",
+                "",
             )
 
-            if version:
-                print(
-                    f"- {player['name']} "
-                    f"{player['rating']} "
-                    f"{player['card']} "
-                    f"[{version}]"
-                )
+            item_id = player.get(
+                "item_id",
+                "",
+            )
 
-            else:
-                print(
-                    f"- {player['name']} "
-                    f"{player['rating']} "
-                    f"{player['card']}"
-                )
+            print(
+                f"{index}. "
+                f"{player['name']} | "
+                f"{player['rating']} | "
+                f"{player['card']} | "
+                f"{version} | "
+                f"ID {item_id}"
+            )
 
         # ====================================================
         # FIRST SCAN
         # ====================================================
 
-        if (
-            old_players
-            is None
-        ):
+        if old_players is None:
             results.append({
                 "category": category,
                 "status": "first_scan",
-                "players": players,
-                "url": url,
             })
 
             continue
 
         # ====================================================
-        # INCOMPLETE VERSION DATA
+        # CHECK VERSION DATA
         # ====================================================
 
-        incomplete = False
-
-        if distinguish:
-            for player in players:
-                if (
-                    player.get(
-                        "version"
-                    )
-                    == "?"
-                ):
-                    incomplete = True
-                    break
-
-        if incomplete:
-            results.append({
-                "category": category,
-                "status": "incomplete",
-                "players": players,
-                "url": url,
-            })
-
-            continue
-
-        # ====================================================
-        # CHECK FOR CHANGES
-        # ====================================================
-
-        if (
-            old_players
-            != players
-        ):
-            (
-                removed,
-                added,
-            ) = compare_players(
-                old_players,
-                players,
+        if detect_version:
+            incomplete = any(
+                player.get(
+                    "version"
+                )
+                in [
+                    None,
+                    "?",
+                ]
+                for player in players
             )
 
-            # Ignore ordering-only changes.
-
-            if (
-                not removed
-                and not added
-            ):
+            if incomplete:
                 results.append({
                     "category": category,
-                    "status": "unchanged",
-                    "players": players,
-                    "url": url,
+                    "status": "incomplete",
                 })
 
                 continue
 
+        # ====================================================
+        # COMPARE
+        # ====================================================
+
+        removed, added = compare_players(
+            old_players,
+            players,
+        )
+
+        if (
+            removed
+            or added
+        ):
             results.append({
                 "category": category,
                 "status": "changed",
-                "players": players,
                 "removed": removed,
                 "added": added,
-                "url": url,
             })
 
         else:
             results.append({
                 "category": category,
                 "status": "unchanged",
-                "players": players,
-                "url": url,
             })
 
     # ========================================================
-    # SAVE CURRENT STATE
+    # SAVE STATE
     # ========================================================
 
     save_state(
@@ -840,11 +1137,13 @@ def main():
     )
 
     # ========================================================
-    # BUILD TELEGRAM MESSAGE
+    # TELEGRAM HEADER
     # ========================================================
 
     has_changes = any(
-        result["status"] == "changed"
+        result[
+            "status"
+        ] == "changed"
         for result in results
     )
 
@@ -861,21 +1160,23 @@ def main():
     message += (
         "\n"
         "✅ Monitoring check completed\n"
-        f"🕐 {now.strftime('%d/%m/%Y %H:%M:%S')} UTC\n"
+        f"🕐 "
+        f"{now.strftime('%d/%m/%Y %H:%M:%S')} "
+        "UTC\n"
     )
 
     # ========================================================
-    # FEED RESULTS
+    # TELEGRAM FEEDS
     # ========================================================
 
     for result in results:
-        category = (
-            result["category"]
-        )
+        category = result[
+            "category"
+        ]
 
-        status = (
-            result["status"]
-        )
+        status = result[
+            "status"
+        ]
 
         message += (
             "\n"
@@ -888,7 +1189,6 @@ def main():
         # ====================================================
 
         if status == "changed":
-
             removed = result[
                 "removed"
             ]
@@ -898,7 +1198,7 @@ def main():
             ]
 
             # ================================================
-            # GONE PLAYERS
+            # GONE
             # ================================================
 
             for index, player in enumerate(
@@ -913,7 +1213,7 @@ def main():
                 )
 
             # ================================================
-            # SEPARATOR BETWEEN GONE AND NEW
+            # SEPARATOR
             # ================================================
 
             if removed and added:
@@ -923,7 +1223,7 @@ def main():
                 )
 
             # ================================================
-            # NEW PLAYERS
+            # NEW
             # ================================================
 
             for index, player in enumerate(
@@ -956,7 +1256,7 @@ def main():
             )
 
         # ====================================================
-        # INCOMPLETE DATA
+        # INCOMPLETE
         # ====================================================
 
         elif status == "incomplete":
@@ -970,7 +1270,9 @@ def main():
 
         elif status == "error":
             error = html.escape(
-                result["error"]
+                result[
+                    "error"
+                ]
             )
 
             message += (
@@ -989,7 +1291,7 @@ def main():
     )
 
     # ========================================================
-    # ALWAYS SEND TELEGRAM
+    # SEND TELEGRAM
     # ========================================================
 
     send_telegram(
@@ -997,7 +1299,6 @@ def main():
     )
 
     print()
-
     print(
         "=" * 60
     )
