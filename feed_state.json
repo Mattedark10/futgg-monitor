@@ -8,17 +8,10 @@
       "version": "Pristine Holographic"
     },
     {
-      "name": "Litmanen",
+      "name": "Zamorano",
       "rating": "88",
       "card": "Base Hero",
-      "item_id": "67114537",
-      "version": "Pristine Holographic"
-    },
-    {
-      "name": "Márquez",
-      "rating": "88",
-      "card": "Base Hero",
-      "item_id": "67135573",
+      "item_id": "67186651",
       "version": "Pristine Holographic"
     },
     {
@@ -34,33 +27,108 @@
       "card": "Base Hero",
       "item_id": "226306",
       "version": "Base"
+    },
+    {
+      "name": "Vialli",
+      "rating": "89",
+      "card": "Base Hero",
+      "item_id": "233700",
+      "version": "Base"
     }
   ],
   "✨ HOLOGRAPHICS": [
     {
       "name": "Angerer",
       "rating": "92",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67335157",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Prinz",
       "rating": "92",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67384140",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Baresi",
       "rating": "91",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67275770",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Foudy",
       "rating": "90",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67180472",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Moore",
       "rating": "90",
-      "card": "Base Icon"
+      "card": "Base Icon",
+      "item_id": "67298908",
+      "version": "Pristine Holographic"
+    }
+  ],
+  "🏆 SEASON 1": [
+    {
+      "name": "Cucurella",
+      "rating": "88",
+      "card": "Destined for Glory",
+      "item_id": "67348095",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Harder",
+      "rating": "88",
+      "card": "Destined for Glory",
+      "item_id": "67368151",
+      "version": "Pristine Holographic"
+    },
+    {
+      "name": "Mora",
+      "rating": "87",
+      "card": "Future Stars",
+      "item_id": "67188263",
+      "version": "Holographic"
+    },
+    {
+      "name": "Bonny",
+      "rating": "87",
+      "card": "Future Stars",
+      "item_id": "67368429",
+      "version": "Holographic"
+    },
+    {
+      "name": "Harder",
+      "rating": "88",
+      "card": "Destined for Glory",
+      "item_id": "50590935",
+      "version": "Base"
+    },
+    {
+      "name": "Undav",
+      "rating": "87",
+      "card": "Destined for Glory",
+      "item_id": "67353040",
+      "version": "Holographic"
+    },
+    {
+      "name": "Bischof",
+      "rating": "86",
+      "card": "Future Stars",
+      "item_id": "67372629",
+      "version": "Holographic"
+    },
+    {
+      "name": "Yohannes",
+      "rating": "86",
+      "card": "Future Stars",
+      "item_id": "67386815",
+      "version": "Holographic"
     }
   ]
 }
