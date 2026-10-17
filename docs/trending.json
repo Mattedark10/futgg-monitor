@@ -143,19 +143,6 @@
     "price": 92500
   },
   {
-    "name": "Brown",
-    "rating": 87,
-    "position": "LB",
-    "rarity": "Future Stars",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601349.b383e21fa9aac5f650963c849bff8340f69bd9dd254a42819cc1d0fa98889570.webp",
-    "url": "https://www.fut.gg/players/269701-nathaniel-brown/27-50601349/",
-    "eaId": 50601349,
-    "slug": "27-50601349",
-    "price": 372000
-  },
-  {
     "name": "Thompson",
     "rating": 87,
     "position": "RB",
@@ -167,6 +154,19 @@
     "eaId": 50606461,
     "slug": "27-50606461",
     "price": 118000
+  },
+  {
+    "name": "Brown",
+    "rating": 87,
+    "position": "LB",
+    "rarity": "Future Stars",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601349.b383e21fa9aac5f650963c849bff8340f69bd9dd254a42819cc1d0fa98889570.webp",
+    "url": "https://www.fut.gg/players/269701-nathaniel-brown/27-50601349/",
+    "eaId": 50601349,
+    "slug": "27-50601349",
+    "price": 372000
   },
   {
     "name": "Enciso",
@@ -195,19 +195,6 @@
     "price": 29000
   },
   {
-    "name": "Tresoldi",
-    "rating": 86,
-    "position": "ST",
-    "rarity": "Future Stars",
-    "club": "Club Brugge",
-    "league": "1A Pro League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598543.9abfc8f82124d73850e2b5b3baa44bb4a7461545eed2e772175cdd52b925f550.webp",
-    "url": "https://www.fut.gg/players/266895-nicolo-tresoldi/27-50598543/",
-    "eaId": 50598543,
-    "slug": "27-50598543",
-    "price": 65500
-  },
-  {
     "name": "Peio Canales",
     "rating": 85,
     "position": "CAM",
@@ -219,6 +206,19 @@
     "eaId": 50406911,
     "slug": "27-50406911",
     "price": null
+  },
+  {
+    "name": "Tresoldi",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Future Stars",
+    "club": "Club Brugge",
+    "league": "1A Pro League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598543.9abfc8f82124d73850e2b5b3baa44bb4a7461545eed2e772175cdd52b925f550.webp",
+    "url": "https://www.fut.gg/players/266895-nicolo-tresoldi/27-50598543/",
+    "eaId": 50598543,
+    "slug": "27-50598543",
+    "price": 65500
   },
   {
     "name": "Xavi Espart",
