@@ -67,52 +67,72 @@
     {
       "name": "Cucurella",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "item_id": "67348095",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Harder",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "item_id": "67368151",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Mora",
       "rating": "87",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "item_id": "67188263",
+      "version": "Holographic"
     },
     {
       "name": "Bonny",
       "rating": "87",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "item_id": "67368429",
+      "version": "Holographic"
     },
     {
       "name": "Harder",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "item_id": "50590935",
+      "version": "Base"
     },
     {
       "name": "Undav",
       "rating": "87",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "item_id": "67353040",
+      "version": "Holographic"
     },
     {
       "name": "Bischof",
       "rating": "86",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "item_id": "67372629",
+      "version": "Holographic"
     },
     {
       "name": "Yohannes",
       "rating": "86",
-      "card": "Future Stars"
+      "card": "Future Stars",
+      "item_id": "67386815",
+      "version": "Holographic"
     },
     {
       "name": "Cucurella",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "item_id": "67348095",
+      "version": "Pristine Holographic"
     },
     {
       "name": "Cucurella",
       "rating": "88",
-      "card": "Destined for Glory"
+      "card": "Destined for Glory",
+      "item_id": "67348095",
+      "version": "Pristine Holographic"
     }
   ]
 }
