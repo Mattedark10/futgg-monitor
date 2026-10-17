@@ -43,6 +43,12 @@ CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 STATE_FILE = "players.json"
 
+# Maximum number of cards with the same player name.
+# This allows variants such as:
+# Cucurella - Base
+# Cucurella - Pristine Holographic
+MAX_SAME_PLAYER = 2
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -86,6 +92,12 @@ def get_players(url, expected_players):
 
     players = []
 
+    # Exact cards already seen
+    seen_cards = set()
+
+    # Number of cards found for each player
+    player_counts = {}
+
     current = heading.find_next()
 
     while current:
@@ -103,32 +115,102 @@ def get_players(url, expected_players):
 
                 alt = img.get("alt", "").strip()
 
-                # Example:
-                # Vialli - 89 - Base Hero
+                # Expected format:
+                #
+                # Cucurella - 88 - Destined for Glory
+                #
                 match = re.match(
                     r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
                     alt
                 )
 
-                if match:
+                if not match:
+                    continue
 
-                    player = {
-                        "name": match.group(1).strip(),
-                        "rating": match.group(2).strip(),
-                        "card": match.group(3).strip()
-                    }
+                name = match.group(1).strip()
+                rating = match.group(2).strip()
+                card = match.group(3).strip()
 
-                    # Do NOT remove duplicates.
-                    # The same card can appear more than once.
-                    players.append(player)
+                # Normalize name for duplicate counting
+                name_key = re.sub(
+                    r"\s+",
+                    " ",
+                    name.lower()
+                )
 
-                    if len(players) == expected_players:
-                        return players
+                # Exact card identity
+                card_key = (
+                    name_key,
+                    rating,
+                    card.lower()
+                )
+
+                # ---------------------------------
+                # EXACT DUPLICATE
+                # ---------------------------------
+                #
+                # If FUT.GG renders the same image
+                # multiple times, ignore it.
+                #
+                if card_key in seen_cards:
+                    continue
+
+                # ---------------------------------
+                # MAX 2 SAME PLAYER
+                # ---------------------------------
+                #
+                # We allow:
+                #
+                # Cucurella - Base
+                # Cucurella - Pristine Holographic
+                #
+                # But not:
+                #
+                # Cucurella
+                # Cucurella
+                # Cucurella
+                #
+                count = player_counts.get(
+                    name_key,
+                    0
+                )
+
+                if count >= MAX_SAME_PLAYER:
+                    continue
+
+                player = {
+                    "name": name,
+                    "rating": rating,
+                    "card": card
+                }
+
+                players.append(player)
+
+                seen_cards.add(card_key)
+
+                player_counts[name_key] = count + 1
+
+                # ---------------------------------
+                # STOP AT EXPECTED NUMBER
+                # ---------------------------------
+                if len(players) >= expected_players:
+                    return players
 
         current = current.find_next()
 
+    # ---------------------------------
+    # VALIDATION
+    # ---------------------------------
+    #
+    # We return the unique cards found.
+    # This is safer than treating duplicated
+    # HTML images as separate players.
+    #
+    if players:
+        return players
+
     raise Exception(
-        f"Found {len(players)} players instead of "
+        f"Found 0 players instead of "
         f"{expected_players} on {url}"
     )
 
@@ -157,14 +239,28 @@ def send_telegram(message):
 
     response.raise_for_status()
 
-    print("Telegram notification sent successfully.")
+    print(
+        "Telegram notification sent successfully."
+    )
 
+
+# =========================
+# PLAYER TEXT
+# =========================
 
 def player_text(player):
 
-    name = html.escape(player["name"])
-    rating = html.escape(player["rating"])
-    card = html.escape(player["card"])
+    name = html.escape(
+        player["name"]
+    )
+
+    rating = html.escape(
+        player["rating"]
+    )
+
+    card = html.escape(
+        player["card"]
+    )
 
     return (
         f"<b>{name}</b> — "
@@ -179,30 +275,52 @@ def player_text(player):
 
 def main():
 
-    # Load previous feeds
+    # =========================
+    # LOAD PREVIOUS FEEDS
+    # =========================
+
     if os.path.exists(STATE_FILE):
 
-        with open(
-            STATE_FILE,
-            "r",
-            encoding="utf-8"
-        ) as file:
+        try:
 
-            old_state = json.load(file)
+            with open(
+                STATE_FILE,
+                "r",
+                encoding="utf-8"
+            ) as file:
+
+                old_state = json.load(file)
+
+        except Exception as error:
+
+            print(
+                f"Could not read {STATE_FILE}: "
+                f"{error}"
+            )
+
+            old_state = {}
 
     else:
+
         old_state = {}
 
-    # Keep old data for categories that fail to load
+    # Keep old data for categories
+    # that fail to load.
     new_state = dict(old_state)
 
     results = []
+
     any_changes = False
 
-    # Check every FUT.GG feed
+
+    # =========================
+    # CHECK EVERY FUT.GG FEED
+    # =========================
+
     for category, config in PAGES.items():
 
         url = config["url"]
+
         expected_players = config["players"]
 
         print(
@@ -211,6 +329,7 @@ def main():
         )
 
         try:
+
             players = get_players(
                 url,
                 expected_players
@@ -230,22 +349,39 @@ def main():
 
             continue
 
+
+        # =========================
+        # PRINT FOUND PLAYERS
+        # =========================
+
         print(
-            f"Found {len(players)} players."
+            f"Found {len(players)} unique players."
         )
 
         for player in players:
+
             print(
                 f"- {player['name']} "
                 f"{player['rating']} "
                 f"{player['card']}"
             )
 
+
+        # =========================
+        # SAVE NEW CATEGORY
+        # =========================
+
         new_state[category] = players
 
-        old_players = old_state.get(category)
 
-        # New category / first scan
+        # =========================
+        # FIRST SCAN
+        # =========================
+
+        old_players = old_state.get(
+            category
+        )
+
         if old_players is None:
 
             print(
@@ -260,25 +396,43 @@ def main():
 
             continue
 
+
         # =========================
-        # CHECK FOR FEED CHANGES
+        # CHECK FOR CHANGES
         # =========================
+
+        #
+        # We copy both lists because
+        # duplicates may exist in old
+        # files created by previous versions.
+        #
 
         removed = old_players.copy()
         added = players.copy()
 
-        # Remove players/cards that stayed the same.
-        # This also handles duplicate cards correctly.
+
+        # Remove cards that stayed the same.
+        #
+        # This handles duplicates correctly
+        # because each matching card is removed
+        # only once.
+        #
+
         for player in old_players:
 
             if player in added:
+
                 added.remove(player)
 
                 if player in removed:
+
                     removed.remove(player)
 
-        # If the lists only changed order (or nothing
-        # changed), there is nothing to report.
+
+        # =========================
+        # NO CHANGES
+        # =========================
+
         if not removed and not added:
 
             print(
@@ -292,6 +446,11 @@ def main():
 
             continue
 
+
+        # =========================
+        # CHANGED
+        # =========================
+
         any_changes = True
 
         results.append({
@@ -300,6 +459,7 @@ def main():
             "removed": removed,
             "added": added
         })
+
 
     # =========================
     # SAVE CURRENT FEEDS
@@ -318,11 +478,13 @@ def main():
             indent=2
         )
 
-    print("Feed state saved successfully.")
+    print(
+        "Feed state saved successfully."
+    )
+
 
     # =========================
-    # BUILD TELEGRAM MESSAGE
-    # (sent on every run)
+    # TELEGRAM MESSAGE
     # =========================
 
     now = datetime.now(
@@ -331,10 +493,19 @@ def main():
         "%d/%m/%Y %H:%M:%S UTC"
     )
 
+
     if any_changes:
-        header = "⚡ <b>FUTFLEX FEED UPDATE</b>"
+
+        header = (
+            "⚡ <b>FUTFLEX FEED UPDATE</b>"
+        )
+
     else:
-        header = "🤖 <b>FUTFLEX MONITOR</b>"
+
+        header = (
+            "🤖 <b>FUTFLEX MONITOR</b>"
+        )
+
 
     parts = [
         header,
@@ -344,49 +515,107 @@ def main():
         ""
     ]
 
+
+    # =========================
+    # BUILD CATEGORY RESULTS
+    # =========================
+
     for result in results:
 
         category = html.escape(
             result["category"]
         )
 
-        parts.append("━━━━━━━━━━━━━━")
-        parts.append(f"<b>{category}</b>")
+        parts.append(
+            "━━━━━━━━━━━━━━"
+        )
+
+        parts.append(
+            f"<b>{category}</b>"
+        )
 
         status = result["status"]
+
+
+        # =========================
+        # CHANGED
+        # =========================
 
         if status == "changed":
 
             for player in result["removed"]:
+
                 parts.append(
                     "❌ <b>GONE</b> · "
                     f"{player_text(player)}"
                 )
 
             for player in result["added"]:
+
                 parts.append(
                     "🆕 <b>NEW</b> · "
                     f"{player_text(player)}"
                 )
 
+
+        # =========================
+        # UNCHANGED
+        # =========================
+
         elif status == "unchanged":
-            parts.append("✓ No changes")
+
+            parts.append(
+                "✓ No changes"
+            )
+
+
+        # =========================
+        # FIRST SCAN
+        # =========================
 
         elif status == "first_scan":
-            parts.append("✓ Monitoring initialized")
+
+            parts.append(
+                "✓ Monitoring initialized"
+            )
+
+
+        # =========================
+        # ERROR
+        # =========================
 
         elif status == "error":
-            parts.append("⚠️ <b>Feed check failed</b>")
+
             parts.append(
-                html.escape(result["error"])
+                "⚠️ <b>Feed check failed</b>"
             )
+
+            parts.append(
+                html.escape(
+                    result["error"]
+                )
+            )
+
 
         parts.append("")
 
-    parts.append("━━━━━━━━━━━━━━")
-    parts.append("⏱ Automatic monitoring · 5 min")
 
-    send_telegram("\n".join(parts))
+    parts.append(
+        "━━━━━━━━━━━━━━"
+    )
+
+    parts.append(
+        "⏱ Automatic monitoring · 5 min"
+    )
+
+
+    # =========================
+    # SEND TELEGRAM
+    # =========================
+
+    send_telegram(
+        "\n".join(parts)
+    )
 
 
 # =========================
