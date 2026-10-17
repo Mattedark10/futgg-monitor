@@ -1,13 +1,10 @@
-name: Debug Season 1 Data
+name: Debug Season 1 Short
 
 on:
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  debug-season1:
+  debug:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,78 +13,57 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4
+      - name: Install
+        run: pip install requests beautifulsoup4
 
-      - name: Extract Season 1 embedded data
+      - name: Short debug
         run: |
           python - <<'PY'
           import re
           import requests
           from bs4 import BeautifulSoup
 
-          URL = "https://www.fut.gg/fut-gallery/rarities/season-1/"
+          url = "https://www.fut.gg/fut-gallery/rarities/season-1/"
 
-          HEADERS = {
-              "User-Agent": (
-                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                  "Chrome/140.0.0.0 Safari/537.36"
-              )
+          headers = {
+              "User-Agent": "Mozilla/5.0"
           }
 
-          response = requests.get(
-              URL,
-              headers=HEADERS,
-              timeout=30,
-          )
-
-          response.raise_for_status()
+          html = requests.get(
+              url,
+              headers=headers,
+              timeout=30
+          ).text
 
           soup = BeautifulSoup(
-              response.text,
-              "html.parser",
+              html,
+              "html.parser"
           )
 
-          scripts = soup.find_all("script")
+          # Find FUT.GG embedded application data.
+          data = ""
 
-          print("=" * 80)
-          print("FUTFLEX - SEASON 1 EMBEDDED DATA DEBUG")
-          print("=" * 80)
-
-          target_script = None
-
-          for script in scripts:
-              content = (
-                  script.string
-                  or script.get_text()
-                  or ""
-              )
+          for script in soup.find_all("script"):
+              text = script.get_text() or ""
 
               if (
-                  "$_TSR.router" in content
-                  and "season-1" in content
+                  "$_TSR.router" in text
+                  and "season-1" in text
               ):
-                  target_script = content
+                  data = text
                   break
 
-          if not target_script:
+          if not data:
               raise SystemExit(
-                  "ERROR: FUT.GG embedded router data not found."
+                  "Embedded FUT.GG data not found."
               )
 
-          print()
-          print(
-              f"Router script size: "
-              f"{len(target_script):,} characters"
-          )
+          print("")
+          print("=== FUTFLEX SHORT DEBUG ===")
+          print("")
 
-          # ==================================================
-          # SEARCH TERMS
-          # ==================================================
-
-          search_terms = [
+          # Known cards currently visible in the lineup.
+          ids = [
               "67348095",
               "67368151",
               "67188263",
@@ -96,151 +72,88 @@ jobs:
               "67353040",
               "67372629",
               "67386815",
-              "lineup",
-              "cheapestLineup",
-              "cheapest",
-              "hyperCosmeticType",
-              "hyper_cosmetic_type",
-              "holographic",
           ]
 
-          # ==================================================
-          # PRINT CONTEXT
-          # ==================================================
+          for item_id in ids:
 
-          for term in search_terms:
-
-              print()
-              print("=" * 80)
-              print(f"SEARCH: {term}")
-              print("=" * 80)
-
-              matches = list(
-                  re.finditer(
-                      re.escape(term),
-                      target_script,
-                      re.I,
-                  )
-              )
+              pos = data.find(item_id)
 
               print(
-                  f"Occurrences: {len(matches)}"
+                  f"ITEM {item_id}"
               )
 
-              for number, match in enumerate(
-                  matches[:10],
-                  start=1,
-              ):
-                  start = max(
-                      0,
-                      match.start() - 1500,
-                  )
+              if pos == -1:
+                  print("NOT FOUND")
+                  print("")
+                  continue
 
-                  end = min(
-                      len(target_script),
-                      match.end() + 2500,
-                  )
-
-                  snippet = target_script[
-                      start:end
-                  ]
-
-                  print()
-                  print("-" * 80)
-                  print(
-                      f"{term} - MATCH {number}"
-                  )
-                  print("-" * 80)
-                  print(snippet)
-
-          # ==================================================
-          # FIND ALL FC ITEM IDS
-          # ==================================================
-
-          print()
-          print("=" * 80)
-          print("ALL POSSIBLE ITEM IDS")
-          print("=" * 80)
-
-          item_ids = sorted(
-              set(
-                  re.findall(
-                      r"\b(?:50|67)\d{6}\b",
-                      target_script,
-                  )
+              start = max(
+                  0,
+                  pos - 250
               )
-          )
 
-          for item_id in item_ids:
-              print(item_id)
+              end = min(
+                  len(data),
+                  pos + 500
+              )
 
-          print()
+              text = data[start:end]
+
+              # Collapse everything to one line.
+              text = re.sub(
+                  r"\s+",
+                  " ",
+                  text
+              )
+
+              print(text)
+              print("")
+
           print(
-              f"Total possible item IDs: "
-              f"{len(item_ids)}"
+              "=== HOLOGRAPHIC DATA ==="
           )
 
-          # ==================================================
-          # SEARCH FOR PLAYER OBJECTS
-          # ==================================================
+          matches = list(
+              re.finditer(
+                  r"hyperCosmeticType",
+                  data,
+                  re.I
+              )
+          )
 
-          print()
-          print("=" * 80)
-          print("PLAYER OBJECT KEYWORDS")
-          print("=" * 80)
+          print(
+              f"FOUND: {len(matches)}"
+          )
 
-          patterns = [
-              r"hyperCosmeticType",
-              r"cosmeticType",
-              r"playerItem",
-              r"itemId",
-              r"resourceId",
-              r"definitionId",
-              r"baseDefId",
-              r"cheapestLineup",
-              r"lineup",
-          ]
-
-          for pattern in patterns:
-
-              matches = list(
-                  re.finditer(
-                      pattern,
-                      target_script,
-                      re.I,
-                  )
+          # Only show the first 10.
+          for number, match in enumerate(
+              matches[:10],
+              start=1
+          ):
+              start = max(
+                  0,
+                  match.start() - 150
               )
 
-              print()
+              end = min(
+                  len(data),
+                  match.end() + 250
+              )
+
+              text = data[start:end]
+
+              text = re.sub(
+                  r"\s+",
+                  " ",
+                  text
+              )
+
+              print("")
               print(
-                  f"{pattern}: "
-                  f"{len(matches)} occurrence(s)"
+                  f"HOLO {number}:"
               )
+              print(text)
 
-              for match in matches[:5]:
-                  start = max(
-                      0,
-                      match.start() - 500,
-                  )
-
-                  end = min(
-                      len(target_script),
-                      match.end() + 1000,
-                  )
-
-                  print()
-                  print(
-                      target_script[
-                          start:end
-                      ]
-                  )
-
-                  print(
-                      "-" * 40
-                  )
-
-          print()
-          print("=" * 80)
-          print("DEBUG COMPLETED")
-          print("=" * 80)
+          print("")
+          print("=== END ===")
           PY
