@@ -3,6 +3,7 @@ import html
 import json
 import os
 import re
+import time
 from collections import Counter
 from datetime import datetime, timezone
 from urllib.parse import urljoin
@@ -265,11 +266,17 @@ async def get_rendered_slots(page, expected_players):
     return slots
 
 
-async def get_static_slots(context, url, expected_players):
+async def get_static_slots(
+    context,
+    url,
+    expected_players,
+    headers=None,
+):
     # The server-rendered HTML already contains the full lineup,
     # even when the browser-rendered page still shows placeholders.
     response = await context.request.get(
         url,
+        headers=headers,
         timeout=30000,
     )
 
@@ -433,51 +440,48 @@ async def scan_category(context, label, config):
         await page.wait_for_timeout(2000)
 
         if label == "🏆 SEASON 1":
-            # Diagnostic: look for a platform selector on the page.
-            try:
-                found = await page.evaluate(
-                    """() => {
-                        const rx = /\\b(ps5?|playstation|xbox|pc|platform|console)\\b/i;
-                        const sel = 'button, a, [role="button"], [role="tab"], '
-                            + '[role="radio"], [role="option"], select, option, '
-                            + 'img, label, input, [class*="platform" i], '
-                            + '[data-platform]';
-                        const out = [];
-                        const seen = new Set();
-                        document.querySelectorAll(sel).forEach((el) => {
-                            const text = (el.innerText || el.value || "")
-                                .trim().slice(0, 40);
-                            const attrs = [
-                                el.getAttribute("aria-label"),
-                                el.getAttribute("title"),
-                                el.getAttribute("alt"),
-                                el.getAttribute("name"),
-                                el.getAttribute("data-platform"),
-                                el.getAttribute("value"),
-                                (typeof el.className === "string"
-                                    && /platform/i.test(el.className))
-                                    ? el.className.slice(0, 60) : null,
-                            ].filter(Boolean).join(" | ");
-                            if (rx.test(text) || rx.test(attrs)) {
-                                const line = el.tagName + ": " + text
-                                    + " [" + attrs.slice(0, 100) + "]";
-                                if (!seen.has(line)) {
-                                    seen.add(line);
-                                    out.push(line);
-                                }
-                            }
-                        });
-                        return out.slice(0, 30);
-                    }"""
-                )
+            # Diagnostic: does the static HTML change with the request?
+            variants = {
+                "plain": (config["url"], None),
+                "no-slash": (config["url"].rstrip("/"), None),
+                "cache-bust": (
+                    f"{config['url']}?cb={int(time.time())}",
+                    None,
+                ),
+                "no-cache": (
+                    config["url"],
+                    {
+                        "Cache-Control": "no-cache",
+                        "Pragma": "no-cache",
+                    },
+                ),
+                "it-IT": (
+                    config["url"],
+                    {"Accept-Language": "it-IT,it;q=0.9"},
+                ),
+            }
 
-                print("DEBUG platform controls found:", len(found))
+            for name, (variant_url, variant_headers) in variants.items():
+                try:
+                    found = await get_static_slots(
+                        context,
+                        variant_url,
+                        config["players"],
+                        variant_headers,
+                    )
 
-                for line in found:
-                    print("DEBUG  ", line)
+                    names = ", ".join(
+                        item["alt"].split(" - ")[0]
+                        for item in found
+                    )
 
-            except Exception as error:
-                print(f"DEBUG platform scan failed: {error}")
+                    print(
+                        f"PROBE {name}: "
+                        f"{len(found)} cards: {names}"
+                    )
+
+                except Exception as error:
+                    print(f"PROBE {name} failed: {error}")
 
         await wait_for_lineup(
             page,
