@@ -471,6 +471,20 @@ async def scan_category(context, label, config):
                 print(f"Static HTML failed: {error}")
                 static_slots = []
 
+            print(
+                f"Static HTML cards found: "
+                f"{len(static_slots)}"
+            )
+
+            for number, static_slot in enumerate(
+                static_slots,
+                start=1,
+            ):
+                print(
+                    f"  static {number}: "
+                    f"{static_slot['alt']}"
+                )
+
             if len(static_slots) > rendered_real:
                 print(
                     f"Using static HTML lineup: "
@@ -492,7 +506,9 @@ async def scan_category(context, label, config):
             if player is None:
                 print(
                     f"Slot {slot_number}: "
-                    f"empty, skipped"
+                    f"empty, skipped "
+                    f"(alt={slot['alt']!r}, "
+                    f"src={slot['src'][-60:]!r})"
                 )
 
                 continue
