@@ -58,7 +58,7 @@ HEADERS = {
 
 
 # ============================================================
-# TELEGRAM
+# SEND TELEGRAM MESSAGE
 # ============================================================
 
 def send_telegram(message):
@@ -83,19 +83,10 @@ def send_telegram(message):
 
 
 # ============================================================
-# CARD VERSION
+# DETECT CARD VERSION
 # ============================================================
 
 def get_version(item_url):
-    """
-    Opens the specific FUT.GG card page and detects its version.
-
-    Possible results:
-    - Base
-    - Holographic
-    - Pristine Holographic
-    """
-
     response = requests.get(
         item_url,
         headers=HEADERS,
@@ -151,10 +142,6 @@ def find_card_link(
     soup,
     item_id,
 ):
-    """
-    Finds the FUT.GG page for the exact card item ID.
-    """
-
     pattern = re.compile(
         rf"/players/.*27-{re.escape(item_id)}"
     )
@@ -225,8 +212,6 @@ def get_players(
         "html.parser",
     )
 
-    # Find the recommended lineup section.
-
     heading = soup.find(
         lambda tag:
         tag.name in ["h2", "h3"]
@@ -244,9 +229,6 @@ def get_players(
     current = heading.find_next()
 
     while current:
-
-        # Stop when the next section begins.
-
         if (
             current.name in ["h2", "h3"]
             and current != heading
@@ -316,8 +298,7 @@ def get_players(
                         "item_id"
                     ] = item_id
 
-                    # Use the saved version when this card
-                    # has already been detected.
+                    # Use cached version when available.
 
                     if item_id in known_versions:
                         player[
@@ -363,9 +344,8 @@ def get_players(
 
                             except Exception as error:
                                 print(
-                                    "Version detection "
-                                    f"error for "
-                                    f"{player['name']}: "
+                                    "Version detection error "
+                                    f"for {player['name']}: "
                                     f"{error}"
                                 )
 
@@ -473,7 +453,7 @@ def player_text(
             f"✨ <b>{safe_version}</b>"
         )
 
-    # Build player block.
+    # Player name first.
 
     lines = [
         f"👤 <b>{name}</b>",
@@ -660,7 +640,9 @@ def main():
 
         known_versions = {}
 
-        # Restore versions already detected.
+        # ================================================
+        # RESTORE SAVED CARD VERSIONS
+        # ================================================
 
         if (
             old_players
@@ -690,6 +672,10 @@ def main():
                     known_versions[
                         item_id
                     ] = version
+
+        # ================================================
+        # DOWNLOAD FEED
+        # ================================================
 
         try:
             players = get_players(
@@ -854,7 +840,7 @@ def main():
     )
 
     # ========================================================
-    # TELEGRAM MESSAGE
+    # BUILD TELEGRAM MESSAGE
     # ========================================================
 
     has_changes = any(
@@ -911,17 +897,41 @@ def main():
                 "added"
             ]
 
-            # Removed players first.
+            # ================================================
+            # GONE PLAYERS
+            # ================================================
 
-            for player in removed:
+            for index, player in enumerate(
+                removed
+            ):
+                if index > 0:
+                    message += "\n"
+
                 message += (
                     "\n"
                     f"{player_text(player, 'gone')}\n"
                 )
 
-            # New players second.
+            # ================================================
+            # SEPARATOR BETWEEN GONE AND NEW
+            # ================================================
 
-            for player in added:
+            if removed and added:
+                message += (
+                    "\n"
+                    "--------------------\n"
+                )
+
+            # ================================================
+            # NEW PLAYERS
+            # ================================================
+
+            for index, player in enumerate(
+                added
+            ):
+                if index > 0:
+                    message += "\n"
+
                 message += (
                     "\n"
                     f"{player_text(player, 'new')}\n"
