@@ -7,9 +7,9 @@ from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 
 
-# =========================
+# ============================================================
 # FUT.GG FEEDS
-# =========================
+# ============================================================
 
 PAGES = {
     "🦸 HEROES": {
@@ -29,38 +29,215 @@ PAGES = {
 }
 
 
-# =========================
+# ============================================================
 # TELEGRAM
-# =========================
+# ============================================================
 
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 
-# =========================
+# ============================================================
 # SETTINGS
-# =========================
+# ============================================================
 
 STATE_FILE = "players.json"
 
-# Maximum number of cards with the same player name.
-# This allows variants such as:
-# Cucurella - Base
-# Cucurella - Pristine Holographic
+# Maximum number of cards for the same player name.
+#
+# Example:
+#
+# Cucurella - 88 - Destined for Glory
+# Cucurella - 88 - Pristine Holographic
+#
+# = allowed
+#
+# Three Cucurella cards
+# = third one ignored
+#
 MAX_SAME_PLAYER = 2
+
 
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/140.0.0.0 Safari/537.36"
-    )
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,"
+        "application/xml;q=0.9,image/avif,image/webp,"
+        "image/apng,*/*;q=0.8"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
 }
 
 
-# =========================
+# ============================================================
+# NORMALIZE TEXT
+# ============================================================
+
+def normalize_text(value):
+
+    if not value:
+        return ""
+
+    value = html.unescape(str(value))
+
+    value = re.sub(
+        r"\s+",
+        " ",
+        value
+    )
+
+    return value.strip()
+
+
+# ============================================================
+# PARSE PLAYER FROM ALT
+# ============================================================
+
+def parse_alt(alt):
+
+    alt = normalize_text(alt)
+
+    if not alt:
+        return None
+
+    # FUT.GG format:
+    #
+    # Player - 88 - Card
+    #
+    match = re.match(
+        r"^(.+?)\s*-\s*(\d+)\s*-\s*(.+?)$",
+        alt
+    )
+
+    if not match:
+        return None
+
+    return {
+        "name": normalize_text(
+            match.group(1)
+        ),
+        "rating": match.group(2),
+        "card": normalize_text(
+            match.group(3)
+        )
+    }
+
+
+# ============================================================
+# GET CARD CONTEXT
+# ============================================================
+
+def get_card_context(img):
+
+    """
+    FUT.GG can render several images/elements for the
+    same card.
+
+    We collect useful information from:
+      - image attributes
+      - parent link
+      - surrounding element
+      - data-* attributes
+
+    This gives us a more stable identity for a card.
+    """
+
+    data = {}
+
+    # Image attributes
+    for key, value in img.attrs.items():
+
+        if value is None:
+            continue
+
+        data[key] = str(value)
+
+
+    # Parent link
+    link = img.find_parent("a")
+
+    if link:
+
+        if link.get("href"):
+            data["href"] = str(
+                link.get("href")
+            )
+
+        for key, value in link.attrs.items():
+
+            if value is None:
+                continue
+
+            data[f"link_{key}"] = str(value)
+
+
+    # Parent element
+    parent = img.parent
+
+    if parent:
+
+        for key, value in parent.attrs.items():
+
+            if value is None:
+                continue
+
+            data[f"parent_{key}"] = str(value)
+
+
+    return data
+
+
+# ============================================================
+# CARD UNIQUE KEY
+# ============================================================
+
+def make_card_key(player, context):
+
+    """
+    Primary identity:
+
+        name + rating + card
+
+    This prevents the same FUT.GG image/card from being
+    counted multiple times.
+
+    If FUT.GG provides a unique URL/ID, it is also included
+    so different variants can be distinguished.
+    """
+
+    name = player["name"].lower()
+    rating = player["rating"].lower()
+    card = player["card"].lower()
+
+    href = context.get("href", "")
+
+    # Normalize URL
+    href = href.split("?")[0].lower()
+
+    # Important:
+    # If the same exact player/card appears with a different
+    # FUT.GG link, keep the link as additional identity.
+    #
+    # But if there is no useful href, the normal card identity
+    # is enough.
+
+    return (
+        name,
+        rating,
+        card,
+        href
+    )
+
+
+# ============================================================
 # GET FUT.GG PLAYERS
-# =========================
+# ============================================================
 
 def get_players(url, expected_players):
 
@@ -77,7 +254,11 @@ def get_players(url, expected_players):
         "html.parser"
     )
 
-    # Find the FUT.GG recommended lineup section
+
+    # ========================================================
+    # FIND CHEAPEST LINEUP
+    # ========================================================
+
     heading = soup.find(
         lambda tag:
         tag.name in ["h2", "h3"]
@@ -85,146 +266,199 @@ def get_players(url, expected_players):
         and "lineup" in tag.get_text()
     )
 
+
     if not heading:
+
         raise Exception(
             f"Feed lineup not found: {url}"
         )
 
+
+    # ========================================================
+    # RESULTS
+    # ========================================================
+
     players = []
 
-    # Exact cards already seen
+    # Exact cards already collected
     seen_cards = set()
 
-    # Number of cards found for each player
+    # Count by player name
     player_counts = {}
+
+
+    # ========================================================
+    # WALK THROUGH LINEUP
+    # ========================================================
 
     current = heading.find_next()
 
+
     while current:
 
-        # Stop when the next section begins
+        # Stop at the next major section
         if (
             current.name in ["h2", "h3"]
             and current != heading
         ):
             break
 
+
         if hasattr(current, "find_all"):
 
-            for img in current.find_all("img"):
+            images = current.find_all("img")
 
-                alt = img.get("alt", "").strip()
 
-                # Expected format:
-                #
-                # Cucurella - 88 - Destined for Glory
-                #
-                match = re.match(
-                    r"(.+?)\s*-\s*(\d+)\s*-\s*(.+)",
-                    alt
+            for img in images:
+
+                alt = normalize_text(
+                    img.get("alt", "")
                 )
 
-                if not match:
+
+                # Ignore placeholder cards
+                if (
+                    not alt
+                    or alt.lower() == "player card"
+                ):
                     continue
 
-                name = match.group(1).strip()
-                rating = match.group(2).strip()
-                card = match.group(3).strip()
 
-                # Normalize name for duplicate counting
-                name_key = re.sub(
-                    r"\s+",
-                    " ",
-                    name.lower()
-                )
+                # Parse player
+                player = parse_alt(alt)
 
-                # Exact card identity
-                card_key = (
-                    name_key,
-                    rating,
-                    card.lower()
-                )
 
-                # ---------------------------------
-                # EXACT DUPLICATE
-                # ---------------------------------
-                #
-                # If FUT.GG renders the same image
-                # multiple times, ignore it.
-                #
-                if card_key in seen_cards:
+                if not player:
                     continue
 
-                # ---------------------------------
-                # MAX 2 SAME PLAYER
-                # ---------------------------------
-                #
-                # We allow:
-                #
-                # Cucurella - Base
-                # Cucurella - Pristine Holographic
-                #
-                # But not:
-                #
-                # Cucurella
-                # Cucurella
-                # Cucurella
-                #
-                count = player_counts.get(
+
+                # Get additional HTML context
+                context = get_card_context(img)
+
+
+                # =================================================
+                # PLAYER NAME LIMIT
+                # =================================================
+
+                name_key = (
+                    player["name"]
+                    .strip()
+                    .lower()
+                )
+
+                current_count = player_counts.get(
                     name_key,
                     0
                 )
 
-                if count >= MAX_SAME_PLAYER:
+
+                # Maximum 2 versions for same player
+                if current_count >= MAX_SAME_PLAYER:
+
+                    print(
+                        f"Skipped third version: "
+                        f"{player['name']} "
+                        f"{player['rating']} "
+                        f"{player['card']}"
+                    )
+
                     continue
 
-                player = {
-                    "name": name,
-                    "rating": rating,
-                    "card": card
-                }
+
+                # =================================================
+                # DUPLICATE CARD CHECK
+                # =================================================
+
+                card_key = make_card_key(
+                    player,
+                    context
+                )
+
+
+                if card_key in seen_cards:
+
+                    print(
+                        f"Skipped duplicate: "
+                        f"{player['name']} "
+                        f"{player['rating']} "
+                        f"{player['card']}"
+                    )
+
+                    continue
+
+
+                # =================================================
+                # SAVE CARD
+                # =================================================
+
+                player["source"] = url
+
+                # Keep useful identity data.
+                #
+                # These fields don't affect Telegram output,
+                # but they allow us to distinguish variants
+                # later if FUT.GG provides them.
+                #
+                if context.get("href"):
+                    player["href"] = context["href"]
+
 
                 players.append(player)
 
-                seen_cards.add(card_key)
+                seen_cards.add(
+                    card_key
+                )
 
-                player_counts[name_key] = count + 1
+                player_counts[name_key] = (
+                    current_count + 1
+                )
 
-                # ---------------------------------
-                # STOP AT EXPECTED NUMBER
-                # ---------------------------------
+
+                print(
+                    f"Accepted: "
+                    f"{player['name']} "
+                    f"{player['rating']} "
+                    f"{player['card']}"
+                )
+
+
+                # =================================================
+                # STOP ONLY WHEN WE HAVE ENOUGH UNIQUE CARDS
+                # =================================================
+
                 if len(players) >= expected_players:
+
                     return players
+
 
         current = current.find_next()
 
-    # ---------------------------------
-    # VALIDATION
-    # ---------------------------------
-    #
-    # We return the unique cards found.
-    # This is safer than treating duplicated
-    # HTML images as separate players.
-    #
+
+    # ========================================================
+    # RETURN WHAT WAS FOUND
+    # ========================================================
+
     if players:
+
         return players
 
+
     raise Exception(
-        f"Found 0 players instead of "
-        f"{expected_players} on {url}"
+        f"Found 0 players on {url}"
     )
 
 
-# =========================
-# TELEGRAM MESSAGE
-# =========================
+# ============================================================
+# TELEGRAM
+# ============================================================
 
 def send_telegram(message):
 
     telegram_url = (
-        f"https://api.telegram.org/"
+        "https://api.telegram.org/"
         f"bot{BOT_TOKEN}/sendMessage"
     )
+
 
     response = requests.post(
         telegram_url,
@@ -237,16 +471,18 @@ def send_telegram(message):
         timeout=30
     )
 
+
     response.raise_for_status()
+
 
     print(
         "Telegram notification sent successfully."
     )
 
 
-# =========================
+# ============================================================
 # PLAYER TEXT
-# =========================
+# ============================================================
 
 def player_text(player):
 
@@ -262,6 +498,7 @@ def player_text(player):
         player["card"]
     )
 
+
     return (
         f"<b>{name}</b> — "
         f"{rating} — "
@@ -269,15 +506,28 @@ def player_text(player):
     )
 
 
-# =========================
-# MAIN MONITOR
-# =========================
+# ============================================================
+# REMOVE INTERNAL FIELDS BEFORE SAVE
+# ============================================================
+
+def clean_player(player):
+
+    return {
+        "name": player["name"],
+        "rating": player["rating"],
+        "card": player["card"]
+    }
+
+
+# ============================================================
+# MAIN
+# ============================================================
 
 def main():
 
-    # =========================
-    # LOAD PREVIOUS FEEDS
-    # =========================
+    # ========================================================
+    # LOAD OLD STATE
+    # ========================================================
 
     if os.path.exists(STATE_FILE):
 
@@ -304,8 +554,8 @@ def main():
 
         old_state = {}
 
-    # Keep old data for categories
-    # that fail to load.
+
+    # Keep previous data if a feed fails
     new_state = dict(old_state)
 
     results = []
@@ -313,9 +563,9 @@ def main():
     any_changes = False
 
 
-    # =========================
-    # CHECK EVERY FUT.GG FEED
-    # =========================
+    # ========================================================
+    # CHECK ALL FEEDS
+    # ========================================================
 
     for category, config in PAGES.items():
 
@@ -323,10 +573,17 @@ def main():
 
         expected_players = config["players"]
 
+
+        print("")
+        print("=" * 60)
+
         print(
             f"Checking {category} "
             f"({expected_players} players)..."
         )
+
+        print("=" * 60)
+
 
         try:
 
@@ -335,11 +592,13 @@ def main():
                 expected_players
             )
 
+
         except Exception as error:
 
             print(
                 f"{category}: ERROR {error}"
             )
+
 
             results.append({
                 "category": category,
@@ -347,18 +606,27 @@ def main():
                 "error": str(error)
             })
 
+
             continue
 
 
-        # =========================
-        # PRINT FOUND PLAYERS
-        # =========================
+        # ====================================================
+        # CLEAN DATA
+        # ====================================================
 
+        clean_players = [
+            clean_player(player)
+            for player in players
+        ]
+
+
+        print("")
         print(
-            f"Found {len(players)} unique players."
+            f"Found {len(clean_players)} unique players."
         )
 
-        for player in players:
+
+        for player in clean_players:
 
             print(
                 f"- {player['name']} "
@@ -367,20 +635,18 @@ def main():
             )
 
 
-        # =========================
-        # SAVE NEW CATEGORY
-        # =========================
-
-        new_state[category] = players
+        # Save current feed
+        new_state[category] = clean_players
 
 
-        # =========================
+        # ====================================================
         # FIRST SCAN
-        # =========================
+        # ====================================================
 
         old_players = old_state.get(
             category
         )
+
 
         if old_players is None:
 
@@ -389,33 +655,37 @@ def main():
                 "Saving current feed."
             )
 
+
             results.append({
                 "category": category,
                 "status": "first_scan"
             })
 
+
             continue
 
 
-        # =========================
-        # CHECK FOR CHANGES
-        # =========================
-
-        #
-        # We copy both lists because
-        # duplicates may exist in old
-        # files created by previous versions.
-        #
+        # ====================================================
+        # COMPARE OLD VS NEW
+        # ====================================================
 
         removed = old_players.copy()
-        added = players.copy()
+
+        added = clean_players.copy()
 
 
-        # Remove cards that stayed the same.
+        # Remove matching cards one by one.
         #
-        # This handles duplicates correctly
-        # because each matching card is removed
-        # only once.
+        # This means:
+        #
+        # old:
+        # Cucurella Base
+        #
+        # new:
+        # Cucurella Base
+        # Cucurella Holographic
+        #
+        # => only Holographic is NEW
         #
 
         for player in old_players:
@@ -424,14 +694,15 @@ def main():
 
                 added.remove(player)
 
+
                 if player in removed:
 
                     removed.remove(player)
 
 
-        # =========================
-        # NO CHANGES
-        # =========================
+        # ====================================================
+        # NO CHANGE
+        # ====================================================
 
         if not removed and not added:
 
@@ -439,19 +710,22 @@ def main():
                 f"{category}: No feed changes."
             )
 
+
             results.append({
                 "category": category,
                 "status": "unchanged"
             })
 
+
             continue
 
 
-        # =========================
+        # ====================================================
         # CHANGED
-        # =========================
+        # ====================================================
 
         any_changes = True
+
 
         results.append({
             "category": category,
@@ -461,9 +735,9 @@ def main():
         })
 
 
-    # =========================
-    # SAVE CURRENT FEEDS
-    # =========================
+    # ========================================================
+    # SAVE STATE
+    # ========================================================
 
     with open(
         STATE_FILE,
@@ -478,14 +752,16 @@ def main():
             indent=2
         )
 
+
+    print("")
     print(
         "Feed state saved successfully."
     )
 
 
-    # =========================
-    # TELEGRAM MESSAGE
-    # =========================
+    # ========================================================
+    # TELEGRAM HEADER
+    # ========================================================
 
     now = datetime.now(
         timezone.utc
@@ -516,15 +792,16 @@ def main():
     ]
 
 
-    # =========================
-    # BUILD CATEGORY RESULTS
-    # =========================
+    # ========================================================
+    # TELEGRAM RESULTS
+    # ========================================================
 
     for result in results:
 
         category = html.escape(
             result["category"]
         )
+
 
         parts.append(
             "━━━━━━━━━━━━━━"
@@ -534,12 +811,13 @@ def main():
             f"<b>{category}</b>"
         )
 
+
         status = result["status"]
 
 
-        # =========================
+        # ----------------------------------------------------
         # CHANGED
-        # =========================
+        # ----------------------------------------------------
 
         if status == "changed":
 
@@ -550,6 +828,7 @@ def main():
                     f"{player_text(player)}"
                 )
 
+
             for player in result["added"]:
 
                 parts.append(
@@ -558,9 +837,9 @@ def main():
                 )
 
 
-        # =========================
+        # ----------------------------------------------------
         # UNCHANGED
-        # =========================
+        # ----------------------------------------------------
 
         elif status == "unchanged":
 
@@ -569,9 +848,9 @@ def main():
             )
 
 
-        # =========================
+        # ----------------------------------------------------
         # FIRST SCAN
-        # =========================
+        # ----------------------------------------------------
 
         elif status == "first_scan":
 
@@ -580,9 +859,9 @@ def main():
             )
 
 
-        # =========================
+        # ----------------------------------------------------
         # ERROR
-        # =========================
+        # ----------------------------------------------------
 
         elif status == "error":
 
@@ -600,6 +879,10 @@ def main():
         parts.append("")
 
 
+    # ========================================================
+    # FOOTER
+    # ========================================================
+
     parts.append(
         "━━━━━━━━━━━━━━"
     )
@@ -609,18 +892,19 @@ def main():
     )
 
 
-    # =========================
-    # SEND TELEGRAM
-    # =========================
+    # ========================================================
+    # SEND
+    # ========================================================
 
     send_telegram(
         "\n".join(parts)
     )
 
 
-# =========================
+# ============================================================
 # START
-# =========================
+# ============================================================
 
 if __name__ == "__main__":
+
     main()
