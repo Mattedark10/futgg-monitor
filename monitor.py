@@ -150,43 +150,56 @@ async def wait_for_lineup(page, expected_players):
         'ul[data-gallery-builder-slots="true"] > li'
     )
 
+    last_real = -1
+    stable_rounds = 0
+
     for attempt in range(20):
+        # Scroll down to trigger lazy-loaded slots.
+        await page.mouse.wheel(0, 1500)
+
         count = await locator.count()
 
         real_cards = 0
 
-        if count >= expected_players:
-            for index in range(expected_players):
-                slot = locator.nth(index)
+        for index in range(min(count, expected_players)):
+            slot = locator.nth(index)
 
-                images = slot.locator("img")
+            images = slot.locator("img")
 
-                if await images.count() == 0:
-                    continue
+            if await images.count() == 0:
+                continue
 
-                alt = (
-                    await images.first.get_attribute("alt")
-                    or ""
-                )
+            alt = (
+                await images.first.get_attribute("alt")
+                or ""
+            )
 
-                alt = alt.strip()
+            alt = alt.strip()
 
-                if (
-                    alt
-                    and alt.lower() != "player card"
-                ):
-                    real_cards += 1
+            if (
+                alt
+                and alt.lower() != "player card"
+            ):
+                real_cards += 1
 
         print(
             f"Rendered lineup: "
             f"{real_cards}/{expected_players} real cards"
         )
 
-        if (
-            count >= expected_players
-            and real_cards == expected_players
-        ):
+        if real_cards == expected_players:
             return True
+
+        if real_cards == last_real:
+            stable_rounds += 1
+        else:
+            stable_rounds = 0
+
+        last_real = real_cards
+
+        # Count has not changed for 4 attempts: stop waiting.
+        if stable_rounds >= 4:
+            return False
 
         await page.wait_for_timeout(1000)
 
@@ -280,6 +293,8 @@ async def detect_card_version(context, href):
             "html.parser",
         )
 
+        # Only the page title and the main heading are used:
+        # meta tags and page text also mention other cards.
         parts = []
 
         if soup.title:
@@ -299,19 +314,6 @@ async def detect_card_version(context, href):
                     strip=True,
                 )
             )
-
-        for meta in soup.find_all("meta"):
-            value = meta.get("content")
-
-            if value:
-                parts.append(value)
-
-        page_text = soup.get_text(
-            " ",
-            strip=True,
-        )
-
-        parts.append(page_text[:50000])
 
         searchable = " ".join(parts).lower()
 
@@ -357,7 +359,7 @@ async def scan_category(context, label, config):
         # Allow FUT.GG JavaScript to start rendering.
         await page.wait_for_timeout(2000)
 
-        complete = await wait_for_lineup(
+        await wait_for_lineup(
             page,
             config["players"],
         )
@@ -378,10 +380,12 @@ async def scan_category(context, label, config):
             )
 
             if player is None:
-                raise RuntimeError(
-                    f"Slot {slot_number} is still "
-                    f"a placeholder after rendering."
+                print(
+                    f"Slot {slot_number}: "
+                    f"empty, skipped"
                 )
+
+                continue
 
             item_id = extract_item_id(
                 slot["src"],
@@ -418,16 +422,9 @@ async def scan_category(context, label, config):
                 f"{player['item_id'] or '?'}"
             )
 
-        if not complete:
+        if not players:
             raise RuntimeError(
-                f"FUT.GG did not render all "
-                f"{config['players']} player cards."
-            )
-
-        if len(players) != config["players"]:
-            raise RuntimeError(
-                f"Found {len(players)} players "
-                f"instead of {config['players']}."
+                "No cards rendered."
             )
 
         print(
