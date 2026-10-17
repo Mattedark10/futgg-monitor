@@ -22,7 +22,7 @@ PAGES = {
     "✨ HOLOGRAPHICS": {
         "url": "https://www.fut.gg/fut-gallery/rarities/holographics/",
         "players": 5,
-        "distinguish": False,
+        "distinguish": True,
     },
 
     "🏆 SEASON 1": {
