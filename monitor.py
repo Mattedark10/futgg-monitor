@@ -265,6 +265,79 @@ async def get_rendered_slots(page, expected_players):
     return slots
 
 
+async def get_static_slots(context, url, expected_players):
+    # The server-rendered HTML already contains the full lineup,
+    # even when the browser-rendered page still shows placeholders.
+    response = await context.request.get(
+        url,
+        timeout=30000,
+    )
+
+    if not response.ok:
+        raise RuntimeError(
+            f"Static page returned HTTP {response.status}."
+        )
+
+    text = await response.text()
+
+    soup = BeautifulSoup(
+        text,
+        "html.parser",
+    )
+
+    slots = []
+
+    for li in soup.find_all("li"):
+        img = li.find("img")
+
+        if img is None:
+            continue
+
+        alt = (img.get("alt") or "").strip()
+
+        if parse_player_alt(alt) is None:
+            continue
+
+        src = (img.get("src") or "").strip()
+
+        link = li.find(
+            "a",
+            href=re.compile(r"/players/"),
+        )
+
+        href = ""
+
+        if link is not None:
+            href = (link.get("href") or "").strip()
+
+        if not href:
+            item_id = extract_item_id(src)
+
+            if item_id:
+                other = soup.find(
+                    "a",
+                    href=re.compile(
+                        rf"/players/.*27-{item_id}"
+                    ),
+                )
+
+                if other is not None:
+                    href = (other.get("href") or "").strip()
+
+        slots.append(
+            {
+                "alt": alt,
+                "src": src,
+                "href": href,
+            }
+        )
+
+        if len(slots) >= expected_players:
+            break
+
+    return slots
+
+
 # ============================================================
 # VERSION DETECTION
 # ============================================================
@@ -364,10 +437,47 @@ async def scan_category(context, label, config):
             config["players"],
         )
 
-        slots = await get_rendered_slots(
-            page,
-            config["players"],
+        try:
+            slots = await get_rendered_slots(
+                page,
+                config["players"],
+            )
+
+        except Exception as error:
+            print(f"Rendered slots unavailable: {error}")
+            slots = []
+
+        rendered_real = sum(
+            1
+            for slot in slots
+            if parse_player_alt(slot["alt"]) is not None
         )
+
+        if rendered_real < config["players"]:
+            print(
+                f"Rendered page has {rendered_real}/"
+                f"{config['players']} cards, "
+                f"trying static HTML."
+            )
+
+            try:
+                static_slots = await get_static_slots(
+                    context,
+                    config["url"],
+                    config["players"],
+                )
+
+            except Exception as error:
+                print(f"Static HTML failed: {error}")
+                static_slots = []
+
+            if len(static_slots) > rendered_real:
+                print(
+                    f"Using static HTML lineup: "
+                    f"{len(static_slots)} cards."
+                )
+
+                slots = static_slots
 
         players = []
 
