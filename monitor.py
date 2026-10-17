@@ -717,7 +717,7 @@ def main():
 
     message += (
         "\n━━━━━━━━━━━━━━\n"
-        "⏱ Automatic monitoring · 5 min"
+        "⏱ Automatic monitoring · 10 min"
     )
 
     # ========================================================
