@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
     "eaId": 84163723,
     "slug": "27-84163723",
-    "price": null
+    "price": 3340000
   },
   {
     "name": "Barcola",
@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/264652-bradley-barcola/27-67373516/",
     "eaId": 67373516,
     "slug": "27-67373516",
-    "price": 936000
+    "price": 747000
   },
   {
     "name": "Cissè",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
     "eaId": 50609974,
     "slug": "27-50609974",
-    "price": 148000
+    "price": 99500
   },
   {
     "name": "Doué",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/271421-desire-doue/27-50603069/",
     "eaId": 50603069,
     "slug": "27-50603069",
-    "price": 2500000
+    "price": 1730000
   },
   {
     "name": "Sadiki",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
     "eaId": 50600878,
     "slug": "27-50600878",
-    "price": 251000
+    "price": 176000
   },
   {
     "name": "William Gomes",
@@ -88,7 +88,7 @@
     "url": "https://www.fut.gg/players/242879-maarten-vandevoordt/27-50574527/",
     "eaId": 50574527,
     "slug": "27-50574527",
-    "price": 70000
+    "price": 37250
   },
   {
     "name": "Flávio Gonçalves",
@@ -140,20 +140,7 @@
     "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
     "eaId": 50608342,
     "slug": "27-50608342",
-    "price": 50920
-  },
-  {
-    "name": "Xavi Espart",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Future Stars",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
-    "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
-    "eaId": 50413511,
-    "slug": "27-50413511",
-    "price": 34440
+    "price": 51310
   },
   {
     "name": "Delgado",
@@ -169,17 +156,17 @@
     "price": null
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
+    "name": "Xavi Espart",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Future Stars",
     "club": "FC Barcelona",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 202000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
+    "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
+    "eaId": 50413511,
+    "slug": "27-50413511",
+    "price": 34645
   },
   {
     "name": "Aitana Bonmatí",
@@ -192,7 +179,7 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
     "slug": "27-241667",
-    "price": 296000
+    "price": 283000
   },
   {
     "name": "Karchaoui",
@@ -205,7 +192,20 @@
     "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
     "eaId": 233662,
     "slug": "27-233662",
-    "price": 86500
+    "price": 85000
+  },
+  {
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 196000
   },
   {
     "name": "Scott",
@@ -218,7 +218,7 @@
     "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
     "eaId": 50592947,
     "slug": "27-50592947",
-    "price": 309000
+    "price": 258000
   },
   {
     "name": "Dro Fernández",
@@ -231,7 +231,7 @@
     "url": "https://www.fut.gg/players/80674-pedro-fernandez-dro/27-50412322/",
     "eaId": 50412322,
     "slug": "27-50412322",
-    "price": 87500
+    "price": 77500
   },
   {
     "name": "Salma Paralluelo",
@@ -244,7 +244,7 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 300000
+    "price": 284000
   },
   {
     "name": "Pedri",
@@ -257,6 +257,6 @@
     "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
     "eaId": 251854,
     "slug": "27-251854",
-    "price": 229000
+    "price": 232000
   }
 ]
