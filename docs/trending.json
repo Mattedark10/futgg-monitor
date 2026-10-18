@@ -78,19 +78,6 @@
     "price": null
   },
   {
-    "name": "Flávio Gonçalves",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "Future Stars",
-    "club": "Sporting CP",
-    "league": "Liga Portugal",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50414596.4634f83e3afc5eaca98048a0d6938a18059a85c3ba866126f6f3b0282b771f85.webp",
-    "url": "https://www.fut.gg/players/82948-flavio-goncalves/27-50414596/",
-    "eaId": 50414596,
-    "slug": "27-50414596",
-    "price": null
-  },
-  {
     "name": "Vandevoordt",
     "rating": 85,
     "position": "GK",
@@ -102,6 +89,19 @@
     "eaId": 50574527,
     "slug": "27-50574527",
     "price": 70000
+  },
+  {
+    "name": "Flávio Gonçalves",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "Future Stars",
+    "club": "Sporting CP",
+    "league": "Liga Portugal",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50414596.4634f83e3afc5eaca98048a0d6938a18059a85c3ba866126f6f3b0282b771f85.webp",
+    "url": "https://www.fut.gg/players/82948-flavio-goncalves/27-50414596/",
+    "eaId": 50414596,
+    "slug": "27-50414596",
+    "price": null
   },
   {
     "name": "Gilberto",
@@ -195,19 +195,6 @@
     "price": 296000
   },
   {
-    "name": "Scott",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "AFC Bournemouth",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
-    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
-    "eaId": 50592947,
-    "slug": "27-50592947",
-    "price": 309000
-  },
-  {
     "name": "Karchaoui",
     "rating": 87,
     "position": "CM",
@@ -219,6 +206,19 @@
     "eaId": 233662,
     "slug": "27-233662",
     "price": 86500
+  },
+  {
+    "name": "Scott",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "AFC Bournemouth",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
+    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
+    "eaId": 50592947,
+    "slug": "27-50592947",
+    "price": 309000
   },
   {
     "name": "Dro Fernández",
