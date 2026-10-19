@@ -26,19 +26,6 @@
     "price": 34440
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 91,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
-    "eaId": 84163723,
-    "slug": "27-84163723",
-    "price": 3445000
-  },
-  {
     "name": "Manzambi",
     "rating": 85,
     "position": "CM",
@@ -50,6 +37,19 @@
     "eaId": 50608342,
     "slug": "27-50608342",
     "price": 50720
+  },
+  {
+    "name": "Lamine Yamal",
+    "rating": 91,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
+    "eaId": 84163723,
+    "slug": "27-84163723",
+    "price": 3445000
   },
   {
     "name": "Karchaoui",
@@ -78,19 +78,6 @@
     "price": 279000
   },
   {
-    "name": "Cissè",
-    "rating": 85,
-    "position": "CAM",
-    "rarity": "Star Performer",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609974.b6def97003008868fe1817b4f3b43ea6fd856f781c442ba887c0c7aa9ff3b8ac.webp",
-    "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
-    "eaId": 50609974,
-    "slug": "27-50609974",
-    "price": 109000
-  },
-  {
     "name": "Scott",
     "rating": 86,
     "position": "CM",
@@ -102,6 +89,19 @@
     "eaId": 50592947,
     "slug": "27-50592947",
     "price": 266000
+  },
+  {
+    "name": "Cissè",
+    "rating": 85,
+    "position": "CAM",
+    "rarity": "Star Performer",
+    "club": "Milano FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609974.b6def97003008868fe1817b4f3b43ea6fd856f781c442ba887c0c7aa9ff3b8ac.webp",
+    "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
+    "eaId": 50609974,
+    "slug": "27-50609974",
+    "price": 109000
   },
   {
     "name": "Salma Paralluelo",
@@ -117,30 +117,17 @@
     "price": 285000
   },
   {
-    "name": "Sadiki",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Star Performer",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
-    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
-    "eaId": 50600878,
-    "slug": "27-50600878",
-    "price": 170000
-  },
-  {
-    "name": "Barcola",
-    "rating": 86,
-    "position": "LW",
-    "rarity": "Star Performer",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373516.4bf7a7cd10a856dfa16181ed8f921942bc38e9053b9080fbc626fbb6208315e6.webp",
-    "url": "https://www.fut.gg/players/264652-bradley-barcola/27-67373516/",
-    "eaId": 67373516,
-    "slug": "27-67373516",
-    "price": 708000
+    "name": "Mariona",
+    "rating": 89,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
+    "eaId": 237288,
+    "slug": "27-237288",
+    "price": 71500
   },
   {
     "name": "Lamine Yamal",
@@ -169,17 +156,30 @@
     "price": 225000
   },
   {
-    "name": "Mariona",
-    "rating": 89,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
-    "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
-    "eaId": 237288,
-    "slug": "27-237288",
-    "price": 71500
+    "name": "Sadiki",
+    "rating": 85,
+    "position": "CDM",
+    "rarity": "Star Performer",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
+    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
+    "eaId": 50600878,
+    "slug": "27-50600878",
+    "price": 170000
+  },
+  {
+    "name": "Barcola",
+    "rating": 86,
+    "position": "LW",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373516.4bf7a7cd10a856dfa16181ed8f921942bc38e9053b9080fbc626fbb6208315e6.webp",
+    "url": "https://www.fut.gg/players/264652-bradley-barcola/27-67373516/",
+    "eaId": 67373516,
+    "slug": "27-67373516",
+    "price": 708000
   },
   {
     "name": "Kika Nazareth",
@@ -193,19 +193,6 @@
     "eaId": 261855,
     "slug": "27-261855",
     "price": 18500
-  },
-  {
-    "name": "Doué",
-    "rating": 87,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603069.9a7a739d15b50707f9e7b7da679ec19205ab58c7c22c1d3c04caa814de8c7598.webp",
-    "url": "https://www.fut.gg/players/271421-desire-doue/27-50603069/",
-    "eaId": 50603069,
-    "slug": "27-50603069",
-    "price": 1664000
   },
   {
     "name": "Stanway",
@@ -245,6 +232,19 @@
     "eaId": 259532,
     "slug": "27-259532",
     "price": 37250
+  },
+  {
+    "name": "Doué",
+    "rating": 87,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603069.9a7a739d15b50707f9e7b7da679ec19205ab58c7c22c1d3c04caa814de8c7598.webp",
+    "url": "https://www.fut.gg/players/271421-desire-doue/27-50603069/",
+    "eaId": 50603069,
+    "slug": "27-50603069",
+    "price": 1664000
   },
   {
     "name": "Adeyemi",
