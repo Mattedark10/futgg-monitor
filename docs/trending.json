@@ -1,18 +1,5 @@
 [
   {
-    "name": "Diao",
-    "rating": 84,
-    "position": "RM",
-    "rarity": "Future Stars",
-    "club": "Como 1907",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606972.d8d3597b2b580624b0f5a55336ba025260792c600c48e3c1a65121ad773e39dd.webp",
-    "url": "https://www.fut.gg/players/275324-assane-diao-diaoune/27-50606972/",
-    "eaId": 50606972,
-    "slug": "27-50606972",
-    "price": 39320
-  },
-  {
     "name": "Xavi Espart",
     "rating": 85,
     "position": "LB",
@@ -91,19 +78,6 @@
     "price": 285000
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 91,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
-    "eaId": 84163723,
-    "slug": "27-84163723",
-    "price": 3445000
-  },
-  {
     "name": "Mariona",
     "rating": 89,
     "position": "CM",
@@ -130,19 +104,6 @@
     "price": 225000
   },
   {
-    "name": "Cissè",
-    "rating": 85,
-    "position": "CAM",
-    "rarity": "Star Performer",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609974.b6def97003008868fe1817b4f3b43ea6fd856f781c442ba887c0c7aa9ff3b8ac.webp",
-    "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
-    "eaId": 50609974,
-    "slug": "27-50609974",
-    "price": 109000
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -154,6 +115,19 @@
     "eaId": 277643,
     "slug": "27-277643",
     "price": 198000
+  },
+  {
+    "name": "Diao",
+    "rating": 84,
+    "position": "RM",
+    "rarity": "Future Stars",
+    "club": "Como 1907",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606972.d8d3597b2b580624b0f5a55336ba025260792c600c48e3c1a65121ad773e39dd.webp",
+    "url": "https://www.fut.gg/players/275324-assane-diao-diaoune/27-50606972/",
+    "eaId": 50606972,
+    "slug": "27-50606972",
+    "price": 39320
   },
   {
     "name": "Kika Nazareth",
@@ -169,6 +143,32 @@
     "price": 18500
   },
   {
+    "name": "Lamine Yamal",
+    "rating": 91,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
+    "eaId": 84163723,
+    "slug": "27-84163723",
+    "price": 3445000
+  },
+  {
+    "name": "Cissè",
+    "rating": 85,
+    "position": "CAM",
+    "rarity": "Star Performer",
+    "club": "Milano FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609974.b6def97003008868fe1817b4f3b43ea6fd856f781c442ba887c0c7aa9ff3b8ac.webp",
+    "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
+    "eaId": 50609974,
+    "slug": "27-50609974",
+    "price": 109000
+  },
+  {
     "name": "Stanway",
     "rating": 86,
     "position": "CDM",
@@ -180,32 +180,6 @@
     "eaId": 243404,
     "slug": "27-243404",
     "price": 31750
-  },
-  {
-    "name": "Sadiki",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Star Performer",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
-    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
-    "eaId": 50600878,
-    "slug": "27-50600878",
-    "price": 170000
-  },
-  {
-    "name": "Vicky López",
-    "rating": 84,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-271446.7ae01100a08a56d8dc57cd326330b1cdccdc36a9b8e605bf89d7c8721983f15c.webp",
-    "url": "https://www.fut.gg/players/271446-vicky-lopez/27-271446/",
-    "eaId": 271446,
-    "slug": "27-271446",
-    "price": 9400
   },
   {
     "name": "Joan García",
@@ -234,17 +208,30 @@
     "price": 482000
   },
   {
-    "name": "Adeyemi",
-    "rating": 83,
-    "position": "RM",
-    "rarity": "Ones to Watch",
+    "name": "Sadiki",
+    "rating": 85,
+    "position": "CDM",
+    "rarity": "Star Performer",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
+    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
+    "eaId": 50600878,
+    "slug": "27-50600878",
+    "price": 170000
+  },
+  {
+    "name": "Vicky López",
+    "rating": 84,
+    "position": "RW",
+    "rarity": "Rare",
     "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583500.9c7183ba20e6a53ae16beaa93f3ea2156d6014d77d23bb39944cd5f07bddec9f.webp",
-    "url": "https://www.fut.gg/players/251852-karim-adeyemi/27-50583500/",
-    "eaId": 50583500,
-    "slug": "27-50583500",
-    "price": null
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-271446.7ae01100a08a56d8dc57cd326330b1cdccdc36a9b8e605bf89d7c8721983f15c.webp",
+    "url": "https://www.fut.gg/players/271446-vicky-lopez/27-271446/",
+    "eaId": 271446,
+    "slug": "27-271446",
+    "price": 9400
   },
   {
     "name": "Patri Guijarro",
@@ -258,5 +245,18 @@
     "eaId": 237289,
     "slug": "27-237289",
     "price": 230000
+  },
+  {
+    "name": "Pajor",
+    "rating": 89,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241846.8446ab3b436f7899e7c7a7ec9d28e21ec5c934d5df3e4ae9eb9d8adbd7e3240d.webp",
+    "url": "https://www.fut.gg/players/241846-ewa-pajor/27-241846/",
+    "eaId": 241846,
+    "slug": "27-241846",
+    "price": 173000
   }
 ]
