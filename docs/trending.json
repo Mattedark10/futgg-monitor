@@ -39,19 +39,6 @@
     "price": 50720
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 91,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
-    "eaId": 84163723,
-    "slug": "27-84163723",
-    "price": 3445000
-  },
-  {
     "name": "Karchaoui",
     "rating": 87,
     "position": "CM",
@@ -78,6 +65,19 @@
     "price": 279000
   },
   {
+    "name": "Lamine Yamal",
+    "rating": 91,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
+    "eaId": 84163723,
+    "slug": "27-84163723",
+    "price": 3445000
+  },
+  {
     "name": "Scott",
     "rating": 86,
     "position": "CM",
@@ -89,19 +89,6 @@
     "eaId": 50592947,
     "slug": "27-50592947",
     "price": 266000
-  },
-  {
-    "name": "Cissè",
-    "rating": 85,
-    "position": "CAM",
-    "rarity": "Star Performer",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609974.b6def97003008868fe1817b4f3b43ea6fd856f781c442ba887c0c7aa9ff3b8ac.webp",
-    "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
-    "eaId": 50609974,
-    "slug": "27-50609974",
-    "price": 109000
   },
   {
     "name": "Salma Paralluelo",
@@ -117,6 +104,19 @@
     "price": 285000
   },
   {
+    "name": "Cissè",
+    "rating": 85,
+    "position": "CAM",
+    "rarity": "Star Performer",
+    "club": "Milano FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609974.b6def97003008868fe1817b4f3b43ea6fd856f781c442ba887c0c7aa9ff3b8ac.webp",
+    "url": "https://www.fut.gg/players/278326-alphadjo-cisse/27-50609974/",
+    "eaId": 50609974,
+    "slug": "27-50609974",
+    "price": 109000
+  },
+  {
     "name": "Mariona",
     "rating": 89,
     "position": "CM",
@@ -128,19 +128,6 @@
     "eaId": 237288,
     "slug": "27-237288",
     "price": 71500
-  },
-  {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 198000
   },
   {
     "name": "Pedri",
@@ -156,6 +143,19 @@
     "price": 225000
   },
   {
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 198000
+  },
+  {
     "name": "Sadiki",
     "rating": 85,
     "position": "CDM",
@@ -167,19 +167,6 @@
     "eaId": 50600878,
     "slug": "27-50600878",
     "price": 170000
-  },
-  {
-    "name": "Barcola",
-    "rating": 86,
-    "position": "LW",
-    "rarity": "Star Performer",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373516.4bf7a7cd10a856dfa16181ed8f921942bc38e9053b9080fbc626fbb6208315e6.webp",
-    "url": "https://www.fut.gg/players/264652-bradley-barcola/27-67373516/",
-    "eaId": 67373516,
-    "slug": "27-67373516",
-    "price": 708000
   },
   {
     "name": "Kika Nazareth",
@@ -208,6 +195,19 @@
     "price": 31750
   },
   {
+    "name": "Barcola",
+    "rating": 86,
+    "position": "LW",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373516.4bf7a7cd10a856dfa16181ed8f921942bc38e9053b9080fbc626fbb6208315e6.webp",
+    "url": "https://www.fut.gg/players/264652-bradley-barcola/27-67373516/",
+    "eaId": 67373516,
+    "slug": "27-67373516",
+    "price": 708000
+  },
+  {
     "name": "Vicky López",
     "rating": 84,
     "position": "RW",
@@ -234,19 +234,6 @@
     "price": 37250
   },
   {
-    "name": "Doué",
-    "rating": 87,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603069.9a7a739d15b50707f9e7b7da679ec19205ab58c7c22c1d3c04caa814de8c7598.webp",
-    "url": "https://www.fut.gg/players/271421-desire-doue/27-50603069/",
-    "eaId": 50603069,
-    "slug": "27-50603069",
-    "price": 1664000
-  },
-  {
     "name": "Adeyemi",
     "rating": 83,
     "position": "RM",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/251852-karim-adeyemi/27-50583500/",
     "eaId": 50583500,
     "slug": "27-50583500",
+    "price": null
+  },
+  {
+    "name": "Ferran Torres",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "Ones to Watch",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50573109.622d6c607090e4a5cf0cc080a458e9f197098b02d816ed65dcad4b639d903d61.webp",
+    "url": "https://www.fut.gg/players/241461-ferran-torres/27-50573109/",
+    "eaId": 50573109,
+    "slug": "27-50573109",
     "price": null
   }
 ]
