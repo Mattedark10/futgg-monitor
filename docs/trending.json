@@ -39,19 +39,6 @@
     "price": 279000
   },
   {
-    "name": "Manzambi",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
-    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
-    "eaId": 50608342,
-    "slug": "27-50608342",
-    "price": 50720
-  },
-  {
     "name": "Scott",
     "rating": 86,
     "position": "CM",
@@ -63,6 +50,19 @@
     "eaId": 50592947,
     "slug": "27-50592947",
     "price": 266000
+  },
+  {
+    "name": "Manzambi",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
+    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
+    "eaId": 50608342,
+    "slug": "27-50608342",
+    "price": 50720
   },
   {
     "name": "Salma Paralluelo",
@@ -117,19 +117,6 @@
     "price": 198000
   },
   {
-    "name": "Kika Nazareth",
-    "rating": 83,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-261855.d9104e33b6382c0c1d7009b5df9e7643c153920d7afb4bc0234ecc73791d6827.webp",
-    "url": "https://www.fut.gg/players/261855-kika-nazareth/27-261855/",
-    "eaId": 261855,
-    "slug": "27-261855",
-    "price": 18500
-  },
-  {
     "name": "Raphinha",
     "rating": 88,
     "position": "LW",
@@ -141,32 +128,6 @@
     "eaId": 233419,
     "slug": "27-233419",
     "price": 482000
-  },
-  {
-    "name": "Stanway",
-    "rating": 86,
-    "position": "CDM",
-    "rarity": "Rare",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
-    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
-    "eaId": 243404,
-    "slug": "27-243404",
-    "price": 31750
-  },
-  {
-    "name": "Joan García",
-    "rating": 86,
-    "position": "GK",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259532.e0add8ed4678fad3b84b0219825e78a41feaaba3739150529263ce8e53dde782.webp",
-    "url": "https://www.fut.gg/players/259532-joan-garcia/27-259532/",
-    "eaId": 259532,
-    "slug": "27-259532",
-    "price": 37250
   },
   {
     "name": "Cissè",
@@ -182,17 +143,30 @@
     "price": 109000
   },
   {
-    "name": "Vicky López",
-    "rating": 84,
-    "position": "RW",
+    "name": "Kika Nazareth",
+    "rating": 83,
+    "position": "CM",
     "rarity": "Rare",
     "club": "FC Barcelona",
     "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-271446.7ae01100a08a56d8dc57cd326330b1cdccdc36a9b8e605bf89d7c8721983f15c.webp",
-    "url": "https://www.fut.gg/players/271446-vicky-lopez/27-271446/",
-    "eaId": 271446,
-    "slug": "27-271446",
-    "price": 9400
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-261855.d9104e33b6382c0c1d7009b5df9e7643c153920d7afb4bc0234ecc73791d6827.webp",
+    "url": "https://www.fut.gg/players/261855-kika-nazareth/27-261855/",
+    "eaId": 261855,
+    "slug": "27-261855",
+    "price": 18500
+  },
+  {
+    "name": "Stanway",
+    "rating": 86,
+    "position": "CDM",
+    "rarity": "Rare",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
+    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
+    "eaId": 243404,
+    "slug": "27-243404",
+    "price": 31750
   },
   {
     "name": "Patri Guijarro",
@@ -206,6 +180,19 @@
     "eaId": 237289,
     "slug": "27-237289",
     "price": 230000
+  },
+  {
+    "name": "Joan García",
+    "rating": 86,
+    "position": "GK",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259532.e0add8ed4678fad3b84b0219825e78a41feaaba3739150529263ce8e53dde782.webp",
+    "url": "https://www.fut.gg/players/259532-joan-garcia/27-259532/",
+    "eaId": 259532,
+    "slug": "27-259532",
+    "price": 37250
   },
   {
     "name": "Pajor",
@@ -234,29 +221,42 @@
     "price": 784000
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 91,
+    "name": "Vicky López",
+    "rating": 84,
     "position": "RW",
-    "rarity": "Star Performer",
+    "rarity": "Rare",
     "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
-    "eaId": 84163723,
-    "slug": "27-84163723",
-    "price": 3445000
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-271446.7ae01100a08a56d8dc57cd326330b1cdccdc36a9b8e605bf89d7c8721983f15c.webp",
+    "url": "https://www.fut.gg/players/271446-vicky-lopez/27-271446/",
+    "eaId": 271446,
+    "slug": "27-271446",
+    "price": 9400
   },
   {
-    "name": "Sadiki",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Star Performer",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
-    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
-    "eaId": 50600878,
-    "slug": "27-50600878",
-    "price": 170000
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1577000
+  },
+  {
+    "name": "Kvaratskhelia",
+    "rating": 89,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-247635.020bc9584fbd23f49b36d7667071e6417635b2efb9f353ba1883e60dce5d6439.webp",
+    "url": "https://www.fut.gg/players/247635-khvicha-kvaratskhelia/27-247635/",
+    "eaId": 247635,
+    "slug": "27-247635",
+    "price": 77500
   }
 ]
