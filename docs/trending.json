@@ -130,19 +130,6 @@
     "price": 285000
   },
   {
-    "name": "Mariona",
-    "rating": 89,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
-    "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
-    "eaId": 237288,
-    "slug": "27-237288",
-    "price": 71500
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -154,6 +141,19 @@
     "eaId": 277643,
     "slug": "27-277643",
     "price": 198000
+  },
+  {
+    "name": "Mariona",
+    "rating": 89,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
+    "eaId": 237288,
+    "slug": "27-237288",
+    "price": 71500
   },
   {
     "name": "Pedri",
@@ -234,19 +234,6 @@
     "price": 230000
   },
   {
-    "name": "Pajor",
-    "rating": 89,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241846.8446ab3b436f7899e7c7a7ec9d28e21ec5c934d5df3e4ae9eb9d8adbd7e3240d.webp",
-    "url": "https://www.fut.gg/players/241846-ewa-pajor/27-241846/",
-    "eaId": 241846,
-    "slug": "27-241846",
-    "price": 173000
-  },
-  {
     "name": "Dumornay",
     "rating": 88,
     "position": "ST",
@@ -258,5 +245,18 @@
     "eaId": 265898,
     "slug": "27-265898",
     "price": 784000
+  },
+  {
+    "name": "Pajor",
+    "rating": 89,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241846.8446ab3b436f7899e7c7a7ec9d28e21ec5c934d5df3e4ae9eb9d8adbd7e3240d.webp",
+    "url": "https://www.fut.gg/players/241846-ewa-pajor/27-241846/",
+    "eaId": 241846,
+    "slug": "27-241846",
+    "price": 173000
   }
 ]
