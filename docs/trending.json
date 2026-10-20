@@ -117,19 +117,6 @@
     "price": 198000
   },
   {
-    "name": "Diao",
-    "rating": 84,
-    "position": "RM",
-    "rarity": "Future Stars",
-    "club": "Como 1907",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606972.d8d3597b2b580624b0f5a55336ba025260792c600c48e3c1a65121ad773e39dd.webp",
-    "url": "https://www.fut.gg/players/275324-assane-diao-diaoune/27-50606972/",
-    "eaId": 50606972,
-    "slug": "27-50606972",
-    "price": 39320
-  },
-  {
     "name": "Kika Nazareth",
     "rating": 83,
     "position": "CM",
@@ -143,17 +130,17 @@
     "price": 18500
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 91,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
-    "eaId": 84163723,
-    "slug": "27-84163723",
-    "price": 3445000
+    "name": "Stanway",
+    "rating": 86,
+    "position": "CDM",
+    "rarity": "Rare",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
+    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
+    "eaId": 243404,
+    "slug": "27-243404",
+    "price": 31750
   },
   {
     "name": "Cissè",
@@ -169,17 +156,17 @@
     "price": 109000
   },
   {
-    "name": "Stanway",
-    "rating": 86,
-    "position": "CDM",
-    "rarity": "Rare",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
-    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
-    "eaId": 243404,
-    "slug": "27-243404",
-    "price": 31750
+    "name": "Lamine Yamal",
+    "rating": 91,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
+    "eaId": 84163723,
+    "slug": "27-84163723",
+    "price": 3445000
   },
   {
     "name": "Joan García",
@@ -208,19 +195,6 @@
     "price": 482000
   },
   {
-    "name": "Sadiki",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Star Performer",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
-    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
-    "eaId": 50600878,
-    "slug": "27-50600878",
-    "price": 170000
-  },
-  {
     "name": "Vicky López",
     "rating": 84,
     "position": "RW",
@@ -232,6 +206,32 @@
     "eaId": 271446,
     "slug": "27-271446",
     "price": 9400
+  },
+  {
+    "name": "Diao",
+    "rating": 84,
+    "position": "RM",
+    "rarity": "Future Stars",
+    "club": "Como 1907",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606972.d8d3597b2b580624b0f5a55336ba025260792c600c48e3c1a65121ad773e39dd.webp",
+    "url": "https://www.fut.gg/players/275324-assane-diao-diaoune/27-50606972/",
+    "eaId": 50606972,
+    "slug": "27-50606972",
+    "price": 39320
+  },
+  {
+    "name": "Sadiki",
+    "rating": 85,
+    "position": "CDM",
+    "rarity": "Star Performer",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
+    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
+    "eaId": 50600878,
+    "slug": "27-50600878",
+    "price": 170000
   },
   {
     "name": "Patri Guijarro",
