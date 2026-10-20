@@ -130,6 +130,19 @@
     "price": 18500
   },
   {
+    "name": "Raphinha",
+    "rating": 88,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233419.1101f0e4f954127d6d28afda571f2e4af01a27316dd850c43d03c661d51816c5.webp",
+    "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
+    "eaId": 233419,
+    "slug": "27-233419",
+    "price": 482000
+  },
+  {
     "name": "Stanway",
     "rating": 86,
     "position": "CDM",
@@ -154,19 +167,6 @@
     "eaId": 259532,
     "slug": "27-259532",
     "price": 37250
-  },
-  {
-    "name": "Raphinha",
-    "rating": 88,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233419.1101f0e4f954127d6d28afda571f2e4af01a27316dd850c43d03c661d51816c5.webp",
-    "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
-    "eaId": 233419,
-    "slug": "27-233419",
-    "price": 482000
   },
   {
     "name": "Cissè",
@@ -195,19 +195,6 @@
     "price": 9400
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 91,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
-    "eaId": 84163723,
-    "slug": "27-84163723",
-    "price": 3445000
-  },
-  {
     "name": "Patri Guijarro",
     "rating": 88,
     "position": "CDM",
@@ -219,19 +206,6 @@
     "eaId": 237289,
     "slug": "27-237289",
     "price": 230000
-  },
-  {
-    "name": "Sadiki",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Star Performer",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
-    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
-    "eaId": 50600878,
-    "slug": "27-50600878",
-    "price": 170000
   },
   {
     "name": "Pajor",
@@ -258,5 +232,31 @@
     "eaId": 265898,
     "slug": "27-265898",
     "price": 784000
+  },
+  {
+    "name": "Lamine Yamal",
+    "rating": 91,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163723.e4574500798c53f301846756f1f903c096cf738ca81529f96ca0748ff171f66e.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-84163723/",
+    "eaId": 84163723,
+    "slug": "27-84163723",
+    "price": 3445000
+  },
+  {
+    "name": "Sadiki",
+    "rating": 85,
+    "position": "CDM",
+    "rarity": "Star Performer",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600878.69de7700651b69d20c1af7dc5a522438d056c768f5c4590d57813dc52a003040.webp",
+    "url": "https://www.fut.gg/players/269230-noah-sadiki/27-50600878/",
+    "eaId": 50600878,
+    "slug": "27-50600878",
+    "price": 170000
   }
 ]
