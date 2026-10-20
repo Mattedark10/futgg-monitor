@@ -1,5 +1,57 @@
 [
   {
+    "name": "Tsakiris",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "Future Stars",
+    "club": "SJ Earthquakes",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598166.14edba01d648a601eddc0dfda981bbcd24c022e7bd0d7df1c9e7266748c6239b.webp",
+    "url": "https://www.fut.gg/players/266518-niko-tsakiris/27-50598166/",
+    "eaId": 50598166,
+    "slug": "27-50598166",
+    "price": null
+  },
+  {
+    "name": "Duah",
+    "rating": 84,
+    "position": "CB",
+    "rarity": "Future Stars",
+    "club": "San Diego FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50409143.1309dec548e5a72a1f678e4171279bcf7a44fb8f10a3a4652bdfd1a7fda563f0.webp",
+    "url": "https://www.fut.gg/players/77495-manu-duah/27-50409143/",
+    "eaId": 50409143,
+    "slug": "27-50409143",
+    "price": null
+  },
+  {
+    "name": "Johnson",
+    "rating": 84,
+    "position": "LB",
+    "rarity": "Future Stars",
+    "club": "Whitecaps FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50408683.b6814e0cb4c75b0bc8c50eafcad11f6ade8ed312988b4878abe37af3ca5ca00f.webp",
+    "url": "https://www.fut.gg/players/77035-tate-johnson/27-50408683/",
+    "eaId": 50408683,
+    "slug": "27-50408683",
+    "price": null
+  },
+  {
+    "name": "Westfield",
+    "rating": 84,
+    "position": "RB",
+    "rarity": "Future Stars",
+    "club": "Philadelphia",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50409131.2a7c347b6457c9f5da2fa14485a4e0cfe0f229b8e0f28f872575b41b1c04ece7.webp",
+    "url": "https://www.fut.gg/players/77483-frankie-westfield/27-50409131/",
+    "eaId": 50409131,
+    "slug": "27-50409131",
+    "price": null
+  },
+  {
     "name": "Xavi Espart",
     "rating": 85,
     "position": "LB",
@@ -91,19 +143,6 @@
     "price": 71500
   },
   {
-    "name": "Pedri",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
-    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
-    "eaId": 251854,
-    "slug": "27-251854",
-    "price": 225000
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -117,17 +156,17 @@
     "price": 198000
   },
   {
-    "name": "Raphinha",
-    "rating": 88,
-    "position": "LW",
+    "name": "Pedri",
+    "rating": 90,
+    "position": "CM",
     "rarity": "Rare",
     "club": "FC Barcelona",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233419.1101f0e4f954127d6d28afda571f2e4af01a27316dd850c43d03c661d51816c5.webp",
-    "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
-    "eaId": 233419,
-    "slug": "27-233419",
-    "price": 482000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
+    "eaId": 251854,
+    "slug": "27-251854",
+    "price": 225000
   },
   {
     "name": "Cissè",
@@ -141,6 +180,19 @@
     "eaId": 50609974,
     "slug": "27-50609974",
     "price": 109000
+  },
+  {
+    "name": "Raphinha",
+    "rating": 88,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233419.1101f0e4f954127d6d28afda571f2e4af01a27316dd850c43d03c661d51816c5.webp",
+    "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
+    "eaId": 233419,
+    "slug": "27-233419",
+    "price": 482000
   },
   {
     "name": "Kika Nazareth",
@@ -182,19 +234,6 @@
     "price": 230000
   },
   {
-    "name": "Joan García",
-    "rating": 86,
-    "position": "GK",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259532.e0add8ed4678fad3b84b0219825e78a41feaaba3739150529263ce8e53dde782.webp",
-    "url": "https://www.fut.gg/players/259532-joan-garcia/27-259532/",
-    "eaId": 259532,
-    "slug": "27-259532",
-    "price": 37250
-  },
-  {
     "name": "Pajor",
     "rating": 89,
     "position": "ST",
@@ -219,44 +258,5 @@
     "eaId": 265898,
     "slug": "27-265898",
     "price": 784000
-  },
-  {
-    "name": "Vicky López",
-    "rating": 84,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-271446.7ae01100a08a56d8dc57cd326330b1cdccdc36a9b8e605bf89d7c8721983f15c.webp",
-    "url": "https://www.fut.gg/players/271446-vicky-lopez/27-271446/",
-    "eaId": 271446,
-    "slug": "27-271446",
-    "price": 9400
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1577000
-  },
-  {
-    "name": "Kvaratskhelia",
-    "rating": 89,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-247635.020bc9584fbd23f49b36d7667071e6417635b2efb9f353ba1883e60dce5d6439.webp",
-    "url": "https://www.fut.gg/players/247635-khvicha-kvaratskhelia/27-247635/",
-    "eaId": 247635,
-    "slug": "27-247635",
-    "price": 77500
   }
 ]
