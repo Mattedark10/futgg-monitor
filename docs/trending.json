@@ -91,19 +91,6 @@
     "price": 256000
   },
   {
-    "name": "Scott",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "AFC Bournemouth",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
-    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
-    "eaId": 50592947,
-    "slug": "27-50592947",
-    "price": 251000
-  },
-  {
     "name": "Manzambi",
     "rating": 85,
     "position": "CM",
@@ -115,6 +102,19 @@
     "eaId": 50608342,
     "slug": "27-50608342",
     "price": 55550
+  },
+  {
+    "name": "Scott",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "AFC Bournemouth",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592947.529b201c5ea3fba7d389c6aa30c637ee5d3765615c70cb2792444bc7b55a3481.webp",
+    "url": "https://www.fut.gg/players/261299-alex-scott/27-50592947/",
+    "eaId": 50592947,
+    "slug": "27-50592947",
+    "price": 251000
   },
   {
     "name": "Salma Paralluelo",
@@ -208,19 +208,6 @@
     "price": 15500
   },
   {
-    "name": "Stanway",
-    "rating": 86,
-    "position": "CDM",
-    "rarity": "Rare",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
-    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
-    "eaId": 243404,
-    "slug": "27-243404",
-    "price": 29250
-  },
-  {
     "name": "Patri Guijarro",
     "rating": 88,
     "position": "CDM",
@@ -234,17 +221,17 @@
     "price": 210000
   },
   {
-    "name": "Ferran Torres",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "Ones to Watch",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50573109.622d6c607090e4a5cf0cc080a458e9f197098b02d816ed65dcad4b639d903d61.webp",
-    "url": "https://www.fut.gg/players/241461-ferran-torres/27-50573109/",
-    "eaId": 50573109,
-    "slug": "27-50573109",
-    "price": null
+    "name": "Stanway",
+    "rating": 86,
+    "position": "CDM",
+    "rarity": "Rare",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
+    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
+    "eaId": 243404,
+    "slug": "27-243404",
+    "price": 29250
   },
   {
     "name": "Kvaratskhelia",
@@ -258,5 +245,18 @@
     "eaId": 247635,
     "slug": "27-247635",
     "price": 81500
+  },
+  {
+    "name": "Ferran Torres",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "Ones to Watch",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50573109.622d6c607090e4a5cf0cc080a458e9f197098b02d816ed65dcad4b639d903d61.webp",
+    "url": "https://www.fut.gg/players/241461-ferran-torres/27-50573109/",
+    "eaId": 50573109,
+    "slug": "27-50573109",
+    "price": null
   }
 ]
