@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Jackson",
-    "rating": 84,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "NC Courage",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609281.140af2c47684afc29ea4a5c4d8cdc8d6b1ce7d82edb25c33fd3f2b908b628f0b.webp",
-    "url": "https://www.fut.gg/players/277633-riley-jackson/27-50609281/",
-    "eaId": 50609281,
-    "slug": "27-50609281",
-    "price": null
-  },
-  {
     "name": "Griezmann",
     "rating": 85,
     "position": "CAM",
@@ -49,6 +36,19 @@
     "url": "https://www.fut.gg/players/194765-antoine-griezmann/27-50526413/",
     "eaId": 50526413,
     "slug": "27-50526413",
+    "price": null
+  },
+  {
+    "name": "Jackson",
+    "rating": 84,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "NC Courage",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609281.140af2c47684afc29ea4a5c4d8cdc8d6b1ce7d82edb25c33fd3f2b908b628f0b.webp",
+    "url": "https://www.fut.gg/players/277633-riley-jackson/27-50609281/",
+    "eaId": 50609281,
+    "slug": "27-50609281",
     "price": null
   },
   {
@@ -65,19 +65,6 @@
     "price": null
   },
   {
-    "name": "Rader",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "Future Stars",
-    "club": "Houston Dash",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50414682.9145e37f59104eeed5f12b1ffef53e3e11785159d77f5c28ffb2df69bd69714f.webp",
-    "url": "https://www.fut.gg/players/83034-kat-rader/27-50414682/",
-    "eaId": 50414682,
-    "slug": "27-50414682",
-    "price": null
-  },
-  {
     "name": "Pedro Neto",
     "rating": 83,
     "position": "RM",
@@ -88,6 +75,19 @@
     "url": "https://www.fut.gg/players/238616-pedro-neto/27-50570264/",
     "eaId": 50570264,
     "slug": "27-50570264",
+    "price": null
+  },
+  {
+    "name": "Rader",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "Future Stars",
+    "club": "Houston Dash",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50414682.9145e37f59104eeed5f12b1ffef53e3e11785159d77f5c28ffb2df69bd69714f.webp",
+    "url": "https://www.fut.gg/players/83034-kat-rader/27-50414682/",
+    "eaId": 50414682,
+    "slug": "27-50414682",
     "price": null
   },
   {
@@ -130,30 +130,17 @@
     "price": null
   },
   {
-    "name": "Xavi Espart",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Future Stars",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
-    "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
-    "eaId": 50413511,
-    "slug": "27-50413511",
-    "price": 38950
-  },
-  {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.412e17c1c8ea7ca2e9ef22ce32e054ce18ba71f138160cf09856a21b080ed55b.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 84500
+    "name": "Gómez",
+    "rating": 80,
+    "position": "RM",
+    "rarity": "Team of the week",
+    "club": "Brighton",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600926.631640b72f83044d08b04f52dc2112135ccbb36e1244f94289a039c0b7068c3d.webp",
+    "url": "https://www.fut.gg/players/269278-diego-alexander-gomez/27-50600926/",
+    "eaId": 50600926,
+    "slug": "27-50600926",
+    "price": null
   },
   {
     "name": "Ferran Torres",
@@ -182,17 +169,30 @@
     "price": null
   },
   {
-    "name": "Gómez",
-    "rating": 80,
-    "position": "RM",
-    "rarity": "Team of the week",
-    "club": "Brighton",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600926.631640b72f83044d08b04f52dc2112135ccbb36e1244f94289a039c0b7068c3d.webp",
-    "url": "https://www.fut.gg/players/269278-diego-alexander-gomez/27-50600926/",
-    "eaId": 50600926,
-    "slug": "27-50600926",
-    "price": null
+    "name": "Xavi Espart",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Future Stars",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
+    "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
+    "eaId": 50413511,
+    "slug": "27-50413511",
+    "price": 38950
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.412e17c1c8ea7ca2e9ef22ce32e054ce18ba71f138160cf09856a21b080ed55b.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 84500
   },
   {
     "name": "Aitana Bonmatí",
@@ -208,30 +208,17 @@
     "price": 256000
   },
   {
-    "name": "Manzambi",
+    "name": "Oyarzabal",
     "rating": 85,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
-    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
-    "eaId": 50608342,
-    "slug": "27-50608342",
-    "price": 55550
-  },
-  {
-    "name": "Salma Paralluelo",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.8c0b830d573fabd9c4578db1004d7dd6b8396d690bebda5e6b26b8d617d07a57.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 290000
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Real Sociedad",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561790.040d3890cffd92e67f9dd3f4acc53f74621f86c92a463036e896b6f5692bf61f.webp",
+    "url": "https://www.fut.gg/players/230142-oyarzabal/27-50561790/",
+    "eaId": 50561790,
+    "slug": "27-50561790",
+    "price": null
   },
   {
     "name": "Maza",
@@ -247,16 +234,29 @@
     "price": null
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 199000
+    "name": "Manzambi",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
+    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
+    "eaId": 50608342,
+    "slug": "27-50608342",
+    "price": 55550
+  },
+  {
+    "name": "Pablo Rodríguez",
+    "rating": 80,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "Lech Poznań",
+    "league": "PKO Bank Polski Ekstraklasa",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590753.606eac5d896d69db98406a2441f2fd1f2a59041580d69a025d8fc6f729dc4ae7.webp",
+    "url": "https://www.fut.gg/players/259105-pablo-rodriguez/27-50590753/",
+    "eaId": 50590753,
+    "slug": "27-50590753",
+    "price": null
   }
 ]
