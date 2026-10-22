@@ -65,19 +65,6 @@
     "price": null
   },
   {
-    "name": "Saint-Maximin",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "FC Heritage",
-    "club": "Charlotte FC",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548036.0bfda5a794bf611fef4a989f75117d5d9d9223e2069de0ad9c5196870f222ce8.webp",
-    "url": "https://www.fut.gg/players/216388-allan-saint-maximin/27-50548036/",
-    "eaId": 50548036,
-    "slug": "27-50548036",
-    "price": null
-  },
-  {
     "name": "Rolfö",
     "rating": 85,
     "position": "CM",
@@ -88,6 +75,19 @@
     "url": "https://www.fut.gg/players/227013-fridolina-rolfo/27-50558661/",
     "eaId": 50558661,
     "slug": "27-50558661",
+    "price": null
+  },
+  {
+    "name": "Saint-Maximin",
+    "rating": 85,
+    "position": "LW",
+    "rarity": "FC Heritage",
+    "club": "Charlotte FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548036.0bfda5a794bf611fef4a989f75117d5d9d9223e2069de0ad9c5196870f222ce8.webp",
+    "url": "https://www.fut.gg/players/216388-allan-saint-maximin/27-50548036/",
+    "eaId": 50548036,
+    "slug": "27-50548036",
     "price": null
   },
   {
@@ -104,19 +104,6 @@
     "price": null
   },
   {
-    "name": "Insigne",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "FC Heritage",
-    "club": "Sampdoria",
-    "league": "Serie BKT",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50529867.a5ccfc7c04ec075d644848b1a6b653d32e09703c0c2d43604ce866eedf73ad04.webp",
-    "url": "https://www.fut.gg/players/198219-lorenzo-insigne/27-50529867/",
-    "eaId": 50529867,
-    "slug": "27-50529867",
-    "price": null
-  },
-  {
     "name": "Witsel",
     "rating": 84,
     "position": "CDM",
@@ -127,6 +114,19 @@
     "url": "https://www.fut.gg/players/177413-axel-witsel/27-50509061/",
     "eaId": 50509061,
     "slug": "27-50509061",
+    "price": null
+  },
+  {
+    "name": "Insigne",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "FC Heritage",
+    "club": "Sampdoria",
+    "league": "Serie BKT",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50529867.a5ccfc7c04ec075d644848b1a6b653d32e09703c0c2d43604ce866eedf73ad04.webp",
+    "url": "https://www.fut.gg/players/198219-lorenzo-insigne/27-50529867/",
+    "eaId": 50529867,
+    "slug": "27-50529867",
     "price": null
   },
   {
@@ -143,19 +143,6 @@
     "price": null
   },
   {
-    "name": "Fekir",
-    "rating": 85,
-    "position": "CAM",
-    "rarity": "FC Heritage",
-    "club": "Abha",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548242.3a1b32593789a189df0c5c2203519b2c955bf24c68707693694a8597fcfa7f9b.webp",
-    "url": "https://www.fut.gg/players/216594-nabil-fekir/27-50548242/",
-    "eaId": 50548242,
-    "slug": "27-50548242",
-    "price": null
-  },
-  {
     "name": "Athenea",
     "rating": 85,
     "position": "RW",
@@ -166,6 +153,19 @@
     "url": "https://www.fut.gg/players/259372-athenea/27-50591020/",
     "eaId": 50591020,
     "slug": "27-50591020",
+    "price": null
+  },
+  {
+    "name": "Fekir",
+    "rating": 85,
+    "position": "CAM",
+    "rarity": "FC Heritage",
+    "club": "Abha",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548242.3a1b32593789a189df0c5c2203519b2c955bf24c68707693694a8597fcfa7f9b.webp",
+    "url": "https://www.fut.gg/players/216594-nabil-fekir/27-50548242/",
+    "eaId": 50548242,
+    "slug": "27-50548242",
     "price": null
   },
   {
@@ -195,19 +195,6 @@
     "price": null
   },
   {
-    "name": "Werner",
-    "rating": 84,
-    "position": "LM",
-    "rarity": "FC Heritage",
-    "club": "SJ Earthquakes",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50543836.d80f6096e69b6d26d8d311f5c18e870f0fa1b23eaea3df1c38875f3746a22460.webp",
-    "url": "https://www.fut.gg/players/212188-timo-werner/27-50543836/",
-    "eaId": 50543836,
-    "slug": "27-50543836",
-    "price": null
-  },
-  {
     "name": "Swanson",
     "rating": 86,
     "position": "LM",
@@ -218,6 +205,19 @@
     "url": "https://www.fut.gg/players/232073-mallory-swanson/27-50563721/",
     "eaId": 50563721,
     "slug": "27-50563721",
+    "price": null
+  },
+  {
+    "name": "Werner",
+    "rating": 84,
+    "position": "LM",
+    "rarity": "FC Heritage",
+    "club": "SJ Earthquakes",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50543836.d80f6096e69b6d26d8d311f5c18e870f0fa1b23eaea3df1c38875f3746a22460.webp",
+    "url": "https://www.fut.gg/players/212188-timo-werner/27-50543836/",
+    "eaId": 50543836,
+    "slug": "27-50543836",
     "price": null
   },
   {
@@ -234,6 +234,19 @@
     "price": null
   },
   {
+    "name": "Gal",
+    "rating": 61,
+    "position": "GK",
+    "rarity": "Rare",
+    "club": "Chicago Fire FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259915.f8de5f7afac7b74098245b2268bea3d9748692c75edce9a765d4dde9422c4b6c.webp",
+    "url": "https://www.fut.gg/players/259915-jeffrey-gal/27-259915/",
+    "eaId": 259915,
+    "slug": "27-259915",
+    "price": null
+  },
+  {
     "name": "Silas",
     "rating": 85,
     "position": "ST",
@@ -244,19 +257,6 @@
     "url": "https://www.fut.gg/players/245940-silas/27-50577588/",
     "eaId": 50577588,
     "slug": "27-50577588",
-    "price": null
-  },
-  {
-    "name": "Areola",
-    "rating": 84,
-    "position": "GK",
-    "rarity": "FC Heritage",
-    "club": "West Ham",
-    "league": "EFL Championship",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50524753.5cc274c1298b3a9dc3776f90ae4f1c999bd1b826e7eaf8ff90d73abeb4fe2a1b.webp",
-    "url": "https://www.fut.gg/players/193105-alphonse-areola/27-50524753/",
-    "eaId": 50524753,
-    "slug": "27-50524753",
     "price": null
   }
 ]
