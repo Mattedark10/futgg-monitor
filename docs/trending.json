@@ -169,17 +169,17 @@
     "price": null
   },
   {
-    "name": "Xavi Espart",
+    "name": "Oyarzabal",
     "rating": 85,
-    "position": "LB",
-    "rarity": "Future Stars",
-    "club": "FC Barcelona",
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Real Sociedad",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
-    "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
-    "eaId": 50413511,
-    "slug": "27-50413511",
-    "price": 38950
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561790.040d3890cffd92e67f9dd3f4acc53f74621f86c92a463036e896b6f5692bf61f.webp",
+    "url": "https://www.fut.gg/players/230142-oyarzabal/27-50561790/",
+    "eaId": 50561790,
+    "slug": "27-50561790",
+    "price": null
   },
   {
     "name": "Karchaoui",
@@ -195,17 +195,17 @@
     "price": 84500
   },
   {
-    "name": "Oyarzabal",
+    "name": "Xavi Espart",
     "rating": 85,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Real Sociedad",
+    "position": "LB",
+    "rarity": "Future Stars",
+    "club": "FC Barcelona",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561790.040d3890cffd92e67f9dd3f4acc53f74621f86c92a463036e896b6f5692bf61f.webp",
-    "url": "https://www.fut.gg/players/230142-oyarzabal/27-50561790/",
-    "eaId": 50561790,
-    "slug": "27-50561790",
-    "price": null
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413511.47490212818e976ef9412e866d2b54252a2a7e3b9fb125f725dac04ab1c5999e.webp",
+    "url": "https://www.fut.gg/players/81863-xavi-espart/27-50413511/",
+    "eaId": 50413511,
+    "slug": "27-50413511",
+    "price": 38950
   },
   {
     "name": "Maza",
@@ -234,19 +234,6 @@
     "price": 256000
   },
   {
-    "name": "Pablo Rodríguez",
-    "rating": 80,
-    "position": "CAM",
-    "rarity": "Team of the week",
-    "club": "Lech Poznań",
-    "league": "PKO Bank Polski Ekstraklasa",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590753.606eac5d896d69db98406a2441f2fd1f2a59041580d69a025d8fc6f729dc4ae7.webp",
-    "url": "https://www.fut.gg/players/259105-pablo-rodriguez/27-50590753/",
-    "eaId": 50590753,
-    "slug": "27-50590753",
-    "price": null
-  },
-  {
     "name": "Bremer",
     "rating": 82,
     "position": "ST",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/226355-pauline-bremer/27-50558003/",
     "eaId": 50558003,
     "slug": "27-50558003",
+    "price": null
+  },
+  {
+    "name": "Stanković",
+    "rating": 80,
+    "position": "GK",
+    "rarity": "Team of the week",
+    "club": "Venezia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600919.b733dc15b8ad454abb4dcc7acdf09a7ef4076726f748a61a6d4d51b5b1c8e8a7.webp",
+    "url": "https://www.fut.gg/players/269271-filip-stankovic/27-50600919/",
+    "eaId": 50600919,
+    "slug": "27-50600919",
     "price": null
   }
 ]
