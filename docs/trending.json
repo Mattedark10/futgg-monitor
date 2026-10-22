@@ -195,19 +195,6 @@
     "price": 84500
   },
   {
-    "name": "Aitana Bonmatí",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
-    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
-    "eaId": 241667,
-    "slug": "27-241667",
-    "price": 256000
-  },
-  {
     "name": "Oyarzabal",
     "rating": 85,
     "position": "ST",
@@ -234,17 +221,17 @@
     "price": null
   },
   {
-    "name": "Manzambi",
-    "rating": 85,
+    "name": "Aitana Bonmatí",
+    "rating": 90,
     "position": "CM",
-    "rarity": "Future Stars",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608342.f51161e3fe08365eb0d953bda06d1490beaa141499045a08998a730a320fd6c7.webp",
-    "url": "https://www.fut.gg/players/276694-johan-manzambi/27-50608342/",
-    "eaId": 50608342,
-    "slug": "27-50608342",
-    "price": 55550
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 256000
   },
   {
     "name": "Pablo Rodríguez",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/259105-pablo-rodriguez/27-50590753/",
     "eaId": 50590753,
     "slug": "27-50590753",
+    "price": null
+  },
+  {
+    "name": "Bremer",
+    "rating": 82,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "1. FC Köln",
+    "league": "Google Pixel Frauen-Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50558003.c12e9e3bd3982ee73d38c4567d0edb789cc86baa332db06bef0cf803e834147c.webp",
+    "url": "https://www.fut.gg/players/226355-pauline-bremer/27-50558003/",
+    "eaId": 50558003,
+    "slug": "27-50558003",
     "price": null
   }
 ]
