@@ -1,18 +1,5 @@
 [
   {
-    "name": "Diomande",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "Team of the week",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67186876.61c17abc21c2d96193654ac50edf0e8ad5015aa9a031311decc3c87ec891c3c5.webp",
-    "url": "https://www.fut.gg/players/78012-yan-diomande/27-67186876/",
-    "eaId": 67186876,
-    "slug": "27-67186876",
-    "price": null
-  },
-  {
     "name": "Rashford",
     "rating": 86,
     "position": "LW",
@@ -23,19 +10,6 @@
     "url": "https://www.fut.gg/players/231677-marcus-rashford/27-50563325/",
     "eaId": 50563325,
     "slug": "27-50563325",
-    "price": null
-  },
-  {
-    "name": "James",
-    "rating": 86,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Chelsea",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596897.7f8d1077de3ac9d98965414a89302fb33a0e90072eda3f4aae8b169c47ae96e9.webp",
-    "url": "https://www.fut.gg/players/265249-lauren-james/27-50596897/",
-    "eaId": 50596897,
-    "slug": "27-50596897",
     "price": null
   },
   {
@@ -52,29 +26,16 @@
     "price": null
   },
   {
-    "name": "Griezmann",
+    "name": "Diomande",
     "rating": 85,
-    "position": "CAM",
+    "position": "LW",
     "rarity": "Team of the week",
-    "club": "Orlando City",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50526413.3d8fc9dba1527b13ee6a4a4af6f9199a6ddd8dee4fe71218c5e6536ab0c6c6db.webp",
-    "url": "https://www.fut.gg/players/194765-antoine-griezmann/27-50526413/",
-    "eaId": 50526413,
-    "slug": "27-50526413",
-    "price": null
-  },
-  {
-    "name": "Salah",
-    "rating": 87,
-    "position": "RM",
-    "rarity": "Fantasy FUT ON",
-    "club": "Trabzonspor",
-    "league": "Trendyol Süper Lig",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84095411.27a211fccb89e13a4ef2f6095579fa88ba341e43d8cc712f0ee16321500f2a37.webp",
-    "url": "https://www.fut.gg/players/209331-mohamed-salah/27-84095411/",
-    "eaId": 84095411,
-    "slug": "27-84095411",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67186876.61c17abc21c2d96193654ac50edf0e8ad5015aa9a031311decc3c87ec891c3c5.webp",
+    "url": "https://www.fut.gg/players/78012-yan-diomande/27-67186876/",
+    "eaId": 67186876,
+    "slug": "27-67186876",
     "price": null
   },
   {
@@ -104,16 +65,16 @@
     "price": null
   },
   {
-    "name": "Pedro Neto",
-    "rating": 83,
-    "position": "RM",
-    "rarity": "Team of the week",
-    "club": "Chelsea",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50570264.1114225aa6c158fc7e4f6c1cd03ecb2b16eba1ac0ec46a09e38c897c3b651d74.webp",
-    "url": "https://www.fut.gg/players/238616-pedro-neto/27-50570264/",
-    "eaId": 50570264,
-    "slug": "27-50570264",
+    "name": "St. Juste",
+    "rating": 84,
+    "position": "CB",
+    "rarity": "FC Heritage",
+    "club": "Feyenoord",
+    "league": "Eredivisie",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50558501.ea0ddec0e3ae5e5a036c4565fe7498375f7a40f23d0d3b8ea0631fac9b8e9161.webp",
+    "url": "https://www.fut.gg/players/226853-jeremiah-st-juste/27-50558501/",
+    "eaId": 50558501,
+    "slug": "27-50558501",
     "price": null
   },
   {
@@ -130,19 +91,6 @@
     "price": null
   },
   {
-    "name": "Díaz",
-    "rating": 89,
-    "position": "LM",
-    "rarity": "Team of the week",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67349948.32b69ed425b199ac8634597ea1f00644eda55b62a79bf9419da5e68cc4dae10e.webp",
-    "url": "https://www.fut.gg/players/241084-luis-diaz/27-67349948/",
-    "eaId": 67349948,
-    "slug": "27-67349948",
-    "price": null
-  },
-  {
     "name": "Olga Carmona",
     "rating": 85,
     "position": "LB",
@@ -156,55 +104,29 @@
     "price": null
   },
   {
-    "name": "Jackson",
-    "rating": 84,
-    "position": "CM",
-    "rarity": "Future Stars",
-    "club": "NC Courage",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609281.140af2c47684afc29ea4a5c4d8cdc8d6b1ce7d82edb25c33fd3f2b908b628f0b.webp",
-    "url": "https://www.fut.gg/players/277633-riley-jackson/27-50609281/",
-    "eaId": 50609281,
-    "slug": "27-50609281",
+    "name": "James",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Chelsea",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596897.7f8d1077de3ac9d98965414a89302fb33a0e90072eda3f4aae8b169c47ae96e9.webp",
+    "url": "https://www.fut.gg/players/265249-lauren-james/27-50596897/",
+    "eaId": 50596897,
+    "slug": "27-50596897",
     "price": null
   },
   {
-    "name": "St. Juste",
-    "rating": 84,
-    "position": "CB",
-    "rarity": "FC Heritage",
-    "club": "Feyenoord",
-    "league": "Eredivisie",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50558501.ea0ddec0e3ae5e5a036c4565fe7498375f7a40f23d0d3b8ea0631fac9b8e9161.webp",
-    "url": "https://www.fut.gg/players/226853-jeremiah-st-juste/27-50558501/",
-    "eaId": 50558501,
-    "slug": "27-50558501",
-    "price": null
-  },
-  {
-    "name": "Insigne",
-    "rating": 84,
+    "name": "Griezmann",
+    "rating": 85,
     "position": "CAM",
-    "rarity": "FC Heritage",
-    "club": "Sampdoria",
-    "league": "Serie BKT",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50529867.a5ccfc7c04ec075d644848b1a6b653d32e09703c0c2d43604ce866eedf73ad04.webp",
-    "url": "https://www.fut.gg/players/198219-lorenzo-insigne/27-50529867/",
-    "eaId": 50529867,
-    "slug": "27-50529867",
-    "price": null
-  },
-  {
-    "name": "Rader",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "Future Stars",
-    "club": "Houston Dash",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50414682.9145e37f59104eeed5f12b1ffef53e3e11785159d77f5c28ffb2df69bd69714f.webp",
-    "url": "https://www.fut.gg/players/83034-kat-rader/27-50414682/",
-    "eaId": 50414682,
-    "slug": "27-50414682",
+    "rarity": "Team of the week",
+    "club": "Orlando City",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50526413.3d8fc9dba1527b13ee6a4a4af6f9199a6ddd8dee4fe71218c5e6536ab0c6c6db.webp",
+    "url": "https://www.fut.gg/players/194765-antoine-griezmann/27-50526413/",
+    "eaId": 50526413,
+    "slug": "27-50526413",
     "price": null
   },
   {
@@ -221,6 +143,19 @@
     "price": null
   },
   {
+    "name": "Insigne",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "FC Heritage",
+    "club": "Sampdoria",
+    "league": "Serie BKT",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50529867.a5ccfc7c04ec075d644848b1a6b653d32e09703c0c2d43604ce866eedf73ad04.webp",
+    "url": "https://www.fut.gg/players/198219-lorenzo-insigne/27-50529867/",
+    "eaId": 50529867,
+    "slug": "27-50529867",
+    "price": null
+  },
+  {
     "name": "Witsel",
     "rating": 84,
     "position": "CDM",
@@ -231,6 +166,32 @@
     "url": "https://www.fut.gg/players/177413-axel-witsel/27-50509061/",
     "eaId": 50509061,
     "slug": "27-50509061",
+    "price": null
+  },
+  {
+    "name": "Pedro Neto",
+    "rating": 83,
+    "position": "RM",
+    "rarity": "Team of the week",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50570264.1114225aa6c158fc7e4f6c1cd03ecb2b16eba1ac0ec46a09e38c897c3b651d74.webp",
+    "url": "https://www.fut.gg/players/238616-pedro-neto/27-50570264/",
+    "eaId": 50570264,
+    "slug": "27-50570264",
+    "price": null
+  },
+  {
+    "name": "Díaz",
+    "rating": 89,
+    "position": "LM",
+    "rarity": "Team of the week",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67349948.32b69ed425b199ac8634597ea1f00644eda55b62a79bf9419da5e68cc4dae10e.webp",
+    "url": "https://www.fut.gg/players/241084-luis-diaz/27-67349948/",
+    "eaId": 67349948,
+    "slug": "27-67349948",
     "price": null
   },
   {
@@ -247,6 +208,19 @@
     "price": null
   },
   {
+    "name": "Jackson",
+    "rating": 84,
+    "position": "CM",
+    "rarity": "Future Stars",
+    "club": "NC Courage",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609281.140af2c47684afc29ea4a5c4d8cdc8d6b1ce7d82edb25c33fd3f2b908b628f0b.webp",
+    "url": "https://www.fut.gg/players/277633-riley-jackson/27-50609281/",
+    "eaId": 50609281,
+    "slug": "27-50609281",
+    "price": null
+  },
+  {
     "name": "De Gea",
     "rating": 84,
     "position": "GK",
@@ -257,6 +231,32 @@
     "url": "https://www.fut.gg/players/193080-de-gea/27-50524728/",
     "eaId": 50524728,
     "slug": "27-50524728",
+    "price": null
+  },
+  {
+    "name": "Athenea",
+    "rating": 85,
+    "position": "RW",
+    "rarity": "FC Heritage",
+    "club": "Real Madrid",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50591020.82786faa5dbdb439c3638101299d720112e17f0efdff786c9eed9c4aa0808829.webp",
+    "url": "https://www.fut.gg/players/259372-athenea/27-50591020/",
+    "eaId": 50591020,
+    "slug": "27-50591020",
+    "price": null
+  },
+  {
+    "name": "Allan",
+    "rating": 84,
+    "position": "CDM",
+    "rarity": "FC Heritage",
+    "club": "Botafogo",
+    "league": "CONMEBOL Sudamericana",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50531562.e5c6dcecbdf1c4b1006323dab7f34ad669aa5ecf177c69fa416fcb09019adc84.webp",
+    "url": "https://www.fut.gg/players/199914-allan/27-50531562/",
+    "eaId": 50531562,
+    "slug": "27-50531562",
     "price": null
   }
 ]
