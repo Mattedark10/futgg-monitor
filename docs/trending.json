@@ -143,6 +143,19 @@
     "price": null
   },
   {
+    "name": "Mandžukić",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84067863.3c421318967b3911c3952b272d686272dbd94df82e9f6e6eb560134c902f0359.webp",
+    "url": "https://www.fut.gg/players/181783-mario-mandzukic/27-84067863/",
+    "eaId": 84067863,
+    "slug": "27-84067863",
+    "price": null
+  },
+  {
     "name": "Stam",
     "rating": 88,
     "position": "CDM",
@@ -156,16 +169,16 @@
     "price": null
   },
   {
-    "name": "Mandžukić",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84067863.3c421318967b3911c3952b272d686272dbd94df82e9f6e6eb560134c902f0359.webp",
-    "url": "https://www.fut.gg/players/181783-mario-mandzukic/27-84067863/",
-    "eaId": 84067863,
-    "slug": "27-84067863",
+    "name": "Tolisso",
+    "rating": 86,
+    "position": "CAM",
+    "rarity": "Ultimate Scream",
+    "club": "OL",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84105763.659cbd6babffafd92f42f444711ba5ccbd25286fcab0b2651ced8d6bb2b6ab44.webp",
+    "url": "https://www.fut.gg/players/219683-corentin-tolisso/27-84105763/",
+    "eaId": 84105763,
+    "slug": "27-84105763",
     "price": null
   },
   {
@@ -192,19 +205,6 @@
     "url": "https://www.fut.gg/players/1201-gianfranco-zola/27-83887281/",
     "eaId": 83887281,
     "slug": "27-83887281",
-    "price": null
-  },
-  {
-    "name": "Tolisso",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "OL",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84105763.659cbd6babffafd92f42f444711ba5ccbd25286fcab0b2651ced8d6bb2b6ab44.webp",
-    "url": "https://www.fut.gg/players/219683-corentin-tolisso/27-84105763/",
-    "eaId": 84105763,
-    "slug": "27-84105763",
     "price": null
   },
   {
