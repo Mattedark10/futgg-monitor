@@ -78,19 +78,6 @@
     "price": null
   },
   {
-    "name": "Saint-Maximin",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "FC Heritage",
-    "club": "Charlotte FC",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548036.0bfda5a794bf611fef4a989f75117d5d9d9223e2069de0ad9c5196870f222ce8.webp",
-    "url": "https://www.fut.gg/players/216388-allan-saint-maximin/27-50548036/",
-    "eaId": 50548036,
-    "slug": "27-50548036",
-    "price": null
-  },
-  {
     "name": "Sánchez",
     "rating": 85,
     "position": "ST",
@@ -101,6 +88,19 @@
     "url": "https://www.fut.gg/players/184941-alexis-sanchez/27-50516589/",
     "eaId": 50516589,
     "slug": "27-50516589",
+    "price": null
+  },
+  {
+    "name": "Saint-Maximin",
+    "rating": 85,
+    "position": "LW",
+    "rarity": "FC Heritage",
+    "club": "Charlotte FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548036.0bfda5a794bf611fef4a989f75117d5d9d9223e2069de0ad9c5196870f222ce8.webp",
+    "url": "https://www.fut.gg/players/216388-allan-saint-maximin/27-50548036/",
+    "eaId": 50548036,
+    "slug": "27-50548036",
     "price": null
   },
   {
@@ -221,19 +221,6 @@
     "price": null
   },
   {
-    "name": "Lala",
-    "rating": 84,
-    "position": "RB",
-    "rarity": "FC Heritage",
-    "club": "Stade Brestois 29",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50535753.d6d4bf1a85f755457540c1c57f168fd7b645e6e5abf8a915aa699624edbc190b.webp",
-    "url": "https://www.fut.gg/players/204105-kenny-lala/27-50535753/",
-    "eaId": 50535753,
-    "slug": "27-50535753",
-    "price": null
-  },
-  {
     "name": "Gal",
     "rating": 61,
     "position": "GK",
@@ -244,6 +231,19 @@
     "url": "https://www.fut.gg/players/259915-jeffrey-gal/27-259915/",
     "eaId": 259915,
     "slug": "27-259915",
+    "price": null
+  },
+  {
+    "name": "Lala",
+    "rating": 84,
+    "position": "RB",
+    "rarity": "FC Heritage",
+    "club": "Stade Brestois 29",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50535753.d6d4bf1a85f755457540c1c57f168fd7b645e6e5abf8a915aa699624edbc190b.webp",
+    "url": "https://www.fut.gg/players/204105-kenny-lala/27-50535753/",
+    "eaId": 50535753,
+    "slug": "27-50535753",
     "price": null
   },
   {
