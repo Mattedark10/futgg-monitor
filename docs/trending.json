@@ -169,42 +169,16 @@
     "price": null
   },
   {
-    "name": "Stam",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83891820.48e175f2b85e644d43fa0d2dc975f21b856f30a802faa765c5149b0a4504b5e0.webp",
-    "url": "https://www.fut.gg/players/5740-jaap-stam/27-83891820/",
-    "eaId": 83891820,
-    "slug": "27-83891820",
-    "price": null
-  },
-  {
-    "name": "Zola",
-    "rating": 89,
-    "position": "ST",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83887281.01d3c763663572d424c21d1035befba9bb4a5221c9a2452f1c9c5629c4485d91.webp",
-    "url": "https://www.fut.gg/players/1201-gianfranco-zola/27-83887281/",
-    "eaId": 83887281,
-    "slug": "27-83887281",
-    "price": null
-  },
-  {
-    "name": "El Mala",
+    "name": "Alonso",
     "rating": 85,
-    "position": "ST",
+    "position": "LB",
     "rarity": "Ultimate Scream",
-    "club": "1. FC Köln",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67180042.86d456b8385b730cd324eccdfca9803aeeeab6808774375121f90678e4038d03.webp",
-    "url": "https://www.fut.gg/players/71178-said-el-mala/27-67180042/",
-    "eaId": 67180042,
-    "slug": "27-67180042",
+    "club": "Atlanta United",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50551985.dd60166fa4ea44aa7c3c53599f53561881814fbb28cd7fd440d86513ad74cd9b.webp",
+    "url": "https://www.fut.gg/players/220337-junior-alonso/27-50551985/",
+    "eaId": 50551985,
+    "slug": "27-50551985",
     "price": null
   },
   {
@@ -221,6 +195,45 @@
     "price": null
   },
   {
+    "name": "Zola",
+    "rating": 89,
+    "position": "ST",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83887281.01d3c763663572d424c21d1035befba9bb4a5221c9a2452f1c9c5629c4485d91.webp",
+    "url": "https://www.fut.gg/players/1201-gianfranco-zola/27-83887281/",
+    "eaId": 83887281,
+    "slug": "27-83887281",
+    "price": null
+  },
+  {
+    "name": "Stam",
+    "rating": 88,
+    "position": "CDM",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83891820.48e175f2b85e644d43fa0d2dc975f21b856f30a802faa765c5149b0a4504b5e0.webp",
+    "url": "https://www.fut.gg/players/5740-jaap-stam/27-83891820/",
+    "eaId": 83891820,
+    "slug": "27-83891820",
+    "price": null
+  },
+  {
+    "name": "El Mala",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "Ultimate Scream",
+    "club": "1. FC Köln",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67180042.86d456b8385b730cd324eccdfca9803aeeeab6808774375121f90678e4038d03.webp",
+    "url": "https://www.fut.gg/players/71178-said-el-mala/27-67180042/",
+    "eaId": 67180042,
+    "slug": "27-67180042",
+    "price": null
+  },
+  {
     "name": "Flint",
     "rating": 85,
     "position": "CB",
@@ -231,19 +244,6 @@
     "url": "https://www.fut.gg/players/267384-taylor-kornieck/27-50599032/",
     "eaId": 50599032,
     "slug": "27-50599032",
-    "price": null
-  },
-  {
-    "name": "Alonso",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Ultimate Scream",
-    "club": "Atlanta United",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50551985.dd60166fa4ea44aa7c3c53599f53561881814fbb28cd7fd440d86513ad74cd9b.webp",
-    "url": "https://www.fut.gg/players/220337-junior-alonso/27-50551985/",
-    "eaId": 50551985,
-    "slug": "27-50551985",
     "price": null
   },
   {
