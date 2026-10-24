@@ -1,5 +1,18 @@
 [
   {
+    "name": "Mor",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "Ultimate Scream",
+    "club": "N.E.C. Nijmegen",
+    "league": "Eredivisie",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50562888.ae8beb9d95ae5c1e1b2757256405bd6aafb472cb4a3cb9cd240feb9851b46f60.webp",
+    "url": "https://www.fut.gg/players/231240-emre-mor/27-50562888/",
+    "eaId": 50562888,
+    "slug": "27-50562888",
+    "price": null
+  },
+  {
     "name": "Cristiano Ronaldo",
     "rating": 89,
     "position": "LW",
@@ -13,6 +26,19 @@
     "price": null
   },
   {
+    "name": "Nico Paz",
+    "rating": 88,
+    "position": "CAM",
+    "rarity": "Star Performer",
+    "club": "Como 1907",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163926.bac356d9546e2a4fb337f373e51adcbe7f1af16216f1388abd64694b8319a276.webp",
+    "url": "https://www.fut.gg/players/277846-nicolas-paz-martinez-nico-paz/27-84163926/",
+    "eaId": 84163926,
+    "slug": "27-84163926",
+    "price": null
+  },
+  {
     "name": "Woltemade",
     "rating": 85,
     "position": "CAM",
@@ -23,6 +49,19 @@
     "url": "https://www.fut.gg/players/254022-nick-woltemade/27-67362886/",
     "eaId": 67362886,
     "slug": "27-67362886",
+    "price": null
+  },
+  {
+    "name": "Foden",
+    "rating": 87,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "Manchester City",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50569340.101aea93d5328644a799858372fdae253d461322159ae4eff069c584f85adc1c.webp",
+    "url": "https://www.fut.gg/players/237692-phil-foden/27-50569340/",
+    "eaId": 50569340,
+    "slug": "27-50569340",
     "price": null
   },
   {
@@ -52,6 +91,19 @@
     "price": null
   },
   {
+    "name": "Mac Allister",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50571485.9b45fd09142d060212fe05e6c58779dfd1a12504ece1547f6f640524995b850d.webp",
+    "url": "https://www.fut.gg/players/239837-alexis-mac-allister/27-50571485/",
+    "eaId": 50571485,
+    "slug": "27-50571485",
+    "price": null
+  },
+  {
     "name": "Salma Paralluelo",
     "rating": 88,
     "position": "ST",
@@ -78,6 +130,58 @@
     "price": null
   },
   {
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.8c0b830d573fabd9c4578db1004d7dd6b8396d690bebda5e6b26b8d617d07a57.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 305000
+  },
+  {
+    "name": "Lukeba",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Ultimate Scream",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.45e0eb46ac017e738c997bd2f2045cc790d4517bbbadaa9f29b153c30a5c01c1.webp",
+    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
+    "eaId": 50593786,
+    "slug": "27-50593786",
+    "price": null
+  },
+  {
+    "name": "Aitana Bonmatí",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.22e8782bf283b572475d3ae07416f247625e36038b24ee6029738e1d0e161fc2.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 277000
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.412e17c1c8ea7ca2e9ef22ce32e054ce18ba71f138160cf09856a21b080ed55b.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 87500
+  },
+  {
     "name": "Szoboszlai",
     "rating": 88,
     "position": "RB",
@@ -88,6 +192,45 @@
     "url": "https://www.fut.gg/players/236772-dominik-szoboszlai/27-50568420/",
     "eaId": 50568420,
     "slug": "27-50568420",
+    "price": null
+  },
+  {
+    "name": "Gal",
+    "rating": 61,
+    "position": "GK",
+    "rarity": "Rare",
+    "club": "Chicago Fire FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259915.f8de5f7afac7b74098245b2268bea3d9748692c75edce9a765d4dde9422c4b6c.webp",
+    "url": "https://www.fut.gg/players/259915-jeffrey-gal/27-259915/",
+    "eaId": 259915,
+    "slug": "27-259915",
+    "price": null
+  },
+  {
+    "name": "Pedri",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
+    "eaId": 251854,
+    "slug": "27-251854",
+    "price": 229000
+  },
+  {
+    "name": "Seys",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Star Performer",
+    "club": "Club Brugge",
+    "league": "1A Pro League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50402953.86b3c4f15ba44cb7441c5e59186099799d79af4d9645c348a7c510e703d3e839.webp",
+    "url": "https://www.fut.gg/players/71305-joaquin-seys/27-50402953/",
+    "eaId": 50402953,
+    "slug": "27-50402953",
     "price": null
   },
   {
@@ -114,149 +257,6 @@
     "url": "https://www.fut.gg/players/257534-cole-palmer/27-50589182/",
     "eaId": 50589182,
     "slug": "27-50589182",
-    "price": null
-  },
-  {
-    "name": "Lukeba",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Ultimate Scream",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.45e0eb46ac017e738c997bd2f2045cc790d4517bbbadaa9f29b153c30a5c01c1.webp",
-    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
-    "eaId": 50593786,
-    "slug": "27-50593786",
-    "price": null
-  },
-  {
-    "name": "Le Fée",
-    "rating": 86,
-    "position": "LM",
-    "rarity": "Ultimate Scream",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50577998.35713a6138858b3fef90edae7379a6d5127c46a1a82417db81fd63025a809038.webp",
-    "url": "https://www.fut.gg/players/246350-enzo-le-fee/27-50577998/",
-    "eaId": 50577998,
-    "slug": "27-50577998",
-    "price": null
-  },
-  {
-    "name": "Tolisso",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "OL",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84105763.659cbd6babffafd92f42f444711ba5ccbd25286fcab0b2651ced8d6bb2b6ab44.webp",
-    "url": "https://www.fut.gg/players/219683-corentin-tolisso/27-84105763/",
-    "eaId": 84105763,
-    "slug": "27-84105763",
-    "price": null
-  },
-  {
-    "name": "Mandžukić",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84067863.3c421318967b3911c3952b272d686272dbd94df82e9f6e6eb560134c902f0359.webp",
-    "url": "https://www.fut.gg/players/181783-mario-mandzukic/27-84067863/",
-    "eaId": 84067863,
-    "slug": "27-84067863",
-    "price": null
-  },
-  {
-    "name": "Alonso",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Ultimate Scream",
-    "club": "Atlanta United",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50551985.dd60166fa4ea44aa7c3c53599f53561881814fbb28cd7fd440d86513ad74cd9b.webp",
-    "url": "https://www.fut.gg/players/220337-junior-alonso/27-50551985/",
-    "eaId": 50551985,
-    "slug": "27-50551985",
-    "price": null
-  },
-  {
-    "name": "Fabinho",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Ultimate Scream",
-    "club": "Trabzonspor",
-    "league": "Trendyol Süper Lig",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50541147.38cb17ad5c4540b620720eaa663759a4b7646ef70913e6068e138e228f893217.webp",
-    "url": "https://www.fut.gg/players/209499-fabinho/27-50541147/",
-    "eaId": 50541147,
-    "slug": "27-50541147",
-    "price": null
-  },
-  {
-    "name": "Zola",
-    "rating": 89,
-    "position": "ST",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83887281.01d3c763663572d424c21d1035befba9bb4a5221c9a2452f1c9c5629c4485d91.webp",
-    "url": "https://www.fut.gg/players/1201-gianfranco-zola/27-83887281/",
-    "eaId": 83887281,
-    "slug": "27-83887281",
-    "price": null
-  },
-  {
-    "name": "Stam",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83891820.48e175f2b85e644d43fa0d2dc975f21b856f30a802faa765c5149b0a4504b5e0.webp",
-    "url": "https://www.fut.gg/players/5740-jaap-stam/27-83891820/",
-    "eaId": 83891820,
-    "slug": "27-83891820",
-    "price": null
-  },
-  {
-    "name": "El Mala",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "Ultimate Scream",
-    "club": "1. FC Köln",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67180042.86d456b8385b730cd324eccdfca9803aeeeab6808774375121f90678e4038d03.webp",
-    "url": "https://www.fut.gg/players/71178-said-el-mala/27-67180042/",
-    "eaId": 67180042,
-    "slug": "27-67180042",
-    "price": null
-  },
-  {
-    "name": "Flint",
-    "rating": 85,
-    "position": "CB",
-    "rarity": "Ultimate Scream",
-    "club": "Rac. Louisville",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50599032.dd1f25102712b6b83bb2abd5baebd7b18b16e50883f89872cc50160bebd08a65.webp",
-    "url": "https://www.fut.gg/players/267384-taylor-kornieck/27-50599032/",
-    "eaId": 50599032,
-    "slug": "27-50599032",
-    "price": null
-  },
-  {
-    "name": "Chong",
-    "rating": 85,
-    "position": "RM",
-    "rarity": "Ultimate Scream",
-    "club": "Sheffield Utd",
-    "league": "EFL Championship",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50565158.8c4d26fd2472b42cea572ed36e29220f940e6bb9221879fd9d5783640ae6290f.webp",
-    "url": "https://www.fut.gg/players/233510-tahith-chong/27-50565158/",
-    "eaId": 50565158,
-    "slug": "27-50565158",
     "price": null
   }
 ]
