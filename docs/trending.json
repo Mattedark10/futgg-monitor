@@ -78,19 +78,6 @@
     "price": null
   },
   {
-    "name": "Verón",
-    "rating": 87,
-    "position": "CAM",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Liga Profesional de Fútbol",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84129107.e51bb013e5d2c3bc62946945a8c8ed963e506cd904b88eaf93742a5ab141ff44.webp",
-    "url": "https://www.fut.gg/players/243027-juan-sebastian-veron/27-84129107/",
-    "eaId": 84129107,
-    "slug": "27-84129107",
-    "price": null
-  },
-  {
     "name": "Çalhanoğlu",
     "rating": 86,
     "position": "CAM",
@@ -101,6 +88,19 @@
     "url": "https://www.fut.gg/players/208128-hakan-calhanoglu/27-67316992/",
     "eaId": 67316992,
     "slug": "27-67316992",
+    "price": null
+  },
+  {
+    "name": "Verón",
+    "rating": 87,
+    "position": "CAM",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Liga Profesional de Fútbol",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84129107.e51bb013e5d2c3bc62946945a8c8ed963e506cd904b88eaf93742a5ab141ff44.webp",
+    "url": "https://www.fut.gg/players/243027-juan-sebastian-veron/27-84129107/",
+    "eaId": 84129107,
+    "slug": "27-84129107",
     "price": null
   },
   {
@@ -117,19 +117,6 @@
     "price": null
   },
   {
-    "name": "Le Fée",
-    "rating": 86,
-    "position": "LM",
-    "rarity": "Ultimate Scream",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50577998.35713a6138858b3fef90edae7379a6d5127c46a1a82417db81fd63025a809038.webp",
-    "url": "https://www.fut.gg/players/246350-enzo-le-fee/27-50577998/",
-    "eaId": 50577998,
-    "slug": "27-50577998",
-    "price": null
-  },
-  {
     "name": "Lukeba",
     "rating": 85,
     "position": "LB",
@@ -143,16 +130,16 @@
     "price": null
   },
   {
-    "name": "Mandžukić",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84067863.3c421318967b3911c3952b272d686272dbd94df82e9f6e6eb560134c902f0359.webp",
-    "url": "https://www.fut.gg/players/181783-mario-mandzukic/27-84067863/",
-    "eaId": 84067863,
-    "slug": "27-84067863",
+    "name": "Le Fée",
+    "rating": 86,
+    "position": "LM",
+    "rarity": "Ultimate Scream",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50577998.35713a6138858b3fef90edae7379a6d5127c46a1a82417db81fd63025a809038.webp",
+    "url": "https://www.fut.gg/players/246350-enzo-le-fee/27-50577998/",
+    "eaId": 50577998,
+    "slug": "27-50577998",
     "price": null
   },
   {
@@ -166,6 +153,19 @@
     "url": "https://www.fut.gg/players/219683-corentin-tolisso/27-84105763/",
     "eaId": 84105763,
     "slug": "27-84105763",
+    "price": null
+  },
+  {
+    "name": "Mandžukić",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84067863.3c421318967b3911c3952b272d686272dbd94df82e9f6e6eb560134c902f0359.webp",
+    "url": "https://www.fut.gg/players/181783-mario-mandzukic/27-84067863/",
+    "eaId": 84067863,
+    "slug": "27-84067863",
     "price": null
   },
   {
