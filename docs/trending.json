@@ -65,19 +65,6 @@
     "price": null
   },
   {
-    "name": "Szoboszlai",
-    "rating": 88,
-    "position": "RB",
-    "rarity": "Ultimate Scream",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568420.45370dcb918f4c4f11d6bd3beb11e9005c9757615b6a43ca7ff6e5fbf2a5e34d.webp",
-    "url": "https://www.fut.gg/players/236772-dominik-szoboszlai/27-50568420/",
-    "eaId": 50568420,
-    "slug": "27-50568420",
-    "price": null
-  },
-  {
     "name": "Çalhanoğlu",
     "rating": 86,
     "position": "CAM",
@@ -88,6 +75,19 @@
     "url": "https://www.fut.gg/players/208128-hakan-calhanoglu/27-67316992/",
     "eaId": 67316992,
     "slug": "27-67316992",
+    "price": null
+  },
+  {
+    "name": "Szoboszlai",
+    "rating": 88,
+    "position": "RB",
+    "rarity": "Ultimate Scream",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568420.45370dcb918f4c4f11d6bd3beb11e9005c9757615b6a43ca7ff6e5fbf2a5e34d.webp",
+    "url": "https://www.fut.gg/players/236772-dominik-szoboszlai/27-50568420/",
+    "eaId": 50568420,
+    "slug": "27-50568420",
     "price": null
   },
   {
