@@ -13,32 +13,6 @@
     "price": null
   },
   {
-    "name": "Mor",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "Ultimate Scream",
-    "club": "N.E.C. Nijmegen",
-    "league": "Eredivisie",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50562888.ae8beb9d95ae5c1e1b2757256405bd6aafb472cb4a3cb9cd240feb9851b46f60.webp",
-    "url": "https://www.fut.gg/players/231240-emre-mor/27-50562888/",
-    "eaId": 50562888,
-    "slug": "27-50562888",
-    "price": null
-  },
-  {
-    "name": "Foden",
-    "rating": 87,
-    "position": "RW",
-    "rarity": "Star Performer",
-    "club": "Manchester City",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50569340.101aea93d5328644a799858372fdae253d461322159ae4eff069c584f85adc1c.webp",
-    "url": "https://www.fut.gg/players/237692-phil-foden/27-50569340/",
-    "eaId": 50569340,
-    "slug": "27-50569340",
-    "price": null
-  },
-  {
     "name": "Park Ji Sung",
     "rating": 86,
     "position": "LM",
@@ -50,6 +24,19 @@
     "eaId": 266473,
     "slug": "27-266473",
     "price": 255000
+  },
+  {
+    "name": "Mor",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "Ultimate Scream",
+    "club": "N.E.C. Nijmegen",
+    "league": "Eredivisie",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50562888.ae8beb9d95ae5c1e1b2757256405bd6aafb472cb4a3cb9cd240feb9851b46f60.webp",
+    "url": "https://www.fut.gg/players/231240-emre-mor/27-50562888/",
+    "eaId": 50562888,
+    "slug": "27-50562888",
+    "price": null
   },
   {
     "name": "Rui Costa",
@@ -65,16 +52,16 @@
     "price": 235000
   },
   {
-    "name": "Cristiano Ronaldo",
-    "rating": 89,
-    "position": "LW",
-    "rarity": "Ultimate Scream",
-    "club": "Al Nassr",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67129665.98705e846e010a27d5c2167b70eeeabe7d9e4bf7eb279ecd8fa272bd27cf22dd.webp",
-    "url": "https://www.fut.gg/players/20801-cristiano-ronaldo/27-67129665/",
-    "eaId": 67129665,
-    "slug": "27-67129665",
+    "name": "Foden",
+    "rating": 87,
+    "position": "RW",
+    "rarity": "Star Performer",
+    "club": "Manchester City",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50569340.101aea93d5328644a799858372fdae253d461322159ae4eff069c584f85adc1c.webp",
+    "url": "https://www.fut.gg/players/237692-phil-foden/27-50569340/",
+    "eaId": 50569340,
+    "slug": "27-50569340",
     "price": null
   },
   {
@@ -89,6 +76,19 @@
     "eaId": 233662,
     "slug": "27-233662",
     "price": 87500
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "rating": 89,
+    "position": "LW",
+    "rarity": "Ultimate Scream",
+    "club": "Al Nassr",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67129665.98705e846e010a27d5c2167b70eeeabe7d9e4bf7eb279ecd8fa272bd27cf22dd.webp",
+    "url": "https://www.fut.gg/players/20801-cristiano-ronaldo/27-67129665/",
+    "eaId": 67129665,
+    "slug": "27-67129665",
+    "price": null
   },
   {
     "name": "Aitana Bonmatí",
@@ -117,6 +117,19 @@
     "price": null
   },
   {
+    "name": "Pedri",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
+    "eaId": 251854,
+    "slug": "27-251854",
+    "price": 229000
+  },
+  {
     "name": "Salma Paralluelo",
     "rating": 87,
     "position": "LW",
@@ -143,19 +156,6 @@
     "price": null
   },
   {
-    "name": "Pedri",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
-    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
-    "eaId": 251854,
-    "slug": "27-251854",
-    "price": 229000
-  },
-  {
     "name": "Gal",
     "rating": 61,
     "position": "GK",
@@ -166,19 +166,6 @@
     "url": "https://www.fut.gg/players/259915-jeffrey-gal/27-259915/",
     "eaId": 259915,
     "slug": "27-259915",
-    "price": null
-  },
-  {
-    "name": "Mac Allister",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Star Performer",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50571485.9b45fd09142d060212fe05e6c58779dfd1a12504ece1547f6f640524995b850d.webp",
-    "url": "https://www.fut.gg/players/239837-alexis-mac-allister/27-50571485/",
-    "eaId": 50571485,
-    "slug": "27-50571485",
     "price": null
   },
   {
@@ -195,16 +182,16 @@
     "price": 189000
   },
   {
-    "name": "Woltemade",
-    "rating": 85,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "Juventus FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67362886.b494f97ee9fa57a92a01df5451963fb68b12daebdcd43593f9917a80e26045a6.webp",
-    "url": "https://www.fut.gg/players/254022-nick-woltemade/27-67362886/",
-    "eaId": 67362886,
-    "slug": "27-67362886",
+    "name": "Mac Allister",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50571485.9b45fd09142d060212fe05e6c58779dfd1a12504ece1547f6f640524995b850d.webp",
+    "url": "https://www.fut.gg/players/239837-alexis-mac-allister/27-50571485/",
+    "eaId": 50571485,
+    "slug": "27-50571485",
     "price": null
   },
   {
@@ -221,16 +208,29 @@
     "price": 70000
   },
   {
-    "name": "Lukeba",
+    "name": "Larsson",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Base Hero",
+    "club": "HERO",
+    "league": "Scottish Premiership",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-239261.d70e9504bdd2aebf037d07e08bf33507d471dd30ade935cc8aba14a5106fec4e.webp",
+    "url": "https://www.fut.gg/players/239261-henrik-larsson/27-239261/",
+    "eaId": 239261,
+    "slug": "27-239261",
+    "price": 250000
+  },
+  {
+    "name": "Woltemade",
     "rating": 85,
-    "position": "LB",
+    "position": "CAM",
     "rarity": "Ultimate Scream",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.45e0eb46ac017e738c997bd2f2045cc790d4517bbbadaa9f29b153c30a5c01c1.webp",
-    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
-    "eaId": 50593786,
-    "slug": "27-50593786",
+    "club": "Juventus FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67362886.b494f97ee9fa57a92a01df5451963fb68b12daebdcd43593f9917a80e26045a6.webp",
+    "url": "https://www.fut.gg/players/254022-nick-woltemade/27-67362886/",
+    "eaId": 67362886,
+    "slug": "27-67362886",
     "price": null
   },
   {
@@ -247,16 +247,16 @@
     "price": 220000
   },
   {
-    "name": "Raphinha",
-    "rating": 90,
-    "position": "CAM",
+    "name": "Lukeba",
+    "rating": 85,
+    "position": "LB",
     "rarity": "Ultimate Scream",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100896715.13561c6be6b165b6d3b829fd39d5212e07000dbf373a96557dc11bd4e54f3995.webp",
-    "url": "https://www.fut.gg/players/233419-raphinha/27-100896715/",
-    "eaId": 100896715,
-    "slug": "27-100896715",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.45e0eb46ac017e738c997bd2f2045cc790d4517bbbadaa9f29b153c30a5c01c1.webp",
+    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
+    "eaId": 50593786,
+    "slug": "27-50593786",
     "price": null
   }
 ]
