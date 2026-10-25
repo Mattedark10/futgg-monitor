@@ -130,19 +130,6 @@
     "price": null
   },
   {
-    "name": "Lukeba",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Ultimate Scream",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.45e0eb46ac017e738c997bd2f2045cc790d4517bbbadaa9f29b153c30a5c01c1.webp",
-    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
-    "eaId": 50593786,
-    "slug": "27-50593786",
-    "price": null
-  },
-  {
     "name": "Salma Paralluelo",
     "rating": 87,
     "position": "LW",
@@ -169,6 +156,19 @@
     "price": 277000
   },
   {
+    "name": "Lukeba",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Ultimate Scream",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.45e0eb46ac017e738c997bd2f2045cc790d4517bbbadaa9f29b153c30a5c01c1.webp",
+    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
+    "eaId": 50593786,
+    "slug": "27-50593786",
+    "price": null
+  },
+  {
     "name": "Karchaoui",
     "rating": 87,
     "position": "CM",
@@ -180,19 +180,6 @@
     "eaId": 233662,
     "slug": "27-233662",
     "price": 87500
-  },
-  {
-    "name": "Çalhanoğlu",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67316992.6b058b237a6b64ecddcc94307c1354eb649158a70cb4c91a6a1d0ea8f8dc1cf4.webp",
-    "url": "https://www.fut.gg/players/208128-hakan-calhanoglu/27-67316992/",
-    "eaId": 67316992,
-    "slug": "27-67316992",
-    "price": null
   },
   {
     "name": "Gal",
@@ -221,16 +208,16 @@
     "price": 229000
   },
   {
-    "name": "Salma Paralluelo",
-    "rating": 88,
-    "position": "ST",
+    "name": "Çalhanoğlu",
+    "rating": 86,
+    "position": "CAM",
     "rarity": "Ultimate Scream",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601052.f787544ca408fedea4cf84ab1a6871b6964503c1b1073b57d8c36b0c73745a79.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-50601052/",
-    "eaId": 50601052,
-    "slug": "27-50601052",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67316992.6b058b237a6b64ecddcc94307c1354eb649158a70cb4c91a6a1d0ea8f8dc1cf4.webp",
+    "url": "https://www.fut.gg/players/208128-hakan-calhanoglu/27-67316992/",
+    "eaId": 67316992,
+    "slug": "27-67316992",
     "price": null
   },
   {
@@ -244,6 +231,19 @@
     "url": "https://www.fut.gg/players/220337-junior-alonso/27-50551985/",
     "eaId": 50551985,
     "slug": "27-50551985",
+    "price": null
+  },
+  {
+    "name": "Salma Paralluelo",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Ultimate Scream",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601052.f787544ca408fedea4cf84ab1a6871b6964503c1b1073b57d8c36b0c73745a79.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-50601052/",
+    "eaId": 50601052,
+    "slug": "27-50601052",
     "price": null
   },
   {
