@@ -13,19 +13,6 @@
     "price": 255000
   },
   {
-    "name": "Nico Paz",
-    "rating": 88,
-    "position": "CAM",
-    "rarity": "Star Performer",
-    "club": "Como 1907",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163926.bac356d9546e2a4fb337f373e51adcbe7f1af16216f1388abd64694b8319a276.webp",
-    "url": "https://www.fut.gg/players/277846-nicolas-paz-martinez-nico-paz/27-84163926/",
-    "eaId": 84163926,
-    "slug": "27-84163926",
-    "price": null
-  },
-  {
     "name": "Rui Costa",
     "rating": 87,
     "position": "CAM",
@@ -37,6 +24,19 @@
     "eaId": 1025,
     "slug": "27-1025",
     "price": 235000
+  },
+  {
+    "name": "Nico Paz",
+    "rating": 88,
+    "position": "CAM",
+    "rarity": "Star Performer",
+    "club": "Como 1907",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84163926.bac356d9546e2a4fb337f373e51adcbe7f1af16216f1388abd64694b8319a276.webp",
+    "url": "https://www.fut.gg/players/277846-nicolas-paz-martinez-nico-paz/27-84163926/",
+    "eaId": 84163926,
+    "slug": "27-84163926",
+    "price": null
   },
   {
     "name": "Mor",
@@ -78,19 +78,6 @@
     "price": 87500
   },
   {
-    "name": "Cristiano Ronaldo",
-    "rating": 89,
-    "position": "LW",
-    "rarity": "Ultimate Scream",
-    "club": "Al Nassr",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67129665.98705e846e010a27d5c2167b70eeeabe7d9e4bf7eb279ecd8fa272bd27cf22dd.webp",
-    "url": "https://www.fut.gg/players/20801-cristiano-ronaldo/27-67129665/",
-    "eaId": 67129665,
-    "slug": "27-67129665",
-    "price": null
-  },
-  {
     "name": "Aitana Bonmatí",
     "rating": 90,
     "position": "CM",
@@ -117,17 +104,17 @@
     "price": null
   },
   {
-    "name": "Salma Paralluelo",
-    "rating": 87,
+    "name": "Cristiano Ronaldo",
+    "rating": 89,
     "position": "LW",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.8c0b830d573fabd9c4578db1004d7dd6b8396d690bebda5e6b26b8d617d07a57.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 305000
+    "rarity": "Ultimate Scream",
+    "club": "Al Nassr",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67129665.98705e846e010a27d5c2167b70eeeabe7d9e4bf7eb279ecd8fa272bd27cf22dd.webp",
+    "url": "https://www.fut.gg/players/20801-cristiano-ronaldo/27-67129665/",
+    "eaId": 67129665,
+    "slug": "27-67129665",
+    "price": null
   },
   {
     "name": "Pedri",
@@ -141,6 +128,19 @@
     "eaId": 251854,
     "slug": "27-251854",
     "price": 229000
+  },
+  {
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.8c0b830d573fabd9c4578db1004d7dd6b8396d690bebda5e6b26b8d617d07a57.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 305000
   },
   {
     "name": "Alonso",
@@ -169,19 +169,6 @@
     "price": 189000
   },
   {
-    "name": "Gal",
-    "rating": 61,
-    "position": "GK",
-    "rarity": "Rare",
-    "club": "Chicago Fire FC",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259915.f8de5f7afac7b74098245b2268bea3d9748692c75edce9a765d4dde9422c4b6c.webp",
-    "url": "https://www.fut.gg/players/259915-jeffrey-gal/27-259915/",
-    "eaId": 259915,
-    "slug": "27-259915",
-    "price": null
-  },
-  {
     "name": "Larsson",
     "rating": 86,
     "position": "ST",
@@ -193,6 +180,19 @@
     "eaId": 239261,
     "slug": "27-239261",
     "price": 250000
+  },
+  {
+    "name": "Gal",
+    "rating": 61,
+    "position": "GK",
+    "rarity": "Rare",
+    "club": "Chicago Fire FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-259915.f8de5f7afac7b74098245b2268bea3d9748692c75edce9a765d4dde9422c4b6c.webp",
+    "url": "https://www.fut.gg/players/259915-jeffrey-gal/27-259915/",
+    "eaId": 259915,
+    "slug": "27-259915",
+    "price": null
   },
   {
     "name": "Mariona",
@@ -208,19 +208,6 @@
     "price": 70000
   },
   {
-    "name": "Mac Allister",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Star Performer",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50571485.9b45fd09142d060212fe05e6c58779dfd1a12504ece1547f6f640524995b850d.webp",
-    "url": "https://www.fut.gg/players/239837-alexis-mac-allister/27-50571485/",
-    "eaId": 50571485,
-    "slug": "27-50571485",
-    "price": null
-  },
-  {
     "name": "Patri Guijarro",
     "rating": 88,
     "position": "CDM",
@@ -234,17 +221,17 @@
     "price": 220000
   },
   {
-    "name": "Hernández",
+    "name": "Mac Allister",
     "rating": 86,
-    "position": "ST",
-    "rarity": "Base Hero",
-    "club": "HERO",
-    "league": "Liga BBVA MX",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-156353.51b19a78bab45f758fe759d029133476899168e05f3ea395cd3c2fde2f2b2b75.webp",
-    "url": "https://www.fut.gg/players/156353-luis-hernandez/27-156353/",
-    "eaId": 156353,
-    "slug": "27-156353",
-    "price": 204000
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50571485.9b45fd09142d060212fe05e6c58779dfd1a12504ece1547f6f640524995b850d.webp",
+    "url": "https://www.fut.gg/players/239837-alexis-mac-allister/27-50571485/",
+    "eaId": 50571485,
+    "slug": "27-50571485",
+    "price": null
   },
   {
     "name": "Xavi Espart",
@@ -258,5 +245,18 @@
     "eaId": 50413511,
     "slug": "27-50413511",
     "price": 38950
+  },
+  {
+    "name": "Hernández",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Base Hero",
+    "club": "HERO",
+    "league": "Liga BBVA MX",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-156353.51b19a78bab45f758fe759d029133476899168e05f3ea395cd3c2fde2f2b2b75.webp",
+    "url": "https://www.fut.gg/players/156353-luis-hernandez/27-156353/",
+    "eaId": 156353,
+    "slug": "27-156353",
+    "price": 204000
   }
 ]
