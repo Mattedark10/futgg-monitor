@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/277846-nicolas-paz-martinez-nico-paz/27-84163926/",
     "eaId": 84163926,
     "slug": "27-84163926",
-    "price": 908000
+    "price": 894000
   },
   {
     "name": "Scott",
@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Park Ji Sung",
-    "rating": 86,
-    "position": "LM",
-    "rarity": "Base Hero",
-    "club": "HERO",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-266473.39371e6713e44f35ced7bdae0a889f0b4b914b1aed48a4812c28bd90d6eb88bc.webp",
-    "url": "https://www.fut.gg/players/266473-park-ji-sung/27-266473/",
-    "eaId": 266473,
-    "slug": "27-266473",
-    "price": 234000
-  },
-  {
     "name": "Foden",
     "rating": 87,
     "position": "RW",
@@ -49,7 +36,7 @@
     "url": "https://www.fut.gg/players/237692-phil-foden/27-50569340/",
     "eaId": 50569340,
     "slug": "27-50569340",
-    "price": 670000
+    "price": 694000
   },
   {
     "name": "Karchaoui",
@@ -62,7 +49,7 @@
     "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
     "eaId": 233662,
     "slug": "27-233662",
-    "price": 73000
+    "price": 74500
   },
   {
     "name": "Aitana Bonmatí",
@@ -75,20 +62,46 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
     "slug": "27-241667",
-    "price": 246000
+    "price": 253000
   },
   {
-    "name": "Rui Costa",
-    "rating": 87,
-    "position": "CAM",
+    "name": "Park Ji Sung",
+    "rating": 86,
+    "position": "LM",
     "rarity": "Base Hero",
     "club": "HERO",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-1025.b73ab363375ab33e3788ac133135bc3586ef3dd3501e2e1b3ff9b2cf907d1275.webp",
-    "url": "https://www.fut.gg/players/1025-rui-costa/27-1025/",
-    "eaId": 1025,
-    "slug": "27-1025",
-    "price": 229000
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-266473.39371e6713e44f35ced7bdae0a889f0b4b914b1aed48a4812c28bd90d6eb88bc.webp",
+    "url": "https://www.fut.gg/players/266473-park-ji-sung/27-266473/",
+    "eaId": 266473,
+    "slug": "27-266473",
+    "price": 232000
+  },
+  {
+    "name": "Alexia Putellas",
+    "rating": 91,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "London City",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-227203.984d50285d9f18bba60fbce5ef448e5ec57856707d8987c30a420028e9150e4d.webp",
+    "url": "https://www.fut.gg/players/227203-alexia-putellas/27-227203/",
+    "eaId": 227203,
+    "slug": "27-227203",
+    "price": 858000
+  },
+  {
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 172000
   },
   {
     "name": "Cristiano Ronaldo",
@@ -101,7 +114,7 @@
     "url": "https://www.fut.gg/players/20801-cristiano-ronaldo/27-67129665/",
     "eaId": 67129665,
     "slug": "27-67129665",
-    "price": 7650000
+    "price": 7794000
   },
   {
     "name": "Alonso",
@@ -117,17 +130,17 @@
     "price": null
   },
   {
-    "name": "Lamine Yamal",
+    "name": "Pedri",
     "rating": 90,
-    "position": "RW",
+    "position": "CM",
     "rarity": "Rare",
     "club": "FC Barcelona",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.9f66f795f6451c81f2cdd372b322bf7de7501c8548e81376d5155795bec9e209.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 177000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
+    "eaId": 251854,
+    "slug": "27-251854",
+    "price": 212000
   },
   {
     "name": "Salma Paralluelo",
@@ -140,20 +153,20 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 298000
+    "price": 297000
   },
   {
-    "name": "Pedri",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.8f619bbb8c1830e685b3b592a36bf1e82a9feddf1181c212e483c14996b2a44d.webp",
-    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
-    "eaId": 251854,
-    "slug": "27-251854",
-    "price": 210000
+    "name": "Rui Costa",
+    "rating": 87,
+    "position": "CAM",
+    "rarity": "Base Hero",
+    "club": "HERO",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-1025.b73ab363375ab33e3788ac133135bc3586ef3dd3501e2e1b3ff9b2cf907d1275.webp",
+    "url": "https://www.fut.gg/players/1025-rui-costa/27-1025/",
+    "eaId": 1025,
+    "slug": "27-1025",
+    "price": 230000
   },
   {
     "name": "Mariona",
@@ -166,7 +179,7 @@
     "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
     "eaId": 237288,
     "slug": "27-237288",
-    "price": 48000
+    "price": 49750
   },
   {
     "name": "Patri Guijarro",
@@ -179,7 +192,20 @@
     "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
     "eaId": 237289,
     "slug": "27-237289",
-    "price": 201000
+    "price": 199000
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1760000
   },
   {
     "name": "Xavi Espart",
@@ -195,17 +221,17 @@
     "price": null
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
+    "name": "Mbappé",
+    "rating": 91,
     "position": "ST",
     "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1745000
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.37dd54fdcfca9c59db34466e2dc0ef50f16417dcf5c64aaa7fdd8bba85f5b7a7.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 3040000
   },
   {
     "name": "Mor",
@@ -221,19 +247,6 @@
     "price": null
   },
   {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.37dd54fdcfca9c59db34466e2dc0ef50f16417dcf5c64aaa7fdd8bba85f5b7a7.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 3089000
-  },
-  {
     "name": "Álvaro Carreras",
     "rating": 81,
     "position": "LB",
@@ -245,18 +258,5 @@
     "eaId": 268889,
     "slug": "27-268889",
     "price": null
-  },
-  {
-    "name": "Çalhanoğlu",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67316992.6b058b237a6b64ecddcc94307c1354eb649158a70cb4c91a6a1d0ea8f8dc1cf4.webp",
-    "url": "https://www.fut.gg/players/208128-hakan-calhanoglu/27-67316992/",
-    "eaId": 67316992,
-    "slug": "27-67316992",
-    "price": 250000
   }
 ]
