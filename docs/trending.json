@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Scott",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84113342.47e2578c2ed8202818184d9ea9d502c7600e3f2b52c73dc661b3d5f855c2a93f.webp",
-    "url": "https://www.fut.gg/players/227262-jill-scott/27-84113342/",
-    "eaId": 84113342,
-    "slug": "27-84113342",
-    "price": null
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -50,6 +37,19 @@
     "eaId": 277643,
     "slug": "27-277643",
     "price": 176000
+  },
+  {
+    "name": "Scott",
+    "rating": 87,
+    "position": "CB",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84113342.47e2578c2ed8202818184d9ea9d502c7600e3f2b52c73dc661b3d5f855c2a93f.webp",
+    "url": "https://www.fut.gg/players/227262-jill-scott/27-84113342/",
+    "eaId": 84113342,
+    "slug": "27-84113342",
+    "price": null
   },
   {
     "name": "Alexia Putellas",
@@ -65,19 +65,6 @@
     "price": 900000
   },
   {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 79000
-  },
-  {
     "name": "Dumornay",
     "rating": 88,
     "position": "ST",
@@ -89,6 +76,19 @@
     "eaId": 265898,
     "slug": "27-265898",
     "price": 827000
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 79000
   },
   {
     "name": "Aitana Bonmatí",
@@ -104,19 +104,6 @@
     "price": 273000
   },
   {
-    "name": "Kane",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-202126.86c27ae147eb25b6a215a01faa684f1800bdec552828ba7586b6161da86b1a0b.webp",
-    "url": "https://www.fut.gg/players/202126-harry-kane/27-202126/",
-    "eaId": 202126,
-    "slug": "27-202126",
-    "price": 37000
-  },
-  {
     "name": "Pedri",
     "rating": 90,
     "position": "CM",
@@ -128,6 +115,19 @@
     "eaId": 251854,
     "slug": "27-251854",
     "price": 226000
+  },
+  {
+    "name": "Mbappé",
+    "rating": 91,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 3170000
   },
   {
     "name": "Salma Paralluelo",
@@ -143,17 +143,17 @@
     "price": 310000
   },
   {
-    "name": "Mbappé",
-    "rating": 91,
+    "name": "Kane",
+    "rating": 90,
     "position": "ST",
     "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 3170000
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-202126.86c27ae147eb25b6a215a01faa684f1800bdec552828ba7586b6161da86b1a0b.webp",
+    "url": "https://www.fut.gg/players/202126-harry-kane/27-202126/",
+    "eaId": 202126,
+    "slug": "27-202126",
+    "price": 37000
   },
   {
     "name": "Raphinha",
@@ -234,29 +234,29 @@
     "price": 6850000
   },
   {
-    "name": "Jones",
-    "rating": 56,
-    "position": "ST",
+    "name": "Stanway",
+    "rating": 86,
+    "position": "CDM",
     "rarity": "Rare",
-    "club": "Tranmere Rovers",
-    "league": "EFL League Two",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50409937.e49a083225bdea21882248c04f5619e68e98dcd9011ce2c36847aaca3974385c.webp",
-    "url": "https://www.fut.gg/players/78289-dylan-jones/27-50409937/",
-    "eaId": 50409937,
-    "slug": "27-50409937",
-    "price": null
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
+    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
+    "eaId": 243404,
+    "slug": "27-243404",
+    "price": 34750
   },
   {
-    "name": "Vini Jr.",
-    "rating": 89,
-    "position": "LW",
+    "name": "Álvaro Carreras",
+    "rating": 81,
+    "position": "LB",
     "rarity": "Rare",
     "club": "Real Madrid",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-238794.e7b2162833e5a4972cafb95ce05a0e7e721f61639cfa265c73c6e392588fbbe0.webp",
-    "url": "https://www.fut.gg/players/238794-vinicius-jr/27-238794/",
-    "eaId": 238794,
-    "slug": "27-238794",
-    "price": 678000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-268889.72c406c9c350d8fd7c1fe3a68474f2a358b95dc796ff6303e66e821161fa59f7.webp",
+    "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-268889/",
+    "eaId": 268889,
+    "slug": "27-268889",
+    "price": null
   }
 ]
