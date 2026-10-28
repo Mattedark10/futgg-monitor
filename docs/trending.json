@@ -13,19 +13,6 @@
     "price": null
   },
   {
-    "name": "Carlos Augusto",
-    "rating": 83,
-    "position": "LB",
-    "rarity": "Showdown",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590296.bd49ccca4a0a185bbe9510e0b8a7b67ed7279c5a68d893df419bff353544b9f3.webp",
-    "url": "https://www.fut.gg/players/258648-carlos-augusto/27-50590296/",
-    "eaId": 50590296,
-    "slug": "27-50590296",
-    "price": null
-  },
-  {
     "name": "Stanway",
     "rating": 87,
     "position": "CM",
@@ -36,6 +23,19 @@
     "url": "https://www.fut.gg/players/243404-georgia-stanway/27-50575052/",
     "eaId": 50575052,
     "slug": "27-50575052",
+    "price": null
+  },
+  {
+    "name": "Carlos Augusto",
+    "rating": 83,
+    "position": "LB",
+    "rarity": "Showdown",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590296.bd49ccca4a0a185bbe9510e0b8a7b67ed7279c5a68d893df419bff353544b9f3.webp",
+    "url": "https://www.fut.gg/players/258648-carlos-augusto/27-50590296/",
+    "eaId": 50590296,
+    "slug": "27-50590296",
     "price": null
   },
   {
@@ -78,19 +78,6 @@
     "price": null
   },
   {
-    "name": "Héctor Bellerín",
-    "rating": 85,
-    "position": "RM",
-    "rarity": "Ultimate Scream",
-    "club": "Real Betis",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67312611.0312e102ea8176d3393cfac97f6005e0e9a8acbeb549997529afcb45de1ad07d.webp",
-    "url": "https://www.fut.gg/players/203747-hector-bellerin/27-67312611/",
-    "eaId": 67312611,
-    "slug": "27-67312611",
-    "price": null
-  },
-  {
     "name": "Osimhen",
     "rating": 86,
     "position": "ST",
@@ -130,17 +117,17 @@
     "price": null
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 176000
+    "name": "Balerdi",
+    "rating": 83,
+    "position": "CB",
+    "rarity": "Team of the week",
+    "club": "AS Roma",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67351699.fffa448b7b8214f2f2914f36dfb20c54c64737fb5dcd3916c1de9be8937b822f.webp",
+    "url": "https://www.fut.gg/players/242835-leonardo-balerdi/27-67351699/",
+    "eaId": 67351699,
+    "slug": "27-67351699",
+    "price": null
   },
   {
     "name": "Milinković-Savić",
@@ -154,6 +141,45 @@
     "eaId": 50555496,
     "slug": "27-50555496",
     "price": null
+  },
+  {
+    "name": "Héctor Bellerín",
+    "rating": 85,
+    "position": "RM",
+    "rarity": "Ultimate Scream",
+    "club": "Real Betis",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67312611.0312e102ea8176d3393cfac97f6005e0e9a8acbeb549997529afcb45de1ad07d.webp",
+    "url": "https://www.fut.gg/players/203747-hector-bellerin/27-67312611/",
+    "eaId": 67312611,
+    "slug": "27-67312611",
+    "price": null
+  },
+  {
+    "name": "Mohya",
+    "rating": 80,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "M'gladbach",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50412102.a5510e67eefc34a129da677dfd9de89df8ac33af57a28a700f307fa7996e9e35.webp",
+    "url": "https://www.fut.gg/players/80454-wael-mohya/27-50412102/",
+    "eaId": 50412102,
+    "slug": "27-50412102",
+    "price": null
+  },
+  {
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 176000
   },
   {
     "name": "Álvaro Carreras",
@@ -182,16 +208,29 @@
     "price": 827000
   },
   {
-    "name": "Balerdi",
-    "rating": 83,
-    "position": "CB",
+    "name": "Mbappé",
+    "rating": 91,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 3170000
+  },
+  {
+    "name": "Vanat",
+    "rating": 80,
+    "position": "ST",
     "rarity": "Team of the week",
-    "club": "AS Roma",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67351699.fffa448b7b8214f2f2914f36dfb20c54c64737fb5dcd3916c1de9be8937b822f.webp",
-    "url": "https://www.fut.gg/players/242835-leonardo-balerdi/27-67351699/",
-    "eaId": 67351699,
-    "slug": "27-67351699",
+    "club": "Girona FC",
+    "league": "LALIGA HYPERMOTION",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603189.64e1f160492f5280cdd22a49a7dc46f18e647b1e8eb7a67811121e983aa4b5f3.webp",
+    "url": "https://www.fut.gg/players/271541-vladyslav-vanat/27-50603189/",
+    "eaId": 50603189,
+    "slug": "27-50603189",
     "price": null
   },
   {
@@ -208,55 +247,16 @@
     "price": 79000
   },
   {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
+    "name": "Stanway",
+    "rating": 86,
+    "position": "CDM",
     "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 3170000
-  },
-  {
-    "name": "Scott",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
+    "club": "Arsenal",
     "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84113342.47e2578c2ed8202818184d9ea9d502c7600e3f2b52c73dc661b3d5f855c2a93f.webp",
-    "url": "https://www.fut.gg/players/227262-jill-scott/27-84113342/",
-    "eaId": 84113342,
-    "slug": "27-84113342",
-    "price": null
-  },
-  {
-    "name": "Mohya",
-    "rating": 80,
-    "position": "CAM",
-    "rarity": "Team of the week",
-    "club": "M'gladbach",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50412102.a5510e67eefc34a129da677dfd9de89df8ac33af57a28a700f307fa7996e9e35.webp",
-    "url": "https://www.fut.gg/players/80454-wael-mohya/27-50412102/",
-    "eaId": 50412102,
-    "slug": "27-50412102",
-    "price": null
-  },
-  {
-    "name": "Aitana Bonmatí",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
-    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
-    "eaId": 241667,
-    "slug": "27-241667",
-    "price": 273000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-243404.305246944c387c855965a9dfd47fe7cfe77cb5e719998b528b737ee56b797938.webp",
+    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-243404/",
+    "eaId": 243404,
+    "slug": "27-243404",
+    "price": 34750
   }
 ]
