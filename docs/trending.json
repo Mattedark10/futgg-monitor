@@ -1,18 +1,5 @@
 [
   {
-    "name": "Loftus-Cheek",
-    "rating": 83,
-    "position": "CAM",
-    "rarity": "Showdown",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50545314.5808ecda97894f6155732166ecd1645c528ff6b1c135c6e7a03062bd6720f261.webp",
-    "url": "https://www.fut.gg/players/213666-ruben-loftus-cheek/27-50545314/",
-    "eaId": 50545314,
-    "slug": "27-50545314",
-    "price": null
-  },
-  {
     "name": "Stanway",
     "rating": 87,
     "position": "CM",
@@ -26,16 +13,16 @@
     "price": null
   },
   {
-    "name": "Carlos Augusto",
+    "name": "Loftus-Cheek",
     "rating": 83,
-    "position": "LB",
+    "position": "CAM",
     "rarity": "Showdown",
-    "club": "Lombardia FC",
+    "club": "Milano FC",
     "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590296.bd49ccca4a0a185bbe9510e0b8a7b67ed7279c5a68d893df419bff353544b9f3.webp",
-    "url": "https://www.fut.gg/players/258648-carlos-augusto/27-50590296/",
-    "eaId": 50590296,
-    "slug": "27-50590296",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50545314.5808ecda97894f6155732166ecd1645c528ff6b1c135c6e7a03062bd6720f261.webp",
+    "url": "https://www.fut.gg/players/213666-ruben-loftus-cheek/27-50545314/",
+    "eaId": 50545314,
+    "slug": "27-50545314",
     "price": null
   },
   {
@@ -49,6 +36,19 @@
     "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-84117827/",
     "eaId": 84117827,
     "slug": "27-84117827",
+    "price": null
+  },
+  {
+    "name": "Carlos Augusto",
+    "rating": 83,
+    "position": "LB",
+    "rarity": "Showdown",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590296.bd49ccca4a0a185bbe9510e0b8a7b67ed7279c5a68d893df419bff353544b9f3.webp",
+    "url": "https://www.fut.gg/players/258648-carlos-augusto/27-50590296/",
+    "eaId": 50590296,
+    "slug": "27-50590296",
     "price": null
   },
   {
@@ -156,6 +156,19 @@
     "price": null
   },
   {
+    "name": "Álvaro Carreras",
+    "rating": 81,
+    "position": "LB",
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-268889.72c406c9c350d8fd7c1fe3a68474f2a358b95dc796ff6303e66e821161fa59f7.webp",
+    "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-268889/",
+    "eaId": 268889,
+    "slug": "27-268889",
+    "price": null
+  },
+  {
     "name": "Héctor Bellerín",
     "rating": 85,
     "position": "RM",
@@ -182,16 +195,42 @@
     "price": 176000
   },
   {
-    "name": "Álvaro Carreras",
-    "rating": 81,
-    "position": "LB",
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 79000
+  },
+  {
+    "name": "Mbappé",
+    "rating": 91,
+    "position": "ST",
     "rarity": "Rare",
     "club": "Real Madrid",
     "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-268889.72c406c9c350d8fd7c1fe3a68474f2a358b95dc796ff6303e66e821161fa59f7.webp",
-    "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-268889/",
-    "eaId": 268889,
-    "slug": "27-268889",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 3170000
+  },
+  {
+    "name": "Kramarić",
+    "rating": 83,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "TSG Hoffenheim",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50548002.9c8746b669f38829581ee1866ef4001279352dca1cc54981440d5ce1e208b326.webp",
+    "url": "https://www.fut.gg/players/216354-andrej-kramaric/27-50548002/",
+    "eaId": 50548002,
+    "slug": "27-50548002",
     "price": null
   },
   {
@@ -208,32 +247,6 @@
     "price": 827000
   },
   {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 3170000
-  },
-  {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 79000
-  },
-  {
     "name": "Stanway",
     "rating": 86,
     "position": "CDM",
@@ -245,18 +258,5 @@
     "eaId": 243404,
     "slug": "27-243404",
     "price": 34750
-  },
-  {
-    "name": "Vanat",
-    "rating": 80,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Girona FC",
-    "league": "LALIGA HYPERMOTION",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603189.64e1f160492f5280cdd22a49a7dc46f18e647b1e8eb7a67811121e983aa4b5f3.webp",
-    "url": "https://www.fut.gg/players/271541-vladyslav-vanat/27-50603189/",
-    "eaId": 50603189,
-    "slug": "27-50603189",
-    "price": null
   }
 ]
