@@ -26,32 +26,6 @@
     "price": null
   },
   {
-    "name": "Stanway",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Team of the week",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575052.6850bed8449f8e1798ca288e2d446749306c7f0883607d1bf126dbeadad24afa.webp",
-    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-50575052/",
-    "eaId": 50575052,
-    "slug": "27-50575052",
-    "price": null
-  },
-  {
-    "name": "Mbappé",
-    "rating": 92,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84117827.b5282dac1f6fdfa12506f61bcf40c6a55c943c406d57c6880ad7f58e2541f5a5.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-84117827/",
-    "eaId": 84117827,
-    "slug": "27-84117827",
-    "price": null
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -65,16 +39,16 @@
     "price": 176000
   },
   {
-    "name": "Loftus-Cheek",
-    "rating": 83,
-    "position": "CAM",
-    "rarity": "Showdown",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50545314.5808ecda97894f6155732166ecd1645c528ff6b1c135c6e7a03062bd6720f261.webp",
-    "url": "https://www.fut.gg/players/213666-ruben-loftus-cheek/27-50545314/",
-    "eaId": 50545314,
-    "slug": "27-50545314",
+    "name": "Mbappé",
+    "rating": 92,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84117827.b5282dac1f6fdfa12506f61bcf40c6a55c943c406d57c6880ad7f58e2541f5a5.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-84117827/",
+    "eaId": 84117827,
+    "slug": "27-84117827",
     "price": null
   },
   {
@@ -91,19 +65,6 @@
     "price": 79000
   },
   {
-    "name": "Aitana Bonmatí",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
-    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
-    "eaId": 241667,
-    "slug": "27-241667",
-    "price": 273000
-  },
-  {
     "name": "Salma Paralluelo",
     "rating": 87,
     "position": "LW",
@@ -117,16 +78,42 @@
     "price": 310000
   },
   {
-    "name": "Álvaro Carreras",
-    "rating": 81,
-    "position": "LB",
+    "name": "Stanway",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Team of the week",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575052.6850bed8449f8e1798ca288e2d446749306c7f0883607d1bf126dbeadad24afa.webp",
+    "url": "https://www.fut.gg/players/243404-georgia-stanway/27-50575052/",
+    "eaId": 50575052,
+    "slug": "27-50575052",
+    "price": null
+  },
+  {
+    "name": "Aitana Bonmatí",
+    "rating": 90,
+    "position": "CM",
     "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-268889.72c406c9c350d8fd7c1fe3a68474f2a358b95dc796ff6303e66e821161fa59f7.webp",
-    "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-268889/",
-    "eaId": 268889,
-    "slug": "27-268889",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 273000
+  },
+  {
+    "name": "Loftus-Cheek",
+    "rating": 83,
+    "position": "CAM",
+    "rarity": "Showdown",
+    "club": "Milano FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50545314.5808ecda97894f6155732166ecd1645c528ff6b1c135c6e7a03062bd6720f261.webp",
+    "url": "https://www.fut.gg/players/213666-ruben-loftus-cheek/27-50545314/",
+    "eaId": 50545314,
+    "slug": "27-50545314",
     "price": null
   },
   {
@@ -169,17 +156,30 @@
     "price": 827000
   },
   {
-    "name": "Carlos Augusto",
-    "rating": 83,
+    "name": "Álvaro Carreras",
+    "rating": 81,
     "position": "LB",
-    "rarity": "Showdown",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590296.bd49ccca4a0a185bbe9510e0b8a7b67ed7279c5a68d893df419bff353544b9f3.webp",
-    "url": "https://www.fut.gg/players/258648-carlos-augusto/27-50590296/",
-    "eaId": 50590296,
-    "slug": "27-50590296",
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-268889.72c406c9c350d8fd7c1fe3a68474f2a358b95dc796ff6303e66e821161fa59f7.webp",
+    "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-268889/",
+    "eaId": 268889,
+    "slug": "27-268889",
     "price": null
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1830000
   },
   {
     "name": "Mbappé",
@@ -208,45 +208,6 @@
     "price": 34750
   },
   {
-    "name": "Gabriel",
-    "rating": 90,
-    "position": "CB",
-    "rarity": "Team of the week",
-    "club": "Arsenal",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50564228.7806d05c9899873779c7f3f87d8945663db3ff23123dd7c46726ddd5ad9615fc.webp",
-    "url": "https://www.fut.gg/players/232580-gabriel/27-50564228/",
-    "eaId": 50564228,
-    "slug": "27-50564228",
-    "price": null
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1830000
-  },
-  {
-    "name": "Tel",
-    "rating": 80,
-    "position": "LM",
-    "rarity": "Team of the week",
-    "club": "Spurs",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50600069.24d78beb15d6686c342dd0a1ac1ffa1ef63657af426e95a0b29e55a7a92400a2.webp",
-    "url": "https://www.fut.gg/players/268421-mathys-tel/27-50600069/",
-    "eaId": 50600069,
-    "slug": "27-50600069",
-    "price": null
-  },
-  {
     "name": "Alonso",
     "rating": 85,
     "position": "LB",
@@ -257,6 +218,45 @@
     "url": "https://www.fut.gg/players/220337-junior-alonso/27-50551985/",
     "eaId": 50551985,
     "slug": "27-50551985",
+    "price": null
+  },
+  {
+    "name": "Mariona",
+    "rating": 89,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
+    "eaId": 237288,
+    "slug": "27-237288",
+    "price": 53500
+  },
+  {
+    "name": "Raphinha",
+    "rating": 88,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233419.bec340ed7a9c3142a3801d98319339988132697aae5a0e32eaaf03bedcc61c7f.webp",
+    "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
+    "eaId": 233419,
+    "slug": "27-233419",
+    "price": 509000
+  },
+  {
+    "name": "Carlos Augusto",
+    "rating": 83,
+    "position": "LB",
+    "rarity": "Showdown",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590296.bd49ccca4a0a185bbe9510e0b8a7b67ed7279c5a68d893df419bff353544b9f3.webp",
+    "url": "https://www.fut.gg/players/258648-carlos-augusto/27-50590296/",
+    "eaId": 50590296,
+    "slug": "27-50590296",
     "price": null
   }
 ]
