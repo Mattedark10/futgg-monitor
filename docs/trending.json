@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Valverde",
-    "rating": 88,
-    "position": "RB",
-    "rarity": "Ultimate Scream",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50570701.f2a71d7d62305767b9d63b7c29ea866cb989061b7eaaa3c684f4abc06ab57bb2.webp",
-    "url": "https://www.fut.gg/players/239053-federico-valverde/27-50570701/",
-    "eaId": 50570701,
-    "slug": "27-50570701",
-    "price": null
-  },
-  {
     "name": "Kvaratskhelia",
     "rating": 89,
     "position": "ST",
@@ -65,6 +52,19 @@
     "price": null
   },
   {
+    "name": "Valverde",
+    "rating": 88,
+    "position": "RB",
+    "rarity": "Ultimate Scream",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50570701.f2a71d7d62305767b9d63b7c29ea866cb989061b7eaaa3c684f4abc06ab57bb2.webp",
+    "url": "https://www.fut.gg/players/239053-federico-valverde/27-50570701/",
+    "eaId": 50570701,
+    "slug": "27-50570701",
+    "price": null
+  },
+  {
     "name": "McTominay",
     "rating": 88,
     "position": "CDM",
@@ -75,6 +75,19 @@
     "url": "https://www.fut.gg/players/237238-scott-mctominay/27-50568886/",
     "eaId": 50568886,
     "slug": "27-50568886",
+    "price": null
+  },
+  {
+    "name": "Amoura",
+    "rating": 85,
+    "position": "LW",
+    "rarity": "Ultimate Scream",
+    "club": "OGC Nice",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373561.8fd3366bc194e1b90f4270c1995f5d54711397f45270b4564e20d520d6267cb7.webp",
+    "url": "https://www.fut.gg/players/264697-mohamed-amoura/27-67373561/",
+    "eaId": 67373561,
+    "slug": "27-67373561",
     "price": null
   },
   {
@@ -104,19 +117,6 @@
     "price": null
   },
   {
-    "name": "Amoura",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "Ultimate Scream",
-    "club": "OGC Nice",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373561.8fd3366bc194e1b90f4270c1995f5d54711397f45270b4564e20d520d6267cb7.webp",
-    "url": "https://www.fut.gg/players/264697-mohamed-amoura/27-67373561/",
-    "eaId": 67373561,
-    "slug": "27-67373561",
-    "price": null
-  },
-  {
     "name": "Quaresma",
     "rating": 87,
     "position": "LW",
@@ -130,19 +130,6 @@
     "price": null
   },
   {
-    "name": "Garner",
-    "rating": 86,
-    "position": "RB",
-    "rarity": "Ultimate Scream",
-    "club": "Everton",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575305.35770360a3ff0d56b23b78b4b29aa4f095c5e704c4a26dab507ba6ea02060f16.webp",
-    "url": "https://www.fut.gg/players/243657-james-garner/27-50575305/",
-    "eaId": 50575305,
-    "slug": "27-50575305",
-    "price": null
-  },
-  {
     "name": "Laura Pérez",
     "rating": 85,
     "position": "ST",
@@ -153,6 +140,19 @@
     "url": "https://www.fut.gg/players/275787-laura-perez/27-50607435/",
     "eaId": 50607435,
     "slug": "27-50607435",
+    "price": null
+  },
+  {
+    "name": "Garner",
+    "rating": 86,
+    "position": "RB",
+    "rarity": "Ultimate Scream",
+    "club": "Everton",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575305.35770360a3ff0d56b23b78b4b29aa4f095c5e704c4a26dab507ba6ea02060f16.webp",
+    "url": "https://www.fut.gg/players/243657-james-garner/27-50575305/",
+    "eaId": 50575305,
+    "slug": "27-50575305",
     "price": null
   },
   {
@@ -182,19 +182,6 @@
     "price": null
   },
   {
-    "name": "Ciss",
-    "rating": 85,
-    "position": "CB",
-    "rarity": "Ultimate Scream",
-    "club": "Rayo Vallecano",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50582506.a5512fcd4df03c059a682083af1c4b59f96c893623ed3cfd65b3c9ede17714c2.webp",
-    "url": "https://www.fut.gg/players/250858-pathe-ciss/27-50582506/",
-    "eaId": 50582506,
-    "slug": "27-50582506",
-    "price": null
-  },
-  {
     "name": "Perišić",
     "rating": 86,
     "position": "CAM",
@@ -205,6 +192,19 @@
     "url": "https://www.fut.gg/players/181458-ivan-perisic/27-50513106/",
     "eaId": 50513106,
     "slug": "27-50513106",
+    "price": null
+  },
+  {
+    "name": "Ciss",
+    "rating": 85,
+    "position": "CB",
+    "rarity": "Ultimate Scream",
+    "club": "Rayo Vallecano",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50582506.a5512fcd4df03c059a682083af1c4b59f96c893623ed3cfd65b3c9ede17714c2.webp",
+    "url": "https://www.fut.gg/players/250858-pathe-ciss/27-50582506/",
+    "eaId": 50582506,
+    "slug": "27-50582506",
     "price": null
   },
   {
@@ -221,19 +221,6 @@
     "price": null
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 176000
-  },
-  {
     "name": "Crnogorčević",
     "rating": 85,
     "position": "RB",
@@ -247,16 +234,29 @@
     "price": null
   },
   {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
     "rarity": "Rare",
-    "club": "PSG",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 176000
+  },
+  {
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
     "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 79000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 310000
   }
 ]
