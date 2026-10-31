@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Kvaratskhelia",
-    "rating": 89,
-    "position": "ST",
-    "rarity": "Ultimate Scream",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50579283.2cfdffae404b44cac1340c52aebbc9c37ec15ad9d1288653ca08d98a6d09fd30.webp",
-    "url": "https://www.fut.gg/players/247635-khvicha-kvaratskhelia/27-50579283/",
-    "eaId": 50579283,
-    "slug": "27-50579283",
-    "price": null
-  },
-  {
     "name": "Matheus Cunha",
     "rating": 87,
     "position": "ST",
@@ -49,6 +36,19 @@
     "url": "https://www.fut.gg/players/240243-matheus-cunha/27-50571891/",
     "eaId": 50571891,
     "slug": "27-50571891",
+    "price": null
+  },
+  {
+    "name": "Kvaratskhelia",
+    "rating": 89,
+    "position": "ST",
+    "rarity": "Ultimate Scream",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50579283.2cfdffae404b44cac1340c52aebbc9c37ec15ad9d1288653ca08d98a6d09fd30.webp",
+    "url": "https://www.fut.gg/players/247635-khvicha-kvaratskhelia/27-50579283/",
+    "eaId": 50579283,
+    "slug": "27-50579283",
     "price": null
   },
   {
@@ -117,19 +117,6 @@
     "price": null
   },
   {
-    "name": "Quaresma",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Ultimate Scream Hero",
-    "club": "HERO",
-    "league": "Liga Portugal",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83906855.83ae37498415560072c1c8adac9300f1425ecc38421b271c6edf6d852a138c3d.webp",
-    "url": "https://www.fut.gg/players/20775-quaresma/27-83906855/",
-    "eaId": 83906855,
-    "slug": "27-83906855",
-    "price": null
-  },
-  {
     "name": "Laura Pérez",
     "rating": 85,
     "position": "ST",
@@ -140,6 +127,19 @@
     "url": "https://www.fut.gg/players/275787-laura-perez/27-50607435/",
     "eaId": 50607435,
     "slug": "27-50607435",
+    "price": null
+  },
+  {
+    "name": "Quaresma",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Liga Portugal",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83906855.83ae37498415560072c1c8adac9300f1425ecc38421b271c6edf6d852a138c3d.webp",
+    "url": "https://www.fut.gg/players/20775-quaresma/27-83906855/",
+    "eaId": 83906855,
+    "slug": "27-83906855",
     "price": null
   },
   {
