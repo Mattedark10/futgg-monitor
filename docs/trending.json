@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/240243-matheus-cunha/27-50571891/",
     "eaId": 50571891,
     "slug": "27-50571891",
-    "price": 405000
+    "price": 293000
   },
   {
     "name": "Amoura",
@@ -78,32 +78,6 @@
     "price": 110000
   },
   {
-    "name": "Messi",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Ultimate Scream",
-    "club": "Inter Miami CF",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50489671.728db5053f5c098b4c23d902e2df724320af9dff75831e9a29df6f86d28a3096.webp",
-    "url": "https://www.fut.gg/players/158023-lionel-messi/27-50489671/",
-    "eaId": 50489671,
-    "slug": "27-50489671",
-    "price": 5600000
-  },
-  {
-    "name": "McTominay",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Ultimate Scream",
-    "club": "SSC Napoli",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568886.1d250ca50d3a98f13bbf673f824a1568a7d798db9cdcb82ed239d6b7ddefd34a.webp",
-    "url": "https://www.fut.gg/players/237238-scott-mctominay/27-50568886/",
-    "eaId": 50568886,
-    "slug": "27-50568886",
-    "price": 620000
-  },
-  {
     "name": "Salma Paralluelo",
     "rating": 87,
     "position": "LW",
@@ -114,7 +88,20 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 310000
+    "price": 317000
+  },
+  {
+    "name": "Messi",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Ultimate Scream",
+    "club": "Inter Miami CF",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50489671.728db5053f5c098b4c23d902e2df724320af9dff75831e9a29df6f86d28a3096.webp",
+    "url": "https://www.fut.gg/players/158023-lionel-messi/27-50489671/",
+    "eaId": 50489671,
+    "slug": "27-50489671",
+    "price": 3655000
   },
   {
     "name": "Aitana Bonmatí",
@@ -127,7 +114,59 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
     "slug": "27-241667",
-    "price": 266000
+    "price": 258000
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 71500
+  },
+  {
+    "name": "McTominay",
+    "rating": 88,
+    "position": "CDM",
+    "rarity": "Ultimate Scream",
+    "club": "SSC Napoli",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568886.1d250ca50d3a98f13bbf673f824a1568a7d798db9cdcb82ed239d6b7ddefd34a.webp",
+    "url": "https://www.fut.gg/players/237238-scott-mctominay/27-50568886/",
+    "eaId": 50568886,
+    "slug": "27-50568886",
+    "price": 531000
+  },
+  {
+    "name": "Pedri",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.384b46ff744661562a313ab76b9594e6536468ff1425e73cc8852791b3d253a5.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
+    "eaId": 251854,
+    "slug": "27-251854",
+    "price": 205000
+  },
+  {
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 173000
   },
   {
     "name": "Laura Pérez",
@@ -143,17 +182,30 @@
     "price": null
   },
   {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
+    "name": "Patri Guijarro",
+    "rating": 88,
+    "position": "CDM",
     "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 80000
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.cc3f69af348d1a89088fdc3d5960468813dba0186b1c2ebe758f8f40553fad9e.webp",
+    "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
+    "eaId": 237289,
+    "slug": "27-237289",
+    "price": 192000
+  },
+  {
+    "name": "Scott",
+    "rating": 87,
+    "position": "CB",
+    "rarity": "Ultimate Scream Hero",
+    "club": "HERO",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84113342.47e2578c2ed8202818184d9ea9d502c7600e3f2b52c73dc661b3d5f855c2a93f.webp",
+    "url": "https://www.fut.gg/players/227262-jill-scott/27-84113342/",
+    "eaId": 84113342,
+    "slug": "27-84113342",
+    "price": null
   },
   {
     "name": "Kvaratskhelia",
@@ -166,20 +218,7 @@
     "url": "https://www.fut.gg/players/247635-khvicha-kvaratskhelia/27-50579283/",
     "eaId": 50579283,
     "slug": "27-50579283",
-    "price": 3600000
-  },
-  {
-    "name": "Pedri",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-251854.384b46ff744661562a313ab76b9594e6536468ff1425e73cc8852791b3d253a5.webp",
-    "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
-    "eaId": 251854,
-    "slug": "27-251854",
-    "price": 224000
+    "price": 2743000
   },
   {
     "name": "Quaresma",
@@ -192,20 +231,7 @@
     "url": "https://www.fut.gg/players/20775-quaresma/27-83906855/",
     "eaId": 83906855,
     "slug": "27-83906855",
-    "price": 1020000
-  },
-  {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 176000
+    "price": 868000
   },
   {
     "name": "Garner",
@@ -221,42 +247,16 @@
     "price": 134000
   },
   {
-    "name": "Patri Guijarro",
-    "rating": 88,
-    "position": "CDM",
+    "name": "Mariona",
+    "rating": 89,
+    "position": "CM",
     "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.cc3f69af348d1a89088fdc3d5960468813dba0186b1c2ebe758f8f40553fad9e.webp",
-    "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
-    "eaId": 237289,
-    "slug": "27-237289",
-    "price": 218000
-  },
-  {
-    "name": "Valverde",
-    "rating": 88,
-    "position": "RB",
-    "rarity": "Ultimate Scream",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50570701.f2a71d7d62305767b9d63b7c29ea866cb989061b7eaaa3c684f4abc06ab57bb2.webp",
-    "url": "https://www.fut.gg/players/239053-federico-valverde/27-50570701/",
-    "eaId": 50570701,
-    "slug": "27-50570701",
-    "price": 3318000
-  },
-  {
-    "name": "Olise",
-    "rating": 91,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100911123.e012418e3cd2c1598738d269663b05e40d991f0440a6f88618e3fb92423f86a0.webp",
-    "url": "https://www.fut.gg/players/247827-michael-olise/27-100911123/",
-    "eaId": 100911123,
-    "slug": "27-100911123",
-    "price": 2320000
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237288.ea0ee321a04478003eb2c13d8a8aa9f40e0312dd990d0c116bdff0865e685789.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-237288/",
+    "eaId": 237288,
+    "slug": "27-237288",
+    "price": 42000
   }
 ]
