@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Tomori",
-    "rating": 80,
-    "position": "CB",
-    "rarity": "Rare",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-232756.5433271e6ea2f8e160da3e1c7feef05da2be0e5b494e95ef0f1c11256c81cfbb.webp",
-    "url": "https://www.fut.gg/players/232756-fikayo-tomori/27-232756/",
-    "eaId": 232756,
-    "slug": "27-232756",
-    "price": null
-  },
-  {
     "name": "Scott",
     "rating": 87,
     "position": "CB",
@@ -65,43 +52,17 @@
     "price": null
   },
   {
-    "name": "Reijnders",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Ultimate Scream",
-    "club": "Al Qadsiah",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572286.a62403fc335e57825f85455550ac90f47590930e07a6751530413606dfa12597.webp",
-    "url": "https://www.fut.gg/players/240638-tijjani-reijnders/27-50572286/",
-    "eaId": 50572286,
-    "slug": "27-50572286",
-    "price": null
-  },
-  {
-    "name": "Solet",
-    "rating": 78,
+    "name": "Tomori",
+    "rating": 80,
     "position": "CB",
     "rarity": "Rare",
-    "club": "Udinese Calcio",
+    "club": "Milano FC",
     "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-242238.d8b84fcadb7f1f0822d42117c448bb8418972f72935f77da90c6622e408f69d4.webp",
-    "url": "https://www.fut.gg/players/242238-oumar-solet/27-242238/",
-    "eaId": 242238,
-    "slug": "27-242238",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-232756.5433271e6ea2f8e160da3e1c7feef05da2be0e5b494e95ef0f1c11256c81cfbb.webp",
+    "url": "https://www.fut.gg/players/232756-fikayo-tomori/27-232756/",
+    "eaId": 232756,
+    "slug": "27-232756",
     "price": null
-  },
-  {
-    "name": "Salma Paralluelo",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 306000
   },
   {
     "name": "Patri Guijarro",
@@ -117,17 +78,17 @@
     "price": 184000
   },
   {
-    "name": "Aitana Bonmatí",
-    "rating": 90,
-    "position": "CM",
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
     "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
-    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
-    "eaId": 241667,
-    "slug": "27-241667",
-    "price": 250000
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 306000
   },
   {
     "name": "Lamine Yamal",
@@ -143,17 +104,17 @@
     "price": 157000
   },
   {
-    "name": "Karchaoui",
-    "rating": 87,
+    "name": "Aitana Bonmatí",
+    "rating": 90,
     "position": "CM",
     "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 60000
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 250000
   },
   {
     "name": "Pedri",
@@ -167,6 +128,32 @@
     "eaId": 251854,
     "slug": "27-251854",
     "price": 198000
+  },
+  {
+    "name": "Reijnders",
+    "rating": 85,
+    "position": "CDM",
+    "rarity": "Ultimate Scream",
+    "club": "Al Qadsiah",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572286.a62403fc335e57825f85455550ac90f47590930e07a6751530413606dfa12597.webp",
+    "url": "https://www.fut.gg/players/240638-tijjani-reijnders/27-50572286/",
+    "eaId": 50572286,
+    "slug": "27-50572286",
+    "price": null
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 60000
   },
   {
     "name": "Matheus Cunha",
@@ -195,17 +182,17 @@
     "price": null
   },
   {
-    "name": "Jonny",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Ultimate Scream",
-    "club": "D. Alavés",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50542103.4ae7502102a254d88fa7cdd12bfb28b9910109fa27bf7963df708fbffc00e4a9.webp",
-    "url": "https://www.fut.gg/players/210455-jonny/27-50542103/",
-    "eaId": 50542103,
-    "slug": "27-50542103",
-    "price": null
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1855000
   },
   {
     "name": "Mariona",
@@ -221,6 +208,19 @@
     "price": 39000
   },
   {
+    "name": "Solet",
+    "rating": 78,
+    "position": "CB",
+    "rarity": "Rare",
+    "club": "Udinese Calcio",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-242238.d8b84fcadb7f1f0822d42117c448bb8418972f72935f77da90c6622e408f69d4.webp",
+    "url": "https://www.fut.gg/players/242238-oumar-solet/27-242238/",
+    "eaId": 242238,
+    "slug": "27-242238",
+    "price": null
+  },
+  {
     "name": "Raphinha",
     "rating": 88,
     "position": "LW",
@@ -234,29 +234,29 @@
     "price": 527000
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
+    "name": "Dumornay",
+    "rating": 88,
     "position": "ST",
     "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1855000
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 863000
   },
   {
-    "name": "McTominay",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Ultimate Scream",
-    "club": "SSC Napoli",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568886.1d250ca50d3a98f13bbf673f824a1568a7d798db9cdcb82ed239d6b7ddefd34a.webp",
-    "url": "https://www.fut.gg/players/237238-scott-mctominay/27-50568886/",
-    "eaId": 50568886,
-    "slug": "27-50568886",
-    "price": 478000
+    "name": "Pajor",
+    "rating": 89,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241846.05ad1967a9e86af6c4df5136a801516f63e9cd62a55251db3328a71b4cbbaf07.webp",
+    "url": "https://www.fut.gg/players/241846-ewa-pajor/27-241846/",
+    "eaId": 241846,
+    "slug": "27-241846",
+    "price": 155000
   }
 ]
