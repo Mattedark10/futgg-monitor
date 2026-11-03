@@ -1,5 +1,70 @@
 [
   {
+    "name": "Ampadu",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Ultimate Scream",
+    "club": "Leeds United",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67344599.2b180479c3f84ca7650a7b7c26ab6aec273507692c4317b2b517985043cced50.webp",
+    "url": "https://www.fut.gg/players/235735-ethan-ampadu/27-67344599/",
+    "eaId": 67344599,
+    "slug": "27-67344599",
+    "price": null
+  },
+  {
+    "name": "Nyoni",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50610776.d1abaf2958a621e852a48791cdd0d9c30d9d0e1ac16b8fd9549131dca9b09c25.webp",
+    "url": "https://www.fut.gg/players/279128-unknown-player/27-50610776/",
+    "eaId": 50610776,
+    "slug": "27-50610776",
+    "price": null
+  },
+  {
+    "name": "Sabitzer",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50536571.60f2480fad940d550a10b5dc1dca046e773483dc25da3aa948c779283599dfe3.webp",
+    "url": "https://www.fut.gg/players/204923-marcel-sabitzer/27-50536571/",
+    "eaId": 50536571,
+    "slug": "27-50536571",
+    "price": null
+  },
+  {
+    "name": "Ta Bi",
+    "rating": 85,
+    "position": "RM",
+    "rarity": "Star Performer",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50414884.c9ebb7ca0c57c13724daa1ad1f261dcb174af6af13189bec726068d8d842fe0b.webp",
+    "url": "https://www.fut.gg/players/83236-jocelin-ta-bi/27-50414884/",
+    "eaId": 50414884,
+    "slug": "27-50414884",
+    "price": null
+  },
+  {
+    "name": "Baumgartl",
+    "rating": 85,
+    "position": "CB",
+    "rarity": "Star Performer",
+    "club": "St. Louis CITY SC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50555289.abc81450f6a54aa78dbd9c243a8b1ca4a0010ed363dbafdc03f8bd7ba1e8872e.webp",
+    "url": "https://www.fut.gg/players/223641-timo-baumgartl/27-50555289/",
+    "eaId": 50555289,
+    "slug": "27-50555289",
+    "price": null
+  },
+  {
     "name": "Jesús de Miguel",
     "rating": 67,
     "position": "ST",
@@ -10,6 +75,19 @@
     "url": "https://www.fut.gg/players/73318-jesus-de-miguel/27-73318/",
     "eaId": 73318,
     "slug": "27-73318",
+    "price": null
+  },
+  {
+    "name": "Lynch",
+    "rating": 85,
+    "position": "GK",
+    "rarity": "Star Performer",
+    "club": "Fleetwood Town",
+    "league": "EFL League Two",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50539254.f94f502c232916368fc2e8744d3484e1ca6c2b20c0bda6e572eb27caefed710f.webp",
+    "url": "https://www.fut.gg/players/207606-jay-lynch/27-50539254/",
+    "eaId": 50539254,
+    "slug": "27-50539254",
     "price": null
   },
   {
@@ -39,19 +117,6 @@
     "price": 184000
   },
   {
-    "name": "Salma Paralluelo",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 306000
-  },
-  {
     "name": "Scott",
     "rating": 87,
     "position": "CB",
@@ -63,6 +128,19 @@
     "eaId": 84113342,
     "slug": "27-84113342",
     "price": null
+  },
+  {
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 306000
   },
   {
     "name": "Lamine Yamal",
@@ -117,19 +195,6 @@
     "price": 60000
   },
   {
-    "name": "Schüller",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "Manchester Utd",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575950.a4f8195e6b5f9c2e260216021ecc22864493a14bbeff4920cb45620a09105fdf.webp",
-    "url": "https://www.fut.gg/players/244302-lea-schuller/27-50575950/",
-    "eaId": 50575950,
-    "slug": "27-50575950",
-    "price": null
-  },
-  {
     "name": "Dembélé",
     "rating": 90,
     "position": "ST",
@@ -156,6 +221,19 @@
     "price": 39000
   },
   {
+    "name": "Schüller",
+    "rating": 86,
+    "position": "CAM",
+    "rarity": "Ultimate Scream",
+    "club": "Manchester Utd",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575950.a4f8195e6b5f9c2e260216021ecc22864493a14bbeff4920cb45620a09105fdf.webp",
+    "url": "https://www.fut.gg/players/244302-lea-schuller/27-50575950/",
+    "eaId": 50575950,
+    "slug": "27-50575950",
+    "price": null
+  },
+  {
     "name": "Matheus Cunha",
     "rating": 87,
     "position": "ST",
@@ -180,83 +258,5 @@
     "eaId": 233419,
     "slug": "27-233419",
     "price": 527000
-  },
-  {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 863000
-  },
-  {
-    "name": "Álvaro Carreras",
-    "rating": 81,
-    "position": "LB",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-268889.72c406c9c350d8fd7c1fe3a68474f2a358b95dc796ff6303e66e821161fa59f7.webp",
-    "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-268889/",
-    "eaId": 268889,
-    "slug": "27-268889",
-    "price": null
-  },
-  {
-    "name": "Reijnders",
-    "rating": 85,
-    "position": "CDM",
-    "rarity": "Ultimate Scream",
-    "club": "Al Qadsiah",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572286.a62403fc335e57825f85455550ac90f47590930e07a6751530413606dfa12597.webp",
-    "url": "https://www.fut.gg/players/240638-tijjani-reijnders/27-50572286/",
-    "eaId": 50572286,
-    "slug": "27-50572286",
-    "price": null
-  },
-  {
-    "name": "Amoura",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "Ultimate Scream",
-    "club": "OGC Nice",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67373561.8fd3366bc194e1b90f4270c1995f5d54711397f45270b4564e20d520d6267cb7.webp",
-    "url": "https://www.fut.gg/players/264697-mohamed-amoura/27-67373561/",
-    "eaId": 67373561,
-    "slug": "27-67373561",
-    "price": null
-  },
-  {
-    "name": "Pablo",
-    "rating": 73,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "West Ham",
-    "league": "EFL Championship",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50595938.a2b60a6a2a77f5606c626bfa90badb216eb139315bc6ddee5bc7344ab9ef4f6e.webp",
-    "url": "https://www.fut.gg/players/264290-pablo-felipe/27-50595938/",
-    "eaId": 50595938,
-    "slug": "27-50595938",
-    "price": null
-  },
-  {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 3200000
   }
 ]
