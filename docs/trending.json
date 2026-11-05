@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Kerolin Nicoli",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Team of the week",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598882.99fbb0a1b3caac03faae7005198b8018e56fc14caa24e36604191330fb892ceb.webp",
-    "url": "https://www.fut.gg/players/267234-kerolin-nicoli/27-50598882/",
-    "eaId": 50598882,
-    "slug": "27-50598882",
-    "price": null
-  },
-  {
     "name": "Kundananji",
     "rating": 81,
     "position": "LM",
@@ -49,6 +36,19 @@
     "url": "https://www.fut.gg/players/272076-racheal-kundananji/27-50603724/",
     "eaId": 50603724,
     "slug": "27-50603724",
+    "price": null
+  },
+  {
+    "name": "Kerolin Nicoli",
+    "rating": 86,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598882.99fbb0a1b3caac03faae7005198b8018e56fc14caa24e36604191330fb892ceb.webp",
+    "url": "https://www.fut.gg/players/267234-kerolin-nicoli/27-50598882/",
+    "eaId": 50598882,
+    "slug": "27-50598882",
     "price": null
   },
   {
@@ -104,19 +104,6 @@
     "price": null
   },
   {
-    "name": "van Hecke",
-    "rating": 83,
-    "position": "CB",
-    "rarity": "Team of the week",
-    "club": "Spurs",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590556.e9b75f53d25e01ea35e4d993faec8c7d71befd92dceee857af104079f4d8a3e0.webp",
-    "url": "https://www.fut.gg/players/258908-jan-paul-van-hecke/27-50590556/",
-    "eaId": 50590556,
-    "slug": "27-50590556",
-    "price": null
-  },
-  {
     "name": "Carrasco",
     "rating": 84,
     "position": "LM",
@@ -130,29 +117,16 @@
     "price": null
   },
   {
-    "name": "Nyoni",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Star Performer",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50610776.d1abaf2958a621e852a48791cdd0d9c30d9d0e1ac16b8fd9549131dca9b09c25.webp",
-    "url": "https://www.fut.gg/players/279128-unknown-player/27-50610776/",
-    "eaId": 50610776,
-    "slug": "27-50610776",
-    "price": null
-  },
-  {
-    "name": "Yassine",
-    "rating": 80,
-    "position": "RW",
+    "name": "van Hecke",
+    "rating": 83,
+    "position": "CB",
     "rarity": "Team of the week",
-    "club": "Strasbourg",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50401665.49d7db4e48e76258063872144f3a7dc269d0f7641cc76d988991de2857c149ff.webp",
-    "url": "https://www.fut.gg/players/70017-gessime-yassine/27-50401665/",
-    "eaId": 50401665,
-    "slug": "27-50401665",
+    "club": "Spurs",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590556.e9b75f53d25e01ea35e4d993faec8c7d71befd92dceee857af104079f4d8a3e0.webp",
+    "url": "https://www.fut.gg/players/258908-jan-paul-van-hecke/27-50590556/",
+    "eaId": 50590556,
+    "slug": "27-50590556",
     "price": null
   },
   {
@@ -182,16 +156,29 @@
     "price": null
   },
   {
-    "name": "Mbangula",
+    "name": "Nyoni",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50610776.d1abaf2958a621e852a48791cdd0d9c30d9d0e1ac16b8fd9549131dca9b09c25.webp",
+    "url": "https://www.fut.gg/players/279128-unknown-player/27-50610776/",
+    "eaId": 50610776,
+    "slug": "27-50610776",
+    "price": null
+  },
+  {
+    "name": "Yassine",
     "rating": 80,
-    "position": "LW",
+    "position": "RW",
     "rarity": "Team of the week",
-    "club": "Bologna FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67183430.7ac3846f937a4d859eca52bf3103c25595e9e39c52e5a80e053cc3cc93acee9c.webp",
-    "url": "https://www.fut.gg/players/74566-samuel-mbangula/27-67183430/",
-    "eaId": 67183430,
-    "slug": "27-67183430",
+    "club": "Strasbourg",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50401665.49d7db4e48e76258063872144f3a7dc269d0f7641cc76d988991de2857c149ff.webp",
+    "url": "https://www.fut.gg/players/70017-gessime-yassine/27-50401665/",
+    "eaId": 50401665,
+    "slug": "27-50401665",
     "price": null
   },
   {
@@ -208,16 +195,16 @@
     "price": null
   },
   {
-    "name": "Ampadu",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Ultimate Scream",
-    "club": "Leeds United",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67344599.2b180479c3f84ca7650a7b7c26ab6aec273507692c4317b2b517985043cced50.webp",
-    "url": "https://www.fut.gg/players/235735-ethan-ampadu/27-67344599/",
-    "eaId": 67344599,
-    "slug": "27-67344599",
+    "name": "Mbangula",
+    "rating": 80,
+    "position": "LW",
+    "rarity": "Team of the week",
+    "club": "Bologna FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67183430.7ac3846f937a4d859eca52bf3103c25595e9e39c52e5a80e053cc3cc93acee9c.webp",
+    "url": "https://www.fut.gg/players/74566-samuel-mbangula/27-67183430/",
+    "eaId": 67183430,
+    "slug": "27-67183430",
     "price": null
   },
   {
@@ -234,16 +221,29 @@
     "price": null
   },
   {
-    "name": "Sabitzer",
-    "rating": 87,
+    "name": "Ampadu",
+    "rating": 85,
     "position": "CM",
-    "rarity": "Star Performer",
-    "club": "Borussia Dortmund",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50536571.60f2480fad940d550a10b5dc1dca046e773483dc25da3aa948c779283599dfe3.webp",
-    "url": "https://www.fut.gg/players/204923-marcel-sabitzer/27-50536571/",
-    "eaId": 50536571,
-    "slug": "27-50536571",
+    "rarity": "Ultimate Scream",
+    "club": "Leeds United",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67344599.2b180479c3f84ca7650a7b7c26ab6aec273507692c4317b2b517985043cced50.webp",
+    "url": "https://www.fut.gg/players/235735-ethan-ampadu/27-67344599/",
+    "eaId": 67344599,
+    "slug": "27-67344599",
+    "price": null
+  },
+  {
+    "name": "Rojo",
+    "rating": 73,
+    "position": "CB",
+    "rarity": "Rare",
+    "club": "Estudiantes",
+    "league": "Liga Profesional de Fútbol",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50533510.e105373862d14a10900f74d6202f914b221509c55b8cdcd21ebba2dd7b99d279.webp",
+    "url": "https://www.fut.gg/players/201862-marcos-rojo/27-50533510/",
+    "eaId": 50533510,
+    "slug": "27-50533510",
     "price": null
   },
   {
