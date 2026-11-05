@@ -26,16 +26,16 @@
     "price": null
   },
   {
-    "name": "Rojo",
-    "rating": 73,
-    "position": "CB",
-    "rarity": "Rare",
-    "club": "Estudiantes",
-    "league": "Liga Profesional de Fútbol",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50533510.e105373862d14a10900f74d6202f914b221509c55b8cdcd21ebba2dd7b99d279.webp",
-    "url": "https://www.fut.gg/players/201862-marcos-rojo/27-50533510/",
-    "eaId": 50533510,
-    "slug": "27-50533510",
+    "name": "Kerolin Nicoli",
+    "rating": 86,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598882.99fbb0a1b3caac03faae7005198b8018e56fc14caa24e36604191330fb892ceb.webp",
+    "url": "https://www.fut.gg/players/267234-kerolin-nicoli/27-50598882/",
+    "eaId": 50598882,
+    "slug": "27-50598882",
     "price": null
   },
   {
@@ -52,30 +52,17 @@
     "price": null
   },
   {
-    "name": "Kerolin Nicoli",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Team of the week",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598882.99fbb0a1b3caac03faae7005198b8018e56fc14caa24e36604191330fb892ceb.webp",
-    "url": "https://www.fut.gg/players/267234-kerolin-nicoli/27-50598882/",
-    "eaId": 50598882,
-    "slug": "27-50598882",
-    "price": null
-  },
-  {
-    "name": "Rodman",
-    "rating": 88,
-    "position": "LM",
-    "rarity": "Team of the week",
-    "club": "Washington Spirit",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598576.09e866566c0973cfe64650c69911caef77afbe179ecad9eb94766d532420f55e.webp",
-    "url": "https://www.fut.gg/players/266928-trinity-rodman/27-50598576/",
-    "eaId": 50598576,
-    "slug": "27-50598576",
-    "price": null
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 306000
   },
   {
     "name": "Rogers",
@@ -88,32 +75,6 @@
     "url": "https://www.fut.gg/players/260247-morgan-rogers/27-84146327/",
     "eaId": 84146327,
     "slug": "27-84146327",
-    "price": null
-  },
-  {
-    "name": "Diego Moreira",
-    "rating": 81,
-    "position": "RM",
-    "rarity": "Team of the week",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601687.3d2c9caf2026db75f0c9d70b9774a00d6392749ea56569432f96bcdda85eb6ce.webp",
-    "url": "https://www.fut.gg/players/270039-diego-moreira/27-50601687/",
-    "eaId": 50601687,
-    "slug": "27-50601687",
-    "price": null
-  },
-  {
-    "name": "Ojeda",
-    "rating": 84,
-    "position": "ST",
-    "rarity": "Ultimate Scream",
-    "club": "Orlando City",
-    "league": "Major League Soccer",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572392.d29df4cdfdceb28221d8ab1f8d8bbdce59cdeb05c26e429759a74cea9347b8d6.webp",
-    "url": "https://www.fut.gg/players/240744-martin-ojeda/27-50572392/",
-    "eaId": 50572392,
-    "slug": "27-50572392",
     "price": null
   },
   {
@@ -130,17 +91,17 @@
     "price": 250000
   },
   {
-    "name": "Salma Paralluelo",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 306000
+    "name": "Diego Moreira",
+    "rating": 81,
+    "position": "RM",
+    "rarity": "Team of the week",
+    "club": "Milano FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50601687.3d2c9caf2026db75f0c9d70b9774a00d6392749ea56569432f96bcdda85eb6ce.webp",
+    "url": "https://www.fut.gg/players/270039-diego-moreira/27-50601687/",
+    "eaId": 50601687,
+    "slug": "27-50601687",
+    "price": null
   },
   {
     "name": "Pedri",
@@ -156,17 +117,17 @@
     "price": 198000
   },
   {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 60000
+    "name": "Rodman",
+    "rating": 88,
+    "position": "LM",
+    "rarity": "Team of the week",
+    "club": "Washington Spirit",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598576.09e866566c0973cfe64650c69911caef77afbe179ecad9eb94766d532420f55e.webp",
+    "url": "https://www.fut.gg/players/266928-trinity-rodman/27-50598576/",
+    "eaId": 50598576,
+    "slug": "27-50598576",
+    "price": null
   },
   {
     "name": "Lamine Yamal",
@@ -182,6 +143,19 @@
     "price": 157000
   },
   {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 60000
+  },
+  {
     "name": "Patri Guijarro",
     "rating": 88,
     "position": "CDM",
@@ -193,19 +167,6 @@
     "eaId": 237289,
     "slug": "27-237289",
     "price": 184000
-  },
-  {
-    "name": "Nusa",
-    "rating": 80,
-    "position": "LW",
-    "rarity": "Team of the week",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371727.df7e605e0390642a926c0acbca8af4e70b75e39855441fded66213ee8ff03e5c.webp",
-    "url": "https://www.fut.gg/players/262863-antonio-nusa/27-67371727/",
-    "eaId": 67371727,
-    "slug": "27-67371727",
-    "price": null
   },
   {
     "name": "Dembélé",
@@ -221,17 +182,17 @@
     "price": 1855000
   },
   {
-    "name": "Ampadu",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Ultimate Scream",
-    "club": "Leeds United",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67344599.2b180479c3f84ca7650a7b7c26ab6aec273507692c4317b2b517985043cced50.webp",
-    "url": "https://www.fut.gg/players/235735-ethan-ampadu/27-67344599/",
-    "eaId": 67344599,
-    "slug": "27-67344599",
-    "price": null
+    "name": "Dumornay",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 863000
   },
   {
     "name": "Raphinha",
@@ -247,16 +208,55 @@
     "price": 527000
   },
   {
-    "name": "Dumornay",
-    "rating": 88,
+    "name": "Nusa",
+    "rating": 80,
+    "position": "LW",
+    "rarity": "Team of the week",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371727.df7e605e0390642a926c0acbca8af4e70b75e39855441fded66213ee8ff03e5c.webp",
+    "url": "https://www.fut.gg/players/262863-antonio-nusa/27-67371727/",
+    "eaId": 67371727,
+    "slug": "27-67371727",
+    "price": null
+  },
+  {
+    "name": "Ojeda",
+    "rating": 84,
+    "position": "ST",
+    "rarity": "Ultimate Scream",
+    "club": "Orlando City",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572392.d29df4cdfdceb28221d8ab1f8d8bbdce59cdeb05c26e429759a74cea9347b8d6.webp",
+    "url": "https://www.fut.gg/players/240744-martin-ojeda/27-50572392/",
+    "eaId": 50572392,
+    "slug": "27-50572392",
+    "price": null
+  },
+  {
+    "name": "Ampadu",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "Ultimate Scream",
+    "club": "Leeds United",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67344599.2b180479c3f84ca7650a7b7c26ab6aec273507692c4317b2b517985043cced50.webp",
+    "url": "https://www.fut.gg/players/235735-ethan-ampadu/27-67344599/",
+    "eaId": 67344599,
+    "slug": "27-67344599",
+    "price": null
+  },
+  {
+    "name": "Pajor",
+    "rating": 89,
     "position": "ST",
     "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 863000
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241846.05ad1967a9e86af6c4df5136a801516f63e9cd62a55251db3328a71b4cbbaf07.webp",
+    "url": "https://www.fut.gg/players/241846-ewa-pajor/27-241846/",
+    "eaId": 241846,
+    "slug": "27-241846",
+    "price": 155000
   }
 ]
