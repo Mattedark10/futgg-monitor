@@ -52,32 +52,6 @@
     "price": 306000
   },
   {
-    "name": "Aitana Bonmatí",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
-    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
-    "eaId": 241667,
-    "slug": "27-241667",
-    "price": 250000
-  },
-  {
-    "name": "Kundananji",
-    "rating": 81,
-    "position": "LM",
-    "rarity": "Rare",
-    "club": "Chicago Stars FC",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603724.cea51d88da9a5421b4ff6286054f169e8835e7b56642f0cfe8a6634f0ee1321e.webp",
-    "url": "https://www.fut.gg/players/272076-racheal-kundananji/27-50603724/",
-    "eaId": 50603724,
-    "slug": "27-50603724",
-    "price": null
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -91,6 +65,32 @@
     "price": 157000
   },
   {
+    "name": "Aitana Bonmatí",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-241667.67f9eeed6d88e705ef7eba9de15fb7381b2d66b6844e08036c421365e8d18339.webp",
+    "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
+    "eaId": 241667,
+    "slug": "27-241667",
+    "price": 250000
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1855000
+  },
+  {
     "name": "Pedri",
     "rating": 90,
     "position": "CM",
@@ -102,6 +102,32 @@
     "eaId": 251854,
     "slug": "27-251854",
     "price": 198000
+  },
+  {
+    "name": "Patri Guijarro",
+    "rating": 88,
+    "position": "CDM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.cc3f69af348d1a89088fdc3d5960468813dba0186b1c2ebe758f8f40553fad9e.webp",
+    "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
+    "eaId": 237289,
+    "slug": "27-237289",
+    "price": 184000
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 60000
   },
   {
     "name": "Rogers",
@@ -127,58 +153,6 @@
     "url": "https://www.fut.gg/players/270039-diego-moreira/27-50601687/",
     "eaId": 50601687,
     "slug": "27-50601687",
-    "price": null
-  },
-  {
-    "name": "Karchaoui",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
-    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
-    "eaId": 233662,
-    "slug": "27-233662",
-    "price": 60000
-  },
-  {
-    "name": "Patri Guijarro",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.cc3f69af348d1a89088fdc3d5960468813dba0186b1c2ebe758f8f40553fad9e.webp",
-    "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
-    "eaId": 237289,
-    "slug": "27-237289",
-    "price": 184000
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1855000
-  },
-  {
-    "name": "Rodman",
-    "rating": 88,
-    "position": "LM",
-    "rarity": "Team of the week",
-    "club": "Washington Spirit",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598576.09e866566c0973cfe64650c69911caef77afbe179ecad9eb94766d532420f55e.webp",
-    "url": "https://www.fut.gg/players/266928-trinity-rodman/27-50598576/",
-    "eaId": 50598576,
-    "slug": "27-50598576",
     "price": null
   },
   {
@@ -208,19 +182,6 @@
     "price": 527000
   },
   {
-    "name": "Nusa",
-    "rating": 80,
-    "position": "LW",
-    "rarity": "Team of the week",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371727.df7e605e0390642a926c0acbca8af4e70b75e39855441fded66213ee8ff03e5c.webp",
-    "url": "https://www.fut.gg/players/262863-antonio-nusa/27-67371727/",
-    "eaId": 67371727,
-    "slug": "27-67371727",
-    "price": null
-  },
-  {
     "name": "Pajor",
     "rating": 89,
     "position": "ST",
@@ -234,6 +195,58 @@
     "price": 155000
   },
   {
+    "name": "Kundananji",
+    "rating": 81,
+    "position": "LM",
+    "rarity": "Rare",
+    "club": "Chicago Stars FC",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603724.cea51d88da9a5421b4ff6286054f169e8835e7b56642f0cfe8a6634f0ee1321e.webp",
+    "url": "https://www.fut.gg/players/272076-racheal-kundananji/27-50603724/",
+    "eaId": 50603724,
+    "slug": "27-50603724",
+    "price": null
+  },
+  {
+    "name": "Nusa",
+    "rating": 80,
+    "position": "LW",
+    "rarity": "Team of the week",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371727.df7e605e0390642a926c0acbca8af4e70b75e39855441fded66213ee8ff03e5c.webp",
+    "url": "https://www.fut.gg/players/262863-antonio-nusa/27-67371727/",
+    "eaId": 67371727,
+    "slug": "27-67371727",
+    "price": null
+  },
+  {
+    "name": "Rodman",
+    "rating": 88,
+    "position": "LM",
+    "rarity": "Team of the week",
+    "club": "Washington Spirit",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598576.09e866566c0973cfe64650c69911caef77afbe179ecad9eb94766d532420f55e.webp",
+    "url": "https://www.fut.gg/players/266928-trinity-rodman/27-50598576/",
+    "eaId": 50598576,
+    "slug": "27-50598576",
+    "price": null
+  },
+  {
+    "name": "Mbappé",
+    "rating": 91,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 3200000
+  },
+  {
     "name": "Mariona",
     "rating": 89,
     "position": "CM",
@@ -245,18 +258,5 @@
     "eaId": 237288,
     "slug": "27-237288",
     "price": 39000
-  },
-  {
-    "name": "Ampadu",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "Ultimate Scream",
-    "club": "Leeds United",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67344599.2b180479c3f84ca7650a7b7c26ab6aec273507692c4317b2b517985043cced50.webp",
-    "url": "https://www.fut.gg/players/235735-ethan-ampadu/27-67344599/",
-    "eaId": 67344599,
-    "slug": "27-67344599",
-    "price": null
   }
 ]
