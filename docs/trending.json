@@ -117,19 +117,6 @@
     "price": 2020000
   },
   {
-    "name": "Buendía",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557810.df031b3806975bfd4458f77d8478091d24726e25fe88fd1114cf7c31f0767400.webp",
-    "url": "https://www.fut.gg/players/226162-emiliano-buendia/27-50557810/",
-    "eaId": 50557810,
-    "slug": "27-50557810",
-    "price": null
-  },
-  {
     "name": "Gabri Veiga",
     "rating": 85,
     "position": "CM",
@@ -140,6 +127,19 @@
     "url": "https://www.fut.gg/players/258729-gabri-veiga/27-50590377/",
     "eaId": 50590377,
     "slug": "27-50590377",
+    "price": null
+  },
+  {
+    "name": "Buendía",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557810.df031b3806975bfd4458f77d8478091d24726e25fe88fd1114cf7c31f0767400.webp",
+    "url": "https://www.fut.gg/players/226162-emiliano-buendia/27-50557810/",
+    "eaId": 50557810,
+    "slug": "27-50557810",
     "price": null
   },
   {
@@ -169,19 +169,6 @@
     "price": null
   },
   {
-    "name": "Chawinga",
-    "rating": 89,
-    "position": "LW",
-    "rarity": "UEFA Women's Champions League RTTK",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609867.048db9e65d2333da9a18f5574acddb5733986961264ec857b4d9332adbb4dc2e.webp",
-    "url": "https://www.fut.gg/players/278219-tabitha-chawinga/27-50609867/",
-    "eaId": 50609867,
-    "slug": "27-50609867",
-    "price": 2598000
-  },
-  {
     "name": "Gravenberch",
     "rating": 88,
     "position": "CDM",
@@ -195,17 +182,17 @@
     "price": 795000
   },
   {
-    "name": "Bellingham",
-    "rating": 91,
-    "position": "CAM",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117692883.ad84f1c14c389abebd6a0a9385672de66ab5e52328a68746c6803a7a3d59fe3c.webp",
-    "url": "https://www.fut.gg/players/252371-jude-bellingham/27-117692883/",
-    "eaId": 117692883,
-    "slug": "27-117692883",
-    "price": 3920000
+    "name": "Chawinga",
+    "rating": 89,
+    "position": "LW",
+    "rarity": "UEFA Women's Champions League RTTK",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609867.048db9e65d2333da9a18f5574acddb5733986961264ec857b4d9332adbb4dc2e.webp",
+    "url": "https://www.fut.gg/players/278219-tabitha-chawinga/27-50609867/",
+    "eaId": 50609867,
+    "slug": "27-50609867",
+    "price": 2598000
   },
   {
     "name": "Camara",
@@ -219,6 +206,19 @@
     "eaId": 50606786,
     "slug": "27-50606786",
     "price": null
+  },
+  {
+    "name": "Bellingham",
+    "rating": 91,
+    "position": "CAM",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117692883.ad84f1c14c389abebd6a0a9385672de66ab5e52328a68746c6803a7a3d59fe3c.webp",
+    "url": "https://www.fut.gg/players/252371-jude-bellingham/27-117692883/",
+    "eaId": 117692883,
+    "slug": "27-117692883",
+    "price": 3920000
   },
   {
     "name": "Marcos Llorente",
@@ -247,16 +247,16 @@
     "price": null
   },
   {
-    "name": "Doku",
-    "rating": 87,
-    "position": "LW",
+    "name": "Bastoni",
+    "rating": 88,
+    "position": "CB",
     "rarity": "UEFA Champions League RTTK",
-    "club": "Manchester City",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578068.118c324ae1baf1a3ab0990fc706811e6024935c375767189ac6d353778fe787f.webp",
-    "url": "https://www.fut.gg/players/246420-jeremy-doku/27-50578068/",
-    "eaId": 50578068,
-    "slug": "27-50578068",
-    "price": 930000
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67346247.d7182b03d2e725699513abff9ca544b76da5b2e972f5859a403330a01208948b.webp",
+    "url": "https://www.fut.gg/players/237383-alessandro-bastoni/27-67346247/",
+    "eaId": 67346247,
+    "slug": "27-67346247",
+    "price": 520000
   }
 ]
