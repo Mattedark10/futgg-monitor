@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/245830-yui-hasegawa/27-50577478/",
     "eaId": 50577478,
     "slug": "27-50577478",
-    "price": 665000
+    "price": 657000
   },
   {
     "name": "Andreia Jacinto",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/251854-pedri/27-50583502/",
     "eaId": 50583502,
     "slug": "27-50583502",
-    "price": 4499000
+    "price": 4998000
   },
   {
     "name": "Tomori",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/232756-fikayo-tomori/27-50564404/",
     "eaId": 50564404,
     "slug": "27-50564404",
-    "price": 339000
+    "price": 346000
   },
   {
     "name": "Rafael Leão",
@@ -75,7 +75,7 @@
     "url": "https://www.fut.gg/players/241721-rafael-leao/27-67350585/",
     "eaId": 67350585,
     "slug": "27-67350585",
-    "price": 673000
+    "price": 715000
   },
   {
     "name": "Karchaoui",
@@ -88,7 +88,20 @@
     "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-50565310/",
     "eaId": 50565310,
     "slug": "27-50565310",
-    "price": 1302000
+    "price": 1189000
+  },
+  {
+    "name": "Francisco Conceição",
+    "rating": 87,
+    "position": "CAM",
+    "rarity": "UEFA Europa League RTTK",
+    "club": "Juventus FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592698.2ddf4272ce77b9a081120c2b3fa6033a314fe65fcf773e39901812fd1bf79046.webp",
+    "url": "https://www.fut.gg/players/261050-francisco-conceicao/27-50592698/",
+    "eaId": 50592698,
+    "slug": "27-50592698",
+    "price": 349000
   },
   {
     "name": "Dembélé",
@@ -101,7 +114,7 @@
     "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-50563091/",
     "eaId": 50563091,
     "slug": "27-50563091",
-    "price": 8600000
+    "price": 9000000
   },
   {
     "name": "Aitana Bonmatí",
@@ -114,20 +127,7 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-50573315/",
     "eaId": 50573315,
     "slug": "27-50573315",
-    "price": 2020000
-  },
-  {
-    "name": "Buendía",
-    "rating": 84,
-    "position": "CAM",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557810.df031b3806975bfd4458f77d8478091d24726e25fe88fd1114cf7c31f0767400.webp",
-    "url": "https://www.fut.gg/players/226162-emiliano-buendia/27-50557810/",
-    "eaId": 50557810,
-    "slug": "27-50557810",
-    "price": null
+    "price": 1705000
   },
   {
     "name": "Gabri Veiga",
@@ -143,19 +143,6 @@
     "price": null
   },
   {
-    "name": "Francisco Conceição",
-    "rating": 87,
-    "position": "CAM",
-    "rarity": "UEFA Europa League RTTK",
-    "club": "Juventus FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50592698.2ddf4272ce77b9a081120c2b3fa6033a314fe65fcf773e39901812fd1bf79046.webp",
-    "url": "https://www.fut.gg/players/261050-francisco-conceicao/27-50592698/",
-    "eaId": 50592698,
-    "slug": "27-50592698",
-    "price": 283000
-  },
-  {
     "name": "Lukaku",
     "rating": 87,
     "position": "ST",
@@ -166,6 +153,19 @@
     "url": "https://www.fut.gg/players/192505-romelu-lukaku/27-50524153/",
     "eaId": 50524153,
     "slug": "27-50524153",
+    "price": null
+  },
+  {
+    "name": "Buendía",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557810.df031b3806975bfd4458f77d8478091d24726e25fe88fd1114cf7c31f0767400.webp",
+    "url": "https://www.fut.gg/players/226162-emiliano-buendia/27-50557810/",
+    "eaId": 50557810,
+    "slug": "27-50557810",
     "price": null
   },
   {
@@ -192,7 +192,7 @@
     "url": "https://www.fut.gg/players/246104-ryan-gravenberch/27-50577752/",
     "eaId": 50577752,
     "slug": "27-50577752",
-    "price": 795000
+    "price": 730000
   },
   {
     "name": "Chawinga",
@@ -205,33 +205,7 @@
     "url": "https://www.fut.gg/players/278219-tabitha-chawinga/27-50609867/",
     "eaId": 50609867,
     "slug": "27-50609867",
-    "price": 2598000
-  },
-  {
-    "name": "Bellingham",
-    "rating": 91,
-    "position": "CAM",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117692883.ad84f1c14c389abebd6a0a9385672de66ab5e52328a68746c6803a7a3d59fe3c.webp",
-    "url": "https://www.fut.gg/players/252371-jude-bellingham/27-117692883/",
-    "eaId": 117692883,
-    "slug": "27-117692883",
-    "price": 3920000
-  },
-  {
-    "name": "Marcos Llorente",
-    "rating": 88,
-    "position": "RB",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "Atlético de Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557809.bdead2c54f02225ffdb73c944bc222b9d914812449199af29b5d41d04e9b308b.webp",
-    "url": "https://www.fut.gg/players/226161-marcos-llorente/27-50557809/",
-    "eaId": 50557809,
-    "slug": "27-50557809",
-    "price": 1300000
+    "price": 2099000
   },
   {
     "name": "De Cuyper",
@@ -247,16 +221,42 @@
     "price": null
   },
   {
-    "name": "Bastoni",
+    "name": "Reuteler",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "UEFA Women's Champions League RTTK",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596584.02de4187bcca13ca3037fbf4234f8d50c1fe76cda9b8345ba5e7a637824bb1f7.webp",
+    "url": "https://www.fut.gg/players/264936-geraldine-reuteler/27-50596584/",
+    "eaId": 50596584,
+    "slug": "27-50596584",
+    "price": 171000
+  },
+  {
+    "name": "Marcos Llorente",
     "rating": 88,
-    "position": "CB",
+    "position": "RB",
     "rarity": "UEFA Champions League RTTK",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67346247.d7182b03d2e725699513abff9ca544b76da5b2e972f5859a403330a01208948b.webp",
-    "url": "https://www.fut.gg/players/237383-alessandro-bastoni/27-67346247/",
-    "eaId": 67346247,
-    "slug": "27-67346247",
-    "price": 520000
+    "club": "Atlético de Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557809.bdead2c54f02225ffdb73c944bc222b9d914812449199af29b5d41d04e9b308b.webp",
+    "url": "https://www.fut.gg/players/226161-marcos-llorente/27-50557809/",
+    "eaId": 50557809,
+    "slug": "27-50557809",
+    "price": 1110000
+  },
+  {
+    "name": "Bellingham",
+    "rating": 91,
+    "position": "CAM",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117692883.ad84f1c14c389abebd6a0a9385672de66ab5e52328a68746c6803a7a3d59fe3c.webp",
+    "url": "https://www.fut.gg/players/252371-jude-bellingham/27-117692883/",
+    "eaId": 117692883,
+    "slug": "27-117692883",
+    "price": 3850000
   }
 ]
