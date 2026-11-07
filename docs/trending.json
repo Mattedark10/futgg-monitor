@@ -117,19 +117,6 @@
     "price": 2020000
   },
   {
-    "name": "Gabri Veiga",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "FC Porto",
-    "league": "Liga Portugal",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590377.91bcd1ae18ecf72d65044a287e7e4ee8ae4458b89cbee2f9817683645a1b8b07.webp",
-    "url": "https://www.fut.gg/players/258729-gabri-veiga/27-50590377/",
-    "eaId": 50590377,
-    "slug": "27-50590377",
-    "price": null
-  },
-  {
     "name": "Buendía",
     "rating": 84,
     "position": "CAM",
@@ -140,6 +127,19 @@
     "url": "https://www.fut.gg/players/226162-emiliano-buendia/27-50557810/",
     "eaId": 50557810,
     "slug": "27-50557810",
+    "price": null
+  },
+  {
+    "name": "Gabri Veiga",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "FC Porto",
+    "league": "Liga Portugal",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590377.91bcd1ae18ecf72d65044a287e7e4ee8ae4458b89cbee2f9817683645a1b8b07.webp",
+    "url": "https://www.fut.gg/players/258729-gabri-veiga/27-50590377/",
+    "eaId": 50590377,
+    "slug": "27-50590377",
     "price": null
   },
   {
@@ -169,6 +169,19 @@
     "price": null
   },
   {
+    "name": "Camara",
+    "rating": 85,
+    "position": "CM",
+    "rarity": "UEFA Conference League RTTK",
+    "club": "AS Monaco",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606786.c3749ab751ab6d691478c745dd86c7e72c62ef60cd7d4348c509bd826788b88b.webp",
+    "url": "https://www.fut.gg/players/275138-lamine-camara/27-50606786/",
+    "eaId": 50606786,
+    "slug": "27-50606786",
+    "price": null
+  },
+  {
     "name": "Gravenberch",
     "rating": 88,
     "position": "CDM",
@@ -193,19 +206,6 @@
     "eaId": 50609867,
     "slug": "27-50609867",
     "price": 2598000
-  },
-  {
-    "name": "Camara",
-    "rating": 85,
-    "position": "CM",
-    "rarity": "UEFA Conference League RTTK",
-    "club": "AS Monaco",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50606786.c3749ab751ab6d691478c745dd86c7e72c62ef60cd7d4348c509bd826788b88b.webp",
-    "url": "https://www.fut.gg/players/275138-lamine-camara/27-50606786/",
-    "eaId": 50606786,
-    "slug": "27-50606786",
-    "price": null
   },
   {
     "name": "Bellingham",
