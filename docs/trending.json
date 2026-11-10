@@ -1,5 +1,18 @@
 [
   {
+    "name": "Ainhoa Marín",
+    "rating": 85,
+    "position": "RW",
+    "rarity": "POTM Liga F",
+    "club": "Real Sociedad",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403797.e7f7d8a6ca2636d832c9dd515397b59d74814ae9e7acfd72c7dc45d8cd7dc83e.webp",
+    "url": "https://www.fut.gg/players/72149-ainhoa-marin-martin-ainhoa-marin/27-50403797/",
+    "eaId": 50403797,
+    "slug": "27-50403797",
+    "price": null
+  },
+  {
     "name": "Lacey",
     "rating": 85,
     "position": "RW",
@@ -26,6 +39,19 @@
     "price": null
   },
   {
+    "name": "Schertenleib",
+    "rating": 84,
+    "position": "CM",
+    "rarity": "Showdown",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609347.3e7a5144f3113e84e6fa69b2514b7ced0b53ad6742a16ecec085cd1a20d7a3fc.webp",
+    "url": "https://www.fut.gg/players/277699-sydney-schertenleib/27-50609347/",
+    "eaId": 50609347,
+    "slug": "27-50609347",
+    "price": null
+  },
+  {
     "name": "Mbappé",
     "rating": 92,
     "position": "ST",
@@ -36,7 +62,7 @@
     "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-151226691/",
     "eaId": 151226691,
     "slug": "27-151226691",
-    "price": null
+    "price": 5858375
   },
   {
     "name": "Brown",
@@ -49,72 +75,7 @@
     "url": "https://www.fut.gg/players/262968-archie-brown/27-50594616/",
     "eaId": 50594616,
     "slug": "27-50594616",
-    "price": null
-  },
-  {
-    "name": "Fabián Ruiz",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Star Performer",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557919.75981a7b94eab12078f73ae6d8ecc8da3c9bf6ee0904e949bfaf572f05e72850.webp",
-    "url": "https://www.fut.gg/players/226271-fabian/27-50557919/",
-    "eaId": 50557919,
-    "slug": "27-50557919",
-    "price": null
-  },
-  {
-    "name": "Laimer",
-    "rating": 86,
-    "position": "RB",
-    "rarity": "Star Performer",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557023.5261f475912b018bda5f4dc19bfb1758b8b6f002b2d720a5f0786527ded75b3b.webp",
-    "url": "https://www.fut.gg/players/225375-konrad-laimer/27-50557023/",
-    "eaId": 50557023,
-    "slug": "27-50557023",
-    "price": null
-  },
-  {
-    "name": "Douvikas",
-    "rating": 86,
-    "position": "ST",
-    "rarity": "Star Performer",
-    "club": "Como 1907",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117701990.2bcd66dbe4fa7d3616cfcd1ece32e0c855acfb2dead464e0ab142b17ffae8b02.webp",
-    "url": "https://www.fut.gg/players/261478-tasos-douvikas/27-117701990/",
-    "eaId": 117701990,
-    "slug": "27-117701990",
-    "price": null
-  },
-  {
-    "name": "Durán",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "Star Performer",
-    "club": "Celtic",
-    "league": "Scottish Premiership",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413372.851d4c60d7f52ca162c09db73f148ab117b5360a3edbf20362c325dd42277b19.webp",
-    "url": "https://www.fut.gg/players/81724-camilo-duran/27-50413372/",
-    "eaId": 50413372,
-    "slug": "27-50413372",
-    "price": null
-  },
-  {
-    "name": "Schertenleib",
-    "rating": 84,
-    "position": "CM",
-    "rarity": "Showdown",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609347.3e7a5144f3113e84e6fa69b2514b7ced0b53ad6742a16ecec085cd1a20d7a3fc.webp",
-    "url": "https://www.fut.gg/players/277699-sydney-schertenleib/27-50609347/",
-    "eaId": 50609347,
-    "slug": "27-50609347",
-    "price": null
+    "price": 209000
   },
   {
     "name": "Calafiori",
@@ -130,17 +91,17 @@
     "price": null
   },
   {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 2890000
+    "name": "Laimer",
+    "rating": 86,
+    "position": "RB",
+    "rarity": "Star Performer",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557023.5261f475912b018bda5f4dc19bfb1758b8b6f002b2d720a5f0786527ded75b3b.webp",
+    "url": "https://www.fut.gg/players/225375-konrad-laimer/27-50557023/",
+    "eaId": 50557023,
+    "slug": "27-50557023",
+    "price": 455000
   },
   {
     "name": "Salma Paralluelo",
@@ -153,7 +114,20 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 200000
+    "price": 194000
+  },
+  {
+    "name": "Fabián Ruiz",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557919.75981a7b94eab12078f73ae6d8ecc8da3c9bf6ee0904e949bfaf572f05e72850.webp",
+    "url": "https://www.fut.gg/players/226271-fabian/27-50557919/",
+    "eaId": 50557919,
+    "slug": "27-50557919",
+    "price": 610000
   },
   {
     "name": "Lamine Yamal",
@@ -166,7 +140,20 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
     "eaId": 277643,
     "slug": "27-277643",
-    "price": 107000
+    "price": 98500
+  },
+  {
+    "name": "Mbappé",
+    "rating": 91,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 2885000
   },
   {
     "name": "Hasegawa",
@@ -179,20 +166,7 @@
     "url": "https://www.fut.gg/players/245830-yui-hasegawa/27-50577478/",
     "eaId": 50577478,
     "slug": "27-50577478",
-    "price": 381000
-  },
-  {
-    "name": "Patri Guijarro",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.cc3f69af348d1a89088fdc3d5960468813dba0186b1c2ebe758f8f40553fad9e.webp",
-    "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
-    "eaId": 237289,
-    "slug": "27-237289",
-    "price": 110000
+    "price": 387000
   },
   {
     "name": "Dembélé",
@@ -205,7 +179,20 @@
     "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
     "eaId": 231443,
     "slug": "27-231443",
-    "price": 1665000
+    "price": 1660000
+  },
+  {
+    "name": "Patri Guijarro",
+    "rating": 88,
+    "position": "CDM",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-237289.cc3f69af348d1a89088fdc3d5960468813dba0186b1c2ebe758f8f40553fad9e.webp",
+    "url": "https://www.fut.gg/players/237289-patri-guijarro/27-237289/",
+    "eaId": 237289,
+    "slug": "27-237289",
+    "price": 103000
   },
   {
     "name": "Raphinha",
@@ -218,7 +205,7 @@
     "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
     "eaId": 233419,
     "slug": "27-233419",
-    "price": 407000
+    "price": 395000
   },
   {
     "name": "Openda",
@@ -234,19 +221,6 @@
     "price": null
   },
   {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 692000
-  },
-  {
     "name": "Aitana Bonmatí",
     "rating": 90,
     "position": "CM",
@@ -257,6 +231,32 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
     "slug": "27-241667",
-    "price": 187000
+    "price": 186000
+  },
+  {
+    "name": "Dumornay",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 675000
+  },
+  {
+    "name": "Douvikas",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Star Performer",
+    "club": "Como 1907",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117701990.2bcd66dbe4fa7d3616cfcd1ece32e0c855acfb2dead464e0ab142b17ffae8b02.webp",
+    "url": "https://www.fut.gg/players/261478-tasos-douvikas/27-117701990/",
+    "eaId": 117701990,
+    "slug": "27-117701990",
+    "price": null
   }
 ]
