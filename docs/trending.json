@@ -182,19 +182,6 @@
     "price": 107000
   },
   {
-    "name": "Openda",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "UEFA Europa League RTTK",
-    "club": "OL",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575228.202542a96aed18855832f086a4c1119387d836e44f3206a9a7ba58e8b4b2e9e4.webp",
-    "url": "https://www.fut.gg/players/243580-lois-openda/27-50575228/",
-    "eaId": 50575228,
-    "slug": "27-50575228",
-    "price": null
-  },
-  {
     "name": "Patri Guijarro",
     "rating": 88,
     "position": "CDM",
@@ -221,6 +208,19 @@
     "price": 1665000
   },
   {
+    "name": "Openda",
+    "rating": 85,
+    "position": "LW",
+    "rarity": "UEFA Europa League RTTK",
+    "club": "OL",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575228.202542a96aed18855832f086a4c1119387d836e44f3206a9a7ba58e8b4b2e9e4.webp",
+    "url": "https://www.fut.gg/players/243580-lois-openda/27-50575228/",
+    "eaId": 50575228,
+    "slug": "27-50575228",
+    "price": null
+  },
+  {
     "name": "Andreia Jacinto",
     "rating": 86,
     "position": "CM",
@@ -234,19 +234,6 @@
     "price": null
   },
   {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 692000
-  },
-  {
     "name": "Aitana Bonmatí",
     "rating": 90,
     "position": "CM",
@@ -258,5 +245,18 @@
     "eaId": 241667,
     "slug": "27-241667",
     "price": 187000
+  },
+  {
+    "name": "Dumornay",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 692000
   }
 ]
