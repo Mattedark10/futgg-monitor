@@ -65,19 +65,6 @@
     "price": 5858375
   },
   {
-    "name": "Brown",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Star Performer",
-    "club": "Fenerbahçe",
-    "league": "Trendyol Süper Lig",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50594616.bb944d9d96962150fc04d74b0dc93fbdfe0e73444d142a5cd4592a1bb31a0350.webp",
-    "url": "https://www.fut.gg/players/262968-archie-brown/27-50594616/",
-    "eaId": 50594616,
-    "slug": "27-50594616",
-    "price": 209000
-  },
-  {
     "name": "Calafiori",
     "rating": 86,
     "position": "LB",
@@ -89,6 +76,19 @@
     "eaId": 50589359,
     "slug": "27-50589359",
     "price": null
+  },
+  {
+    "name": "Brown",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Star Performer",
+    "club": "Fenerbahçe",
+    "league": "Trendyol Süper Lig",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50594616.bb944d9d96962150fc04d74b0dc93fbdfe0e73444d142a5cd4592a1bb31a0350.webp",
+    "url": "https://www.fut.gg/players/262968-archie-brown/27-50594616/",
+    "eaId": 50594616,
+    "slug": "27-50594616",
+    "price": 209000
   },
   {
     "name": "Salma Paralluelo",
@@ -104,19 +104,6 @@
     "price": 194000
   },
   {
-    "name": "Lamine Yamal",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Rare",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
-    "eaId": 277643,
-    "slug": "27-277643",
-    "price": 98500
-  },
-  {
     "name": "Hasegawa",
     "rating": 89,
     "position": "CDM",
@@ -130,17 +117,17 @@
     "price": 387000
   },
   {
-    "name": "Laimer",
-    "rating": 86,
-    "position": "RB",
-    "rarity": "Star Performer",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557023.5261f475912b018bda5f4dc19bfb1758b8b6f002b2d720a5f0786527ded75b3b.webp",
-    "url": "https://www.fut.gg/players/225375-konrad-laimer/27-50557023/",
-    "eaId": 50557023,
-    "slug": "27-50557023",
-    "price": 455000
+    "name": "Lamine Yamal",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Rare",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-277643.5f55941c5a7e0230a0396b3ecfa7b9f15bf636c7c69c3ff81ccc013d41c04856.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-277643/",
+    "eaId": 277643,
+    "slug": "27-277643",
+    "price": 98500
   },
   {
     "name": "Mbappé",
@@ -154,19 +141,6 @@
     "eaId": 231747,
     "slug": "27-231747",
     "price": 2885000
-  },
-  {
-    "name": "Fabián Ruiz",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Star Performer",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557919.75981a7b94eab12078f73ae6d8ecc8da3c9bf6ee0904e949bfaf572f05e72850.webp",
-    "url": "https://www.fut.gg/players/226271-fabian/27-50557919/",
-    "eaId": 50557919,
-    "slug": "27-50557919",
-    "price": 610000
   },
   {
     "name": "Raphinha",
@@ -208,6 +182,19 @@
     "price": 103000
   },
   {
+    "name": "Laimer",
+    "rating": 86,
+    "position": "RB",
+    "rarity": "Star Performer",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557023.5261f475912b018bda5f4dc19bfb1758b8b6f002b2d720a5f0786527ded75b3b.webp",
+    "url": "https://www.fut.gg/players/225375-konrad-laimer/27-50557023/",
+    "eaId": 50557023,
+    "slug": "27-50557023",
+    "price": 455000
+  },
+  {
     "name": "Aitana Bonmatí",
     "rating": 90,
     "position": "CM",
@@ -232,6 +219,19 @@
     "eaId": 50575228,
     "slug": "27-50575228",
     "price": null
+  },
+  {
+    "name": "Fabián Ruiz",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Star Performer",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557919.75981a7b94eab12078f73ae6d8ecc8da3c9bf6ee0904e949bfaf572f05e72850.webp",
+    "url": "https://www.fut.gg/players/226271-fabian/27-50557919/",
+    "eaId": 50557919,
+    "slug": "27-50557919",
+    "price": 610000
   },
   {
     "name": "Dumornay",
