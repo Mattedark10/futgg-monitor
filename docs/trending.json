@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "Brobbey",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "UEFA Europa League RTTK",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583458.59b4feec1da3d35653c00052d766f63c1346cdfa0b2e431df5162619c77be5b4.webp",
-    "url": "https://www.fut.gg/players/251810-brian-brobbey/27-50583458/",
-    "eaId": 50583458,
-    "slug": "27-50583458",
-    "price": null
-  },
-  {
     "name": "Schertenleib",
     "rating": 84,
     "position": "CM",
@@ -52,17 +39,17 @@
     "price": null
   },
   {
-    "name": "Mbappé",
-    "rating": 92,
+    "name": "Brobbey",
+    "rating": 85,
     "position": "ST",
-    "rarity": "POTM LaLiga EA Sports",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-151226691.b461806ac41b3932eef629a0da9a3d0c3635a4be69bc48c362bda974931af66e.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-151226691/",
-    "eaId": 151226691,
-    "slug": "27-151226691",
-    "price": 5858375
+    "rarity": "UEFA Europa League RTTK",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583458.59b4feec1da3d35653c00052d766f63c1346cdfa0b2e431df5162619c77be5b4.webp",
+    "url": "https://www.fut.gg/players/251810-brian-brobbey/27-50583458/",
+    "eaId": 50583458,
+    "slug": "27-50583458",
+    "price": null
   },
   {
     "name": "Calafiori",
@@ -78,17 +65,17 @@
     "price": null
   },
   {
-    "name": "Brown",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Star Performer",
-    "club": "Fenerbahçe",
-    "league": "Trendyol Süper Lig",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50594616.bb944d9d96962150fc04d74b0dc93fbdfe0e73444d142a5cd4592a1bb31a0350.webp",
-    "url": "https://www.fut.gg/players/262968-archie-brown/27-50594616/",
-    "eaId": 50594616,
-    "slug": "27-50594616",
-    "price": 209000
+    "name": "Mbappé",
+    "rating": 92,
+    "position": "ST",
+    "rarity": "POTM LaLiga EA Sports",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-151226691.b461806ac41b3932eef629a0da9a3d0c3635a4be69bc48c362bda974931af66e.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-151226691/",
+    "eaId": 151226691,
+    "slug": "27-151226691",
+    "price": 5858375
   },
   {
     "name": "Salma Paralluelo",
@@ -117,6 +104,19 @@
     "price": 387000
   },
   {
+    "name": "Brown",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Star Performer",
+    "club": "Fenerbahçe",
+    "league": "Trendyol Süper Lig",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50594616.bb944d9d96962150fc04d74b0dc93fbdfe0e73444d142a5cd4592a1bb31a0350.webp",
+    "url": "https://www.fut.gg/players/262968-archie-brown/27-50594616/",
+    "eaId": 50594616,
+    "slug": "27-50594616",
+    "price": 209000
+  },
+  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -128,6 +128,19 @@
     "eaId": 277643,
     "slug": "27-277643",
     "price": 98500
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1660000
   },
   {
     "name": "Mbappé",
@@ -156,19 +169,6 @@
     "price": 395000
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1660000
-  },
-  {
     "name": "Patri Guijarro",
     "rating": 88,
     "position": "CDM",
@@ -180,19 +180,6 @@
     "eaId": 237289,
     "slug": "27-237289",
     "price": 103000
-  },
-  {
-    "name": "Laimer",
-    "rating": 86,
-    "position": "RB",
-    "rarity": "Star Performer",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557023.5261f475912b018bda5f4dc19bfb1758b8b6f002b2d720a5f0786527ded75b3b.webp",
-    "url": "https://www.fut.gg/players/225375-konrad-laimer/27-50557023/",
-    "eaId": 50557023,
-    "slug": "27-50557023",
-    "price": 455000
   },
   {
     "name": "Aitana Bonmatí",
@@ -208,32 +195,6 @@
     "price": 186000
   },
   {
-    "name": "Openda",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "UEFA Europa League RTTK",
-    "club": "OL",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575228.202542a96aed18855832f086a4c1119387d836e44f3206a9a7ba58e8b4b2e9e4.webp",
-    "url": "https://www.fut.gg/players/243580-lois-openda/27-50575228/",
-    "eaId": 50575228,
-    "slug": "27-50575228",
-    "price": null
-  },
-  {
-    "name": "Fabián Ruiz",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Star Performer",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50557919.75981a7b94eab12078f73ae6d8ecc8da3c9bf6ee0904e949bfaf572f05e72850.webp",
-    "url": "https://www.fut.gg/players/226271-fabian/27-50557919/",
-    "eaId": 50557919,
-    "slug": "27-50557919",
-    "price": 610000
-  },
-  {
     "name": "Dumornay",
     "rating": 88,
     "position": "ST",
@@ -247,6 +208,19 @@
     "price": 675000
   },
   {
+    "name": "Openda",
+    "rating": 85,
+    "position": "LW",
+    "rarity": "UEFA Europa League RTTK",
+    "club": "OL",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50575228.202542a96aed18855832f086a4c1119387d836e44f3206a9a7ba58e8b4b2e9e4.webp",
+    "url": "https://www.fut.gg/players/243580-lois-openda/27-50575228/",
+    "eaId": 50575228,
+    "slug": "27-50575228",
+    "price": null
+  },
+  {
     "name": "Pedri",
     "rating": 90,
     "position": "CM",
@@ -258,5 +232,31 @@
     "eaId": 251854,
     "slug": "27-251854",
     "price": 154000
+  },
+  {
+    "name": "Alexia Putellas",
+    "rating": 91,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "London City",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-227203.984d50285d9f18bba60fbce5ef448e5ec57856707d8987c30a420028e9150e4d.webp",
+    "url": "https://www.fut.gg/players/227203-alexia-putellas/27-227203/",
+    "eaId": 227203,
+    "slug": "27-227203",
+    "price": 675000
+  },
+  {
+    "name": "Karchaoui",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-233662.4311d4835043c36789b2d84e81ed25e67bc7652731a6dfde50ce66375f1b4698.webp",
+    "url": "https://www.fut.gg/players/233662-sakina-karchaoui/27-233662/",
+    "eaId": 233662,
+    "slug": "27-233662",
+    "price": 52000
   }
 ]
