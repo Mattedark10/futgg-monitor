@@ -130,16 +130,16 @@
     "price": null
   },
   {
-    "name": "Schertenleib",
-    "rating": 84,
-    "position": "CM",
-    "rarity": "Showdown",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609347.3e7a5144f3113e84e6fa69b2514b7ced0b53ad6742a16ecec085cd1a20d7a3fc.webp",
-    "url": "https://www.fut.gg/players/277699-sydney-schertenleib/27-50609347/",
-    "eaId": 50609347,
-    "slug": "27-50609347",
+    "name": "Mario Hermoso",
+    "rating": 83,
+    "position": "CB",
+    "rarity": "Team of the week",
+    "club": "AS Roma",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561316.a77f225970c7e0ccf810c91dcea3b22b4b0c6b6fb0d88906980ea58c406b6c00.webp",
+    "url": "https://www.fut.gg/players/229668-mario-hermoso/27-50561316/",
+    "eaId": 50561316,
+    "slug": "27-50561316",
     "price": null
   },
   {
@@ -156,42 +156,16 @@
     "price": null
   },
   {
-    "name": "Mario Hermoso",
-    "rating": 83,
-    "position": "CB",
-    "rarity": "Team of the week",
-    "club": "AS Roma",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561316.a77f225970c7e0ccf810c91dcea3b22b4b0c6b6fb0d88906980ea58c406b6c00.webp",
-    "url": "https://www.fut.gg/players/229668-mario-hermoso/27-50561316/",
-    "eaId": 50561316,
-    "slug": "27-50561316",
-    "price": null
-  },
-  {
-    "name": "Ainhoa Marín",
-    "rating": 85,
-    "position": "RW",
-    "rarity": "POTM Liga F",
-    "club": "Real Sociedad",
+    "name": "Schertenleib",
+    "rating": 84,
+    "position": "CM",
+    "rarity": "Showdown",
+    "club": "FC Barcelona",
     "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403797.e7f7d8a6ca2636d832c9dd515397b59d74814ae9e7acfd72c7dc45d8cd7dc83e.webp",
-    "url": "https://www.fut.gg/players/72149-ainhoa-marin-martin-ainhoa-marin/27-50403797/",
-    "eaId": 50403797,
-    "slug": "27-50403797",
-    "price": null
-  },
-  {
-    "name": "Brobbey",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "UEFA Europa League RTTK",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583458.59b4feec1da3d35653c00052d766f63c1346cdfa0b2e431df5162619c77be5b4.webp",
-    "url": "https://www.fut.gg/players/251810-brian-brobbey/27-50583458/",
-    "eaId": 50583458,
-    "slug": "27-50583458",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609347.3e7a5144f3113e84e6fa69b2514b7ced0b53ad6742a16ecec085cd1a20d7a3fc.webp",
+    "url": "https://www.fut.gg/players/277699-sydney-schertenleib/27-50609347/",
+    "eaId": 50609347,
+    "slug": "27-50609347",
     "price": null
   },
   {
@@ -221,19 +195,6 @@
     "price": null
   },
   {
-    "name": "Calafiori",
-    "rating": 86,
-    "position": "LB",
-    "rarity": "UEFA Champions League RTTK",
-    "club": "Arsenal",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50589359.7fa2e64814b27a581f029c8e875421434e88be82a2ce7ba7da1af1d376d84b6b.webp",
-    "url": "https://www.fut.gg/players/257711-riccardo-calafiori/27-50589359/",
-    "eaId": 50589359,
-    "slug": "27-50589359",
-    "price": null
-  },
-  {
     "name": "Touré",
     "rating": 80,
     "position": "RM",
@@ -247,6 +208,32 @@
     "price": null
   },
   {
+    "name": "Ainhoa Marín",
+    "rating": 85,
+    "position": "RW",
+    "rarity": "POTM Liga F",
+    "club": "Real Sociedad",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403797.e7f7d8a6ca2636d832c9dd515397b59d74814ae9e7acfd72c7dc45d8cd7dc83e.webp",
+    "url": "https://www.fut.gg/players/72149-ainhoa-marin-martin-ainhoa-marin/27-50403797/",
+    "eaId": 50403797,
+    "slug": "27-50403797",
+    "price": null
+  },
+  {
+    "name": "Brobbey",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "UEFA Europa League RTTK",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583458.59b4feec1da3d35653c00052d766f63c1346cdfa0b2e431df5162619c77be5b4.webp",
+    "url": "https://www.fut.gg/players/251810-brian-brobbey/27-50583458/",
+    "eaId": 50583458,
+    "slug": "27-50583458",
+    "price": null
+  },
+  {
     "name": "Isina Corte",
     "rating": 82,
     "position": "LW",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/276887-isabel-corte-pelaez-isina-corte/27-50608535/",
     "eaId": 50608535,
     "slug": "27-50608535",
+    "price": null
+  },
+  {
+    "name": "Calafiori",
+    "rating": 86,
+    "position": "LB",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "Arsenal",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50589359.7fa2e64814b27a581f029c8e875421434e88be82a2ce7ba7da1af1d376d84b6b.webp",
+    "url": "https://www.fut.gg/players/257711-riccardo-calafiori/27-50589359/",
+    "eaId": 50589359,
+    "slug": "27-50589359",
     "price": null
   }
 ]
