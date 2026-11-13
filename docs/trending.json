@@ -39,6 +39,19 @@
     "price": null
   },
   {
+    "name": "Schertenleib",
+    "rating": 84,
+    "position": "CM",
+    "rarity": "Showdown",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609347.3e7a5144f3113e84e6fa69b2514b7ced0b53ad6742a16ecec085cd1a20d7a3fc.webp",
+    "url": "https://www.fut.gg/players/277699-sydney-schertenleib/27-50609347/",
+    "eaId": 50609347,
+    "slug": "27-50609347",
+    "price": null
+  },
+  {
     "name": "Güler",
     "rating": 84,
     "position": "RM",
@@ -62,19 +75,6 @@
     "url": "https://www.fut.gg/players/256630-florian-wirtz/27-50588278/",
     "eaId": 50588278,
     "slug": "27-50588278",
-    "price": null
-  },
-  {
-    "name": "Schertenleib",
-    "rating": 84,
-    "position": "CM",
-    "rarity": "Showdown",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609347.3e7a5144f3113e84e6fa69b2514b7ced0b53ad6742a16ecec085cd1a20d7a3fc.webp",
-    "url": "https://www.fut.gg/players/277699-sydney-schertenleib/27-50609347/",
-    "eaId": 50609347,
-    "slug": "27-50609347",
     "price": null
   },
   {
@@ -130,19 +130,6 @@
     "price": 387000
   },
   {
-    "name": "Brand",
-    "rating": 85,
-    "position": "LB",
-    "rarity": "Team of the week",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67370604.634827b63807d04fefb7e810719f17ffbf14fcdd5f8b752e5a3222537dd22739.webp",
-    "url": "https://www.fut.gg/players/261740-jule-brand/27-67370604/",
-    "eaId": 67370604,
-    "slug": "27-67370604",
-    "price": null
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 90,
     "position": "RW",
@@ -182,19 +169,6 @@
     "price": 186000
   },
   {
-    "name": "Brobbey",
-    "rating": 85,
-    "position": "ST",
-    "rarity": "UEFA Europa League RTTK",
-    "club": "Sunderland",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583458.59b4feec1da3d35653c00052d766f63c1346cdfa0b2e431df5162619c77be5b4.webp",
-    "url": "https://www.fut.gg/players/251810-brian-brobbey/27-50583458/",
-    "eaId": 50583458,
-    "slug": "27-50583458",
-    "price": null
-  },
-  {
     "name": "Raphinha",
     "rating": 88,
     "position": "LW",
@@ -206,19 +180,6 @@
     "eaId": 233419,
     "slug": "27-233419",
     "price": 395000
-  },
-  {
-    "name": "Shaw",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Manchester City",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50577867.13d92f2fee2dbbe3e557f07496d977ee6031ce15d120a82541002b4f014c52b5.webp",
-    "url": "https://www.fut.gg/players/246219-khadija-shaw/27-50577867/",
-    "eaId": 50577867,
-    "slug": "27-50577867",
-    "price": null
   },
   {
     "name": "Dumornay",
@@ -234,6 +195,19 @@
     "price": 675000
   },
   {
+    "name": "Brobbey",
+    "rating": 85,
+    "position": "ST",
+    "rarity": "UEFA Europa League RTTK",
+    "club": "Sunderland",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50583458.59b4feec1da3d35653c00052d766f63c1346cdfa0b2e431df5162619c77be5b4.webp",
+    "url": "https://www.fut.gg/players/251810-brian-brobbey/27-50583458/",
+    "eaId": 50583458,
+    "slug": "27-50583458",
+    "price": null
+  },
+  {
     "name": "Dembélé",
     "rating": 90,
     "position": "ST",
@@ -247,6 +221,19 @@
     "price": 1660000
   },
   {
+    "name": "Brand",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Team of the week",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67370604.634827b63807d04fefb7e810719f17ffbf14fcdd5f8b752e5a3222537dd22739.webp",
+    "url": "https://www.fut.gg/players/261740-jule-brand/27-67370604/",
+    "eaId": 67370604,
+    "slug": "27-67370604",
+    "price": null
+  },
+  {
     "name": "Pedri",
     "rating": 90,
     "position": "CM",
@@ -258,5 +245,18 @@
     "eaId": 251854,
     "slug": "27-251854",
     "price": 154000
+  },
+  {
+    "name": "Calafiori",
+    "rating": 86,
+    "position": "LB",
+    "rarity": "UEFA Champions League RTTK",
+    "club": "Arsenal",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50589359.7fa2e64814b27a581f029c8e875421434e88be82a2ce7ba7da1af1d376d84b6b.webp",
+    "url": "https://www.fut.gg/players/257711-riccardo-calafiori/27-50589359/",
+    "eaId": 50589359,
+    "slug": "27-50589359",
+    "price": null
   }
 ]
