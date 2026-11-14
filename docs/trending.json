@@ -10,20 +10,7 @@
     "url": "https://www.fut.gg/players/203551-alessandro-florenzi/27-50535199/",
     "eaId": 50535199,
     "slug": "27-50535199",
-    "price": 387010
-  },
-  {
-    "name": "Richards",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50501369.4a1797b783fdcdaa5d2c6a11d9ef3530d5438274c086d05acf9c6c7238d8e01d.webp",
-    "url": "https://www.fut.gg/players/169721-micah-richards/27-50501369/",
-    "eaId": 50501369,
-    "slug": "27-50501369",
-    "price": null
+    "price": 419070
   },
   {
     "name": "McGeady",
@@ -39,6 +26,19 @@
     "price": null
   },
   {
+    "name": "Richards",
+    "rating": 87,
+    "position": "CB",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50501369.4a1797b783fdcdaa5d2c6a11d9ef3530d5438274c086d05acf9c6c7238d8e01d.webp",
+    "url": "https://www.fut.gg/players/169721-micah-richards/27-50501369/",
+    "eaId": 50501369,
+    "slug": "27-50501369",
+    "price": 595000
+  },
+  {
     "name": "dos Santos",
     "rating": 87,
     "position": "ST",
@@ -49,20 +49,7 @@
     "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
     "eaId": 50502017,
     "slug": "27-50502017",
-    "price": 460000
-  },
-  {
-    "name": "Fellaini",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50508592.0868db3a7a8a2a422f8d94029d93d037f93df0aaa9ed5a0d725cfbb0d369e9bf.webp",
-    "url": "https://www.fut.gg/players/176944-marouane-fellaini/27-50508592/",
-    "eaId": 50508592,
-    "slug": "27-50508592",
-    "price": 750000
+    "price": 470000
   },
   {
     "name": "Walcott",
@@ -75,33 +62,20 @@
     "url": "https://www.fut.gg/players/164859-theo-walcott/27-50496507/",
     "eaId": 50496507,
     "slug": "27-50496507",
-    "price": 2070000
+    "price": 1595000
   },
   {
-    "name": "Alexandre Pato",
+    "name": "Fellaini",
     "rating": 88,
-    "position": "ST",
+    "position": "CDM",
     "rarity": "Hall of FUT: Unleashed",
     "club": "HALL OF FUT",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50511823.991f27ac14e37ec9a1e8e1ffe50f74a332e093856bbbdb11ab92c646cdebd3fb.webp",
-    "url": "https://www.fut.gg/players/180175-alexandre-pato/27-50511823/",
-    "eaId": 50511823,
-    "slug": "27-50511823",
-    "price": 1080000
-  },
-  {
-    "name": "Hulk",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Liga Portugal",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50521010.d798db569dcbd1e7dba0ad36224964701693c98ee50cdea56811ae7cafc961bf.webp",
-    "url": "https://www.fut.gg/players/189362-givanildo-vieira-de-souza/27-50521010/",
-    "eaId": 50521010,
-    "slug": "27-50521010",
-    "price": 3600000
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50508592.0868db3a7a8a2a422f8d94029d93d037f93df0aaa9ed5a0d725cfbb0d369e9bf.webp",
+    "url": "https://www.fut.gg/players/176944-marouane-fellaini/27-50508592/",
+    "eaId": 50508592,
+    "slug": "27-50508592",
+    "price": 727000
   },
   {
     "name": "Balotelli",
@@ -114,7 +88,20 @@
     "url": "https://www.fut.gg/players/186627-mario-balotelli/27-50518275/",
     "eaId": 50518275,
     "slug": "27-50518275",
-    "price": 620000
+    "price": 491000
+  },
+  {
+    "name": "Alexandre Pato",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50511823.991f27ac14e37ec9a1e8e1ffe50f74a332e093856bbbdb11ab92c646cdebd3fb.webp",
+    "url": "https://www.fut.gg/players/180175-alexandre-pato/27-50511823/",
+    "eaId": 50511823,
+    "slug": "27-50511823",
+    "price": 890000
   },
   {
     "name": "Guarín",
@@ -127,20 +114,20 @@
     "url": "https://www.fut.gg/players/169051-freddy-guarin/27-50500699/",
     "eaId": 50500699,
     "slug": "27-50500699",
-    "price": 799000
+    "price": 678000
   },
   {
-    "name": "Jackson",
-    "rating": 85,
+    "name": "Hulk",
+    "rating": 90,
     "position": "ST",
-    "rarity": "POTM Premier League",
-    "club": "Aston Villa",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-134476925.c30edf661bb709565e6533e9a318ad874c1566bfbe0b487ff15c45c7fe199687.webp",
-    "url": "https://www.fut.gg/players/259197-nicolas-jackson/27-134476925/",
-    "eaId": 134476925,
-    "slug": "27-134476925",
-    "price": null
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Liga Portugal",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50521010.d798db569dcbd1e7dba0ad36224964701693c98ee50cdea56811ae7cafc961bf.webp",
+    "url": "https://www.fut.gg/players/189362-givanildo-vieira-de-souza/27-50521010/",
+    "eaId": 50521010,
+    "slug": "27-50521010",
+    "price": 1867000
   },
   {
     "name": "Akinfenwa",
@@ -153,6 +140,19 @@
     "url": "https://www.fut.gg/players/156321-adebayo-akinfenwa/27-50487969/",
     "eaId": 50487969,
     "slug": "27-50487969",
+    "price": null
+  },
+  {
+    "name": "Ibarbo",
+    "rating": 86,
+    "position": "RW",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50536198.91877e75c7600d59a3c78ec2f7e75a9ca80e392ce53b172028447897d008fa41.webp",
+    "url": "https://www.fut.gg/players/204550-victor-ibarbo/27-50536198/",
+    "eaId": 50536198,
+    "slug": "27-50536198",
     "price": null
   },
   {
@@ -169,32 +169,6 @@
     "price": null
   },
   {
-    "name": "David Luiz",
-    "rating": 89,
-    "position": "CDM",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50511592.df6ec1fb2a0972f9c245c7755b8b1b239570976667bb642f0df1a065b4af90cd.webp",
-    "url": "https://www.fut.gg/players/179944-david-luiz-moreira-marinho/27-50511592/",
-    "eaId": 50511592,
-    "slug": "27-50511592",
-    "price": 1470000
-  },
-  {
-    "name": "Ibarbo",
-    "rating": 86,
-    "position": "RW",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50536198.91877e75c7600d59a3c78ec2f7e75a9ca80e392ce53b172028447897d008fa41.webp",
-    "url": "https://www.fut.gg/players/204550-victor-ibarbo/27-50536198/",
-    "eaId": 50536198,
-    "slug": "27-50536198",
-    "price": null
-  },
-  {
     "name": "Rémy",
     "rating": 86,
     "position": "ST",
@@ -208,17 +182,17 @@
     "price": null
   },
   {
-    "name": "Valencia",
+    "name": "David Luiz",
     "rating": 89,
-    "position": "RB",
+    "position": "CDM",
     "rarity": "Hall of FUT: Unleashed",
     "club": "HALL OF FUT",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50499553.a6193e0e2c21a2a729c857325d142790e01eba643dd1a63bee59dd57b1661745.webp",
-    "url": "https://www.fut.gg/players/167905-luis-antonio-valencia/27-50499553/",
-    "eaId": 50499553,
-    "slug": "27-50499553",
-    "price": 1549000
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50511592.df6ec1fb2a0972f9c245c7755b8b1b239570976667bb642f0df1a065b4af90cd.webp",
+    "url": "https://www.fut.gg/players/179944-david-luiz-moreira-marinho/27-50511592/",
+    "eaId": 50511592,
+    "slug": "27-50511592",
+    "price": 1155000
   },
   {
     "name": "Elia",
@@ -234,6 +208,19 @@
     "price": null
   },
   {
+    "name": "Valencia",
+    "rating": 89,
+    "position": "RB",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50499553.a6193e0e2c21a2a729c857325d142790e01eba643dd1a63bee59dd57b1661745.webp",
+    "url": "https://www.fut.gg/players/167905-luis-antonio-valencia/27-50499553/",
+    "eaId": 50499553,
+    "slug": "27-50499553",
+    "price": 880000
+  },
+  {
     "name": "Gervinho",
     "rating": 87,
     "position": "LW",
@@ -244,7 +231,7 @@
     "url": "https://www.fut.gg/players/170733-gervinho/27-50502381/",
     "eaId": 50502381,
     "slug": "27-50502381",
-    "price": 394000
+    "price": 365000
   },
   {
     "name": "Błaszczykowski",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/164994-jakub-blaszczykowski/27-50496642/",
     "eaId": 50496642,
     "slug": "27-50496642",
+    "price": null
+  },
+  {
+    "name": "Emenike",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Trendyol Süper Lig",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50531483.a2509c66ddcbb87a8117791acdcf3042020a50191ce54a6d8367dd3b9227839f.webp",
+    "url": "https://www.fut.gg/players/199835-emmanuel-emenike/27-50531483/",
+    "eaId": 50531483,
+    "slug": "27-50531483",
     "price": null
   }
 ]
