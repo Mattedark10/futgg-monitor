@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/238428-peter-schmeichel/27-238428/",
     "eaId": 238428,
     "slug": "27-238428",
-    "price": 350000
+    "price": 340000
   },
   {
     "name": "Barnes",
@@ -26,19 +26,6 @@
     "price": null
   },
   {
-    "name": "dos Santos",
-    "rating": 87,
-    "position": "ST",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
-    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
-    "eaId": 50502017,
-    "slug": "27-50502017",
-    "price": 219000
-  },
-  {
     "name": "Petit",
     "rating": 88,
     "position": "CDM",
@@ -52,6 +39,19 @@
     "price": null
   },
   {
+    "name": "dos Santos",
+    "rating": 87,
+    "position": "ST",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
+    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
+    "eaId": 50502017,
+    "slug": "27-50502017",
+    "price": 218000
+  },
+  {
     "name": "Dembélé",
     "rating": 90,
     "position": "ST",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
     "eaId": 231443,
     "slug": "27-231443",
-    "price": 1195000
+    "price": 1142000
   },
   {
     "name": "Balotelli",
@@ -75,20 +75,7 @@
     "url": "https://www.fut.gg/players/186627-mario-balotelli/27-50518275/",
     "eaId": 50518275,
     "slug": "27-50518275",
-    "price": 203000
-  },
-  {
-    "name": "Danjuma",
-    "rating": 85,
-    "position": "LW",
-    "rarity": "FC Heritage",
-    "club": "Valencia CF",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50567924.3d695a55735e7b67756956d7d8d455e755366bcc2ad1b5886259fad1ffa2f956.webp",
-    "url": "https://www.fut.gg/players/236276-arnaut-danjuma/27-50567924/",
-    "eaId": 50567924,
-    "slug": "27-50567924",
-    "price": null
+    "price": 188000
   },
   {
     "name": "McGeady",
@@ -104,6 +91,19 @@
     "price": null
   },
   {
+    "name": "Danjuma",
+    "rating": 85,
+    "position": "LW",
+    "rarity": "FC Heritage",
+    "club": "Valencia CF",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50567924.3d695a55735e7b67756956d7d8d455e755366bcc2ad1b5886259fad1ffa2f956.webp",
+    "url": "https://www.fut.gg/players/236276-arnaut-danjuma/27-50567924/",
+    "eaId": 50567924,
+    "slug": "27-50567924",
+    "price": null
+  },
+  {
     "name": "Alexandre Pato",
     "rating": 88,
     "position": "ST",
@@ -114,20 +114,7 @@
     "url": "https://www.fut.gg/players/180175-alexandre-pato/27-50511823/",
     "eaId": 50511823,
     "slug": "27-50511823",
-    "price": 450000
-  },
-  {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 401000
+    "price": 451000
   },
   {
     "name": "Salma Paralluelo",
@@ -140,7 +127,20 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 99000
+    "price": 97500
+  },
+  {
+    "name": "Dumornay",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 390000
   },
   {
     "name": "Mbappé",
@@ -153,7 +153,7 @@
     "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
     "eaId": 231747,
     "slug": "27-231747",
-    "price": 2290000
+    "price": 2265000
   },
   {
     "name": "Aitana Bonmatí",
@@ -166,7 +166,7 @@
     "url": "https://www.fut.gg/players/241667-aitana-bonmati/27-241667/",
     "eaId": 241667,
     "slug": "27-241667",
-    "price": 106000
+    "price": 98500
   },
   {
     "name": "Pedri",
@@ -179,7 +179,7 @@
     "url": "https://www.fut.gg/players/251854-pedri/27-251854/",
     "eaId": 251854,
     "slug": "27-251854",
-    "price": 95000
+    "price": 95500
   },
   {
     "name": "Raphinha",
@@ -192,7 +192,33 @@
     "url": "https://www.fut.gg/players/233419-raphinha/27-233419/",
     "eaId": 233419,
     "slug": "27-233419",
-    "price": 234000
+    "price": 233000
+  },
+  {
+    "name": "Walcott",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50496507.faa0d72edea568a3b3211b1e5648045ba79964735ed0ba8ba764fff2074ad62d.webp",
+    "url": "https://www.fut.gg/players/164859-theo-walcott/27-50496507/",
+    "eaId": 50496507,
+    "slug": "27-50496507",
+    "price": 790000
+  },
+  {
+    "name": "Guarín",
+    "rating": 88,
+    "position": "CAM",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50500699.69a1afaafb8fe2adf0a2502ff48645eb48723d966ed06f76aed1c38c0e177582.webp",
+    "url": "https://www.fut.gg/players/169051-freddy-guarin/27-50500699/",
+    "eaId": 50500699,
+    "slug": "27-50500699",
+    "price": 350000
   },
   {
     "name": "Patri Guijarro",
@@ -208,45 +234,6 @@
     "price": 65000
   },
   {
-    "name": "Walcott",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50496507.faa0d72edea568a3b3211b1e5648045ba79964735ed0ba8ba764fff2074ad62d.webp",
-    "url": "https://www.fut.gg/players/164859-theo-walcott/27-50496507/",
-    "eaId": 50496507,
-    "slug": "27-50496507",
-    "price": 800000
-  },
-  {
-    "name": "Paula León",
-    "rating": 84,
-    "position": "ST",
-    "rarity": "Squad Foundations",
-    "club": "Madrid CFF",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50610301.31aa65da73e3a656bb2c7fa958efed7a0f7be39dcfb1454c2320e5c157f87fac.webp",
-    "url": "https://www.fut.gg/players/278653-paula-leon-brena-paula-leon/27-50610301/",
-    "eaId": 50610301,
-    "slug": "27-50610301",
-    "price": null
-  },
-  {
-    "name": "Guarín",
-    "rating": 88,
-    "position": "CAM",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50500699.69a1afaafb8fe2adf0a2502ff48645eb48723d966ed06f76aed1c38c0e177582.webp",
-    "url": "https://www.fut.gg/players/169051-freddy-guarin/27-50500699/",
-    "eaId": 50500699,
-    "slug": "27-50500699",
-    "price": 340000
-  },
-  {
     "name": "Ibarbo",
     "rating": 86,
     "position": "RW",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/204550-victor-ibarbo/27-50536198/",
     "eaId": 50536198,
     "slug": "27-50536198",
+    "price": null
+  },
+  {
+    "name": "Layún",
+    "rating": 86,
+    "position": "LB",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "Liga BBVA MX",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50509970.694460104a9c38da70a557d65e51a40d47adecb185005aaed502c4e2ac31a152.webp",
+    "url": "https://www.fut.gg/players/178322-miguel-layun/27-50509970/",
+    "eaId": 50509970,
+    "slug": "27-50509970",
     "price": null
   }
 ]
