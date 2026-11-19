@@ -1,18 +1,5 @@
 [
   {
-    "name": "Cooper",
-    "rating": 85,
-    "position": "RM",
-    "rarity": "Showdown",
-    "club": "KC Current",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50605115.95380e7db0cda321ed9c1940ac45282f434cc22df09329d083675826597c383e.webp",
-    "url": "https://www.fut.gg/players/273467-michelle-cooper/27-50605115/",
-    "eaId": 50605115,
-    "slug": "27-50605115",
-    "price": null
-  },
-  {
     "name": "Di Guglielmo",
     "rating": 85,
     "position": "RB",
@@ -26,6 +13,19 @@
     "price": null
   },
   {
+    "name": "Cooper",
+    "rating": 85,
+    "position": "RM",
+    "rarity": "Showdown",
+    "club": "KC Current",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50605115.95380e7db0cda321ed9c1940ac45282f434cc22df09329d083675826597c383e.webp",
+    "url": "https://www.fut.gg/players/273467-michelle-cooper/27-50605115/",
+    "eaId": 50605115,
+    "slug": "27-50605115",
+    "price": null
+  },
+  {
     "name": "Haaland",
     "rating": 92,
     "position": "ST",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/239085-erling-haaland/27-84125165/",
     "eaId": 84125165,
     "slug": "27-84125165",
-    "price": 3000000
+    "price": 650000
   },
   {
     "name": "Szoboszlai",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/236772-dominik-szoboszlai/27-84122852/",
     "eaId": 84122852,
     "slug": "27-84122852",
-    "price": 254000
+    "price": 180000
   },
   {
     "name": "Reijnders",
@@ -65,19 +65,6 @@
     "price": null
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1108000
-  },
-  {
     "name": "Vušković",
     "rating": 83,
     "position": "CB",
@@ -89,32 +76,6 @@
     "eaId": 67384056,
     "slug": "27-67384056",
     "price": null
-  },
-  {
-    "name": "dos Santos",
-    "rating": 87,
-    "position": "ST",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
-    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
-    "eaId": 50502017,
-    "slug": "27-50502017",
-    "price": 202000
-  },
-  {
-    "name": "Schmeichel",
-    "rating": 89,
-    "position": "GK",
-    "rarity": "Base Icon",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-238428.ab33700006338312b316359a0fb6cbb01aba0b41f63208abd8595a7e05466b7e.webp",
-    "url": "https://www.fut.gg/players/238428-peter-schmeichel/27-238428/",
-    "eaId": 238428,
-    "slug": "27-238428",
-    "price": 337000
   },
   {
     "name": "White",
@@ -140,84 +101,6 @@
     "url": "https://www.fut.gg/players/269705-derry-scherhant/27-50601353/",
     "eaId": 50601353,
     "slug": "27-50601353",
-    "price": null
-  },
-  {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 375000
-  },
-  {
-    "name": "Barnes",
-    "rating": 88,
-    "position": "LW",
-    "rarity": "Base Icon",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-247515.aec1ebed76ae40f8a5c688d6b9e331efd770c70fa4429260a9402cd33c1232ba.webp",
-    "url": "https://www.fut.gg/players/247515-john-barnes/27-247515/",
-    "eaId": 247515,
-    "slug": "27-247515",
-    "price": 316000
-  },
-  {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 2280000
-  },
-  {
-    "name": "Salma Paralluelo",
-    "rating": 87,
-    "position": "LW",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 97500
-  },
-  {
-    "name": "Balotelli",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50518275.70a5caef75f9526a6e0c1e548804a2f0e4c1d6028ada6a786fb55810b724aa0b.webp",
-    "url": "https://www.fut.gg/players/186627-mario-balotelli/27-50518275/",
-    "eaId": 50518275,
-    "slug": "27-50518275",
-    "price": 197000
-  },
-  {
-    "name": "Petit",
-    "rating": 88,
-    "position": "CDM",
-    "rarity": "Base Icon",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-1620.318dc0334373ad49b9a582cabd921b70cf4915e8f63ce4cad76c4b143633ef10.webp",
-    "url": "https://www.fut.gg/players/1620-emmanuel-petit/27-1620/",
-    "eaId": 1620,
-    "slug": "27-1620",
     "price": null
   },
   {
@@ -247,16 +130,133 @@
     "price": null
   },
   {
-    "name": "McGeady",
+    "name": "Ngoy",
+    "rating": 80,
+    "position": "CB",
+    "rarity": "Team of the week",
+    "club": "LOSC",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593719.0544d330d4bd11368b66581110853ce832f934e06024d26b82380a8ba6fd8ceb.webp",
+    "url": "https://www.fut.gg/players/262071-nathan-ngoy/27-50593719/",
+    "eaId": 50593719,
+    "slug": "27-50593719",
+    "price": null
+  },
+  {
+    "name": "Le Tissier",
     "rating": 86,
-    "position": "RM",
+    "position": "CB",
+    "rarity": "Team of the week",
+    "club": "Manchester Utd",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596941.2432e3866700dce7ffd6bfa9de9bac2d87ab5684dd8f94302f12c8eb558fdfe8.webp",
+    "url": "https://www.fut.gg/players/265293-maya-le-tissier/27-50596941/",
+    "eaId": 50596941,
+    "slug": "27-50596941",
+    "price": null
+  },
+  {
+    "name": "McGinn",
+    "rating": 84,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50542529.8d4312cc33877e311a74030b7c3ea5084882ba7048fa5d74c375b47dfe6fb884.webp",
+    "url": "https://www.fut.gg/players/210881-john-mcginn/27-50542529/",
+    "eaId": 50542529,
+    "slug": "27-50542529",
+    "price": null
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1119000
+  },
+  {
+    "name": "Esposito",
+    "rating": 80,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608975.2908577176232382e8071e13f1d057d0da2c2ae76b40b7881a49f7dbc4409be1.webp",
+    "url": "https://www.fut.gg/players/277327-francesco-pio-esposito/27-50608975/",
+    "eaId": 50608975,
+    "slug": "27-50608975",
+    "price": null
+  },
+  {
+    "name": "dos Santos",
+    "rating": 87,
+    "position": "ST",
     "rarity": "Hall of FUT: Unleashed",
     "club": "HALL OF FUT",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50487533.900c7c7f94acbd4727e9bb032a1c1a7db5c0aba68e35c732ba3f382b587f6bde.webp",
-    "url": "https://www.fut.gg/players/155885-aiden-mcgeady/27-50487533/",
-    "eaId": 50487533,
-    "slug": "27-50487533",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
+    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
+    "eaId": 50502017,
+    "slug": "27-50502017",
+    "price": 174000
+  },
+  {
+    "name": "Højlund",
+    "rating": 80,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "SSC Napoli",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50591047.41b4f9e1644fb99879547142609945dd35bba3b0acaaeb1b6a16f68957b6aec4.webp",
+    "url": "https://www.fut.gg/players/259399-rasmus-hojlund/27-50591047/",
+    "eaId": 50591047,
+    "slug": "27-50591047",
     "price": null
+  },
+  {
+    "name": "Bethune",
+    "rating": 85,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "KC Current",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50611460.5a6431f9e6bc0dba6916387ae7d7f1aa2a1fe69d9e6eef4f307b23a92e9be72d.webp",
+    "url": "https://www.fut.gg/players/279812-croix-bethune/27-50611460/",
+    "eaId": 50611460,
+    "slug": "27-50611460",
+    "price": null
+  },
+  {
+    "name": "Dumornay",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 348000
+  },
+  {
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 80500
   }
 ]
