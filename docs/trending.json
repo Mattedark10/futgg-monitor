@@ -1,5 +1,18 @@
 [
   {
+    "name": "Haaland",
+    "rating": 92,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Manchester City",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84125165.00ac8e5d69458a42f51e44b021a0d52f3504558ab6bb22c02b4cd00bbb514176.webp",
+    "url": "https://www.fut.gg/players/239085-erling-haaland/27-84125165/",
+    "eaId": 84125165,
+    "slug": "27-84125165",
+    "price": 399000
+  },
+  {
     "name": "Di Guglielmo",
     "rating": 85,
     "position": "RB",
@@ -26,19 +39,6 @@
     "price": null
   },
   {
-    "name": "Haaland",
-    "rating": 92,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Manchester City",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84125165.00ac8e5d69458a42f51e44b021a0d52f3504558ab6bb22c02b4cd00bbb514176.webp",
-    "url": "https://www.fut.gg/players/239085-erling-haaland/27-84125165/",
-    "eaId": 84125165,
-    "slug": "27-84125165",
-    "price": 650000
-  },
-  {
     "name": "Szoboszlai",
     "rating": 87,
     "position": "CAM",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/236772-dominik-szoboszlai/27-84122852/",
     "eaId": 84122852,
     "slug": "27-84122852",
-    "price": 180000
+    "price": 159000
   },
   {
     "name": "Reijnders",
@@ -130,19 +130,6 @@
     "price": null
   },
   {
-    "name": "Ngoy",
-    "rating": 80,
-    "position": "CB",
-    "rarity": "Team of the week",
-    "club": "LOSC",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593719.0544d330d4bd11368b66581110853ce832f934e06024d26b82380a8ba6fd8ceb.webp",
-    "url": "https://www.fut.gg/players/262071-nathan-ngoy/27-50593719/",
-    "eaId": 50593719,
-    "slug": "27-50593719",
-    "price": null
-  },
-  {
     "name": "Le Tissier",
     "rating": 86,
     "position": "CB",
@@ -153,6 +140,19 @@
     "url": "https://www.fut.gg/players/265293-maya-le-tissier/27-50596941/",
     "eaId": 50596941,
     "slug": "27-50596941",
+    "price": null
+  },
+  {
+    "name": "Ngoy",
+    "rating": 80,
+    "position": "CB",
+    "rarity": "Team of the week",
+    "club": "LOSC",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593719.0544d330d4bd11368b66581110853ce832f934e06024d26b82380a8ba6fd8ceb.webp",
+    "url": "https://www.fut.gg/players/262071-nathan-ngoy/27-50593719/",
+    "eaId": 50593719,
+    "slug": "27-50593719",
     "price": null
   },
   {
@@ -169,19 +169,6 @@
     "price": null
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1119000
-  },
-  {
     "name": "Esposito",
     "rating": 80,
     "position": "ST",
@@ -193,19 +180,6 @@
     "eaId": 50608975,
     "slug": "27-50608975",
     "price": null
-  },
-  {
-    "name": "dos Santos",
-    "rating": 87,
-    "position": "ST",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
-    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
-    "eaId": 50502017,
-    "slug": "27-50502017",
-    "price": 174000
   },
   {
     "name": "Højlund",
@@ -234,6 +208,32 @@
     "price": null
   },
   {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1119000
+  },
+  {
+    "name": "dos Santos",
+    "rating": 87,
+    "position": "ST",
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
+    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
+    "eaId": 50502017,
+    "slug": "27-50502017",
+    "price": 174000
+  },
+  {
     "name": "Dumornay",
     "rating": 88,
     "position": "ST",
@@ -244,7 +244,7 @@
     "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
     "eaId": 265898,
     "slug": "27-265898",
-    "price": 348000
+    "price": 346000
   },
   {
     "name": "Salma Paralluelo",
