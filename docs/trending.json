@@ -10,33 +10,7 @@
     "url": "https://www.fut.gg/players/239085-erling-haaland/27-84125165/",
     "eaId": 84125165,
     "slug": "27-84125165",
-    "price": 399000
-  },
-  {
-    "name": "Di Guglielmo",
-    "rating": 85,
-    "position": "RB",
-    "rarity": "Showdown",
-    "club": "Washington Spirit",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598618.9b4e2a42b5dd46d98287ac6f3bac2bc4037538aae4e70d16a9aec5662394f66b.webp",
-    "url": "https://www.fut.gg/players/266970-lucia-di-guglielmo/27-50598618/",
-    "eaId": 50598618,
-    "slug": "27-50598618",
-    "price": null
-  },
-  {
-    "name": "Cooper",
-    "rating": 85,
-    "position": "RM",
-    "rarity": "Showdown",
-    "club": "KC Current",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50605115.95380e7db0cda321ed9c1940ac45282f434cc22df09329d083675826597c383e.webp",
-    "url": "https://www.fut.gg/players/273467-michelle-cooper/27-50605115/",
-    "eaId": 50605115,
-    "slug": "27-50605115",
-    "price": null
+    "price": 322000
   },
   {
     "name": "Szoboszlai",
@@ -62,6 +36,32 @@
     "url": "https://www.fut.gg/players/240638-tijjani-reijnders/27-67349502/",
     "eaId": 67349502,
     "slug": "27-67349502",
+    "price": null
+  },
+  {
+    "name": "Di Guglielmo",
+    "rating": 85,
+    "position": "RB",
+    "rarity": "Showdown",
+    "club": "Washington Spirit",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50598618.9b4e2a42b5dd46d98287ac6f3bac2bc4037538aae4e70d16a9aec5662394f66b.webp",
+    "url": "https://www.fut.gg/players/266970-lucia-di-guglielmo/27-50598618/",
+    "eaId": 50598618,
+    "slug": "27-50598618",
+    "price": null
+  },
+  {
+    "name": "Cooper",
+    "rating": 85,
+    "position": "RM",
+    "rarity": "Showdown",
+    "club": "KC Current",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50605115.95380e7db0cda321ed9c1940ac45282f434cc22df09329d083675826597c383e.webp",
+    "url": "https://www.fut.gg/players/273467-michelle-cooper/27-50605115/",
+    "eaId": 50605115,
+    "slug": "27-50605115",
     "price": null
   },
   {
@@ -91,6 +91,19 @@
     "price": null
   },
   {
+    "name": "Baltimore",
+    "rating": 86,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "Chelsea",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593381.c004051b72100416dd43e8733cb4978713c1b86882fe1a5a26e87156fb7a5887.webp",
+    "url": "https://www.fut.gg/players/261733-sandy-baltimore/27-50593381/",
+    "eaId": 50593381,
+    "slug": "27-50593381",
+    "price": null
+  },
+  {
     "name": "Scherhant",
     "rating": 80,
     "position": "LM",
@@ -114,19 +127,6 @@
     "url": "https://www.fut.gg/players/237681-takefusa-kubo/27-50569329/",
     "eaId": 50569329,
     "slug": "27-50569329",
-    "price": null
-  },
-  {
-    "name": "Baltimore",
-    "rating": 86,
-    "position": "CAM",
-    "rarity": "Team of the week",
-    "club": "Chelsea",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593381.c004051b72100416dd43e8733cb4978713c1b86882fe1a5a26e87156fb7a5887.webp",
-    "url": "https://www.fut.gg/players/261733-sandy-baltimore/27-50593381/",
-    "eaId": 50593381,
-    "slug": "27-50593381",
     "price": null
   },
   {
@@ -169,17 +169,17 @@
     "price": null
   },
   {
-    "name": "Esposito",
-    "rating": 80,
+    "name": "dos Santos",
+    "rating": 87,
     "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608975.2908577176232382e8071e13f1d057d0da2c2ae76b40b7881a49f7dbc4409be1.webp",
-    "url": "https://www.fut.gg/players/277327-francesco-pio-esposito/27-50608975/",
-    "eaId": 50608975,
-    "slug": "27-50608975",
-    "price": null
+    "rarity": "Hall of FUT: Unleashed",
+    "club": "HALL OF FUT",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
+    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
+    "eaId": 50502017,
+    "slug": "27-50502017",
+    "price": 183000
   },
   {
     "name": "Højlund",
@@ -195,16 +195,16 @@
     "price": null
   },
   {
-    "name": "Bethune",
-    "rating": 85,
-    "position": "CAM",
+    "name": "Esposito",
+    "rating": 80,
+    "position": "ST",
     "rarity": "Team of the week",
-    "club": "KC Current",
-    "league": "National Women's Soccer League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50611460.5a6431f9e6bc0dba6916387ae7d7f1aa2a1fe69d9e6eef4f307b23a92e9be72d.webp",
-    "url": "https://www.fut.gg/players/279812-croix-bethune/27-50611460/",
-    "eaId": 50611460,
-    "slug": "27-50611460",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608975.2908577176232382e8071e13f1d057d0da2c2ae76b40b7881a49f7dbc4409be1.webp",
+    "url": "https://www.fut.gg/players/277327-francesco-pio-esposito/27-50608975/",
+    "eaId": 50608975,
+    "slug": "27-50608975",
     "price": null
   },
   {
@@ -218,33 +218,20 @@
     "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
     "eaId": 231443,
     "slug": "27-231443",
-    "price": 1119000
+    "price": 1178000
   },
   {
-    "name": "dos Santos",
-    "rating": 87,
-    "position": "ST",
-    "rarity": "Hall of FUT: Unleashed",
-    "club": "HALL OF FUT",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50502017.9da49ceeb5964873133fa7a94c5575970ca4f08481638803fd60fb317e544d2e.webp",
-    "url": "https://www.fut.gg/players/170369-giovani-dos-santos/27-50502017/",
-    "eaId": 50502017,
-    "slug": "27-50502017",
-    "price": 174000
-  },
-  {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 346000
+    "name": "Bethune",
+    "rating": 85,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "KC Current",
+    "league": "National Women's Soccer League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50611460.5a6431f9e6bc0dba6916387ae7d7f1aa2a1fe69d9e6eef4f307b23a92e9be72d.webp",
+    "url": "https://www.fut.gg/players/279812-croix-bethune/27-50611460/",
+    "eaId": 50611460,
+    "slug": "27-50611460",
+    "price": null
   },
   {
     "name": "Salma Paralluelo",
@@ -257,6 +244,19 @@
     "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
     "eaId": 269404,
     "slug": "27-269404",
-    "price": 80500
+    "price": 87000
+  },
+  {
+    "name": "Dumornay",
+    "rating": 88,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 369000
   }
 ]
