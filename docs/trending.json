@@ -26,6 +26,19 @@
     "price": 407530
   },
   {
+    "name": "van de Ven",
+    "rating": 87,
+    "position": "CB",
+    "rarity": "Thunderstruck",
+    "club": "Spurs",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596101.f835bfefbc1267e39565dae9574ae7b14c96d437c81ed059a7bb243e02f750e7.webp",
+    "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
+    "eaId": 50596101,
+    "slug": "27-50596101",
+    "price": 365000
+  },
+  {
     "name": "Diaby",
     "rating": 86,
     "position": "LM",
@@ -39,19 +52,6 @@
     "price": null
   },
   {
-    "name": "van de Ven",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Spurs",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596101.f835bfefbc1267e39565dae9574ae7b14c96d437c81ed059a7bb243e02f750e7.webp",
-    "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
-    "eaId": 50596101,
-    "slug": "27-50596101",
-    "price": 355000
-  },
-  {
     "name": "Zaïre-Emery",
     "rating": 89,
     "position": "RB",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 346000
+    "price": 357000
   },
   {
     "name": "Jones",
@@ -88,19 +88,19 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 535000
+    "price": 539000
   },
   {
-    "name": "Ibañez",
+    "name": "Elena Julve",
     "rating": 88,
-    "position": "CB",
+    "position": "RW",
     "rarity": "Thunderstruck",
-    "club": "Al Ahli",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578905.bc4dddfa77baeaad610ce290a656c5c8add6dcf0570e5679f7390836ad788041.webp",
-    "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
-    "eaId": 50578905,
-    "slug": "27-50578905",
+    "club": "Badalona Women",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603811.5afd76aba8845a6b54a3587d7a48251dae0e56c69d871596e4823ddc82912068.webp",
+    "url": "https://www.fut.gg/players/272163-elena-julve/27-50603811/",
+    "eaId": 50603811,
+    "slug": "27-50603811",
     "price": null
   },
   {
@@ -117,30 +117,17 @@
     "price": null
   },
   {
-    "name": "Elena Julve",
+    "name": "Ibañez",
     "rating": 88,
-    "position": "RW",
+    "position": "CB",
     "rarity": "Thunderstruck",
-    "club": "Badalona Women",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603811.5afd76aba8845a6b54a3587d7a48251dae0e56c69d871596e4823ddc82912068.webp",
-    "url": "https://www.fut.gg/players/272163-elena-julve/27-50603811/",
-    "eaId": 50603811,
-    "slug": "27-50603811",
+    "club": "Al Ahli",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578905.bc4dddfa77baeaad610ce290a656c5c8add6dcf0570e5679f7390836ad788041.webp",
+    "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
+    "eaId": 50578905,
+    "slug": "27-50578905",
     "price": null
-  },
-  {
-    "name": "Mariona",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Thunderstruck",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568936.28ed5a5c5421b228460464497a97ebd9cc4059b6a03faec93cf2b46dba6d3cb0.webp",
-    "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
-    "eaId": 50568936,
-    "slug": "27-50568936",
-    "price": 234000
   },
   {
     "name": "Schlotterbeck",
@@ -156,6 +143,19 @@
     "price": null
   },
   {
+    "name": "Mariona",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Thunderstruck",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568936.28ed5a5c5421b228460464497a97ebd9cc4059b6a03faec93cf2b46dba6d3cb0.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
+    "eaId": 50568936,
+    "slug": "27-50568936",
+    "price": 245000
+  },
+  {
     "name": "Batistuta",
     "rating": 90,
     "position": "ST",
@@ -167,19 +167,6 @@
     "eaId": 67330026,
     "slug": "27-67330026",
     "price": null
-  },
-  {
-    "name": "Lamine Yamal",
-    "rating": 92,
-    "position": "RW",
-    "rarity": "Thunderstruck",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117718155.18a2005c18124d90d27871b1431317af8be0b31f8ba1445f40e511898e0c2073.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-117718155/",
-    "eaId": 117718155,
-    "slug": "27-117718155",
-    "price": 2995000
   },
   {
     "name": "Touré",
@@ -195,6 +182,19 @@
     "price": null
   },
   {
+    "name": "Lamine Yamal",
+    "rating": 92,
+    "position": "RW",
+    "rarity": "Thunderstruck",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117718155.18a2005c18124d90d27871b1431317af8be0b31f8ba1445f40e511898e0c2073.webp",
+    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-117718155/",
+    "eaId": 117718155,
+    "slug": "27-117718155",
+    "price": 3134000
+  },
+  {
     "name": "Kane",
     "rating": 91,
     "position": "ST",
@@ -205,20 +205,7 @@
     "url": "https://www.fut.gg/players/202126-harry-kane/27-67310990/",
     "eaId": 67310990,
     "slug": "27-67310990",
-    "price": 1250000
-  },
-  {
-    "name": "Graham Hansen",
-    "rating": 90,
-    "position": "RW",
-    "rarity": "Thunderstruck",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50558750.8d3d76d19bf99d0e2c1475a04d0a5da29a096f41bc7fb3aa7b883bf3b2de7024.webp",
-    "url": "https://www.fut.gg/players/227102-caroline-graham-hansen/27-50558750/",
-    "eaId": 50558750,
-    "slug": "27-50558750",
-    "price": 1006000
+    "price": 900000
   },
   {
     "name": "Fiamma Benítez",
@@ -232,6 +219,19 @@
     "eaId": 50603742,
     "slug": "27-50603742",
     "price": null
+  },
+  {
+    "name": "Graham Hansen",
+    "rating": 90,
+    "position": "RW",
+    "rarity": "Thunderstruck",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50558750.8d3d76d19bf99d0e2c1475a04d0a5da29a096f41bc7fb3aa7b883bf3b2de7024.webp",
+    "url": "https://www.fut.gg/players/227102-caroline-graham-hansen/27-50558750/",
+    "eaId": 50558750,
+    "slug": "27-50558750",
+    "price": 860000
   },
   {
     "name": "Rutter",
@@ -257,6 +257,6 @@
     "url": "https://www.fut.gg/players/275243-mia-hamm/27-84161323/",
     "eaId": 84161323,
     "slug": "27-84161323",
-    "price": 8700000
+    "price": 8850000
   }
 ]
