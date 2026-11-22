@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/234396-alphonso-davies/27-67343260/",
     "eaId": 67343260,
     "slug": "27-67343260",
-    "price": 289900
+    "price": 286650
   },
   {
     "name": "van Bergen",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 320000
+    "price": 300000
   },
   {
     "name": "Zaïre-Emery",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 310000
+    "price": 300000
   },
   {
     "name": "Bruno Fernandes",
@@ -75,7 +75,7 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 500000
+    "price": 470000
   },
   {
     "name": "Jones",
@@ -89,19 +89,6 @@
     "eaId": 50574082,
     "slug": "27-50574082",
     "price": null
-  },
-  {
-    "name": "Dybala",
-    "rating": 88,
-    "position": "CAM",
-    "rarity": "Flashback",
-    "club": "AS Roma",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50542758.d211292c6335b24744dc5830b21937850db430e3fab993091672b4b5c377ef8c.webp",
-    "url": "https://www.fut.gg/players/211110-paulo-dybala/27-50542758/",
-    "eaId": 50542758,
-    "slug": "27-50542758",
-    "price": 402280
   },
   {
     "name": "Pulisic",
@@ -143,17 +130,17 @@
     "price": null
   },
   {
-    "name": "Diaby",
-    "rating": 86,
-    "position": "LM",
-    "rarity": "Thunderstruck",
-    "club": "Leverkusen",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67350716.5e113227633f4d21f963b14bfc5b6720a4af91c31a76e5f5863152bb1dc8880c.webp",
-    "url": "https://www.fut.gg/players/241852-moussa-diaby/27-67350716/",
-    "eaId": 67350716,
-    "slug": "27-67350716",
-    "price": null
+    "name": "Dybala",
+    "rating": 88,
+    "position": "CAM",
+    "rarity": "Flashback",
+    "club": "AS Roma",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50542758.d211292c6335b24744dc5830b21937850db430e3fab993091672b4b5c377ef8c.webp",
+    "url": "https://www.fut.gg/players/211110-paulo-dybala/27-50542758/",
+    "eaId": 50542758,
+    "slug": "27-50542758",
+    "price": 397760
   },
   {
     "name": "Mariona",
@@ -166,7 +153,20 @@
     "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
     "eaId": 50568936,
     "slug": "27-50568936",
-    "price": 208000
+    "price": 192000
+  },
+  {
+    "name": "Diaby",
+    "rating": 86,
+    "position": "LM",
+    "rarity": "Thunderstruck",
+    "club": "Leverkusen",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67350716.5e113227633f4d21f963b14bfc5b6720a4af91c31a76e5f5863152bb1dc8880c.webp",
+    "url": "https://www.fut.gg/players/241852-moussa-diaby/27-67350716/",
+    "eaId": 67350716,
+    "slug": "27-67350716",
+    "price": null
   },
   {
     "name": "Fiamma Benítez",
@@ -195,19 +195,6 @@
     "price": null
   },
   {
-    "name": "Dunga",
-    "rating": 89,
-    "position": "CDM",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84078270.be19369faf4c8413c49f19c46462cbc84b30026ec96056a314284d12f4321bca.webp",
-    "url": "https://www.fut.gg/players/192190-dunga/27-84078270/",
-    "eaId": 84078270,
-    "slug": "27-84078270",
-    "price": 450540
-  },
-  {
     "name": "Kane",
     "rating": 91,
     "position": "ST",
@@ -218,7 +205,7 @@
     "url": "https://www.fut.gg/players/202126-harry-kane/27-67310990/",
     "eaId": 67310990,
     "slug": "27-67310990",
-    "price": 1019000
+    "price": 975000
   },
   {
     "name": "Lamine Yamal",
@@ -231,7 +218,20 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-117718155/",
     "eaId": 117718155,
     "slug": "27-117718155",
-    "price": 3000000
+    "price": 3065000
+  },
+  {
+    "name": "Dunga",
+    "rating": 89,
+    "position": "CDM",
+    "rarity": "Thunderstruck ICON",
+    "club": "ICON",
+    "league": "Icons",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84078270.be19369faf4c8413c49f19c46462cbc84b30026ec96056a314284d12f4321bca.webp",
+    "url": "https://www.fut.gg/players/192190-dunga/27-84078270/",
+    "eaId": 84078270,
+    "slug": "27-84078270",
+    "price": 445480
   },
   {
     "name": "Graham Hansen",
@@ -244,19 +244,19 @@
     "url": "https://www.fut.gg/players/227102-caroline-graham-hansen/27-50558750/",
     "eaId": 50558750,
     "slug": "27-50558750",
-    "price": 875000
+    "price": 869000
   },
   {
-    "name": "Batistuta",
+    "name": "Dembélé",
     "rating": 90,
     "position": "ST",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67330026.47f698cb97124aa792d96f234a5a3c2c1dc9c3814a92ccb2bc73b99766b3ece1.webp",
-    "url": "https://www.fut.gg/players/221162-gabriel-batistuta/27-67330026/",
-    "eaId": 67330026,
-    "slug": "27-67330026",
-    "price": null
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1187000
   }
 ]
