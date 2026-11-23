@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/242444-joao-felix/27-117682956/",
     "eaId": 117682956,
     "slug": "27-117682956",
-    "price": 312185
+    "price": 331750
   },
   {
     "name": "Elena Julve",
@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/272163-elena-julve/27-50603811/",
     "eaId": 50603811,
     "slug": "27-50603811",
-    "price": 184000
+    "price": null
   },
   {
     "name": "Bruno Fernandes",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 420000
+    "price": 435000
   },
   {
     "name": "van de Ven",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 283000
+    "price": 292000
   },
   {
     "name": "Zaïre-Emery",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 288000
+    "price": 294000
   },
   {
     "name": "Pulisic",
@@ -140,20 +140,20 @@
     "url": "https://www.fut.gg/players/1116-marcel-desailly/27-1116/",
     "eaId": 1116,
     "slug": "27-1116",
-    "price": 684000
+    "price": 650000
   },
   {
-    "name": "Davies",
-    "rating": 87,
-    "position": "LB",
-    "rarity": "Thunderstruck",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67343260.07f5b6c655a0f8637d1ac75818036774f47ce1f1166ba33532d8507e8582aa9d.webp",
-    "url": "https://www.fut.gg/players/234396-alphonso-davies/27-67343260/",
-    "eaId": 67343260,
-    "slug": "27-67343260",
-    "price": 337025
+    "name": "Pepe",
+    "rating": 89,
+    "position": "CB",
+    "rarity": "Base Icon",
+    "club": "ICON",
+    "league": "Icons",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-120533.12b2b62f78431c2faec4be567b7f0a69cb427f40e2c19a1beb7444f280862dd8.webp",
+    "url": "https://www.fut.gg/players/120533-pepe/27-120533/",
+    "eaId": 120533,
+    "slug": "27-120533",
+    "price": 974000
   },
   {
     "name": "Fiamma Benítez",
@@ -169,17 +169,30 @@
     "price": null
   },
   {
-    "name": "Pepe",
-    "rating": 89,
-    "position": "CB",
-    "rarity": "Base Icon",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-120533.12b2b62f78431c2faec4be567b7f0a69cb427f40e2c19a1beb7444f280862dd8.webp",
-    "url": "https://www.fut.gg/players/120533-pepe/27-120533/",
-    "eaId": 120533,
-    "slug": "27-120533",
-    "price": 613000
+    "name": "Davies",
+    "rating": 87,
+    "position": "LB",
+    "rarity": "Thunderstruck",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67343260.07f5b6c655a0f8637d1ac75818036774f47ce1f1166ba33532d8507e8582aa9d.webp",
+    "url": "https://www.fut.gg/players/234396-alphonso-davies/27-67343260/",
+    "eaId": 67343260,
+    "slug": "27-67343260",
+    "price": 358150
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1146000
   },
   {
     "name": "Diaby",
@@ -195,19 +208,6 @@
     "price": null
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1181000
-  },
-  {
     "name": "Lamine Yamal",
     "rating": 92,
     "position": "RW",
@@ -218,7 +218,7 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-117718155/",
     "eaId": 117718155,
     "slug": "27-117718155",
-    "price": 2920000
+    "price": 2905000
   },
   {
     "name": "Dybala",
@@ -231,32 +231,32 @@
     "url": "https://www.fut.gg/players/211110-paulo-dybala/27-50542758/",
     "eaId": 50542758,
     "slug": "27-50542758",
-    "price": 467820
+    "price": 497200
   },
   {
-    "name": "Touré",
-    "rating": 85,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "FC Lorient",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590620.ba6d9954596b6caebd7ba723a5c00f17f754ca1187b025349478e5d8b5cf52b8.webp",
-    "url": "https://www.fut.gg/players/258972-isaak-toure/27-50590620/",
-    "eaId": 50590620,
-    "slug": "27-50590620",
-    "price": null
-  },
-  {
-    "name": "Kane",
-    "rating": 91,
+    "name": "Dumornay",
+    "rating": 88,
     "position": "ST",
-    "rarity": "Thunderstruck",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67310990.4b8a8e452c01d3d457ee1e6360a379566494d3f57d63eee7bc1ce784d0141368.webp",
-    "url": "https://www.fut.gg/players/202126-harry-kane/27-67310990/",
-    "eaId": 67310990,
-    "slug": "27-67310990",
-    "price": 850000
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
+    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
+    "eaId": 265898,
+    "slug": "27-265898",
+    "price": 283000
+  },
+  {
+    "name": "Salma Paralluelo",
+    "rating": 87,
+    "position": "LW",
+    "rarity": "Rare",
+    "club": "OL Lyonnes",
+    "league": "Arkema Première Ligue",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
+    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
+    "eaId": 269404,
+    "slug": "27-269404",
+    "price": 56000
   }
 ]
