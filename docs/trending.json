@@ -10,7 +10,7 @@
     "url": "https://www.fut.gg/players/242444-joao-felix/27-117682956/",
     "eaId": 117682956,
     "slug": "27-117682956",
-    "price": 331750
+    "price": 288105
   },
   {
     "name": "Elena Julve",
@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 435000
+    "price": 392000
   },
   {
     "name": "van de Ven",
@@ -49,7 +49,7 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 292000
+    "price": 279000
   },
   {
     "name": "Zaïre-Emery",
@@ -62,7 +62,7 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 294000
+    "price": 307000
   },
   {
     "name": "Pulisic",
@@ -91,19 +91,6 @@
     "price": null
   },
   {
-    "name": "Ibañez",
-    "rating": 88,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Al Ahli",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578905.bc4dddfa77baeaad610ce290a656c5c8add6dcf0570e5679f7390836ad788041.webp",
-    "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
-    "eaId": 50578905,
-    "slug": "27-50578905",
-    "price": null
-  },
-  {
     "name": "Jones",
     "rating": 86,
     "position": "CM",
@@ -114,6 +101,19 @@
     "url": "https://www.fut.gg/players/242434-curtis-jones/27-50574082/",
     "eaId": 50574082,
     "slug": "27-50574082",
+    "price": null
+  },
+  {
+    "name": "Ibañez",
+    "rating": 88,
+    "position": "CB",
+    "rarity": "Thunderstruck",
+    "club": "Al Ahli",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578905.bc4dddfa77baeaad610ce290a656c5c8add6dcf0570e5679f7390836ad788041.webp",
+    "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
+    "eaId": 50578905,
+    "slug": "27-50578905",
     "price": null
   },
   {
@@ -140,7 +140,20 @@
     "url": "https://www.fut.gg/players/1116-marcel-desailly/27-1116/",
     "eaId": 1116,
     "slug": "27-1116",
-    "price": 650000
+    "price": 642000
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1185000
   },
   {
     "name": "Pepe",
@@ -153,7 +166,7 @@
     "url": "https://www.fut.gg/players/120533-pepe/27-120533/",
     "eaId": 120533,
     "slug": "27-120533",
-    "price": 974000
+    "price": 666000
   },
   {
     "name": "Fiamma Benítez",
@@ -167,32 +180,6 @@
     "eaId": 50603742,
     "slug": "27-50603742",
     "price": null
-  },
-  {
-    "name": "Davies",
-    "rating": 87,
-    "position": "LB",
-    "rarity": "Thunderstruck",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67343260.07f5b6c655a0f8637d1ac75818036774f47ce1f1166ba33532d8507e8582aa9d.webp",
-    "url": "https://www.fut.gg/players/234396-alphonso-davies/27-67343260/",
-    "eaId": 67343260,
-    "slug": "27-67343260",
-    "price": 358150
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1146000
   },
   {
     "name": "Diaby",
@@ -218,7 +205,7 @@
     "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-117718155/",
     "eaId": 117718155,
     "slug": "27-117718155",
-    "price": 2905000
+    "price": 2975000
   },
   {
     "name": "Dybala",
@@ -231,7 +218,7 @@
     "url": "https://www.fut.gg/players/211110-paulo-dybala/27-50542758/",
     "eaId": 50542758,
     "slug": "27-50542758",
-    "price": 497200
+    "price": 431660
   },
   {
     "name": "Dumornay",
@@ -244,19 +231,32 @@
     "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
     "eaId": 265898,
     "slug": "27-265898",
-    "price": 283000
+    "price": 289000
   },
   {
-    "name": "Salma Paralluelo",
-    "rating": 87,
-    "position": "LW",
+    "name": "Mbappé",
+    "rating": 91,
+    "position": "ST",
     "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-269404.7ed65a84570e4000f63d98560d29be85701531a105b00fbefa24026d573851a4.webp",
-    "url": "https://www.fut.gg/players/269404-salma-paralluelo/27-269404/",
-    "eaId": 269404,
-    "slug": "27-269404",
-    "price": 56000
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 2305000
+  },
+  {
+    "name": "Kane",
+    "rating": 91,
+    "position": "ST",
+    "rarity": "Thunderstruck",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67310990.4b8a8e452c01d3d457ee1e6360a379566494d3f57d63eee7bc1ce784d0141368.webp",
+    "url": "https://www.fut.gg/players/202126-harry-kane/27-67310990/",
+    "eaId": 67310990,
+    "slug": "27-67310990",
+    "price": 766000
   }
 ]
