@@ -140,7 +140,7 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 348000
+    "price": 362000
   },
   {
     "name": "van de Ven",
@@ -153,33 +153,7 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 232000
-  },
-  {
-    "name": "João Félix",
-    "rating": 87,
-    "position": "ST",
-    "rarity": "Thunderstruck",
-    "club": "Al Nassr",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117682956.7b8c93f7c32f4e45ba8dae7054beddd37c15871285e37e726aaf8aef809430d2.webp",
-    "url": "https://www.fut.gg/players/242444-joao-felix/27-117682956/",
-    "eaId": 117682956,
-    "slug": "27-117682956",
-    "price": 322720
-  },
-  {
-    "name": "Zaïre-Emery",
-    "rating": 89,
-    "position": "RB",
-    "rarity": "Thunderstruck",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50602321.97f8d77ac4927a882b59d9b327c4e971153575f7c88b33a2f0ce30d9b56e5838.webp",
-    "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
-    "eaId": 50602321,
-    "slug": "27-50602321",
-    "price": 253000
+    "price": 238000
   },
   {
     "name": "Schlotterbeck",
@@ -195,6 +169,19 @@
     "price": null
   },
   {
+    "name": "Zaïre-Emery",
+    "rating": 89,
+    "position": "RB",
+    "rarity": "Thunderstruck",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50602321.97f8d77ac4927a882b59d9b327c4e971153575f7c88b33a2f0ce30d9b56e5838.webp",
+    "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
+    "eaId": 50602321,
+    "slug": "27-50602321",
+    "price": 246000
+  },
+  {
     "name": "Mariona",
     "rating": 90,
     "position": "CM",
@@ -205,7 +192,7 @@
     "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
     "eaId": 50568936,
     "slug": "27-50568936",
-    "price": null
+    "price": 166000
   },
   {
     "name": "Ibañez",
@@ -234,6 +221,32 @@
     "price": null
   },
   {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1098000
+  },
+  {
+    "name": "João Félix",
+    "rating": 87,
+    "position": "ST",
+    "rarity": "Thunderstruck",
+    "club": "Al Nassr",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117682956.7b8c93f7c32f4e45ba8dae7054beddd37c15871285e37e726aaf8aef809430d2.webp",
+    "url": "https://www.fut.gg/players/242444-joao-felix/27-117682956/",
+    "eaId": 117682956,
+    "slug": "27-117682956",
+    "price": 313690
+  },
+  {
     "name": "Jones",
     "rating": 86,
     "position": "CM",
@@ -245,18 +258,5 @@
     "eaId": 50574082,
     "slug": "27-50574082",
     "price": null
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1097000
   }
 ]
