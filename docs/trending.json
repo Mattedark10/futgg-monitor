@@ -1,16 +1,120 @@
 [
   {
-    "name": "João Félix",
-    "rating": 87,
-    "position": "ST",
+    "name": "Araujo",
+    "rating": 86,
+    "position": "CB",
     "rarity": "Thunderstruck",
-    "club": "Al Nassr",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50584811.86e9a0992de8c1e1558b8f2324c34c03a2d55145d61953d4e15675aa4ed377c8.webp",
+    "url": "https://www.fut.gg/players/253163-ronald-araujo/27-50584811/",
+    "eaId": 50584811,
+    "slug": "27-50584811",
+    "price": null
+  },
+  {
+    "name": "Ndjantou",
+    "rating": 73,
+    "position": "CAM",
+    "rarity": "FC Pro Live",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50410197.e430f373ed1129c7624e6c3abf9127819394a6ed73df41da5e24bf1f2f491f25.webp",
+    "url": "https://www.fut.gg/players/78549-quentin-ndjantou/27-50410197/",
+    "eaId": 50410197,
+    "slug": "27-50410197",
+    "price": null
+  },
+  {
+    "name": "van Persie",
+    "rating": 73,
+    "position": "ST",
+    "rarity": "FC Pro Live",
+    "club": "Feyenoord",
+    "league": "Eredivisie",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413981.7431f021c124a4ec4a5610658f866a8a945d4cc1246173b600f4b013e8bcfa6e.webp",
+    "url": "https://www.fut.gg/players/82333-shaqueel-van-persie/27-50413981/",
+    "eaId": 50413981,
+    "slug": "27-50413981",
+    "price": null
+  },
+  {
+    "name": "Koné",
+    "rating": 72,
+    "position": "CB",
+    "rarity": "FC Pro Live",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403898.87f1a58f7c2a3dd6a299be97b231b009162ee1bf3f3cd313bd9886bc10ce1874.webp",
+    "url": "https://www.fut.gg/players/72250-abdoul-kone/27-50403898/",
+    "eaId": 50403898,
+    "slug": "27-50403898",
+    "price": null
+  },
+  {
+    "name": "Longoni",
+    "rating": 71,
+    "position": "GK",
+    "rarity": "FC Pro Live",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50418505.52f9e797657db539b443795ae7160f6aa65a15468828d5209f4733b5001be550.webp",
+    "url": "https://www.fut.gg/players/86857-alessandro-longoni/27-50418505/",
+    "eaId": 50418505,
+    "slug": "27-50418505",
+    "price": null
+  },
+  {
+    "name": "Talles Magno",
+    "rating": 73,
+    "position": "LW",
+    "rarity": "FC Pro Live",
+    "club": "New York City FC",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50585403.09ca1a449f509a75383c913ee789ad49691c755408b9d6106a594cd7d8d59d4e.webp",
+    "url": "https://www.fut.gg/players/253755-talles-magno/27-50585403/",
+    "eaId": 50585403,
+    "slug": "27-50585403",
+    "price": null
+  },
+  {
+    "name": "Poulsen",
+    "rating": 73,
+    "position": "ST",
+    "rarity": "FC Pro Live",
+    "club": "Hamburger SV",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67316655.d3a0b4231e1e7077a62532362666f8508344a58e89b891a37dd108ec451d06f4.webp",
+    "url": "https://www.fut.gg/players/207791-yussuf-poulsen/27-67316655/",
+    "eaId": 67316655,
+    "slug": "27-67316655",
+    "price": null
+  },
+  {
+    "name": "Cowell",
+    "rating": 73,
+    "position": "RW",
+    "rarity": "FC Pro Live",
+    "club": "Red Bulls",
+    "league": "Major League Soccer",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578973.6f67ab292bf28d954398b959fb2b11b93d64f817fcb03a4ea77afb471ef4de85.webp",
+    "url": "https://www.fut.gg/players/247325-cade-cowell/27-50578973/",
+    "eaId": 50578973,
+    "slug": "27-50578973",
+    "price": null
+  },
+  {
+    "name": "Al Dawsari",
+    "rating": 72,
+    "position": "CM",
+    "rarity": "FC Pro Live",
+    "club": "Al Hilal",
     "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117682956.7b8c93f7c32f4e45ba8dae7054beddd37c15871285e37e726aaf8aef809430d2.webp",
-    "url": "https://www.fut.gg/players/242444-joao-felix/27-117682956/",
-    "eaId": 117682956,
-    "slug": "27-117682956",
-    "price": 288105
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117682450.85e3a59bf32b21c722c4757a91f8d249e33b2226551e1ca8cf5a52f3350c5014.webp",
+    "url": "https://www.fut.gg/players/241938-nasser-al-dawsari/27-117682450/",
+    "eaId": 117682450,
+    "slug": "27-117682450",
+    "price": null
   },
   {
     "name": "Elena Julve",
@@ -36,7 +140,7 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 392000
+    "price": 348000
   },
   {
     "name": "van de Ven",
@@ -49,7 +153,20 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 279000
+    "price": 232000
+  },
+  {
+    "name": "João Félix",
+    "rating": 87,
+    "position": "ST",
+    "rarity": "Thunderstruck",
+    "club": "Al Nassr",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117682956.7b8c93f7c32f4e45ba8dae7054beddd37c15871285e37e726aaf8aef809430d2.webp",
+    "url": "https://www.fut.gg/players/242444-joao-felix/27-117682956/",
+    "eaId": 117682956,
+    "slug": "27-117682956",
+    "price": 322720
   },
   {
     "name": "Zaïre-Emery",
@@ -62,20 +179,7 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 307000
-  },
-  {
-    "name": "Pulisic",
-    "rating": 87,
-    "position": "ST",
-    "rarity": "Thunderstruck",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50559444.39194ff2a8e14337641bddaf68ecf2349681ee053489f788f6ee988f10983c43.webp",
-    "url": "https://www.fut.gg/players/227796-christian-pulisic/27-50559444/",
-    "eaId": 50559444,
-    "slug": "27-50559444",
-    "price": null
+    "price": 253000
   },
   {
     "name": "Schlotterbeck",
@@ -88,32 +192,6 @@
     "url": "https://www.fut.gg/players/247819-nico-schlotterbeck/27-50579467/",
     "eaId": 50579467,
     "slug": "27-50579467",
-    "price": null
-  },
-  {
-    "name": "Jones",
-    "rating": 86,
-    "position": "CM",
-    "rarity": "Thunderstruck",
-    "club": "Lombardia FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50574082.7dfee79d6fd67b9b2b98f8168f2d1e9877e13fc486d191697dfd2acfcd0f2fc8.webp",
-    "url": "https://www.fut.gg/players/242434-curtis-jones/27-50574082/",
-    "eaId": 50574082,
-    "slug": "27-50574082",
-    "price": null
-  },
-  {
-    "name": "Ibañez",
-    "rating": 88,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Al Ahli",
-    "league": "ROSHN Saudi League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578905.bc4dddfa77baeaad610ce290a656c5c8add6dcf0570e5679f7390836ad788041.webp",
-    "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
-    "eaId": 50578905,
-    "slug": "27-50578905",
     "price": null
   },
   {
@@ -130,17 +208,43 @@
     "price": null
   },
   {
-    "name": "Desailly",
-    "rating": 89,
+    "name": "Ibañez",
+    "rating": 88,
     "position": "CB",
-    "rarity": "Base Icon",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-1116.e8b264d7a657330858029e8bd90b4fe142e5757295d943fc3e9eba336aba01df.webp",
-    "url": "https://www.fut.gg/players/1116-marcel-desailly/27-1116/",
-    "eaId": 1116,
-    "slug": "27-1116",
-    "price": 642000
+    "rarity": "Thunderstruck",
+    "club": "Al Ahli",
+    "league": "ROSHN Saudi League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578905.bc4dddfa77baeaad610ce290a656c5c8add6dcf0570e5679f7390836ad788041.webp",
+    "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
+    "eaId": 50578905,
+    "slug": "27-50578905",
+    "price": null
+  },
+  {
+    "name": "Pulisic",
+    "rating": 87,
+    "position": "ST",
+    "rarity": "Thunderstruck",
+    "club": "Milano FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50559444.39194ff2a8e14337641bddaf68ecf2349681ee053489f788f6ee988f10983c43.webp",
+    "url": "https://www.fut.gg/players/227796-christian-pulisic/27-50559444/",
+    "eaId": 50559444,
+    "slug": "27-50559444",
+    "price": null
+  },
+  {
+    "name": "Jones",
+    "rating": 86,
+    "position": "CM",
+    "rarity": "Thunderstruck",
+    "club": "Lombardia FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50574082.7dfee79d6fd67b9b2b98f8168f2d1e9877e13fc486d191697dfd2acfcd0f2fc8.webp",
+    "url": "https://www.fut.gg/players/242434-curtis-jones/27-50574082/",
+    "eaId": 50574082,
+    "slug": "27-50574082",
+    "price": null
   },
   {
     "name": "Dembélé",
@@ -153,110 +257,6 @@
     "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
     "eaId": 231443,
     "slug": "27-231443",
-    "price": 1185000
-  },
-  {
-    "name": "Pepe",
-    "rating": 89,
-    "position": "CB",
-    "rarity": "Base Icon",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-120533.12b2b62f78431c2faec4be567b7f0a69cb427f40e2c19a1beb7444f280862dd8.webp",
-    "url": "https://www.fut.gg/players/120533-pepe/27-120533/",
-    "eaId": 120533,
-    "slug": "27-120533",
-    "price": 666000
-  },
-  {
-    "name": "Fiamma Benítez",
-    "rating": 87,
-    "position": "CAM",
-    "rarity": "Thunderstruck",
-    "club": "Atlético de Madrid",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603742.9ccd8bc9de0f4f2927e2b85b937801bc8384c506ae3e9aaf2aac2a69e069cf98.webp",
-    "url": "https://www.fut.gg/players/272094-fiamma-benitez/27-50603742/",
-    "eaId": 50603742,
-    "slug": "27-50603742",
-    "price": null
-  },
-  {
-    "name": "Diaby",
-    "rating": 86,
-    "position": "LM",
-    "rarity": "Thunderstruck",
-    "club": "Leverkusen",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67350716.5e113227633f4d21f963b14bfc5b6720a4af91c31a76e5f5863152bb1dc8880c.webp",
-    "url": "https://www.fut.gg/players/241852-moussa-diaby/27-67350716/",
-    "eaId": 67350716,
-    "slug": "27-67350716",
-    "price": null
-  },
-  {
-    "name": "Lamine Yamal",
-    "rating": 92,
-    "position": "RW",
-    "rarity": "Thunderstruck",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117718155.18a2005c18124d90d27871b1431317af8be0b31f8ba1445f40e511898e0c2073.webp",
-    "url": "https://www.fut.gg/players/277643-lamine-yamal-lamine-yamal/27-117718155/",
-    "eaId": 117718155,
-    "slug": "27-117718155",
-    "price": 2975000
-  },
-  {
-    "name": "Dybala",
-    "rating": 88,
-    "position": "CAM",
-    "rarity": "Flashback",
-    "club": "AS Roma",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50542758.d211292c6335b24744dc5830b21937850db430e3fab993091672b4b5c377ef8c.webp",
-    "url": "https://www.fut.gg/players/211110-paulo-dybala/27-50542758/",
-    "eaId": 50542758,
-    "slug": "27-50542758",
-    "price": 431660
-  },
-  {
-    "name": "Dumornay",
-    "rating": 88,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "OL Lyonnes",
-    "league": "Arkema Première Ligue",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-265898.65a74e07a7d0d410ef6dfa44e5519a9ad88930b24d348d997752773c663a5fd3.webp",
-    "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
-    "eaId": 265898,
-    "slug": "27-265898",
-    "price": 289000
-  },
-  {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 2305000
-  },
-  {
-    "name": "Kane",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Thunderstruck",
-    "club": "FC Bayern München",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67310990.4b8a8e452c01d3d457ee1e6360a379566494d3f57d63eee7bc1ce784d0141368.webp",
-    "url": "https://www.fut.gg/players/202126-harry-kane/27-67310990/",
-    "eaId": 67310990,
-    "slug": "27-67310990",
-    "price": 766000
+    "price": 1097000
   }
 ]
