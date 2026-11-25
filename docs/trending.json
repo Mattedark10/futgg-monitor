@@ -13,19 +13,6 @@
     "price": null
   },
   {
-    "name": "Sinayoko",
-    "rating": 86,
-    "position": "ST",
-    "rarity": "POTM Ligue 1",
-    "club": "Paris FC",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-134468898.a26dd789a3ac00a4940141ce6078dac7e5bf2542b57dfcd7e3de56b3759c14ec.webp",
-    "url": "https://www.fut.gg/players/251170-lassine-sinayoko/27-134468898/",
-    "eaId": 134468898,
-    "slug": "27-134468898",
-    "price": null
-  },
-  {
     "name": "Zechiël",
     "rating": 84,
     "position": "CM",
@@ -36,6 +23,19 @@
     "url": "https://www.fut.gg/players/277483-gjivai-zechiel/27-50609131/",
     "eaId": 50609131,
     "slug": "27-50609131",
+    "price": null
+  },
+  {
+    "name": "Sinayoko",
+    "rating": 86,
+    "position": "ST",
+    "rarity": "POTM Ligue 1",
+    "club": "Paris FC",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-134468898.a26dd789a3ac00a4940141ce6078dac7e5bf2542b57dfcd7e3de56b3759c14ec.webp",
+    "url": "https://www.fut.gg/players/251170-lassine-sinayoko/27-134468898/",
+    "eaId": 134468898,
+    "slug": "27-134468898",
     "price": null
   },
   {
@@ -65,19 +65,6 @@
     "price": null
   },
   {
-    "name": "Araujo",
-    "rating": 86,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50584811.86e9a0992de8c1e1558b8f2324c34c03a2d55145d61953d4e15675aa4ed377c8.webp",
-    "url": "https://www.fut.gg/players/253163-ronald-araujo/27-50584811/",
-    "eaId": 50584811,
-    "slug": "27-50584811",
-    "price": null
-  },
-  {
     "name": "Elena Julve",
     "rating": 88,
     "position": "RW",
@@ -101,20 +88,7 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 325000
-  },
-  {
-    "name": "van Persie",
-    "rating": 73,
-    "position": "ST",
-    "rarity": "FC Pro Live",
-    "club": "Feyenoord",
-    "league": "Eredivisie",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413981.7431f021c124a4ec4a5610658f866a8a945d4cc1246173b600f4b013e8bcfa6e.webp",
-    "url": "https://www.fut.gg/players/82333-shaqueel-van-persie/27-50413981/",
-    "eaId": 50413981,
-    "slug": "27-50413981",
-    "price": null
+    "price": 354000
   },
   {
     "name": "Raphinha",
@@ -127,33 +101,7 @@
     "url": "https://www.fut.gg/players/233419-raphinha/27-100896715/",
     "eaId": 100896715,
     "slug": "27-100896715",
-    "price": 3228000
-  },
-  {
-    "name": "van de Ven",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Spurs",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596101.f835bfefbc1267e39565dae9574ae7b14c96d437c81ed059a7bb243e02f750e7.webp",
-    "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
-    "eaId": 50596101,
-    "slug": "27-50596101",
-    "price": 239000
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1075000
+    "price": 3275000
   },
   {
     "name": "Lukeba",
@@ -169,6 +117,58 @@
     "price": null
   },
   {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1074000
+  },
+  {
+    "name": "Ryerson",
+    "rating": 86,
+    "position": "RM",
+    "rarity": "Ultimate Scream",
+    "club": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561539.7c81118de9766718b11f2ce2253c610d39cd5e2e8f26b17299f689260f754ecb.webp",
+    "url": "https://www.fut.gg/players/229891-julian-ryerson/27-50561539/",
+    "eaId": 50561539,
+    "slug": "27-50561539",
+    "price": null
+  },
+  {
+    "name": "Araujo",
+    "rating": 86,
+    "position": "CB",
+    "rarity": "Thunderstruck",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50584811.86e9a0992de8c1e1558b8f2324c34c03a2d55145d61953d4e15675aa4ed377c8.webp",
+    "url": "https://www.fut.gg/players/253163-ronald-araujo/27-50584811/",
+    "eaId": 50584811,
+    "slug": "27-50584811",
+    "price": null
+  },
+  {
+    "name": "van de Ven",
+    "rating": 87,
+    "position": "CB",
+    "rarity": "Thunderstruck",
+    "club": "Spurs",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596101.f835bfefbc1267e39565dae9574ae7b14c96d437c81ed059a7bb243e02f750e7.webp",
+    "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
+    "eaId": 50596101,
+    "slug": "27-50596101",
+    "price": 229000
+  },
+  {
     "name": "Zaïre-Emery",
     "rating": 89,
     "position": "RB",
@@ -179,7 +179,20 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 230000
+    "price": 242000
+  },
+  {
+    "name": "Mariona",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Thunderstruck",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568936.28ed5a5c5421b228460464497a97ebd9cc4059b6a03faec93cf2b46dba6d3cb0.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
+    "eaId": 50568936,
+    "slug": "27-50568936",
+    "price": null
   },
   {
     "name": "Schlotterbeck",
@@ -195,16 +208,16 @@
     "price": null
   },
   {
-    "name": "Mariona",
-    "rating": 90,
-    "position": "CM",
-    "rarity": "Thunderstruck",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568936.28ed5a5c5421b228460464497a97ebd9cc4059b6a03faec93cf2b46dba6d3cb0.webp",
-    "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
-    "eaId": 50568936,
-    "slug": "27-50568936",
+    "name": "van Persie",
+    "rating": 73,
+    "position": "ST",
+    "rarity": "FC Pro Live",
+    "club": "Feyenoord",
+    "league": "Eredivisie",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50413981.7431f021c124a4ec4a5610658f866a8a945d4cc1246173b600f4b013e8bcfa6e.webp",
+    "url": "https://www.fut.gg/players/82333-shaqueel-van-persie/27-50413981/",
+    "eaId": 50413981,
+    "slug": "27-50413981",
     "price": null
   },
   {
@@ -221,42 +234,29 @@
     "price": null
   },
   {
-    "name": "Koné",
-    "rating": 72,
-    "position": "CB",
-    "rarity": "FC Pro Live",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403898.87f1a58f7c2a3dd6a299be97b231b009162ee1bf3f3cd313bd9886bc10ce1874.webp",
-    "url": "https://www.fut.gg/players/72250-abdoul-kone/27-50403898/",
-    "eaId": 50403898,
-    "slug": "27-50403898",
-    "price": null
-  },
-  {
-    "name": "Pulisic",
-    "rating": 87,
+    "name": "Mbappé",
+    "rating": 91,
     "position": "ST",
-    "rarity": "Thunderstruck",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50559444.39194ff2a8e14337641bddaf68ecf2349681ee053489f788f6ee988f10983c43.webp",
-    "url": "https://www.fut.gg/players/227796-christian-pulisic/27-50559444/",
-    "eaId": 50559444,
-    "slug": "27-50559444",
-    "price": null
+    "rarity": "Rare",
+    "club": "Real Madrid",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
+    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
+    "eaId": 231747,
+    "slug": "27-231747",
+    "price": 2190000
   },
   {
-    "name": "Ryerson",
-    "rating": 86,
-    "position": "RM",
+    "name": "McTominay",
+    "rating": 88,
+    "position": "CDM",
     "rarity": "Ultimate Scream",
-    "club": "Borussia Dortmund",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561539.7c81118de9766718b11f2ce2253c610d39cd5e2e8f26b17299f689260f754ecb.webp",
-    "url": "https://www.fut.gg/players/229891-julian-ryerson/27-50561539/",
-    "eaId": 50561539,
-    "slug": "27-50561539",
+    "club": "SSC Napoli",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568886.9245a0951505f81a2a24454dd87f2d608f5a8e0a85352b9be5e6080efa122c45.webp",
+    "url": "https://www.fut.gg/players/237238-scott-mctominay/27-50568886/",
+    "eaId": 50568886,
+    "slug": "27-50568886",
     "price": null
   }
 ]
