@@ -91,6 +91,19 @@
     "price": null
   },
   {
+    "name": "Bruno Fernandes",
+    "rating": 90,
+    "position": "CAM",
+    "rarity": "Thunderstruck",
+    "club": "Man Utd",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50543846.a41a7a4d379175f376392bc270617227e74619e3b43ee56f42ee73e603da6941.webp",
+    "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
+    "eaId": 50543846,
+    "slug": "27-50543846",
+    "price": 325000
+  },
+  {
     "name": "van Persie",
     "rating": 73,
     "position": "ST",
@@ -104,17 +117,17 @@
     "price": null
   },
   {
-    "name": "Bruno Fernandes",
+    "name": "Raphinha",
     "rating": 90,
     "position": "CAM",
-    "rarity": "Thunderstruck",
-    "club": "Man Utd",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50543846.a41a7a4d379175f376392bc270617227e74619e3b43ee56f42ee73e603da6941.webp",
-    "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
-    "eaId": 50543846,
-    "slug": "27-50543846",
-    "price": 340000
+    "rarity": "Ultimate Scream",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100896715.4f76dc0d19eedfbbfe425430ae0809f9fc06cd81884cdcc1d61adc0522de42e3.webp",
+    "url": "https://www.fut.gg/players/233419-raphinha/27-100896715/",
+    "eaId": 100896715,
+    "slug": "27-100896715",
+    "price": 3228000
   },
   {
     "name": "van de Ven",
@@ -127,20 +140,7 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 225000
-  },
-  {
-    "name": "Koné",
-    "rating": 72,
-    "position": "CB",
-    "rarity": "FC Pro Live",
-    "club": "RB Leipzig",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403898.87f1a58f7c2a3dd6a299be97b231b009162ee1bf3f3cd313bd9886bc10ce1874.webp",
-    "url": "https://www.fut.gg/players/72250-abdoul-kone/27-50403898/",
-    "eaId": 50403898,
-    "slug": "27-50403898",
-    "price": null
+    "price": 239000
   },
   {
     "name": "Dembélé",
@@ -153,7 +153,20 @@
     "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
     "eaId": 231443,
     "slug": "27-231443",
-    "price": 1030000
+    "price": 1075000
+  },
+  {
+    "name": "Lukeba",
+    "rating": 85,
+    "position": "LB",
+    "rarity": "Ultimate Scream",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.7c191405653b6a33beed5b6d8bc67dba001285cdd5b747a820e18035de4e0a93.webp",
+    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
+    "eaId": 50593786,
+    "slug": "27-50593786",
+    "price": null
   },
   {
     "name": "Zaïre-Emery",
@@ -166,7 +179,7 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 240000
+    "price": 230000
   },
   {
     "name": "Schlotterbeck",
@@ -195,19 +208,6 @@
     "price": null
   },
   {
-    "name": "Raphinha",
-    "rating": 90,
-    "position": "CAM",
-    "rarity": "Ultimate Scream",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100896715.4f76dc0d19eedfbbfe425430ae0809f9fc06cd81884cdcc1d61adc0522de42e3.webp",
-    "url": "https://www.fut.gg/players/233419-raphinha/27-100896715/",
-    "eaId": 100896715,
-    "slug": "27-100896715",
-    "price": 3261000
-  },
-  {
     "name": "Ibañez",
     "rating": 88,
     "position": "CB",
@@ -218,6 +218,19 @@
     "url": "https://www.fut.gg/players/247257-ibanez/27-50578905/",
     "eaId": 50578905,
     "slug": "27-50578905",
+    "price": null
+  },
+  {
+    "name": "Koné",
+    "rating": 72,
+    "position": "CB",
+    "rarity": "FC Pro Live",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50403898.87f1a58f7c2a3dd6a299be97b231b009162ee1bf3f3cd313bd9886bc10ce1874.webp",
+    "url": "https://www.fut.gg/players/72250-abdoul-kone/27-50403898/",
+    "eaId": 50403898,
+    "slug": "27-50403898",
     "price": null
   },
   {
@@ -234,29 +247,16 @@
     "price": null
   },
   {
-    "name": "Lukeba",
-    "rating": 85,
-    "position": "LB",
+    "name": "Ryerson",
+    "rating": 86,
+    "position": "RM",
     "rarity": "Ultimate Scream",
-    "club": "RB Leipzig",
+    "club": "Borussia Dortmund",
     "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50593786.7c191405653b6a33beed5b6d8bc67dba001285cdd5b747a820e18035de4e0a93.webp",
-    "url": "https://www.fut.gg/players/262138-castello-lukeba/27-50593786/",
-    "eaId": 50593786,
-    "slug": "27-50593786",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50561539.7c81118de9766718b11f2ce2253c610d39cd5e2e8f26b17299f689260f754ecb.webp",
+    "url": "https://www.fut.gg/players/229891-julian-ryerson/27-50561539/",
+    "eaId": 50561539,
+    "slug": "27-50561539",
     "price": null
-  },
-  {
-    "name": "Mbappé",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231747.fd427fcf948ab38a69d74b43d5753b5deb00981076ed2339777256654a38f70f.webp",
-    "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
-    "eaId": 231747,
-    "slug": "27-231747",
-    "price": 2205000
   }
 ]
