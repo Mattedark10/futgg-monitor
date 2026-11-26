@@ -36,7 +36,7 @@
     "url": "https://www.fut.gg/players/251854-pedri/27-84137934/",
     "eaId": 84137934,
     "slug": "27-84137934",
-    "price": 680000
+    "price": 615000
   },
   {
     "name": "Villalibre",
@@ -91,16 +91,16 @@
     "price": null
   },
   {
-    "name": "Isco",
-    "rating": 87,
-    "position": "CAM",
-    "rarity": "Thunderstruck",
-    "club": "Real Betis",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117638293.797a324a64863323d4c86de582e9d315e665de410bf251d1ea247f66e2396dca.webp",
-    "url": "https://www.fut.gg/players/197781-isco/27-117638293/",
-    "eaId": 117638293,
-    "slug": "27-117638293",
+    "name": "Merentiel",
+    "rating": 80,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Boca Juniors",
+    "league": "Liga Profesional de Fútbol",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572311.87dc2ec6d8fc9c065cababeb6760f0795175ac1beb9ee2482e8fa5f85fb761f1.webp",
+    "url": "https://www.fut.gg/players/240663-miguel-angel-merentiel/27-50572311/",
+    "eaId": 50572311,
+    "slug": "27-50572311",
     "price": null
   },
   {
@@ -117,19 +117,6 @@
     "price": null
   },
   {
-    "name": "Merentiel",
-    "rating": 80,
-    "position": "ST",
-    "rarity": "Team of the week",
-    "club": "Boca Juniors",
-    "league": "Liga Profesional de Fútbol",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50572311.87dc2ec6d8fc9c065cababeb6760f0795175ac1beb9ee2482e8fa5f85fb761f1.webp",
-    "url": "https://www.fut.gg/players/240663-miguel-angel-merentiel/27-50572311/",
-    "eaId": 50572311,
-    "slug": "27-50572311",
-    "price": null
-  },
-  {
     "name": "Jacobo Ramón",
     "rating": 80,
     "position": "CB",
@@ -143,42 +130,16 @@
     "price": null
   },
   {
-    "name": "Elena Julve",
-    "rating": 88,
-    "position": "RW",
-    "rarity": "Thunderstruck",
-    "club": "Badalona Women",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603811.5afd76aba8845a6b54a3587d7a48251dae0e56c69d871596e4823ddc82912068.webp",
-    "url": "https://www.fut.gg/players/272163-elena-julve/27-50603811/",
-    "eaId": 50603811,
-    "slug": "27-50603811",
-    "price": null
-  },
-  {
-    "name": "Afonso Moreira",
-    "rating": 80,
-    "position": "LM",
-    "rarity": "Team of the week",
-    "club": "Leverkusen",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608549.ef6a34d0dd42a73df716eabed504f937bea78be6e5394c7769a587b5bac0181b.webp",
-    "url": "https://www.fut.gg/players/276901-afonso-bastardo-moreira-afonso-moreira/27-50608549/",
-    "eaId": 50608549,
-    "slug": "27-50608549",
-    "price": null
-  },
-  {
-    "name": "Ndjantou",
-    "rating": 73,
+    "name": "Isco",
+    "rating": 87,
     "position": "CAM",
-    "rarity": "FC Pro Live",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50410197.e430f373ed1129c7624e6c3abf9127819394a6ed73df41da5e24bf1f2f491f25.webp",
-    "url": "https://www.fut.gg/players/78549-quentin-ndjantou/27-50410197/",
-    "eaId": 50410197,
-    "slug": "27-50410197",
+    "rarity": "Thunderstruck",
+    "club": "Real Betis",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117638293.797a324a64863323d4c86de582e9d315e665de410bf251d1ea247f66e2396dca.webp",
+    "url": "https://www.fut.gg/players/197781-isco/27-117638293/",
+    "eaId": 117638293,
+    "slug": "27-117638293",
     "price": null
   },
   {
@@ -195,6 +156,32 @@
     "price": null
   },
   {
+    "name": "Afonso Moreira",
+    "rating": 80,
+    "position": "LM",
+    "rarity": "Team of the week",
+    "club": "Leverkusen",
+    "league": "Bundesliga",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608549.ef6a34d0dd42a73df716eabed504f937bea78be6e5394c7769a587b5bac0181b.webp",
+    "url": "https://www.fut.gg/players/276901-afonso-bastardo-moreira-afonso-moreira/27-50608549/",
+    "eaId": 50608549,
+    "slug": "27-50608549",
+    "price": null
+  },
+  {
+    "name": "Elena Julve",
+    "rating": 88,
+    "position": "RW",
+    "rarity": "Thunderstruck",
+    "club": "Badalona Women",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50603811.5afd76aba8845a6b54a3587d7a48251dae0e56c69d871596e4823ddc82912068.webp",
+    "url": "https://www.fut.gg/players/272163-elena-julve/27-50603811/",
+    "eaId": 50603811,
+    "slug": "27-50603811",
+    "price": null
+  },
+  {
     "name": "Bruno Fernandes",
     "rating": 90,
     "position": "CAM",
@@ -205,7 +192,33 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 305000
+    "price": 317000
+  },
+  {
+    "name": "Ndjantou",
+    "rating": 73,
+    "position": "CAM",
+    "rarity": "FC Pro Live",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50410197.e430f373ed1129c7624e6c3abf9127819394a6ed73df41da5e24bf1f2f491f25.webp",
+    "url": "https://www.fut.gg/players/78549-quentin-ndjantou/27-50410197/",
+    "eaId": 50410197,
+    "slug": "27-50410197",
+    "price": null
+  },
+  {
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1032000
   },
   {
     "name": "Ryerson",
@@ -221,19 +234,6 @@
     "price": null
   },
   {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1049000
-  },
-  {
     "name": "van de Donk",
     "rating": 83,
     "position": "LM",
@@ -247,16 +247,16 @@
     "price": null
   },
   {
-    "name": "van de Ven",
-    "rating": 87,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Spurs",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50596101.f835bfefbc1267e39565dae9574ae7b14c96d437c81ed059a7bb243e02f750e7.webp",
-    "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
-    "eaId": 50596101,
-    "slug": "27-50596101",
-    "price": 217000
+    "name": "Vlahović",
+    "rating": 83,
+    "position": "ST",
+    "rarity": "Team of the week",
+    "club": "Beşiktaş",
+    "league": "Trendyol Süper Lig",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50578078.30a6ee527d88f1ec054627ff7f3927860ddd7d26ce65de8fac7ba6decfac98a5.webp",
+    "url": "https://www.fut.gg/players/246430-dusan-vlahovic/27-50578078/",
+    "eaId": 50578078,
+    "slug": "27-50578078",
+    "price": null
   }
 ]
