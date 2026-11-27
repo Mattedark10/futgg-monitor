@@ -26,17 +26,17 @@
     "price": null
   },
   {
-    "name": "Ngumoha",
-    "rating": 82,
-    "position": "LW",
-    "rarity": "Team of the week",
-    "club": "Liverpool",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83966456.988b7a525b81b3df417c07495c1f0485aa0136fe32ccc153c50ff49b6eac0d03.webp",
-    "url": "https://www.fut.gg/players/80376-rio-ngumoha/27-83966456/",
-    "eaId": 83966456,
-    "slug": "27-83966456",
-    "price": null
+    "name": "Hasegawa",
+    "rating": 89,
+    "position": "CDM",
+    "rarity": "UEFA Women's Champions League RTTK",
+    "club": "Manchester City",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50577478.ea5716e1b15453338398c27191943b9ac14d07d6c9543186a7b389533f83b992.webp",
+    "url": "https://www.fut.gg/players/245830-yui-hasegawa/27-50577478/",
+    "eaId": 50577478,
+    "slug": "27-50577478",
+    "price": 138000
   },
   {
     "name": "Elena Julve",
@@ -75,46 +75,20 @@
     "url": "https://www.fut.gg/players/212198-bruno-fernandes/27-50543846/",
     "eaId": 50543846,
     "slug": "27-50543846",
-    "price": 326000
+    "price": 330000
   },
   {
-    "name": "Hasegawa",
-    "rating": 89,
-    "position": "CDM",
-    "rarity": "UEFA Women's Champions League RTTK",
-    "club": "Manchester City",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50577478.ea5716e1b15453338398c27191943b9ac14d07d6c9543186a7b389533f83b992.webp",
-    "url": "https://www.fut.gg/players/245830-yui-hasegawa/27-50577478/",
-    "eaId": 50577478,
-    "slug": "27-50577478",
-    "price": null
-  },
-  {
-    "name": "Dembélé",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Rare",
-    "club": "PSG",
-    "league": "Ligue 1 McDonald's",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
-    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
-    "eaId": 231443,
-    "slug": "27-231443",
-    "price": 1106000
-  },
-  {
-    "name": "Pedri",
-    "rating": 91,
-    "position": "CM",
+    "name": "Ngumoha",
+    "rating": 82,
+    "position": "LW",
     "rarity": "Team of the week",
-    "club": "FC Barcelona",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84137934.85e12974efadc48e0b8ba1fe3c36a19e8555f6e30840b9efc202a6ad1a07a2e4.webp",
-    "url": "https://www.fut.gg/players/251854-pedri/27-84137934/",
-    "eaId": 84137934,
-    "slug": "27-84137934",
-    "price": 520000
+    "club": "Liverpool",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83966456.988b7a525b81b3df417c07495c1f0485aa0136fe32ccc153c50ff49b6eac0d03.webp",
+    "url": "https://www.fut.gg/players/80376-rio-ngumoha/27-83966456/",
+    "eaId": 83966456,
+    "slug": "27-83966456",
+    "price": null
   },
   {
     "name": "van de Ven",
@@ -127,20 +101,20 @@
     "url": "https://www.fut.gg/players/264453-micky-van-de-ven/27-50596101/",
     "eaId": 50596101,
     "slug": "27-50596101",
-    "price": 210000
+    "price": 216000
   },
   {
-    "name": "Isco",
-    "rating": 87,
-    "position": "CAM",
-    "rarity": "Thunderstruck",
-    "club": "Real Betis",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117638293.797a324a64863323d4c86de582e9d315e665de410bf251d1ea247f66e2396dca.webp",
-    "url": "https://www.fut.gg/players/197781-isco/27-117638293/",
-    "eaId": 117638293,
-    "slug": "27-117638293",
-    "price": null
+    "name": "Dembélé",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Rare",
+    "club": "PSG",
+    "league": "Ligue 1 McDonald's",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-231443.67311458ebec2afebc5f4e102d3719e813d97b4a994445cffa173343331f927b.webp",
+    "url": "https://www.fut.gg/players/231443-ousmane-dembele/27-231443/",
+    "eaId": 231443,
+    "slug": "27-231443",
+    "price": 1119000
   },
   {
     "name": "Zaïre-Emery",
@@ -153,32 +127,19 @@
     "url": "https://www.fut.gg/players/270673-warren-zaire-emery/27-50602321/",
     "eaId": 50602321,
     "slug": "27-50602321",
-    "price": 219000
+    "price": 230000
   },
   {
-    "name": "Rabiot",
-    "rating": 86,
+    "name": "Isco",
+    "rating": 87,
     "position": "CAM",
-    "rarity": "Team of the week",
-    "club": "Milano FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50541656.b65866f5a7cc1a7bbc85a23aa1b567585635cce06f07e1f20303dee1a825cdb9.webp",
-    "url": "https://www.fut.gg/players/210008-adrien-rabiot/27-50541656/",
-    "eaId": 50541656,
-    "slug": "27-50541656",
-    "price": null
-  },
-  {
-    "name": "Mariona",
-    "rating": 90,
-    "position": "CM",
     "rarity": "Thunderstruck",
-    "club": "Arsenal",
-    "league": "Barclays Women’s Super League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568936.28ed5a5c5421b228460464497a97ebd9cc4059b6a03faec93cf2b46dba6d3cb0.webp",
-    "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
-    "eaId": 50568936,
-    "slug": "27-50568936",
+    "club": "Real Betis",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117638293.797a324a64863323d4c86de582e9d315e665de410bf251d1ea247f66e2396dca.webp",
+    "url": "https://www.fut.gg/players/197781-isco/27-117638293/",
+    "eaId": 117638293,
+    "slug": "27-117638293",
     "price": null
   },
   {
@@ -195,6 +156,32 @@
     "price": null
   },
   {
+    "name": "Mariona",
+    "rating": 90,
+    "position": "CM",
+    "rarity": "Thunderstruck",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50568936.28ed5a5c5421b228460464497a97ebd9cc4059b6a03faec93cf2b46dba6d3cb0.webp",
+    "url": "https://www.fut.gg/players/237288-mariona/27-50568936/",
+    "eaId": 50568936,
+    "slug": "27-50568936",
+    "price": null
+  },
+  {
+    "name": "Rummenigge",
+    "rating": 90,
+    "position": "ST",
+    "rarity": "Champion International Icon",
+    "club": "ICON",
+    "league": "Icons",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67351939.a19ed3c8614bd760e51bf09c8b23e9a579ae72bddb0674032555361fd8912dd4.webp",
+    "url": "https://www.fut.gg/players/243075-karl-heinz-rummenigge/27-67351939/",
+    "eaId": 67351939,
+    "slug": "27-67351939",
+    "price": null
+  },
+  {
     "name": "Dumornay",
     "rating": 88,
     "position": "ST",
@@ -205,7 +192,7 @@
     "url": "https://www.fut.gg/players/265898-melchie-dumornay/27-265898/",
     "eaId": 265898,
     "slug": "27-265898",
-    "price": 223000
+    "price": 220000
   },
   {
     "name": "Mbappé",
@@ -218,19 +205,32 @@
     "url": "https://www.fut.gg/players/231747-kylian-mbappe/27-231747/",
     "eaId": 231747,
     "slug": "27-231747",
-    "price": 2244000
+    "price": 2269000
   },
   {
-    "name": "Malen",
-    "rating": 84,
-    "position": "ST",
+    "name": "Pedri",
+    "rating": 91,
+    "position": "CM",
     "rarity": "Team of the week",
-    "club": "AS Roma",
+    "club": "FC Barcelona",
+    "league": "LALIGA EA SPORTS",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84137934.85e12974efadc48e0b8ba1fe3c36a19e8555f6e30840b9efc202a6ad1a07a2e4.webp",
+    "url": "https://www.fut.gg/players/251854-pedri/27-84137934/",
+    "eaId": 84137934,
+    "slug": "27-84137934",
+    "price": 458000
+  },
+  {
+    "name": "Rabiot",
+    "rating": 86,
+    "position": "CAM",
+    "rarity": "Team of the week",
+    "club": "Milano FC",
     "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67340311.66d9a1e86e327ccd0bbd7181a24e1635c84e14db14e61c6461c30cc87678b361.webp",
-    "url": "https://www.fut.gg/players/231447-donyell-malen/27-67340311/",
-    "eaId": 67340311,
-    "slug": "27-67340311",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50541656.b65866f5a7cc1a7bbc85a23aa1b567585635cce06f07e1f20303dee1a825cdb9.webp",
+    "url": "https://www.fut.gg/players/210008-adrien-rabiot/27-50541656/",
+    "eaId": 50541656,
+    "slug": "27-50541656",
     "price": null
   },
   {
