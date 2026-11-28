@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-84154969/",
     "eaId": 84154969,
     "slug": "27-84154969",
-    "price": 825000
+    "price": 775000
   },
   {
     "name": "de Jong",
@@ -36,33 +36,7 @@
     "url": "https://www.fut.gg/players/228702-frenkie-de-jong/27-50560350/",
     "eaId": 50560350,
     "slug": "27-50560350",
-    "price": 370000
-  },
-  {
-    "name": "Ronaldo",
-    "rating": 95,
-    "position": "ST",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83923656.efdc342615f2b6da5d962d718637ad619f71a59e6e2c13edab2bc385fae0cad4.webp",
-    "url": "https://www.fut.gg/players/37576-ronaldo/27-83923656/",
-    "eaId": 83923656,
-    "slug": "27-83923656",
-    "price": 15000000
-  },
-  {
-    "name": "Estêvão",
-    "rating": 89,
-    "position": "RM",
-    "rarity": "Thunderstruck",
-    "club": "Chelsea",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50408335.16deb4d57d1f6c5fd0546f29fadd85d0a134db7817e850fb4df0513344f08083.webp",
-    "url": "https://www.fut.gg/players/76687-estevao-willian-almeida-estevao/27-50408335/",
-    "eaId": 50408335,
-    "slug": "27-50408335",
-    "price": 274000
+    "price": 360000
   },
   {
     "name": "Fernández",
@@ -88,7 +62,7 @@
     "url": "https://www.fut.gg/players/1114-roberto-baggio/27-83887194/",
     "eaId": 83887194,
     "slug": "27-83887194",
-    "price": 260630
+    "price": 217475
   },
   {
     "name": "Kelly",
@@ -104,6 +78,58 @@
     "price": null
   },
   {
+    "name": "Ronaldo",
+    "rating": 95,
+    "position": "ST",
+    "rarity": "Thunderstruck ICON",
+    "club": "ICON",
+    "league": "Icons",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83923656.efdc342615f2b6da5d962d718637ad619f71a59e6e2c13edab2bc385fae0cad4.webp",
+    "url": "https://www.fut.gg/players/37576-ronaldo/27-83923656/",
+    "eaId": 83923656,
+    "slug": "27-83923656",
+    "price": 15000000
+  },
+  {
+    "name": "Estêvão",
+    "rating": 89,
+    "position": "RM",
+    "rarity": "Thunderstruck",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50408335.16deb4d57d1f6c5fd0546f29fadd85d0a134db7817e850fb4df0513344f08083.webp",
+    "url": "https://www.fut.gg/players/76687-estevao-willian-almeida-estevao/27-50408335/",
+    "eaId": 50408335,
+    "slug": "27-50408335",
+    "price": 244000
+  },
+  {
+    "name": "James",
+    "rating": 87,
+    "position": "RB",
+    "rarity": "Thunderstruck",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50569722.b0bbd8c1c1747ab1bb7c0d28a7dc53a2b49051a6dc0ec0adba3d5fdb9adfe683.webp",
+    "url": "https://www.fut.gg/players/238074-reece-james/27-50569722/",
+    "eaId": 50569722,
+    "slug": "27-50569722",
+    "price": null
+  },
+  {
+    "name": "Salah",
+    "rating": 90,
+    "position": "RM",
+    "rarity": "Thunderstruck",
+    "club": "Trabzonspor",
+    "league": "Trendyol Süper Lig",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100872627.95d1c50804284c32433479e47fd5cfa48c2c29344352ad2ef4e3c24628128e7f.webp",
+    "url": "https://www.fut.gg/players/209331-mohamed-salah/27-100872627/",
+    "eaId": 100872627,
+    "slug": "27-100872627",
+    "price": null
+  },
+  {
     "name": "Khusanov",
     "rating": 89,
     "position": "CB",
@@ -114,7 +140,7 @@
     "url": "https://www.fut.gg/players/277031-abdukodir-khusanov/27-50608679/",
     "eaId": 50608679,
     "slug": "27-50608679",
-    "price": 345000
+    "price": 350000
   },
   {
     "name": "Vitinha",
@@ -127,7 +153,7 @@
     "url": "https://www.fut.gg/players/255253-vitinha/27-50586901/",
     "eaId": 50586901,
     "slug": "27-50586901",
-    "price": 1100000
+    "price": 1040000
   },
   {
     "name": "Nedvěd",
@@ -153,20 +179,7 @@
     "url": "https://www.fut.gg/players/277954-kenan-yildiz/27-50609602/",
     "eaId": 50609602,
     "slug": "27-50609602",
-    "price": 310000
-  },
-  {
-    "name": "Salah",
-    "rating": 90,
-    "position": "RM",
-    "rarity": "Thunderstruck",
-    "club": "Trabzonspor",
-    "league": "Trendyol Süper Lig",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100872627.95d1c50804284c32433479e47fd5cfa48c2c29344352ad2ef4e3c24628128e7f.webp",
-    "url": "https://www.fut.gg/players/209331-mohamed-salah/27-100872627/",
-    "eaId": 100872627,
-    "slug": "27-100872627",
-    "price": null
+    "price": 249000
   },
   {
     "name": "Wharton",
@@ -182,17 +195,30 @@
     "price": null
   },
   {
-    "name": "James",
-    "rating": 87,
-    "position": "RB",
+    "name": "Blanc",
+    "rating": 90,
+    "position": "CDM",
+    "rarity": "Thunderstruck ICON",
+    "club": "ICON",
+    "league": "Icons",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84124523.bbdcc39872c75f4b9bde24330295931f70e49688775090864defc1941080489e.webp",
+    "url": "https://www.fut.gg/players/238443-laurent-blanc/27-84124523/",
+    "eaId": 84124523,
+    "slug": "27-84124523",
+    "price": 317000
+  },
+  {
+    "name": "van Dijk",
+    "rating": 90,
+    "position": "CB",
     "rarity": "Thunderstruck",
-    "club": "Chelsea",
+    "club": "Liverpool",
     "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50569722.b0bbd8c1c1747ab1bb7c0d28a7dc53a2b49051a6dc0ec0adba3d5fdb9adfe683.webp",
-    "url": "https://www.fut.gg/players/238074-reece-james/27-50569722/",
-    "eaId": 50569722,
-    "slug": "27-50569722",
-    "price": null
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50535024.e6e019dbcf9291ef8b1e28f68ea9a7a73ba6c827142b7a146214884022565992.webp",
+    "url": "https://www.fut.gg/players/203376-virgil-van-dijk/27-50535024/",
+    "eaId": 50535024,
+    "slug": "27-50535024",
+    "price": 496000
   },
   {
     "name": "Thierry Correia",
@@ -208,19 +234,6 @@
     "price": null
   },
   {
-    "name": "Claudia Pina",
-    "rating": 91,
-    "position": "LW",
-    "rarity": "Thunderstruck",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371395.c33f3d4f0225c0a51e5a279fe80cb3333521cfbac820f3ffd0c455020385d436.webp",
-    "url": "https://www.fut.gg/players/262531-claudia-pina/27-67371395/",
-    "eaId": 67371395,
-    "slug": "27-67371395",
-    "price": 3119000
-  },
-  {
     "name": "Gabriel",
     "rating": 91,
     "position": "CB",
@@ -231,32 +244,19 @@
     "url": "https://www.fut.gg/players/232580-gabriel/27-117673092/",
     "eaId": 117673092,
     "slug": "27-117673092",
-    "price": 238000
-  },
-  {
-    "name": "Leroy Sané",
-    "rating": 87,
-    "position": "RM",
-    "rarity": "Thunderstruck",
-    "club": "Galatasaray",
-    "league": "Trendyol Süper Lig",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50554140.2addd167ba2f34f1a9952ee4e5828c08caad40c9daedaad063419ba0792288de.webp",
-    "url": "https://www.fut.gg/players/222492-leroy-sane/27-50554140/",
-    "eaId": 50554140,
-    "slug": "27-50554140",
     "price": null
   },
   {
-    "name": "Blanc",
-    "rating": 90,
-    "position": "CDM",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84124523.bbdcc39872c75f4b9bde24330295931f70e49688775090864defc1941080489e.webp",
-    "url": "https://www.fut.gg/players/238443-laurent-blanc/27-84124523/",
-    "eaId": 84124523,
-    "slug": "27-84124523",
-    "price": 335000
+    "name": "Claudia Pina",
+    "rating": 91,
+    "position": "LW",
+    "rarity": "Thunderstruck",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371395.c33f3d4f0225c0a51e5a279fe80cb3333521cfbac820f3ffd0c455020385d436.webp",
+    "url": "https://www.fut.gg/players/262531-claudia-pina/27-67371395/",
+    "eaId": 67371395,
+    "slug": "27-67371395",
+    "price": 3144000
   }
 ]
