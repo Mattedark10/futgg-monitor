@@ -23,7 +23,7 @@
     "url": "https://www.fut.gg/players/268889-alvaro-fernandez/27-84154969/",
     "eaId": 84154969,
     "slug": "27-84154969",
-    "price": 900000
+    "price": 825000
   },
   {
     "name": "de Jong",
@@ -52,19 +52,6 @@
     "price": 15000000
   },
   {
-    "name": "Khusanov",
-    "rating": 89,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Manchester City",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608679.a48c96151512c4ce2f92eff62ad8fb155618c1506d0946cb75712bb998182959.webp",
-    "url": "https://www.fut.gg/players/277031-abdukodir-khusanov/27-50608679/",
-    "eaId": 50608679,
-    "slug": "27-50608679",
-    "price": 319000
-  },
-  {
     "name": "Estêvão",
     "rating": 89,
     "position": "RM",
@@ -75,7 +62,59 @@
     "url": "https://www.fut.gg/players/76687-estevao-willian-almeida-estevao/27-50408335/",
     "eaId": 50408335,
     "slug": "27-50408335",
-    "price": 289000
+    "price": 274000
+  },
+  {
+    "name": "Fernández",
+    "rating": 89,
+    "position": "CM",
+    "rarity": "Thunderstruck",
+    "club": "Manchester City",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67355954.e5f272cdc32744c61c79e8dcdc21fcc7c311df65598423dff27440bdaba35345.webp",
+    "url": "https://www.fut.gg/players/247090-enzo-fernandez/27-67355954/",
+    "eaId": 67355954,
+    "slug": "27-67355954",
+    "price": null
+  },
+  {
+    "name": "Baggio",
+    "rating": 92,
+    "position": "CAM",
+    "rarity": "Thunderstruck ICON",
+    "club": "ICON",
+    "league": "Icons",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-83887194.3215273dc52874273bd558c8d85a0f99d0bead2bb6f09575cfa134ed7a57edbf.webp",
+    "url": "https://www.fut.gg/players/1114-roberto-baggio/27-83887194/",
+    "eaId": 83887194,
+    "slug": "27-83887194",
+    "price": 260630
+  },
+  {
+    "name": "Kelly",
+    "rating": 88,
+    "position": "RM",
+    "rarity": "Flashback",
+    "club": "Arsenal",
+    "league": "Barclays Women’s Super League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50588649.778e84a7604c7b38f3649ba952235c706932aa06e8f02f6b60cea8026d2d823a.webp",
+    "url": "https://www.fut.gg/players/257001-chloe-kelly/27-50588649/",
+    "eaId": 50588649,
+    "slug": "27-50588649",
+    "price": null
+  },
+  {
+    "name": "Khusanov",
+    "rating": 89,
+    "position": "CB",
+    "rarity": "Thunderstruck",
+    "club": "Manchester City",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50608679.a48c96151512c4ce2f92eff62ad8fb155618c1506d0946cb75712bb998182959.webp",
+    "url": "https://www.fut.gg/players/277031-abdukodir-khusanov/27-50608679/",
+    "eaId": 50608679,
+    "slug": "27-50608679",
+    "price": 345000
   },
   {
     "name": "Vitinha",
@@ -88,46 +127,7 @@
     "url": "https://www.fut.gg/players/255253-vitinha/27-50586901/",
     "eaId": 50586901,
     "slug": "27-50586901",
-    "price": 1019000
-  },
-  {
-    "name": "Yıldız",
-    "rating": 90,
-    "position": "CAM",
-    "rarity": "Thunderstruck",
-    "club": "Juventus FC",
-    "league": "Serie A Enilive",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609602.fcb6c019996320ba2c2fdcd2fddf87572ab9612a5b92f5b8a355ce11977aaa18.webp",
-    "url": "https://www.fut.gg/players/277954-kenan-yildiz/27-50609602/",
-    "eaId": 50609602,
-    "slug": "27-50609602",
-    "price": 340000
-  },
-  {
-    "name": "Wharton",
-    "rating": 87,
-    "position": "CM",
-    "rarity": "Thunderstruck",
-    "club": "Crystal Palace",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590888.1eb7451f958f269e468b0ff2ac7beaab23dae6329346c387f5ca402d2a05a1d6.webp",
-    "url": "https://www.fut.gg/players/259240-adam-wharton/27-50590888/",
-    "eaId": 50590888,
-    "slug": "27-50590888",
-    "price": null
-  },
-  {
-    "name": "Claudia Pina",
-    "rating": 91,
-    "position": "LW",
-    "rarity": "Thunderstruck",
-    "club": "FC Barcelona",
-    "league": "Liga F",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371395.c33f3d4f0225c0a51e5a279fe80cb3333521cfbac820f3ffd0c455020385d436.webp",
-    "url": "https://www.fut.gg/players/262531-claudia-pina/27-67371395/",
-    "eaId": 67371395,
-    "slug": "27-67371395",
-    "price": 2905000
+    "price": 1100000
   },
   {
     "name": "Nedvěd",
@@ -143,6 +143,58 @@
     "price": 290000
   },
   {
+    "name": "Yıldız",
+    "rating": 90,
+    "position": "CAM",
+    "rarity": "Thunderstruck",
+    "club": "Juventus FC",
+    "league": "Serie A Enilive",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50609602.fcb6c019996320ba2c2fdcd2fddf87572ab9612a5b92f5b8a355ce11977aaa18.webp",
+    "url": "https://www.fut.gg/players/277954-kenan-yildiz/27-50609602/",
+    "eaId": 50609602,
+    "slug": "27-50609602",
+    "price": 310000
+  },
+  {
+    "name": "Salah",
+    "rating": 90,
+    "position": "RM",
+    "rarity": "Thunderstruck",
+    "club": "Trabzonspor",
+    "league": "Trendyol Süper Lig",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-100872627.95d1c50804284c32433479e47fd5cfa48c2c29344352ad2ef4e3c24628128e7f.webp",
+    "url": "https://www.fut.gg/players/209331-mohamed-salah/27-100872627/",
+    "eaId": 100872627,
+    "slug": "27-100872627",
+    "price": null
+  },
+  {
+    "name": "Wharton",
+    "rating": 87,
+    "position": "CM",
+    "rarity": "Thunderstruck",
+    "club": "Crystal Palace",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50590888.1eb7451f958f269e468b0ff2ac7beaab23dae6329346c387f5ca402d2a05a1d6.webp",
+    "url": "https://www.fut.gg/players/259240-adam-wharton/27-50590888/",
+    "eaId": 50590888,
+    "slug": "27-50590888",
+    "price": null
+  },
+  {
+    "name": "James",
+    "rating": 87,
+    "position": "RB",
+    "rarity": "Thunderstruck",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50569722.b0bbd8c1c1747ab1bb7c0d28a7dc53a2b49051a6dc0ec0adba3d5fdb9adfe683.webp",
+    "url": "https://www.fut.gg/players/238074-reece-james/27-50569722/",
+    "eaId": 50569722,
+    "slug": "27-50569722",
+    "price": null
+  },
+  {
     "name": "Thierry Correia",
     "rating": 86,
     "position": "RB",
@@ -154,6 +206,32 @@
     "eaId": 50579480,
     "slug": "27-50579480",
     "price": null
+  },
+  {
+    "name": "Claudia Pina",
+    "rating": 91,
+    "position": "LW",
+    "rarity": "Thunderstruck",
+    "club": "FC Barcelona",
+    "league": "Liga F",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-67371395.c33f3d4f0225c0a51e5a279fe80cb3333521cfbac820f3ffd0c455020385d436.webp",
+    "url": "https://www.fut.gg/players/262531-claudia-pina/27-67371395/",
+    "eaId": 67371395,
+    "slug": "27-67371395",
+    "price": 3119000
+  },
+  {
+    "name": "Gabriel",
+    "rating": 91,
+    "position": "CB",
+    "rarity": "Thunderstruck",
+    "club": "Arsenal",
+    "league": "Premier League",
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117673092.36271ffc5003d39a2af5cafc35301ab7b830ca54385962cafec98fe98a5be847.webp",
+    "url": "https://www.fut.gg/players/232580-gabriel/27-117673092/",
+    "eaId": 117673092,
+    "slug": "27-117673092",
+    "price": 238000
   },
   {
     "name": "Leroy Sané",
@@ -169,94 +247,16 @@
     "price": null
   },
   {
-    "name": "Gabriel",
-    "rating": 91,
-    "position": "CB",
-    "rarity": "Thunderstruck",
-    "club": "Arsenal",
-    "league": "Premier League",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-117673092.36271ffc5003d39a2af5cafc35301ab7b830ca54385962cafec98fe98a5be847.webp",
-    "url": "https://www.fut.gg/players/232580-gabriel/27-117673092/",
-    "eaId": 117673092,
-    "slug": "27-117673092",
-    "price": 216000
-  },
-  {
-    "name": "Vini Jr.",
+    "name": "Blanc",
     "rating": 90,
-    "position": "LW",
-    "rarity": "Thunderstruck",
-    "club": "Real Madrid",
-    "league": "LALIGA EA SPORTS",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50570442.8c41e1e398d20c91d566bdf1c6739f14de9328b8d775e9362c6e56520f851bb4.webp",
-    "url": "https://www.fut.gg/players/238794-vinicius-jr/27-50570442/",
-    "eaId": 50570442,
-    "slug": "27-50570442",
-    "price": 1588000
-  },
-  {
-    "name": "Sawa",
-    "rating": 92,
-    "position": "CM",
+    "position": "CDM",
     "rarity": "Thunderstruck ICON",
     "club": "ICON",
     "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84113086.d9101ba2c39c88086fae3470a25f414ef234d8aa45d100fb516e92bde7d65792.webp",
-    "url": "https://www.fut.gg/players/227006-homare-sawa/27-84113086/",
-    "eaId": 84113086,
-    "slug": "27-84113086",
-    "price": 790000
-  },
-  {
-    "name": "Tillman",
-    "rating": 88,
-    "position": "CAM",
-    "rarity": "Thunderstruck",
-    "club": "Leverkusen",
-    "league": "Bundesliga",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-50588501.bdf34d0e60c4c25f79b1091928c679f86eaa98cfa63aef954a73c1ccbeb5b039.webp",
-    "url": "https://www.fut.gg/players/256853-malik-tillman/27-50588501/",
-    "eaId": 50588501,
-    "slug": "27-50588501",
-    "price": null
-  },
-  {
-    "name": "Cantona",
-    "rating": 90,
-    "position": "ST",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84053278.dd562fd130be078af0879f2c63b4d182b882d1d0e72cdc661ae6ea16d57a5472.webp",
-    "url": "https://www.fut.gg/players/167198-eric-cantona/27-84053278/",
-    "eaId": 84053278,
-    "slug": "27-84053278",
-    "price": 578000
-  },
-  {
-    "name": "Rivellino",
-    "rating": 91,
-    "position": "CAM",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84077270.0079c223300a33e32aa264166741c0c93b25742f9a4d73967de912158ebea171.webp",
-    "url": "https://www.fut.gg/players/191190-rivellino/27-84077270/",
-    "eaId": 84077270,
-    "slug": "27-84077270",
-    "price": 850000
-  },
-  {
-    "name": "Emilio Butragueño",
-    "rating": 91,
-    "position": "ST",
-    "rarity": "Thunderstruck ICON",
-    "club": "ICON",
-    "league": "Icons",
-    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84077775.21217cc88510daa81e0196fa7b8a23b0047fbe67166d6b16e10664e4cf8a71eb.webp",
-    "url": "https://www.fut.gg/players/191695-emilio-butragueno/27-84077775/",
-    "eaId": 84077775,
-    "slug": "27-84077775",
-    "price": 2320000
+    "img": "https://game-assets.fut.gg/cdn-cgi/image/quality=85,format=auto,width=300/2027/futgg-player-item-card/27-84124523.bbdcc39872c75f4b9bde24330295931f70e49688775090864defc1941080489e.webp",
+    "url": "https://www.fut.gg/players/238443-laurent-blanc/27-84124523/",
+    "eaId": 84124523,
+    "slug": "27-84124523",
+    "price": 335000
   }
 ]
